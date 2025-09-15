@@ -1,0 +1,84 @@
+================================================================================
+COMPOUND RISK SCORING ANALYSIS REPORT
+================================================================================
+
+SCORING METHOD: ADDITIVE
+Dataset: 232 records, 36 variables
+Factor groups: 6 groups, 28 total factors
+  demographic_factors: 4 factors
+  lifestyle_factors: 6 factors
+  stress_factors: 6 factors
+  nutrition_factors: 4 factors
+  physical_health_factors: 1 factors
+  chronic_condition_factors: 7 factors
+
+Calculating individual factor risk weights...
+Population baselines: 18.1% high risk, 79.3% elevated risk
+
+------------------------------------------------------------
+COMPOUND SCORE EVALUATION (ADDITIVE METHOD)
+------------------------------------------------------------
+
+------------------------------------------------------------
+UNDERESTIMATED RISK CASES
+------------------------------------------------------------
+Employees with low compound scores but actually high risk:
+
+• Compound score: 1.36 | Actual: high_risk
+  Profile: age_group=young_adult, Data.gender=female, Data.has_children=no_children, bmi_category=normal_weight
+
+• Compound score: 1.21 | Actual: high_risk
+  Profile: age_group=young_adult, Data.gender=female, Data.has_children=no_children, bmi_category=overweight
+
+• Compound score: 1.14 | Actual: high_risk
+  Profile: age_group=young_adult, Data.gender=male, Data.has_children=no_children, bmi_category=overweight
+
+------------------------------------------------------------
+HIGHEST IMPACT INDIVIDUAL FACTORS
+------------------------------------------------------------
+
+• Data.smoking_status = daily_smoker (AMPLIFYING)
+  Impact: 2.48x baseline | Risk rate: 84.5%
+  Sample: 58 employees | Group: lifestyle_factors
+
+• Data.sleep_quality = insufficient_sleep (AMPLIFYING)
+  Impact: 2.34x baseline | Risk rate: 84.8%
+  Sample: 33 employees | Group: lifestyle_factors
+
+• Data.perceived_health = very_poor_health (AMPLIFYING)
+  Impact: 2.27x baseline | Risk rate: 64.7%
+  Sample: 17 employees | Group: stress_factors
+
+• Data.depression_anhedonia = severe_anhedonia (AMPLIFYING)
+  Impact: 2.21x baseline | Risk rate: 66.7%
+  Sample: 30 employees | Group: stress_factors
+
+• Data.perceived_health = poor_health (AMPLIFYING)
+  Impact: 2.21x baseline | Risk rate: 88.9%
+  Sample: 45 employees | Group: stress_factors
+
+• Data.depression_mood = persistent_sadness (AMPLIFYING)
+  Impact: 2.10x baseline | Risk rate: 69.0%
+  Sample: 29 employees | Group: stress_factors
+
+• Data.activity_level = frequent_exercise (PROTECTIVE)
+  Impact: 0.00x baseline | Risk rate: 63.2%
+  Sample: 19 employees | Group: lifestyle_factors
+
+• Data.daily_steps = good_steps (PROTECTIVE)
+  Impact: 0.00x baseline | Risk rate: 65.7%
+  Sample: 35 employees | Group: lifestyle_factors
+
+================================================================================
+ANALYSIS SUMMARY
+================================================================================
+Total records analyzed: 232
+Scoring method: additive
+Factor groups analyzed: 6
+Total factors included: 28
+High-impact factors found: 15
+Underestimated risk cases: 42
+Overestimated risk cases: 0
+
+This analysis creates predictive risk scores for individual employee assessment
+and identifies high-impact factors for targeted wellness interventions.

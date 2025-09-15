@@ -1,0 +1,159 @@
+Demographic Outlier Analysis
+Dataset: 232 records, 36 variables
+Available demographics: 21
+Available outcomes: 1
+
+Population Baselines:
+  health_risk_level.high_risk: 18.1%
+  health_risk_level.moderate_risk: 61.2%
+  health_risk_level.elevated_risk: 79.3%
+
+Analyzing single-variable demographic outliers...
+
+Analyzing strategic two-variable demographic combinations...
+
+Outlier Detection Results:
+Single-variable outliers: 12
+Two-variable outliers: 38
+Total outliers: 50
+================================================================================
+DEMOGRAPHIC OUTLIER ANALYSIS REPORT
+================================================================================
+
+OUTLIER DETECTION SUMMARY:
+Total outlier segments found: 50
+Max segment size threshold: 15.0% of population
+Min risk ratio threshold: 2.5x
+Min sample size: 8
+Elevated risk segments: 12
+Protected segments: 38
+
+------------------------------------------------------------
+HIGHEST RISK DEMOGRAPHIC OUTLIERS
+------------------------------------------------------------
+
+• Data.stress_level_irritability=often_irritated, Data.depression_mood=persistent_sadness
+  Segment size: 9 employees (3.9% of population)
+  high_risk: 66.7% (vs 18.1% population)
+  Risk ratio: 3.68x | Difference: +48.6pp
+
+• Data.physical_pain = moderate_pain
+  Segment size: 13 employees (5.6% of population)
+  high_risk: 61.5% (vs 18.1% population)
+  Risk ratio: 3.4x | Difference: +43.4pp
+
+• Data.smoking_status=daily_smoker, Data.alcohol_consumption=no_alcohol
+  Segment size: 25 employees (10.8% of population)
+  high_risk: 56.0% (vs 18.1% population)
+  Risk ratio: 3.09x | Difference: +37.9pp
+
+• Data.gender=female, Data.smoking_status=daily_smoker
+  Segment size: 33 employees (14.2% of population)
+  high_risk: 54.5% (vs 18.1% population)
+  Risk ratio: 3.01x | Difference: +36.4pp
+
+• Data.stress_level_irritability=sometimes_irritated, Data.sleep_quality=insufficient_sleep
+  Segment size: 13 employees (5.6% of population)
+  high_risk: 53.8% (vs 18.1% population)
+  Risk ratio: 2.97x | Difference: +35.7pp
+
+• Data.activity_level=no_exercise, Data.sleep_quality=insufficient_sleep
+  Segment size: 19 employees (8.2% of population)
+  high_risk: 52.6% (vs 18.1% population)
+  Risk ratio: 2.91x | Difference: +34.5pp
+
+• bmi_category=overweight, Data.activity_level=weekly_exercise
+  Segment size: 8 employees (3.4% of population)
+  high_risk: 50.0% (vs 18.1% population)
+  Risk ratio: 2.76x | Difference: +31.9pp
+
+• Data.depression_mood=frequent_sadness, Data.loneliness=always_lonely
+  Segment size: 18 employees (7.8% of population)
+  high_risk: 50.0% (vs 18.1% population)
+  Risk ratio: 2.76x | Difference: +31.9pp
+
+------------------------------------------------------------
+STRONGEST DEMOGRAPHIC PROTECTION
+------------------------------------------------------------
+
+• Data.activity_level = frequent_exercise
+  Segment size: 19 employees (8.2% of population)
+  high_risk: 0.0% (vs 18.1% population)
+  Protection factor: infx | Difference: -18.1pp
+
+• Data.activity_level = daily_exercise
+  Segment size: 11 employees (4.7% of population)
+  high_risk: 0.0% (vs 18.1% population)
+  Protection factor: infx | Difference: -18.1pp
+
+• Data.perceived_health = excellent_health
+  Segment size: 15 employees (6.5% of population)
+  high_risk: 0.0% (vs 18.1% population)
+  Protection factor: infx | Difference: -18.1pp
+
+• Data.stress_level_irritability = never_irritated
+  Segment size: 8 employees (3.4% of population)
+  high_risk: 0.0% (vs 18.1% population)
+  Protection factor: infx | Difference: -18.1pp
+
+• Data.fruit_veg_intake = adequate_nutrition
+  Segment size: 15 employees (6.5% of population)
+  high_risk: 0.0% (vs 18.1% population)
+  Protection factor: infx | Difference: -18.1pp
+
+------------------------------------------------------------
+OUTLIER PATTERN ANALYSIS
+------------------------------------------------------------
+
+• Data.stress_level_irritability=often_irritated, Data.depression_mood=persistent_sadness (ELEVATED risk)
+  high_risk: 66.7% vs 18.1% population
+  Risk ratio: 3.68x | Size: 9 (3.9%)
+  Distinctive characteristics:
+    Data.activity_level: 75% no_exercise (vs 48% population)
+    Data.smoking_status: 42% daily_smoker (vs 25% population)
+    Data.stress_level_irritability: 100% often_irritated (vs 36% population)
+
+• Data.physical_pain = moderate_pain (ELEVATED risk)
+  high_risk: 61.5% vs 18.1% population
+  Risk ratio: 3.4x | Size: 13 (5.6%)
+  Distinctive characteristics:
+    Data.activity_level: 69% no_exercise (vs 48% population)
+    Data.stress_level_irritability: 54% often_irritated (vs 36% population)
+    Data.perceived_health: 38% poor_health (vs 19% population)
+
+• Data.smoking_status=daily_smoker, Data.alcohol_consumption=no_alcohol (ELEVATED risk)
+  high_risk: 56.0% vs 18.1% population
+  Risk ratio: 3.09x | Size: 25 (10.8%)
+  Distinctive characteristics:
+    Data.activity_level: 71% no_exercise (vs 48% population)
+    Data.smoking_status: 100% daily_smoker (vs 25% population)
+
+• Data.gender=female, Data.smoking_status=daily_smoker (ELEVATED risk)
+  high_risk: 54.5% vs 18.1% population
+  Risk ratio: 3.01x | Size: 33 (14.2%)
+  Distinctive characteristics:
+    Data.activity_level: 67% no_exercise (vs 48% population)
+    Data.smoking_status: 100% daily_smoker (vs 25% population)
+    Data.perceived_health: 39% poor_health (vs 19% population)
+
+• Data.stress_level_irritability=sometimes_irritated, Data.sleep_quality=insufficient_sleep (ELEVATED risk)
+  high_risk: 53.8% vs 18.1% population
+  Risk ratio: 2.97x | Size: 13 (5.6%)
+  Distinctive characteristics:
+    Data.sleep_quality: 100% insufficient_sleep (vs 14% population)
+    Data.stress_level_irritability: 100% sometimes_irritated (vs 41% population)
+    Data.perceived_health: 46% poor_health (vs 19% population)
+
+================================================================================
+ANALYSIS SUMMARY
+================================================================================
+Total records analyzed: 232
+Demographic variables analyzed: 21
+Outcome variables: health_risk_level
+Strategic combinations tested: 12
+Max segment size: 15.0%
+Min risk ratio: 2.5x
+Min sample size: 8
+
+This analysis identifies small demographic segments with disproportionate health risks
+suitable for targeted wellness interventions and LLM-based insights.
