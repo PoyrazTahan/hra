@@ -10,7 +10,7 @@ Parameters: min_sample=10, threshold=2.0σ
 SURPRISE DETECTION SUMMARY:
 Total patterns analyzed: 414
 High confidence surprises: 338
-Categories with surprises: DEMOGRAPHIC, LIFESTYLE, COMPOUND
+Categories with surprises: DEMOGRAPHIC, COMPOUND, LIFESTYLE
 
 ------------------------------------------------------------
 TOP STATISTICAL SURPRISES (ALL TARGETS)

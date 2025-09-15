@@ -17,8 +17,8 @@ from pathlib import Path
 from datetime import datetime
 import os
 
-def run_script_with_output(script_path, command_args, description):
-    """Run a script with simple output."""
+def run_script(script_path, command_args, description):
+    """Run a script that writes directly to output file."""
 
     print(f"\n{'='*60}")
     print(f"RUNNING: {description}")
@@ -28,11 +28,16 @@ def run_script_with_output(script_path, command_args, description):
     full_command = f"python {script_path} {command_args}"
 
     try:
-        result = subprocess.run(full_command, shell=True, cwd=Path.cwd())
+        result = subprocess.run(full_command, shell=True, cwd=Path.cwd(),
+                              capture_output=True, text=True)
         if result.returncode == 0:
             print(f"✓ SUCCESS")
+            if result.stdout.strip():
+                print(f"  Output: {result.stdout.strip()}")
         else:
             print(f"✗ FAILED (code {result.returncode})")
+            if result.stderr.strip():
+                print(f"  Error: {result.stderr.strip()}")
         return result.returncode == 0
     except Exception as e:
         print(f"✗ ERROR: {e}")
@@ -78,60 +83,52 @@ Examples:
     results = []
 
     # 1. Simple EDA - Comprehensive exploratory data analysis
-    success = run_script_with_output(
-        script_path="scripts_new/simple_eda.py",
-        command_args=f"--data {data_path} --output {output_dir / '01_simple_eda.txt'}",
+    success = run_script(
+        script_path="scripts/01_simple_eda.py",
+        command_args=f"{data_path} {output_dir / '01_simple_eda.txt'}",
         description="Exploratory Data Analysis (EDA) - Complete statistical overview"
     )
     results.append(("Simple EDA", success))
 
     # 2. Statistical Surprise Detection - Find unexpected patterns
-    success = run_script_with_output(
-        script_path="scripts_new/statistical_surprise.py",
-        command_args=f"--data {data_path} --threshold 2.0 --min-sample 10 --verbose --output {output_dir / '02_statistical_surprises.txt'}",
+    success = run_script(
+        script_path="scripts/02_statistical_surprise_refactored.py",
+        command_args=f"{data_path} {output_dir / '02_statistical_surprises.txt'}",
         description="Statistical Surprise Detection - Unexpected demographic/lifestyle patterns"
     )
     results.append(("Statistical Surprises", success))
 
     # 3. Demographic Outlier Spotting - Small segments with big health impacts
-    success = run_script_with_output(
-        script_path="scripts_new/demographic_outlier_spotter.py",
-        command_args=f"--data {data_path} --output {output_dir / '03_demographic_outliers.txt'}",
+    success = run_script(
+        script_path="scripts/03_demographic_outlier_spotter_refactored.py",
+        command_args=f"{data_path} {output_dir / '03_demographic_outliers.txt'}",
         description="Demographic Outlier Detection - Small segments with disproportionate health impacts"
     )
     results.append(("Demographic Outliers", success))
 
     # 4. Compound Risk Scoring - Additive Method
-    success = run_script_with_output(
-        script_path="scripts_new/compound_risk_scorer.py",
-        command_args=f"--data {data_path} --method additive --output {output_dir / '04_compound_risk_additive.txt'}",
+    success = run_script(
+        script_path="scripts/04_compound_risk_scorer_refactored.py",
+        command_args=f"{data_path} {output_dir / '04_compound_additive.txt'} --method additive",
         description="Compound Risk Scoring - Additive method for multi-factor risk assessment"
     )
     results.append(("Compound Risk (Additive)", success))
 
     # 5. Compound Risk Scoring - Interaction-Weighted Method
-    success = run_script_with_output(
-        script_path="scripts_new/compound_risk_scorer.py",
-        command_args=f"--data {data_path} --method interaction-weighted --output {output_dir / '05_compound_risk_interaction.txt'}",
+    success = run_script(
+        script_path="scripts/04_compound_risk_scorer_refactored.py",
+        command_args=f"{data_path} {output_dir / '04_compound_interaction.txt'} --method interaction-weighted",
         description="Compound Risk Scoring - Interaction-weighted method with factor amplification"
     )
     results.append(("Compound Risk (Interaction)", success))
 
-    # 6. Interaction Scanner - General Mode
-    success = run_script_with_output(
-        script_path="scripts_new/interaction_scanner.py",
-        command_args=f"--data {data_path} --mode general --output {output_dir / '06_interactions_general.txt'}",
-        description="Interaction Scanner - General mode (broad variable interaction analysis)"
+    # 6. Column Relationship Analysis - Descriptive correlations and patterns
+    success = run_script(
+        script_path="scripts/05_column_relation_analysis.py",
+        command_args=f"{data_path} {output_dir / '05_column_relationships.txt'}",
+        description="Column Relationship Analysis - Descriptive-to-descriptive correlations and clustering"
     )
-    results.append(("Interactions (General)", success))
-
-    # 7. Interaction Scanner - Focused Mode
-    success = run_script_with_output(
-        script_path="scripts_new/interaction_scanner.py",
-        command_args=f"--data {data_path} --mode focused --output {output_dir / '07_interactions_focused.txt'}",
-        description="Interaction Scanner - Focused mode (key risk factor interactions only)"
-    )
-    results.append(("Interactions (Focused)", success))
+    results.append(("Column Relationships", success))
 
     # Final Summary
     print(f"\n{'='*80}")

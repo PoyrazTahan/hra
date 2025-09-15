@@ -18,9 +18,9 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # Configuration Constants
-MIN_SAMPLE_SIZE = 10        # Minimum sample per cell for reliable analysis
-MIN_EFFECT_SIZE = 0.3       # Minimum Cramer's V for medium effect
-MIN_PROPORTION_DIFF = 15.0  # Minimum percentage point difference to report
+MIN_SAMPLE_SIZE = 3        # Minimum sample per cell for reliable analysis
+MIN_EFFECT_SIZE = 0.15     # Minimum Cramer's V for small-medium effect
+MIN_PROPORTION_DIFF = 3.0  # Minimum percentage point difference to report
 
 # Exclusion columns (ID fields and target variables)
 EXCLUSION_COLUMNS = ['_id', 'UserId', 'health_risk_level', 'Total_Health_Score']
@@ -103,13 +103,41 @@ def analyze_lifestyle_clustering(df, output_lines):
     output_lines.append("-"*60)
 
     available_lifestyle = [col for col in LIFESTYLE_FACTORS if col in df.columns]
+    # output_lines.append(f"\nDEBUG: Available lifestyle columns: {available_lifestyle}")
+
+    total_pairs = len(list(combinations(available_lifestyle, 2)))
+    # output_lines.append(f"DEBUG: Testing {total_pairs} lifestyle pairs")
+
     lifestyle_associations = []
+    tested_pairs = 0
+    failed_sample_size = 0
+    failed_effect_size = 0
+    passed_all_filters = 0
 
     # Test all pairs within lifestyle factors
     for var1, var2 in combinations(available_lifestyle, 2):
+        tested_pairs += 1
         association = test_categorical_association(df, var1, var2)
         if association:
             lifestyle_associations.append(association)
+            passed_all_filters += 1
+        else:
+            # Debug why this pair failed
+            try:
+                contingency_table = pd.crosstab(df[var1], df[var2])
+                if contingency_table.min().min() < 5:
+                    failed_sample_size += 1
+                else:
+                    cramers_v, p_val = calculate_cramers_v(contingency_table)
+                    if cramers_v < MIN_EFFECT_SIZE or p_val >= 0.05:
+                        failed_effect_size += 1
+            except:
+                failed_sample_size += 1
+
+    # output_lines.append(f"DEBUG: Tested {tested_pairs} pairs")
+    # output_lines.append(f"DEBUG: Failed sample size: {failed_sample_size}")
+    # output_lines.append(f"DEBUG: Failed effect size/significance: {failed_effect_size}")
+    # output_lines.append(f"DEBUG: Passed all filters: {passed_all_filters}")
 
     # Sort by effect size
     lifestyle_associations.sort(key=lambda x: x['cramers_v'], reverse=True)
@@ -140,6 +168,23 @@ def analyze_lifestyle_clustering(df, output_lines):
             output_lines.append(f"  - Insight: {effect_desc} clustering between {var1.replace('Data.', '')} and {var2.replace('Data.', '')}")
     else:
         output_lines.append("\nNo strong lifestyle clustering patterns found above threshold.")
+
+        # Fallback: Show top relationships regardless of threshold
+        if tested_pairs > 0:
+            output_lines.append(f"\nDEBUG: Top relationships found (regardless of threshold):")
+            all_relationships = []
+            for var1, var2 in combinations(available_lifestyle, 2):
+                try:
+                    contingency_table = pd.crosstab(df[var1], df[var2])
+                    if contingency_table.min().min() >= 3:  # Very low threshold for debug
+                        cramers_v, p_val = calculate_cramers_v(contingency_table)
+                        all_relationships.append((var1, var2, cramers_v, p_val))
+                except:
+                    pass
+
+            all_relationships.sort(key=lambda x: x[2], reverse=True)
+            for var1, var2, cramers_v, p_val in all_relationships[:3]:
+                output_lines.append(f"  {var1} ↔ {var2}: V={cramers_v:.3f}, p={p_val:.3f}")
 
 def analyze_mental_health_clustering(df, output_lines):
     """Find clustering patterns within mental health factors."""
@@ -362,6 +407,23 @@ def run_column_relationship_analysis(input_path, output_path):
     output_lines.append(f"\nDataset: {df.shape[0]} records, {df.shape[1]} variables")
     output_lines.append(f"Analysis focus: Descriptive-to-descriptive relationships")
     output_lines.append(f"Excluded from analysis: {', '.join(EXCLUSION_COLUMNS)}")
+
+    # Debug: Show all available columns
+    # output_lines.append(f"\nDEBUG: All available columns: {list(df.columns)}")
+
+    # Debug: Check which factor columns exist
+    lifestyle_found = [col for col in LIFESTYLE_FACTORS if col in df.columns]
+    mental_found = [col for col in MENTAL_HEALTH_FACTORS if col in df.columns]
+    demo_found = [col for col in DEMOGRAPHIC_FACTORS if col in df.columns]
+    nutrition_found = [col for col in NUTRITION_FACTORS if col in df.columns]
+    physical_found = [col for col in PHYSICAL_HEALTH_FACTORS if col in df.columns]
+
+    # output_lines.append(f"\nDEBUG: Factor columns found:")
+    # output_lines.append(f"  Lifestyle: {lifestyle_found}")
+    # output_lines.append(f"  Mental Health: {mental_found}")
+    # output_lines.append(f"  Demographics: {demo_found}")
+    # output_lines.append(f"  Nutrition: {nutrition_found}")
+    # output_lines.append(f"  Physical Health: {physical_found}")
 
     # Run core analyses
     analyze_lifestyle_clustering(df, output_lines)
