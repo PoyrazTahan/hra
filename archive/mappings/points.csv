@@ -1,0 +1,72 @@
+slug,PossibleAnswer,PossibleAnswerEnglish,Score
+Data.depression_anhedonia,Hiç yaşamadım,no_depression,3.0
+Data.depression_anhedonia,Ara sıra,rare_depression,2.0
+Data.depression_anhedonia,Çoğu gün,frequent_depression,1.0
+Data.depression_anhedonia,Neredeyse her gün,daily_depression,0.0
+Data.depression_mood,Hiç yaşamadım,no_depression,3.0
+Data.depression_mood,Ara sıra,rare_depression,2.0
+Data.depression_mood,Çoğu gün,frequent_depression,1.0
+Data.depression_mood,Neredeyse her gün,daily_depression,0.0
+Data.stress_level_irritability,Hiçbir zaman,never_stressed,2.0
+Data.stress_level_irritability,Neredeyse hiçbir zaman,rarely_stressed,1.5
+Data.stress_level_irritability,Bazen,sometimes_stressed,1.0
+Data.stress_level_irritability,Oldukça sık,often_stressed,0.5
+Data.stress_level_irritability,Çok sık,frequently_stressed,0.0
+Data.stress_level_loc,Hiçbir zaman,never_stressed,2.0
+Data.stress_level_loc,Neredeyse hiçbir zaman,rarely_stressed,1.5
+Data.stress_level_loc,Bazen,sometimes_stressed,1.0
+Data.stress_level_loc,Oldukça sık,often_stressed,0.5
+Data.stress_level_loc,Çok sık,frequently_stressed,0.0
+Data.loneliness,Hiçbir zaman,never_lonely,4.0
+Data.loneliness,Nadiren,rarely_lonely,3.0
+Data.loneliness,Ara sıra,sometimes_lonely,2.0
+Data.loneliness,Bazen,often_lonely,1.0
+Data.loneliness,Sık sık / Her zaman,always_lonely,0.0
+Data.sleep_quality,6 saatten az,insufficient_sleep,0.0
+Data.sleep_quality,6-7 saat,borderline_sleep,6.0
+Data.sleep_quality,7-9 saat,optimal_sleep,12.0
+Data.sleep_quality,9-10 saat,long_sleep,6.0
+Data.sleep_quality,10 saatten fazla,excessive_sleep,0.0
+Data.activity_level,Hiç yapmıyorum,no_exercise,0.0
+Data.activity_level,Haftada 1 gün,weekly_exercise,1.5
+Data.activity_level,Haftada 2–3 gün,regular_exercise,3.0
+Data.activity_level,Haftada 4–5 gün,frequent_exercise,5.0
+Data.activity_level,Haftada 5 günden fazla,daily_exercise,6.0
+Data.daily_steps,2.500 adımdan az,very_low_steps,0.0
+Data.daily_steps,2.500 - 5.000 adım,low_steps,1.0
+Data.daily_steps,5.000 - 7.500 adım,moderate_steps,3.0
+Data.daily_steps,7.500 -10.000 adım,good_steps,5.0
+Data.daily_steps,10.000'dan fazla,excellent_steps,6.0
+Data.physical_pain,Hiç ağrım olmadı,no_pain,12.0
+Data.physical_pain,Ağrım günlük işlerimi etkilemedi,minimal_pain,10.0
+Data.physical_pain,Ağrım günlük işlerimi biraz etkiledi,mild_pain,6.0
+Data.physical_pain,Ağrım günlük işlerimi orta derecede etkiledi,moderate_pain,4.0
+Data.physical_pain,Ağrım günlük işlerimi belirgin şekilde etkiledi,severe_pain,2.0
+Data.physical_pain,Ağrım günlük işlerimi ciddi şekilde kısıtladı,extreme_pain,0.0
+Data.fruit_veg_intake,Günde 1 porsiyondan az veya hiç,very_poor_nutrition,0.0
+Data.fruit_veg_intake,Günde 1-2 porsiyon,poor_nutrition,2.0
+Data.fruit_veg_intake,Günde 3 porsiyon,adequate_nutrition,4.0
+Data.fruit_veg_intake,Günde 4 porsiyon,good_nutrition,5.0
+Data.fruit_veg_intake,Günde 5 porsiyondan fazla,excellent_nutrition,6.0
+Data.sugar_intake,Haftada 1 veya hiç,minimal_sugar,3.0
+Data.sugar_intake,Haftada 2,low_sugar,2.0
+Data.sugar_intake,Haftada 3,moderate_sugar_weekly,1.0
+Data.sugar_intake,Haftada 4,frequent_sugar_weekly,0.5
+Data.sugar_intake,Haftada 5 veya daha fazla,daily_sugar_weekly,0.0
+Data.processed_food_intake,Haftada1 veya hiç,minimal_sugar,3.0
+Data.processed_food_intake,Haftada 2,low_sugar,2.0
+Data.processed_food_intake,Haftada 3,moderate_sugar_weekly,1.0
+Data.processed_food_intake,Haftada 4,frequent_sugar_weekly,0.5
+Data.processed_food_intake,Haftada 5 veya daha fazla,daily_sugar_weekly,0.0
+Data.alcohol_consumption,Hiç içmiyorum,no_alcohol,12.0
+Data.alcohol_consumption,1–6 kadeh,light_alcohol,10.0
+Data.alcohol_consumption,7–9 kadeh,moderate_light_alcohol,8.0
+Data.alcohol_consumption,10–20 kadeh,moderate_alcohol,5.0
+Data.alcohol_consumption,21–30 kadeh,heavy_alcohol,3.0
+Data.alcohol_consumption,31–50 kadeh,very_heavy_alcohol,1.0
+Data.alcohol_consumption,50+ kadeh,excessive_alcohol,0.0
+Data.smoking_status,Hiç kullanmadım,never_smoked,14.0
+Data.smoking_status,Uzun zaman önce bıraktım,former_smoker,12.0
+Data.smoking_status,"Sosyal içiciyim, bazen kullanıyorum",occasional_smoker,9.0
+Data.smoking_status,Sık sık kullanıyorum,frequent_smoker,5.0
+Data.smoking_status,Her gün kullanıyorum,daily_smoker,0.0

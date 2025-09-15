@@ -1,0 +1,79 @@
+Command: python scripts/compound_risk_scorer.py --data /Users/dogapoyraztahan/heltia/hra/preprocessed_data/HRA_data.csv --method additive\nTimestamp: 2025-08-31 14:53:06.994798\nRuntime: 0.68 seconds\nReturn code: 0\n================================================================================\nSTDOUT:\nCompound Risk Scorer
+Scoring method: additive
+Minimum sample size: 15
+Data loaded: 1000 records, 35 columns
+Risk factor groups: ['stress_factors', 'lifestyle_factors', 'demographic_factors', 'health_factors', 'behavior_factors']
+  stress_factors: ['stress_calm', 'mood_positivity', 'depression_mood', 'depression_interest']
+  lifestyle_factors: ['smoking_status', 'alcohol_level', 'exercise_freq', 'nutrition_quality', 'sleep_duration']
+  demographic_factors: ['age_group', 'gender', 'has_children', 'bmi_category']
+  health_factors: ['chronic_conditions', 'pain_level', 'health_perception']
+  behavior_factors: ['water_intake', 'sugar_frequency', 'processed_food', 'supplements', 'daily_steps']
+
+Calculating individual factor risk weights...
+Population baselines: 8.7% high risk, 33.7% elevated risk
+
+------------------------------------------------------------
+COMPOUND SCORE EVALUATION (ADDITIVE METHOD)
+------------------------------------------------------------
+
+================================================================================
+COMPOUND RISK SCORING ANALYSIS REPORT
+================================================================================
+
+SCORING METHOD: ADDITIVE
+
+------------------------------------------------------------
+COMPOUND SCORE PERFORMANCE
+------------------------------------------------------------
+
+------------------------------------------------------------
+HIGHEST IMPACT INDIVIDUAL FACTORS
+------------------------------------------------------------
+
+• stress_calm = often_stressed (AMPLIFYING)
+  Impact: 2.967x baseline | Risk rate: 100.0%
+  Sample: 179 employees | Group: stress_factors
+
+• stress_calm = mostly_stressed (AMPLIFYING)
+  Impact: 2.967x baseline | Risk rate: 100.0%
+  Sample: 61 employees | Group: stress_factors
+
+• mood_positivity = rarely_positive (AMPLIFYING)
+  Impact: 2.967x baseline | Risk rate: 100.0%
+  Sample: 179 employees | Group: stress_factors
+
+• mood_positivity = never_positive (AMPLIFYING)
+  Impact: 2.967x baseline | Risk rate: 100.0%
+  Sample: 61 employees | Group: stress_factors
+
+• smoking_status = heavy_smoker (AMPLIFYING)
+  Impact: 2.967x baseline | Risk rate: 100.0%
+  Sample: 37 employees | Group: lifestyle_factors
+
+• stress_calm = sometimes_stressed (PROTECTIVE)
+  Impact: 0.32x baseline | Risk rate: 10.8%
+  Sample: 269 employees | Group: stress_factors
+
+• mood_positivity = sometimes_positive (PROTECTIVE)
+  Impact: 0.32x baseline | Risk rate: 10.8%
+  Sample: 269 employees | Group: stress_factors
+
+• stress_calm = never_stressed (PROTECTIVE)
+  Impact: 0.405x baseline | Risk rate: 13.6%
+  Sample: 220 employees | Group: stress_factors
+
+------------------------------------------------------------
+UNDERESTIMATED RISK CASES
+------------------------------------------------------------
+Employees with low compound scores but actually high risk:
+
+• Compound score: 1.21 | Actual: high_risk
+  Profile: age_group=middle_adult, gender=female, has_children=has_children, bmi_category=obese
+
+• Compound score: 1.18 | Actual: high_risk
+  Profile: age_group=young_adult, gender=female, has_children=has_children, bmi_category=normal
+
+• Compound score: 1.17 | Actual: high_risk
+  Profile: age_group=young_adult, gender=male, has_children=no_children, bmi_category=overweight
+
+Compound risk scoring analysis complete using additive method.

@@ -1,0 +1,92 @@
+{
+  "data_path": "/Users/dogapoyraztahan/heltia/hra/preprocessed_data/HRA_data.csv",
+  "analyses_completed": [
+    {
+      "name": "Foundation EDA (Complete Statistics + Cross-Patterns)",
+      "output_file": "outputs/0_foundation_eda.txt",
+      "runtime_seconds": 0.811103,
+      "success": true
+    },
+    {
+      "name": "Statistical Surprise Detection (Broad Threshold)",
+      "output_file": "outputs/1_statistical_surprises.txt",
+      "runtime_seconds": 0.589517,
+      "success": true
+    },
+    {
+      "name": "Interaction Scanning (Exploratory - All Variables)",
+      "output_file": "outputs/2_interaction_effects.txt",
+      "runtime_seconds": 45.689324,
+      "success": true
+    },
+    {
+      "name": "Demographic Outlier Detection (Standard Settings)",
+      "output_file": "outputs/3_demographic_outliers.txt",
+      "runtime_seconds": 0.47198,
+      "success": true
+    },
+    {
+      "name": "Compound Risk Scoring (Additive Method)",
+      "output_file": "outputs/4_compound_scoring_additive.txt",
+      "runtime_seconds": 0.679546,
+      "success": true
+    },
+    {
+      "name": "Compound Risk Scoring (Interaction-Weighted Method)",
+      "output_file": "outputs/5_compound_scoring_interaction.txt",
+      "runtime_seconds": 0.617063,
+      "success": true
+    }
+  ],
+  "total_runtime_seconds": 48.861296,
+  "key_findings_summary": {
+    "foundation_eda": {
+      "status": "completed",
+      "output_file": "outputs/0_foundation_eda.txt",
+      "description": "Complete 1D and 2D statistical analysis foundation"
+    },
+    "statistical_surprises": {
+      "status": "completed",
+      "text_output": "outputs/1_statistical_surprises.txt",
+      "description": "Demographic and lifestyle subgroups with unexpected outcomes",
+      "text_file_size_kb": 4.8,
+      "key_stats": {
+        "total_surprises": 10,
+        "has_high_magnitude": false
+      }
+    },
+    "interaction_effects": {
+      "status": "completed",
+      "text_output": "outputs/2_interaction_effects.txt",
+      "description": "Variable combinations with amplified or protective effects",
+      "text_file_size_kb": 4.9,
+      "key_stats": {
+        "total_amplifications": 1,
+        "has_extreme_amplification": false
+      }
+    },
+    "demographic_outliers": {
+      "status": "completed",
+      "text_output": "outputs/3_demographic_outliers.txt",
+      "description": "Small demographic segments with disproportionate health impacts",
+      "text_file_size_kb": 4.1,
+      "key_stats": {
+        "total_outliers": 5,
+        "has_high_risk_ratios": false
+      }
+    },
+    "compound_scoring": {
+      "additive_method": {
+        "status": "completed",
+        "text_output": "outputs/4_compound_scoring_additive.txt",
+        "json_output": null
+      },
+      "interaction_method": {
+        "status": "completed",
+        "text_output": "outputs/5_compound_scoring_interaction.txt",
+        "json_output": null
+      },
+      "description": "Alternative risk scoring approaches and performance evaluation"
+    }
+  }
+}

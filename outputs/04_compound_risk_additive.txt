@@ -1,0 +1,46 @@
+Command: python scripts_new/compound_risk_scorer.py --data preprocessed_data/HRA_data.csv --method additive --min-sample 15 --verbose
+Timestamp: 2025-09-15 17:56:57.817899
+Return code: 0
+================================================================================
+STDOUT:
+Compound Risk Scorer
+Method: additive
+Minimum sample size: 15
+✓ Data loaded: 232 records, 38 columns
+
+Risk factor groups: ['demographic', 'lifestyle', 'stress', 'health']
+  demographic: 4 factors
+  lifestyle: 10 factors
+  stress: 6 factors
+  health: 1 factors
+
+Calculating factor risk weights...
+Population baselines: 18.1% high risk, 79.3% elevated risk
+
+============================================================
+COMPOUND SCORE EVALUATION (ADDITIVE METHOD)
+============================================================
+
+============================================================
+HIGH-IMPACT RISK FACTORS
+============================================================
+
+============================================================
+PREDICTION OUTLIERS
+============================================================
+
+Underestimated Risk (42 cases):
+Low compound score but actually high risk
+  Score: 1.03 | Actual: high_risk
+    Profile: age_group=young_adult, Data.gender=female, Data.has_children=no_children, bmi_category=normal_weight, Data.stress_level_irritability=frequently_irritated, Data.smoking_status=daily_smoker, Data.physical_pain=moderate_pain
+  Score: 1.00 | Actual: high_risk
+    Profile: age_group=young_adult, Data.gender=female, Data.has_children=no_children, bmi_category=overweight, Data.stress_level_irritability=frequently_irritated, Data.smoking_status=never_smoked, Data.physical_pain=moderate_pain
+  Score: 1.03 | Actual: high_risk
+    Profile: age_group=young_adult, Data.gender=male, Data.has_children=no_children, bmi_category=overweight, Data.stress_level_irritability=sometimes_irritated, Data.smoking_status=daily_smoker, Data.physical_pain=minimal_pain
+
+Overestimated Risk (0 cases):
+High compound score but actually low risk
+
+============================================================
+COMPOUND RISK SCORING COMPLETE
+============================================================

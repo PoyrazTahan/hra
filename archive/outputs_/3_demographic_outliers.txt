@@ -1,0 +1,94 @@
+Command: python scripts/demographic_outlier_spotter.py --data /Users/dogapoyraztahan/heltia/hra/preprocessed_data/HRA_data.csv --max-size 5.0 --min-risk-ratio 1.8 --min-sample 10\nTimestamp: 2025-08-31 14:53:06.522352\nRuntime: 0.47 seconds\nReturn code: 0\n================================================================================\nSTDOUT:\nDemographic Outlier Spotter
+Max segment size: 5.0% of population
+Min risk ratio: 1.8x
+Min sample size: 10
+Data loaded: 1000 records, 35 columns
+Demographic variables: ['age_group', 'gender', 'has_children', 'bmi_category', 'chronic_conditions', 'supplements', 'health_perception']
+Outcome variables: ['health_risk_level', 'health_risk_score']
+
+Analyzing single-variable demographic outliers...
+
+Analyzing two-variable demographic combinations...
+
+================================================================================
+DEMOGRAPHIC OUTLIER ANALYSIS REPORT
+================================================================================
+
+OUTLIER DETECTION SUMMARY:
+Total outlier segments found: 259
+Risk ratio threshold: 1.8x
+Max segment size: 5.0% of population
+Elevated risk segments: 104
+Protected segments: 155
+
+------------------------------------------------------------
+HIGHEST RISK DEMOGRAPHIC OUTLIERS
+------------------------------------------------------------
+
+• bmi_category=underweight, health_perception=excellent_health
+  Segment size: 10 employees (1.0% of population)
+  high_risk: 30.0% (vs 8.7% population)
+  Risk ratio: 3.45x | Difference: +21.3pp
+
+• bmi_category=underweight, health_perception=excellent_health
+  Segment size: 10 employees (1.0% of population)
+  high_score: 30.0% (vs 8.7% population)
+  Risk ratio: 3.45x | Difference: +21.3pp
+
+• bmi_category=obese, health_perception=fair_health
+  Segment size: 29 employees (2.9% of population)
+  high_risk: 27.6% (vs 8.7% population)
+  Risk ratio: 3.17x | Difference: +18.9pp
+
+• bmi_category=obese, health_perception=fair_health
+  Segment size: 29 employees (2.9% of population)
+  high_score: 27.6% (vs 8.7% population)
+  Risk ratio: 3.17x | Difference: +18.9pp
+
+• bmi_category=obese, chronic_conditions=hypertension
+  Segment size: 11 employees (1.1% of population)
+  high_risk: 27.3% (vs 8.7% population)
+  Risk ratio: 3.13x | Difference: +18.6pp
+
+------------------------------------------------------------
+STRONGEST DEMOGRAPHIC PROTECTION
+------------------------------------------------------------
+
+• age_group = senior
+  Segment size: 34 employees (3.4% of population)
+  high_risk: 0.0% (vs 8.7% population)
+  Protection factor: infx | Difference: -8.7pp
+
+• age_group = senior
+  Segment size: 34 employees (3.4% of population)
+  high_score: 0.0% (vs 8.7% population)
+  Protection factor: infx | Difference: -8.7pp
+
+• age_group=young_adult, gender=prefer_not_say
+  Segment size: 23 employees (2.3% of population)
+  high_risk: 0.0% (vs 8.7% population)
+  Protection factor: infx | Difference: -8.7pp
+
+------------------------------------------------------------
+OUTLIER SEGMENT CHARACTERISTICS
+------------------------------------------------------------
+
+• bmi_category=underweight, health_perception=excellent_health (ELEVATED risk)
+  Distinctive characteristics vs population:
+    exercise_freq: 40.0% no_exercise (+20.4pp more than population)
+    water_intake: 50.0% adequate_water (+20.1pp more than population)
+    sleep_duration: 40.0% excessive_sleep (+17.8pp more than population)
+
+• bmi_category=underweight, health_perception=excellent_health (ELEVATED risk)
+  Distinctive characteristics vs population:
+    exercise_freq: 40.0% no_exercise (+20.4pp more than population)
+    water_intake: 50.0% adequate_water (+20.1pp more than population)
+    sleep_duration: 40.0% excessive_sleep (+17.8pp more than population)
+
+• bmi_category=obese, chronic_conditions=hypertension (ELEVATED risk)
+  Distinctive characteristics vs population:
+    stress_calm: 54.5% often_stressed (+36.6pp more than population)
+    mood_positivity: 54.5% rarely_positive (+36.6pp more than population)
+    stress_calm: 9.1% rarely_stressed (-18.0pp less than population)
+
+Analysis complete. 259 demographic outliers detected.

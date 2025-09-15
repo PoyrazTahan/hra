@@ -1,0 +1,112 @@
+Command: python scripts/interaction_scanner.py --data /Users/dogapoyraztahan/heltia/hra/preprocessed_data/HRA_data.csv --threshold 1.8\nTimestamp: 2025-08-31 14:52:20.832531\nRuntime: 45.69 seconds\nReturn code: 0\n================================================================================\nSTDOUT:\nInteraction Effect Scanner v2
+Amplification threshold: 1.8x
+Minimum sample size: 15
+Data loaded: 1000 records, 35 columns
+Testing: 31 predictors against 2 outcomes
+
+Testing 930 variable pair × outcome combinations...
+Found 643 meaningful interactions
+
+================================================================================
+INTERACTION EFFECT ANALYSIS REPORT
+================================================================================
+
+SUMMARY:
+Total meaningful interactions: 643
+Amplification threshold: 1.8x
+High amplification patterns: 467
+Protective patterns: 529
+
+------------------------------------------------------------
+HIGH RISK AMPLIFICATION PATTERNS
+------------------------------------------------------------
+
+1. sleep_refreshed × activity_level → health_risk_level
+   Population baseline: 8.7%
+   High-risk combinations:
+     • rarely_positive + sedentary: 100.0% (11.49x baseline, n=22)
+     • never_positive + high_activity: 100.0% (11.49x baseline, n=18)
+
+2. sleep_refreshed × water_intake → health_risk_level
+   Population baseline: 8.7%
+   High-risk combinations:
+     • never_positive + good_water: 100.0% (11.49x baseline, n=16)
+     • never_positive + low_water: 100.0% (11.49x baseline, n=16)
+     • rarely_positive + very_low_water: 26.3% (3.02x baseline, n=19)
+
+3. sleep_refreshed × has_children → health_risk_level
+   Population baseline: 8.7%
+   High-risk combinations:
+     • never_positive + has_children: 100.0% (11.49x baseline, n=33)
+     • never_positive + no_children: 100.0% (11.49x baseline, n=28)
+
+4. sleep_refreshed × stress_calm → health_risk_level
+   Population baseline: 8.7%
+   High-risk combinations:
+     • never_positive + mostly_stressed: 100.0% (11.49x baseline, n=61)
+
+5. sleep_refreshed × sugar_frequency → health_risk_level
+   Population baseline: 8.7%
+   High-risk combinations:
+     • never_positive + moderate_sugar: 100.0% (11.49x baseline, n=16)
+     • never_positive + rare_sugar: 100.0% (11.49x baseline, n=17)
+
+6. sleep_refreshed × smoking_status → health_risk_level
+   Population baseline: 8.7%
+   High-risk combinations:
+     • never_positive + non_smoker: 100.0% (11.49x baseline, n=39)
+
+7. sleep_refreshed × mood_positivity → health_risk_level
+   Population baseline: 8.7%
+   High-risk combinations:
+     • never_positive + never_positive: 100.0% (11.49x baseline, n=61)
+
+8. sleep_refreshed × gender → health_risk_level
+   Population baseline: 8.7%
+   High-risk combinations:
+     • never_positive + female: 100.0% (11.49x baseline, n=29)
+     • never_positive + male: 100.0% (11.49x baseline, n=23)
+     • rarely_positive + male: 21.2% (2.43x baseline, n=85)
+
+9. sleep_refreshed × supplements → health_risk_level
+   Population baseline: 8.7%
+   High-risk combinations:
+     • never_positive + yes: 100.0% (11.49x baseline, n=27)
+     • never_positive + no: 100.0% (11.49x baseline, n=34)
+
+10. sleep_refreshed × health_perception → health_risk_level
+   Population baseline: 8.7%
+   High-risk combinations:
+     • never_positive + fair_health: 100.0% (11.49x baseline, n=26)
+     • rarely_positive + excellent_health: 21.1% (2.42x baseline, n=19)
+     • rarely_positive + very_poor_health: 20.0% (2.3x baseline, n=15)
+
+------------------------------------------------------------
+PROTECTIVE COMBINATION PATTERNS
+------------------------------------------------------------
+• sleep_refreshed × activity_level → health_risk_level
+  Population baseline: 8.7%
+  Protective combinations:
+    sometimes_positive + moderate_activity: 0.0% (-8.7% protection, n=74)
+    sometimes_positive + high_activity: 0.0% (-8.7% protection, n=78)
+• sleep_refreshed × water_intake → health_risk_level
+  Population baseline: 8.7%
+  Protective combinations:
+    sometimes_positive + good_water: 0.0% (-8.7% protection, n=63)
+• sleep_refreshed × has_children → health_risk_level
+  Population baseline: 8.7%
+  Protective combinations:
+    sometimes_positive + has_children: 0.0% (-8.7% protection, n=150)
+    sometimes_positive + no_children: 0.0% (-8.7% protection, n=118)
+• sleep_refreshed × stress_calm → health_risk_level
+  Population baseline: 8.7%
+  Protective combinations:
+    sometimes_positive + sometimes_stressed: 0.0% (-8.7% protection, n=269)
+    often_positive + rarely_stressed: 0.0% (-8.7% protection, n=271)
+• sleep_refreshed × sugar_frequency → health_risk_level
+  Population baseline: 8.7%
+  Protective combinations:
+    sometimes_positive + frequent_sugar: 0.0% (-8.7% protection, n=53)
+    sometimes_positive + moderate_sugar: 0.0% (-8.7% protection, n=65)
+
+Analysis complete. 643 interactions detected.

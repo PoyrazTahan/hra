@@ -1,0 +1,142 @@
+Command: python scripts_new/interaction_scanner.py --data preprocessed_data/HRA_data.csv --mode general --threshold 1.7 --min-sample 15
+Timestamp: 2025-09-15 17:57:09.387832
+Return code: 0
+================================================================================
+STDOUT:
+Interaction Effect Scanner
+Mode: general - Broad analysis across all meaningful variables
+Threshold: 1.7x amplification
+Minimum sample: 15
+✓ Data loaded: 232 records, 38 columns
+Auto-excluded: ['_id', 'UserId', 'Perceived_Health_Score', 'thyroid_disorder_status', 'kidney_disease_status']
+Testing: 31 predictors against 2 outcomes
+
+Testing 930 variable pair × outcome combinations...
+Limiting to top 1000 most promising combinations
+Found 278 meaningful interactions
+
+================================================================================
+INTERACTION EFFECT ANALYSIS REPORT
+================================================================================
+
+SUMMARY:
+Total meaningful interactions: 278
+High amplifiers (3.0x+): 32
+Moderate amplifiers (2.0x+): 158
+Protective effects (<0.5x): 275
+
+------------------------------------------------------------
+HIGH AMPLIFICATION PATTERNS (3.0x+ RISK)
+------------------------------------------------------------
+
+1. poor_health + daily_smoker → health_risk_level
+   Risk Rate: 81.2% (vs 19.0% baseline)
+   Amplification: 4.28x | Sample: n=16
+
+2. often_irritated + daily_smoker → health_risk_level
+   Risk Rate: 75.0% (vs 19.0% baseline)
+   Amplification: 3.95x | Sample: n=16
+
+3. severe_anhedonia + no_exercise → health_risk_level
+   Risk Rate: 68.8% (vs 19.0% baseline)
+   Amplification: 3.62x | Sample: n=16
+
+4. no_exercise + daily_smoker → health_risk_level
+   Risk Rate: 68.8% (vs 19.0% baseline)
+   Amplification: 3.62x | Sample: n=32
+
+5. poor_health + very_low_steps → health_risk_level
+   Risk Rate: 66.7% (vs 19.0% baseline)
+   Amplification: 3.52x | Sample: n=18
+
+6. persistent_sadness + no_exercise → health_risk_level
+   Risk Rate: 66.7% (vs 19.0% baseline)
+   Amplification: 3.52x | Sample: n=18
+
+7. low_water + daily_smoker → health_risk_level
+   Risk Rate: 66.7% (vs 19.0% baseline)
+   Amplification: 3.52x | Sample: n=15
+
+8. daily_smoker + overweight → health_risk_level
+   Risk Rate: 65.0% (vs 19.0% baseline)
+   Amplification: 3.43x | Sample: n=20
+
+9. severe_anhedonia + no_heart_disease → health_risk_level
+   Risk Rate: 63.6% (vs 19.0% baseline)
+   Amplification: 3.36x | Sample: n=22
+
+10. severe_anhedonia + no_cancer → health_risk_level
+   Risk Rate: 63.6% (vs 19.0% baseline)
+   Amplification: 3.36x | Sample: n=22
+
+------------------------------------------------------------
+MODERATE AMPLIFICATION PATTERNS (2.0x+ RISK)
+------------------------------------------------------------
+
+1. daily_smoker + young_adult → health_risk_level
+   Risk Rate: 56.8% (vs 19.0% baseline)
+   Amplification: 2.99x | Sample: n=37
+
+2. persistent_sadness + no_hypertension → health_risk_level
+   Risk Rate: 56.5% (vs 19.0% baseline)
+   Amplification: 2.98x | Sample: n=23
+
+3. persistent_sadness + no_cancer → health_risk_level
+   Risk Rate: 56.5% (vs 19.0% baseline)
+   Amplification: 2.98x | Sample: n=23
+
+4. always_lonely + no_exercise → health_risk_level
+   Risk Rate: 56.5% (vs 19.0% baseline)
+   Amplification: 2.98x | Sample: n=23
+
+5. no_children + severe_anhedonia → health_risk_level
+   Risk Rate: 56.2% (vs 19.0% baseline)
+   Amplification: 2.97x | Sample: n=16
+
+6. moderate_anhedonia + very_low_steps → health_risk_level
+   Risk Rate: 56.2% (vs 19.0% baseline)
+   Amplification: 2.97x | Sample: n=16
+
+7. frequent_sadness + very_low_steps → health_risk_level
+   Risk Rate: 56.2% (vs 19.0% baseline)
+   Amplification: 2.97x | Sample: n=16
+
+8. always_lonely + young_adult → health_risk_level
+   Risk Rate: 55.6% (vs 19.0% baseline)
+   Amplification: 2.93x | Sample: n=27
+
+9. daily_smoker + not_using_supplements → health_risk_level
+   Risk Rate: 55.6% (vs 19.0% baseline)
+   Amplification: 2.93x | Sample: n=36
+
+10. no_children + persistent_sadness → health_risk_level
+   Risk Rate: 55.0% (vs 19.0% baseline)
+   Amplification: 2.9x | Sample: n=20
+
+------------------------------------------------------------
+PROTECTIVE EFFECT PATTERNS (<0.5x RISK)
+------------------------------------------------------------
+
+1. female + positive_mood → health_risk_level
+   Risk Rate: 0.0% (vs 19.0% baseline)
+   Protection: 100% risk reduction | Sample: n=15
+
+2. female + good_steps → health_risk_level
+   Risk Rate: 0.0% (vs 19.0% baseline)
+   Protection: 100% risk reduction | Sample: n=24
+
+3. male + no_pain → health_risk_level
+   Risk Rate: 0.0% (vs 19.0% baseline)
+   Protection: 100% risk reduction | Sample: n=19
+
+4. male + normal_weight → health_risk_level
+   Risk Rate: 0.0% (vs 19.0% baseline)
+   Protection: 100% risk reduction | Sample: n=21
+
+5. has_children + good_health → health_risk_level
+   Risk Rate: 0.0% (vs 19.0% baseline)
+   Protection: 100% risk reduction | Sample: n=21
+
+================================================================================
+INTERACTION ANALYSIS COMPLETE
+================================================================================

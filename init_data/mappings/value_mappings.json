@@ -1,0 +1,377 @@
+{
+  "Data.perceived_health": {
+    "answer_field": "SingleSelection",
+    "category": "mental_health",
+    "mappings": {
+      "english": {
+        "Hiç iyi hissetmiyorum": "very_poor_health",
+        "Pek iyi hissetmiyorum": "poor_health",
+        "Ne iyi ne kötü": "fair_health",
+        "Oldukça iyi hissediyorum": "good_health",
+        "Çok iyi ve zinde hissediyorum": "excellent_health"
+      },
+      "score": {
+        "Hiç iyi hissetmiyorum": 0,
+        "Pek iyi hissetmiyorum": 1,
+        "Ne iyi ne kötü": 2,
+        "Oldukça iyi hissediyorum": 3,
+        "Çok iyi ve zinde hissediyorum": 4
+      }
+    }
+  },
+  "Data.depression_anhedonia": {
+    "answer_field": "SingleSelection",
+    "category": "mental_health",
+    "mappings": {
+      "english": {
+        "Hiç yaşamadım": "full_interest_pleasure",
+        "Ara sıra": "mild_anhedonia",
+        "Çoğu gün": "moderate_anhedonia",
+        "Neredeyse her gün": "severe_anhedonia"
+      },
+      "score": {
+        "Hiç yaşamadım": 3.0,
+        "Ara sıra": 2.0,
+        "Çoğu gün": 1.0,
+        "Neredeyse her gün": 0.0
+      }
+    }
+  },
+  "Data.depression_mood": {
+    "answer_field": "SingleSelection",
+    "category": "mental_health",
+    "mappings": {
+      "english": {
+        "Hiç yaşamadım": "positive_mood",
+        "Ara sıra": "occasional_sadness",
+        "Çoğu gün": "frequent_sadness",
+        "Neredeyse her gün": "persistent_sadness"
+      },
+      "score": {
+        "Hiç yaşamadım": 3.0,
+        "Ara sıra": 2.0,
+        "Çoğu gün": 1.0,
+        "Neredeyse her gün": 0.0
+      }
+    }
+  },
+  "Data.stress_level_irritability": {
+    "answer_field": "SingleSelection",
+    "category": "mental_health",
+    "mappings": {
+      "english": {
+        "Hiçbir zaman": "never_irritated",
+        "Neredeyse hiçbir zaman": "rarely_irritated",
+        "Bazen": "sometimes_irritated",
+        "Oldukça sık": "often_irritated",
+        "Çok sık": "frequently_irritated"
+      },
+      "score": {
+        "Hiçbir zaman": 2.0,
+        "Neredeyse hiçbir zaman": 1.5,
+        "Bazen": 1.0,
+        "Oldukça sık": 0.5,
+        "Çok sık": 0.0
+      }
+    }
+  },
+  "Data.stress_level_loc": {
+    "category": "mental_health",
+    "mappings": {
+      "english": {
+        "Hiçbir zaman": "always_in_control",
+        "Neredeyse hiçbir zaman": "mostly_in_control",
+        "Bazen": "sometimes_out_of_control",
+        "Oldukça sık": "often_out_of_control",
+        "Çok sık": "frequently_out_of_control"
+      },
+      "score": {
+        "Hiçbir zaman": 2.0,
+        "Neredeyse hiçbir zaman": 1.5,
+        "Bazen": 1.0,
+        "Oldukça sık": 0.5,
+        "Çok sık": 0.0
+      }
+    },
+    "answer_field": "SingleSelection"
+  },
+  "Data.loneliness": {
+    "answer_field": "SingleSelection",
+    "category": "mental_health",
+    "mappings": {
+      "english": {
+        "Hiçbir zaman": "never_lonely",
+        "Nadiren": "rarely_lonely",
+        "Ara sıra": "sometimes_lonely",
+        "Bazen": "often_lonely",
+        "Sık sık / Her zaman": "always_lonely"
+      },
+      "score": {
+        "Hiçbir zaman": 4.0,
+        "Nadiren": 3.0,
+        "Ara sıra": 2.0,
+        "Bazen": 1.0,
+        "Sık sık / Her zaman": 0.0
+      }
+    }
+  },
+  "Data.sleep_quality": {
+    "answer_field": "SingleSelection",
+    "category": "sleep",
+    "mappings": {
+      "english": {
+        "6 saatten az": "insufficient_sleep",
+        "6-7 saat": "borderline_sleep",
+        "7-9 saat": "optimal_sleep",
+        "9-10 saat": "long_sleep",
+        "10 saatten fazla": "excessive_sleep"
+      },
+      "score": {
+        "6 saatten az": 0.0,
+        "6-7 saat": 6.0,
+        "7-9 saat": 12.0,
+        "9-10 saat": 6.0,
+        "10 saatten fazla": 0.0
+      }
+    }
+  },
+  "Data.activity_level": {
+    "answer_field": "SingleSelection",
+    "category": "activity_level",
+    "mappings": {
+      "english": {
+        "Hiç yapmıyorum": "no_exercise",
+        "Haftada 1 gün": "weekly_exercise",
+        "Haftada 2–3 gün": "regular_exercise",
+        "Haftada 4–5 gün": "frequent_exercise",
+        "Haftada 5 günden fazla": "daily_exercise"
+      },
+      "score": {
+        "Hiç yapmıyorum": 0.0,
+        "Haftada 1 gün": 1.5,
+        "Haftada 2–3 gün": 3.0,
+        "Haftada 4–5 gün": 5.0,
+        "Haftada 5 günden fazla": 6.0
+      }
+    }
+  },
+  "Data.daily_steps": {
+    "answer_field": "SingleSelection",
+    "category": "activity_level",
+    "mappings": {
+      "english": {
+        "2.500 adımdan az": "very_low_steps",
+        "2.500 - 5.000 adım": "low_steps",
+        "5.000 - 7.500 adım": "moderate_steps",
+        "7.500 -10.000 adım": "good_steps",
+        "10.000'dan fazla": "excellent_steps"
+      },
+      "score": {
+        "2.500 adımdan az": 0.0,
+        "2.500 - 5.000 adım": 1.0,
+        "5.000 - 7.500 adım": 3.0,
+        "7.500 -10.000 adım": 5.0,
+        "10.000'dan fazla": 6.0
+      }
+    }
+  },
+  "Data.physical_pain": {
+    "answer_field": "SingleSelection",
+    "category": "physical_health",
+    "mappings": {
+      "english": {
+        "Hiç ağrım olmadı": "no_pain",
+        "Ağrım günlük işlerimi etkilemedi": "minimal_pain",
+        "Ağrım günlük işlerimi biraz etkiledi": "mild_pain",
+        "Ağrım günlük işlerimi orta derecede etkiledi": "moderate_pain",
+        "Ağrım günlük işlerimi belirgin şekilde etkiledi": "severe_pain",
+        "Ağrım günlük işlerimi ciddi şekilde kısıtladı": "extreme_pain"
+      },
+      "score": {
+        "Hiç ağrım olmadı": 12.0,
+        "Ağrım günlük işlerimi etkilemedi": 10.0,
+        "Ağrım günlük işlerimi biraz etkiledi": 6.0,
+        "Ağrım günlük işlerimi orta derecede etkiledi": 4.0,
+        "Ağrım günlük işlerimi belirgin şekilde etkiledi": 2.0,
+        "Ağrım günlük işlerimi ciddi şekilde kısıtladı": 0.0
+      }
+    }
+  },
+  "Data.fruit_veg_intake": {
+    "answer_field": "SingleSelection",
+    "category": "nutrition",
+    "mappings": {
+      "english": {
+        "Günde 1 porsiyondan az veya hiç": "very_poor_nutrition",
+        "Günde 1-2 porsiyon": "poor_nutrition",
+        "Günde 3 porsiyon": "adequate_nutrition",
+        "Günde 4 porsiyon": "good_nutrition",
+        "Günde 5 porsiyondan fazla": "excellent_nutrition"
+      },
+      "score": {
+        "Günde 1 porsiyondan az veya hiç": 0.0,
+        "Günde 1-2 porsiyon": 2.0,
+        "Günde 3 porsiyon": 4.0,
+        "Günde 4 porsiyon": 5.0,
+        "Günde 5 porsiyondan fazla": 6.0
+      }
+    }
+  },
+  "Data.sugar_intake": {
+    "answer_field": "SingleSelection",
+    "category": "nutrition",
+    "mappings": {
+      "english": {
+        "Haftada 1 veya hiç": "minimal_sugar",
+        "Haftada 2": "low_sugar",
+        "Haftada 3": "moderate_sugar_weekly",
+        "Haftada 4": "frequent_sugar_weekly",
+        "Haftada 5 veya daha fazla": "daily_sugar_weekly"
+      },
+      "score": {
+        "Haftada 1 veya hiç": 3.0,
+        "Haftada 2": 2.0,
+        "Haftada 3": 1.0,
+        "Haftada 4": 0.5,
+        "Haftada 5 veya daha fazla": 0.0
+      }
+    }
+  },
+  "Data.processed_food_intake": {
+    "answer_field": "SingleSelection",
+    "category": "nutrition",
+    "mappings": {
+      "english": {
+        "Haftada 1 veya hiç": "minimal_processed_food",
+        "Haftada 2": "low_processed_food",
+        "Haftada 3": "moderate_processed_food_weekly",
+        "Haftada 4": "frequent_processed_food_weekly",
+        "Haftada 5 veya daha fazla": "daily_processed_food_weekly"
+      },
+      "score": {
+        "Haftada1 veya hiç": 3.0,
+        "Haftada 2": 2.0,
+        "Haftada 3": 1.0,
+        "Haftada 4": 0.5,
+        "Haftada 5 veya daha fazla": 0.0
+      }
+    }
+  },
+  "Data.water_intake": {
+    "answer_field": "SingleSelection",
+    "category": "nutrition",
+    "mappings": {
+      "english": {
+        "1-2 bardak (200-400 ml)": "very_low_water",
+        "3-4 bardak (600-800 ml)": "low_water",
+        "5-6 bardak (1000-1200 ml)": "adequate_water",
+        "7-8 bardak (1400-1600 ml)": "good_water",
+        "8 bardaktan fazla (+1600 ml)": "high_water"
+      }
+    }
+  },
+  "Data.alcohol_consumption": {
+    "answer_field": "SingleSelection",
+    "category": "lifestyle",
+    "mappings": {
+      "english": {
+        "Hiç içmiyorum": "no_alcohol",
+        "1–6 kadeh": "light_alcohol",
+        "7–9 kadeh": "moderate_light_alcohol",
+        "10–20 kadeh": "moderate_alcohol",
+        "21–30 kadeh": "heavy_alcohol",
+        "31–50 kadeh": "very_heavy_alcohol",
+        "50+ kadeh": "excessive_alcohol"
+      },
+      "score": {
+        "Hiç içmiyorum": 12.0,
+        "1–6 kadeh": 10.0,
+        "7–9 kadeh": 8.0,
+        "10–20 kadeh": 5.0,
+        "21–30 kadeh": 3.0,
+        "31–50 kadeh": 1.0,
+        "50+ kadeh": 0.0
+      }
+    }
+  },
+  "Data.smoking_status": {
+    "answer_field": "SingleSelection",
+    "category": "lifestyle",
+    "mappings": {
+      "english": {
+        "Hiç kullanmadım": "never_smoked",
+        "Uzun zaman önce bıraktım": "former_smoker",
+        "Sosyal içiciyim, bazen kullanıyorum": "occasional_smoker",
+        "Sık sık kullanıyorum": "frequent_smoker",
+        "Her gün kullanıyorum": "daily_smoker"
+      },
+      "score": {
+        "Hiç kullanmadım": 14.0,
+        "Uzun zaman önce bıraktım": 12.0,
+        "Sosyal içiciyim, bazen kullanıyorum": 9.0,
+        "Sık sık kullanıyorum": 5.0,
+        "Her gün kullanıyorum": 0.0
+      }
+    }
+  },
+  "Data.chronic_conditions": {
+    "answer_field": "MultiSelection",
+    "category": "health_conditions",
+    "mappings": {
+      "english": {
+        "Hayır yok": "no_chronic_conditions",
+        "Diabet": "diabetes",
+        "Tiroid": "thyroid_disorder",
+        "Böbrek": "kidney_disease",
+        "Kalp": "heart_disease",
+        "Obezite": "obesity",
+        "Hipertansiyon": "hypertension",
+        "Kanser": "cancer",
+        "Diğer": "other_condition"
+      },
+      "binary_values": {
+        "Diabet": {"1": "has_diabetes", "0": "no_diabetes"},
+        "Tiroid": {"1": "has_thyroid", "0": "no_thyroid"},
+        "Böbrek": {"1": "has_kidney_disease", "0": "no_kidney_disease"},
+        "Kalp": {"1": "has_heart_disease", "0": "no_heart_disease"},
+        "Obezite": {"1": "has_obesity", "0": "no_obesity"},
+        "Hipertansiyon": {"1": "has_hypertension", "0": "no_hypertension"},
+        "Kanser": {"1": "has_cancer", "0": "no_cancer"},
+        "Diğer": {"1": "has_other_condition", "0": "no_other_condition"}
+      }
+    }
+  },
+  "Data.supplement_usage": {
+    "answer_field": "SingleSelection",
+    "category": "health_conditions",
+    "mappings": {
+      "english": {
+        "Evet kullanıyorum": "using_supplements",
+        "Hayır kullanmıyorum": "not_using_supplements"
+      }
+    }
+  },
+  "Data.gender": {
+    "answer_field": "SingleSelection",
+    "category": "other",
+    "mappings": {
+      "english": {
+        "Erkek": "male",
+        "Kadın": "female",
+        "Belirtmek istemiyorum": "prefer_not_say",
+        "Diğer": "other"
+      }
+    }
+  },
+  "Data.has_children": {
+    "answer_field": "SingleSelection",
+    "category": "other",
+    "mappings": {
+      "english": {
+        "Çocuğum yok": "no_children",
+        "Çocuğum var": "has_children",
+        "Partnerim hamile": "partner_pregnant"
+      }
+    }
+  }
+}

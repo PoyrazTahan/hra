@@ -1,0 +1,410 @@
+{
+  "dataset_info": {
+    "name": "Heltia HRA Processed Data",
+    "total_records": 1000,
+    "total_columns": 35,
+    "processing_date": "2025-08-29T16:08:20.661031"
+  },
+  "columns": {
+    "record_id": {
+      "data_type": "object",
+      "non_null_count": "1000",
+      "null_count": "0"
+    },
+    "user_id": {
+      "data_type": "object",
+      "non_null_count": "1000",
+      "null_count": "0"
+    },
+    "sleep_refreshed": {
+      "data_type": "category",
+      "non_null_count": "1000",
+      "null_count": "0",
+      "unique_values": {
+        "often_positive": 271,
+        "sometimes_positive": 269,
+        "mostly_positive": 220,
+        "rarely_positive": 179,
+        "never_positive": 61
+      }
+    },
+    "activity_level": {
+      "data_type": "category",
+      "non_null_count": "1000",
+      "null_count": "0",
+      "unique_values": {
+        "moderate_activity": 304,
+        "high_activity": 260,
+        "light_activity": 236,
+        "very_high_activity": 106,
+        "sedentary": 94
+      }
+    },
+    "water_intake": {
+      "data_type": "category",
+      "non_null_count": "1000",
+      "null_count": "0",
+      "unique_values": {
+        "adequate_water": 299,
+        "good_water": 230,
+        "low_water": 203,
+        "high_water": 137,
+        "very_low_water": 123,
+        "unknown": 8
+      }
+    },
+    "height_cm": {
+      "data_type": "float64",
+      "non_null_count": "992",
+      "null_count": "8",
+      "statistics": {
+        "mean": 167.1209677419355,
+        "median": 167.0,
+        "min": 142.0,
+        "max": 196.0
+      }
+    },
+    "has_children": {
+      "data_type": "category",
+      "non_null_count": "1000",
+      "null_count": "0",
+      "unique_values": {
+        "has_children": 533,
+        "no_children": 454,
+        "pregnant": 13
+      }
+    },
+    "stress_calm": {
+      "data_type": "category",
+      "non_null_count": "1000",
+      "null_count": "0",
+      "unique_values": {
+        "rarely_stressed": 271,
+        "sometimes_stressed": 269,
+        "never_stressed": 220,
+        "often_stressed": 179,
+        "mostly_stressed": 61
+      }
+    },
+    "sugar_frequency": {
+      "data_type": "category",
+      "non_null_count": "1000",
+      "null_count": "0",
+      "unique_values": {
+        "rare_sugar": 298,
+        "moderate_sugar": 292,
+        "frequent_sugar": 197,
+        "no_sugar": 146,
+        "daily_sugar": 67
+      }
+    },
+    "weight_kg": {
+      "data_type": "float64",
+      "non_null_count": "996",
+      "null_count": "4",
+      "statistics": {
+        "mean": 69.16767068273093,
+        "median": 67.0,
+        "min": 37.0,
+        "max": 160.0
+      }
+    },
+    "smoking_status": {
+      "data_type": "category",
+      "non_null_count": "1000",
+      "null_count": "0",
+      "unique_values": {
+        "non_smoker": 649,
+        "social_smoker": 174,
+        "light_smoker": 93,
+        "heavy_smoker": 37,
+        "moderate_smoker": 37,
+        "very_heavy_smoker": 10
+      }
+    },
+    "mood_positivity": {
+      "data_type": "category",
+      "non_null_count": "1000",
+      "null_count": "0",
+      "unique_values": {
+        "often_positive": 271,
+        "sometimes_positive": 269,
+        "mostly_positive": 220,
+        "rarely_positive": 179,
+        "never_positive": 61
+      }
+    },
+    "gender": {
+      "data_type": "category",
+      "non_null_count": "1000",
+      "null_count": "0",
+      "unique_values": {
+        "female": 460,
+        "male": 446,
+        "prefer_not_say": 77,
+        "other": 17
+      }
+    },
+    "supplements": {
+      "data_type": "category",
+      "non_null_count": "1000",
+      "null_count": "0",
+      "unique_values": {
+        "no": 552,
+        "yes": 448
+      }
+    },
+    "age": {
+      "data_type": "int64",
+      "non_null_count": "1000",
+      "null_count": "0",
+      "statistics": {
+        "mean": 34.478,
+        "median": 34.0,
+        "min": 18.0,
+        "max": 65.0
+      }
+    },
+    "health_perception": {
+      "data_type": "category",
+      "non_null_count": "1000",
+      "null_count": "0",
+      "unique_values": {
+        "good_health": 283,
+        "fair_health": 269,
+        "poor_health": 208,
+        "excellent_health": 142,
+        "very_poor_health": 98
+      }
+    },
+    "depression_interest": {
+      "data_type": "category",
+      "non_null_count": "1000",
+      "null_count": "0",
+      "unique_values": {
+        "no_depression": 477,
+        "rare_depression": 302,
+        "frequent_depression": 156,
+        "daily_depression": 65
+      }
+    },
+    "depression_mood": {
+      "data_type": "category",
+      "non_null_count": "1000",
+      "null_count": "0",
+      "unique_values": {
+        "no_depression": 498,
+        "rare_depression": 273,
+        "frequent_depression": 154,
+        "daily_depression": 75
+      }
+    },
+    "stress_irritable": {
+      "data_type": "category",
+      "non_null_count": "1000",
+      "null_count": "0",
+      "unique_values": {
+        "often_stressed": 220,
+        "never_stressed": 207,
+        "frequently_stressed": 194,
+        "sometimes_stressed": 191,
+        "rarely_stressed": 188
+      }
+    },
+    "stress_control": {
+      "data_type": "category",
+      "non_null_count": "1000",
+      "null_count": "0",
+      "unique_values": {
+        "frequently_stressed": 232,
+        "rarely_stressed": 206,
+        "never_stressed": 205,
+        "often_stressed": 187,
+        "sometimes_stressed": 170
+      }
+    },
+    "loneliness": {
+      "data_type": "category",
+      "non_null_count": "1000",
+      "null_count": "0",
+      "unique_values": {
+        "never_lonely": 207,
+        "often_lonely": 207,
+        "rarely_lonely": 202,
+        "sometimes_lonely": 194,
+        "always_lonely": 190
+      }
+    },
+    "sleep_duration": {
+      "data_type": "category",
+      "non_null_count": "1000",
+      "null_count": "0",
+      "unique_values": {
+        "excessive_sleep": 222,
+        "optimal_sleep": 209,
+        "insufficient_sleep": 199,
+        "long_sleep": 187,
+        "borderline_sleep": 183
+      }
+    },
+    "exercise_freq": {
+      "data_type": "category",
+      "non_null_count": "1000",
+      "null_count": "0",
+      "unique_values": {
+        "frequent_exercise": 226,
+        "daily_exercise": 202,
+        "no_exercise": 196,
+        "weekly_exercise": 191,
+        "regular_exercise": 185
+      }
+    },
+    "daily_steps": {
+      "data_type": "category",
+      "non_null_count": "1000",
+      "null_count": "0",
+      "unique_values": {
+        "moderate_steps": 217,
+        "excellent_steps": 203,
+        "very_low_steps": 199,
+        "good_steps": 198,
+        "low_steps": 183
+      }
+    },
+    "pain_level": {
+      "data_type": "category",
+      "non_null_count": "1000",
+      "null_count": "0",
+      "unique_values": {
+        "minimal_pain": 189,
+        "severe_pain": 168,
+        "moderate_pain": 163,
+        "extreme_pain": 162,
+        "no_pain": 162,
+        "mild_pain": 156
+      }
+    },
+    "nutrition_quality": {
+      "data_type": "category",
+      "non_null_count": "1000",
+      "null_count": "0",
+      "unique_values": {
+        "excellent_nutrition": 229,
+        "adequate_nutrition": 208,
+        "poor_nutrition": 195,
+        "good_nutrition": 186,
+        "very_poor_nutrition": 182
+      }
+    },
+    "processed_food": {
+      "data_type": "category",
+      "non_null_count": "1000",
+      "null_count": "0",
+      "unique_values": {
+        "daily_sugar_weekly": 218,
+        "frequent_sugar_weekly": 212,
+        "moderate_sugar_weekly": 208,
+        "low_sugar": 183,
+        "minimal_sugar": 179
+      }
+    },
+    "alcohol_level": {
+      "data_type": "category",
+      "non_null_count": "1000",
+      "null_count": "0",
+      "unique_values": {
+        "moderate_light_alcohol": 150,
+        "no_alcohol": 148,
+        "heavy_alcohol": 144,
+        "excessive_alcohol": 143,
+        "light_alcohol": 140,
+        "moderate_alcohol": 138,
+        "very_heavy_alcohol": 137
+      }
+    },
+    "smoking_detailed": {
+      "data_type": "category",
+      "non_null_count": "1000",
+      "null_count": "0",
+      "unique_values": {
+        "daily_smoker": 222,
+        "frequent_smoker": 209,
+        "occasional_smoker": 200,
+        "former_smoker": 188,
+        "never_smoked": 181
+      }
+    },
+    "chronic_conditions": {
+      "data_type": "category",
+      "non_null_count": "1000",
+      "null_count": "0",
+      "unique_values": {
+        "no_chronic_conditions": 127,
+        "kidney_disease": 122,
+        "cancer": 121,
+        "obesity": 119,
+        "heart_disease": 109,
+        "thyroid_disorder": 108,
+        "diabetes": 102,
+        "other_condition": 97,
+        "hypertension": 95
+      }
+    },
+    "bmi": {
+      "data_type": "float64",
+      "non_null_count": "988",
+      "null_count": "12",
+      "statistics": {
+        "mean": 24.699081346966864,
+        "median": 24.1652138547269,
+        "min": 11.197894795778394,
+        "max": 69.25207756232687
+      }
+    },
+    "bmi_category": {
+      "data_type": "category",
+      "non_null_count": "988",
+      "null_count": "12",
+      "unique_values": {
+        "normal": 487,
+        "overweight": 322,
+        "obese": 95,
+        "underweight": 84
+      }
+    },
+    "age_group": {
+      "data_type": "category",
+      "non_null_count": "1000",
+      "null_count": "0",
+      "unique_values": {
+        "young_adult": 303,
+        "middle_adult": 291,
+        "young": 241,
+        "mature": 131,
+        "senior": 34
+      }
+    },
+    "health_risk_score": {
+      "data_type": "int64",
+      "non_null_count": "1000",
+      "null_count": "0",
+      "statistics": {
+        "mean": 0.682,
+        "median": 0.0,
+        "min": 0.0,
+        "max": 4.0
+      }
+    },
+    "health_risk_level": {
+      "data_type": "category",
+      "non_null_count": "1000",
+      "null_count": "0",
+      "unique_values": {
+        "low_risk": 663,
+        "moderate_risk": 250,
+        "high_risk": 87,
+        "very_high_risk": 0
+      }
+    }
+  }
+}

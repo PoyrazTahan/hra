@@ -1,0 +1,130 @@
+Command: python scripts/statistical_surprise.py --data /Users/dogapoyraztahan/heltia/hra/preprocessed_data/HRA_data.csv --threshold 2.0 --min-sample 10\nTimestamp: 2025-08-31 14:52:20.242457\nRuntime: 0.59 seconds\nReturn code: 0\n================================================================================\nSTDOUT:\nStatistical Surprise Detector
+Minimum sample size: 10
+Surprise threshold: 2.0σ
+Data loaded: 1000 records, 35 columns
+
+Analyzing demographic surprises...
+Demographics: ['age_group', 'gender', 'has_children', 'bmi_category']
+Outcomes: ['health_risk_level', 'health_risk_score']
+
+Analyzing lifestyle surprises...
+Lifestyle factors: ['smoking_status', 'alcohol_level', 'exercise_freq', 'nutrition_quality', 'sleep_duration', 'stress_calm', 'mood_positivity', 'water_intake']
+
+Analyzing compound demographic-lifestyle surprises...
+
+================================================================================
+STATISTICAL SURPRISE ANALYSIS REPORT
+================================================================================
+
+SURPRISE DETECTION SUMMARY:
+Total patterns analyzed: 212
+High confidence surprises: 197
+Categories with surprises: DEMOGRAPHIC, LIFESTYLE, COMPOUND
+
+------------------------------------------------------------
+TOP STATISTICAL SURPRISES
+------------------------------------------------------------
+
+1. [LIFESTYLE] mostly_stressed ↑
+   Outcome: high_risk in health_risk_level
+   Rate: 100.0% (vs 8.7% population)
+   Magnitude: 24.18σ | Confidence: HIGH
+   Sample: 61 employees
+
+2. [LIFESTYLE] never_positive ↑
+   Outcome: high_risk in health_risk_level
+   Rate: 100.0% (vs 8.7% population)
+   Magnitude: 24.18σ | Confidence: HIGH
+   Sample: 61 employees
+
+3. [LIFESTYLE] often_stressed ↑
+   Outcome: 2 in health_risk_score
+   Rate: 85.5% (vs 15.4% population)
+   Magnitude: 23.89σ | Confidence: HIGH
+   Sample: 179 employees
+
+4. [LIFESTYLE] rarely_positive ↑
+   Outcome: 2 in health_risk_score
+   Rate: 85.5% (vs 15.4% population)
+   Magnitude: 23.89σ | Confidence: HIGH
+   Sample: 179 employees
+
+5. [LIFESTYLE] mostly_stressed ↑
+   Outcome: 3 in health_risk_score
+   Rate: 75.4% (vs 7.0% population)
+   Magnitude: 20.19σ | Confidence: HIGH
+   Sample: 61 employees
+
+6. [LIFESTYLE] never_positive ↑
+   Outcome: 3 in health_risk_score
+   Rate: 75.4% (vs 7.0% population)
+   Magnitude: 20.19σ | Confidence: HIGH
+   Sample: 61 employees
+
+7. [COMPOUND] has_children + mostly_stressed ↑
+   Outcome: high_risk in health_risk_level
+   Rate: 100.0% (vs 8.7% population)
+   Magnitude: 17.78σ | Confidence: HIGH
+   Sample: 33 employees
+
+8. [COMPOUND] female + mostly_stressed ↑
+   Outcome: high_risk in health_risk_level
+   Rate: 100.0% (vs 8.7% population)
+   Magnitude: 16.67σ | Confidence: HIGH
+   Sample: 29 employees
+
+9. [COMPOUND] no_children + mostly_stressed ↑
+   Outcome: high_risk in health_risk_level
+   Rate: 100.0% (vs 8.7% population)
+   Magnitude: 16.38σ | Confidence: HIGH
+   Sample: 28 employees
+
+10. [LIFESTYLE] often_stressed ↑
+   Outcome: moderate_risk in health_risk_level
+   Rate: 85.5% (vs 25.0% population)
+   Magnitude: 16.18σ | Confidence: HIGH
+   Sample: 179 employees
+
+------------------------------------------------------------
+DEMOGRAPHIC OUTLIERS
+------------------------------------------------------------
+• pregnant: 46.2% 2
+  (30.8pp higher than population average, n=13)
+• pregnant: 61.5% moderate_risk
+  (36.5pp higher than population average, n=13)
+• other: 23.5% 3
+  (16.5pp higher than population average, n=17)
+• underweight: 16.7% high_risk
+  (8.1pp higher than population average, n=84)
+• underweight: 13.1% 3
+  (6.1pp higher than population average, n=84)
+
+------------------------------------------------------------
+LIFESTYLE ANOMALIES
+------------------------------------------------------------
+• mostly_stressed: 100.0% high_risk
+  (91.3pp higher than population average, n=61)
+• never_positive: 100.0% high_risk
+  (91.3pp higher than population average, n=61)
+• often_stressed: 85.5% 2
+  (70.1pp higher than population average, n=179)
+• rarely_positive: 85.5% 2
+  (70.1pp higher than population average, n=179)
+• mostly_stressed: 75.4% 3
+  (68.4pp higher than population average, n=61)
+
+------------------------------------------------------------
+COMPOUND EFFECTS
+------------------------------------------------------------
+• has_children + mostly_stressed: 100.0% high_risk
+  (91.3pp higher than population average, n=33)
+• female + mostly_stressed: 100.0% high_risk
+  (91.3pp higher than population average, n=29)
+• no_children + mostly_stressed: 100.0% high_risk
+  (91.3pp higher than population average, n=28)
+• young_adult + mostly_stressed: 100.0% high_risk
+  (91.3pp higher than population average, n=23)
+• male + mostly_stressed: 100.0% high_risk
+  (91.3pp higher than population average, n=23)
+
+Analysis complete. 10 surprises detected.

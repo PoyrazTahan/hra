@@ -1,0 +1,210 @@
+{
+  "Data.perceived_health": {
+    "description": "Self-perceived health status",
+    "mappings": {
+      "Hiç iyi hissetmiyorum": "very_poor_health",
+      "Pek iyi hissetmiyorum": "poor_health",
+      "Ne iyi ne kötü": "fair_health",
+      "Oldukça iyi hissediyorum": "good_health",
+      "Çok iyi ve zinde hissediyorum": "excellent_health"
+    }
+  },
+  "Data.depression_anhedonia": {
+    "description": "Depression symptom frequency",
+    "mappings": {
+      "Hiç yaşamadım": "no_depression",
+      "Ara sıra": "rare_depression",
+      "Çoğu gün": "frequent_depression",
+      "Neredeyse her gün": "daily_depression"
+    }
+  },
+  "Data.depression_mood": {
+    "description": "Depression symptom frequency",
+    "mappings": {
+      "Hiç yaşamadım": "no_depression",
+      "Ara sıra": "rare_depression",
+      "Çoğu gün": "frequent_depression",
+      "Neredeyse her gün": "daily_depression"
+    }
+  },
+  "Data.stress_level_irritability": {
+    "description": "Stress experience frequency",
+    "mappings": {
+      "Hiçbir zaman": "never_stressed",
+      "Neredeyse hiçbir zaman": "rarely_stressed",
+      "Bazen": "sometimes_stressed",
+      "Oldukça sık": "often_stressed",
+      "Çok sık": "frequently_stressed"
+    }
+  },
+  "Data.stress_level_loc": {
+    "description": "Stress experience frequency",
+    "mappings": {
+      "Hiçbir zaman": "never_stressed",
+      "Neredeyse hiçbir zaman": "rarely_stressed",
+      "Bazen": "sometimes_stressed",
+      "Oldukça sık": "often_stressed",
+      "Çok sık": "frequently_stressed"
+    }
+  },
+  "Data.loneliness": {
+    "description": "Loneliness experience frequency",
+    "mappings": {
+      "Hiçbir zaman": "never_lonely",
+      "Nadiren": "rarely_lonely",
+      "Ara sıra": "sometimes_lonely",
+      "Bazen": "often_lonely",
+      "Sık sık / Her zaman": "always_lonely"
+    }
+  },
+  "Data.sleep_quality": {
+    "description": "Sleep hours categorization",
+    "mappings": {
+      "6 saatten az": "insufficient_sleep",
+      "6-7 saat": "borderline_sleep",
+      "7-9 saat": "optimal_sleep",
+      "9-10 saat": "long_sleep",
+      "10 saatten fazla": "excessive_sleep"
+    }
+  },
+  "Data.activity_level": {
+    "description": "Weekly exercise frequency",
+    "mappings": {
+      "Hiç yapmıyorum": "no_exercise",
+      "Haftada 1 gün": "weekly_exercise",
+      "Haftada 2–3 gün": "regular_exercise",
+      "Haftada 4–5 gün": "frequent_exercise",
+      "Haftada 5 günden fazla": "daily_exercise"
+    }
+  },
+  "Data.daily_steps": {
+    "description": "Daily step count categories",
+    "mappings": {
+      "2.500 adımdan az": "very_low_steps",
+      "2.500 - 5.000 adım": "low_steps",
+      "5.000 - 7.500 adım": "moderate_steps",
+      "7.500 -10.000 adım": "good_steps",
+      "10.000'dan fazla": "excellent_steps"
+    }
+  },
+  "Data.physical_pain": {
+    "description": "Physical pain impact on daily activities",
+    "mappings": {
+      "Hiç ağrım olmadı": "no_pain",
+      "Ağrım günlük işlerimi etkilemedi": "minimal_pain",
+      "Ağrım günlük işlerimi biraz etkiledi": "mild_pain",
+      "Ağrım günlük işlerimi orta derecede etkiledi": "moderate_pain",
+      "Ağrım günlük işlerimi belirgin şekilde etkiledi": "severe_pain",
+      "Ağrım günlük işlerimi ciddi şekilde kısıtladı": "extreme_pain"
+    }
+  },
+  "Data.fruit_veg_intake": {
+    "description": "Daily fruit and vegetable consumption",
+    "mappings": {
+      "Günde 1 porsiyondan az veya hiç": "very_poor_nutrition",
+      "Günde 1-2 porsiyon": "poor_nutrition",
+      "Günde 3 porsiyon": "adequate_nutrition",
+      "Günde 4 porsiyon": "good_nutrition",
+      "Günde 5 porsiyondan fazla": "excellent_nutrition"
+    }
+  },
+  "Data.sugar_intake": {
+    "description": "Weekly sugar consumption frequency",
+    "mappings": {
+      "Hiç": "no_sugar",
+      "1-2 gün": "rare_sugar",
+      "3-4 gün": "moderate_sugar",
+      "5-6 gün": "frequent_sugar",
+      "Her gün": "daily_sugar",
+      "Haftada 1 veya hiç": "minimal_sugar",
+      "Haftada1 veya hiç": "minimal_sugar",
+      "Haftada 2": "low_sugar",
+      "Haftada 3": "moderate_sugar_weekly",
+      "Haftada 4": "frequent_sugar_weekly",
+      "Haftada 5 veya daha fazla": "daily_sugar_weekly"
+    }
+  },
+  "Data.processed_food_intake": {
+    "description": "Weekly sugar consumption frequency",
+    "mappings": {
+      "Hiç": "no_sugar",
+      "1-2 gün": "rare_sugar",
+      "3-4 gün": "moderate_sugar",
+      "5-6 gün": "frequent_sugar",
+      "Her gün": "daily_sugar",
+      "Haftada 1 veya hiç": "minimal_sugar",
+      "Haftada1 veya hiç": "minimal_sugar",
+      "Haftada 2": "low_sugar",
+      "Haftada 3": "moderate_sugar_weekly",
+      "Haftada 4": "frequent_sugar_weekly",
+      "Haftada 5 veya daha fazla": "daily_sugar_weekly"
+    }
+  },
+  "Data.water_intake": {
+    "description": "Daily water consumption levels",
+    "mappings": {
+      "1-2 bardak (200-400 ml)": "very_low_water",
+      "3-4 bardak (600-800 ml)": "low_water",
+      "5-6 bardak (1000-1200 ml)": "adequate_water",
+      "7-8 bardak (1400-1600 ml)": "good_water",
+      "8 bardaktan fazla (+1600 ml)": "high_water"
+    }
+  },
+  "Data.alcohol_consumption": {
+    "description": "Weekly alcohol consumption",
+    "mappings": {
+      "Hiç içmiyorum": "no_alcohol",
+      "1–6 kadeh": "light_alcohol",
+      "7–9 kadeh": "moderate_light_alcohol",
+      "10–20 kadeh": "moderate_alcohol",
+      "21–30 kadeh": "heavy_alcohol",
+      "31–50 kadeh": "very_heavy_alcohol",
+      "50+ kadeh": "excessive_alcohol"
+    }
+  },
+  "Data.smoking_status": {
+    "description": "Smoking habits with health risk levels",
+    "mappings": {
+      "Hayır": "non_smoker",
+      "Sosyal içiciyim (haftada birkaç gün)": "social_smoker",
+      "Günde 3-4 tane": "light_smoker",
+      "Günde yarım paket": "moderate_smoker",
+      "Günde 1 paket": "heavy_smoker",
+      "Günde 1 paketten fazla": "very_heavy_smoker",
+      "Hiç kullanmadım": "never_smoked",
+      "Uzun zaman önce bıraktım": "former_smoker",
+      "Sosyal içiciyim, bazen kullanıyorum": "occasional_smoker",
+      "Sık sık kullanıyorum": "frequent_smoker",
+      "Her gün kullanıyorum": "daily_smoker"
+    }
+  },
+  "Data.chronic_conditions": {
+    "description": "Chronic health conditions",
+    "mappings": {
+      "Hayır yok": "no_chronic_conditions",
+      "Diabet": "diabetes",
+      "Tiroid": "thyroid_disorder",
+      "Böbrek": "kidney_disease",
+      "Kalp": "heart_disease",
+      "Obezite": "obesity",
+      "Hipertansiyon": "hypertension",
+      "Kanser": "cancer",
+      "Diğer": "other_condition",
+      "[Hayır yok]": "no_chronic_conditions",
+      "[Diabet]": "diabetes",
+      "[Tiroid]": "thyroid_disorder",
+      "[Böbrek]": "kidney_disease",
+      "[Kalp]": "heart_disease",
+      "[Obezite]": "obesity",
+      "[Hipertansiyon]": "hypertension",
+      "[Kanser]": "cancer",
+      "[Diğer]": "other_condition"
+    }
+  },
+  "Data.supplement_usage": {
+    "mappings": {
+      "Evet": "yes",
+      "Hayır": "no"
+    }
+  }
+}

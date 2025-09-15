@@ -1,0 +1,718 @@
+Command: python scripts_new/simple_eda.py --data preprocessed_data/HRA_data.csv --verbose
+Timestamp: 2025-09-15 17:56:56.680713
+Return code: 0
+================================================================================
+STDOUT:
+✓ Data loaded successfully: 232 records, 38 columns
+  - Numeric columns: 6
+  - Categorical columns: 32
+
+================================================================================
+ONE-DIMENSIONAL STATISTICS ANALYSIS
+================================================================================
+
+DATASET OVERVIEW:
+Shape: 232 rows × 38 columns
+Memory Usage: 0.46 MB
+Duplicate Records: 0 (0.0%)
+
+MISSING DATA ANALYSIS:
+                    Missing_Count  Missing_Pct
+Total_Health_Score             15     6.465517
+health_risk_level              15     6.465517
+bmi_category                    2     0.862069
+
+------------------------------------------------------------
+NUMERIC COLUMNS STATISTICS (6 columns)
+------------------------------------------------------------
+
+DATA.AGE:
+  Count: 232 | Missing: 0
+  Mean: 31.358 | Std: 6.679
+  Min: 19.000 | Max: 56.000
+  Q1: 26.000 | Median: 30.000 | Q3: 35.000
+  Outliers (IQR): 5 (2.2%)
+  Skewness: 0.996 | Kurtosis: 1.244
+  Unique Values: 32 (13.8% of records)
+
+DATA.HEIGHT:
+  Count: 232 | Missing: 0
+  Mean: 167.797 | Std: 8.136
+  Min: 150.000 | Max: 191.000
+  Q1: 162.000 | Median: 167.000 | Q3: 172.250
+  Outliers (IQR): 1 (0.4%)
+  Skewness: 0.516 | Kurtosis: -0.150
+  Unique Values: 33 (14.2% of records)
+
+DATA.WEIGHT:
+  Count: 232 | Missing: 0
+  Mean: 294.289 | Std: 3402.801
+  Min: 0.000 | Max: 51900.000
+  Q1: 59.000 | Median: 69.000 | Q3: 81.000
+  Outliers (IQR): 11 (4.7%)
+  Skewness: 15.231 | Kurtosis: 231.985
+  Unique Values: 70 (30.2% of records)
+
+PERCEIVED_HEALTH_SCORE:
+  Count: 232 | Missing: 0
+  Mean: 2.034 | Std: 0.997
+  Min: 0.000 | Max: 4.000
+  Q1: 1.000 | Median: 2.000 | Q3: 3.000
+  Outliers (IQR): 0 (0.0%)
+  Skewness: -0.122 | Kurtosis: -0.271
+  Unique Values: 5 (2.2% of records)
+  Value Distribution:
+    0: 17 (7.3%)
+    1: 45 (19.4%)
+    2: 98 (42.2%)
+    3: 57 (24.6%)
+    4: 15 (6.5%)
+
+TOTAL_HEALTH_SCORE:
+  Count: 217 | Missing: 15
+  Mean: 61.495 | Std: 13.511
+  Min: 14.000 | Max: 90.500
+  Q1: 52.500 | Median: 63.500 | Q3: 72.000
+  Outliers (IQR): 1 (0.5%)
+  Skewness: -0.508 | Kurtosis: 0.242
+  Unique Values: 97 (44.7% of records)
+
+BMI:
+  Count: 232 | Missing: 0
+  Mean: 102.349 | Std: 1177.403
+  Min: 0.000 | Max: 17958.480
+  Q1: 21.547 | Median: 24.525 | Q3: 27.392
+  Outliers (IQR): 13 (5.6%)
+  Skewness: 15.231 | Kurtosis: 231.988
+  Unique Values: 198 (85.3% of records)
+
+------------------------------------------------------------
+CATEGORICAL COLUMNS STATISTICS (32 columns)
+------------------------------------------------------------
+
+_ID:
+  Count: 232 | Missing: 0
+  Unique Values: 232
+  Value Distribution:
+    6893bf13086dc94f5bebc4bd: 1 (0.4%)
+    68c3c2626958441d79250b18: 1 (0.4%)
+    68c3b8736958441d7924e674: 1 (0.4%)
+    68c3b8c06958441d7924e796: 1 (0.4%)
+    68c3bbf56958441d7924f171: 1 (0.4%)
+    68c3bc1a6958441d7924f20a: 1 (0.4%)
+    68c3bc956958441d7924f38b: 1 (0.4%)
+    68c3bca06958441d7924f3b4: 1 (0.4%)
+    68c3bd366958441d7924f5e9: 1 (0.4%)
+    68c3bd6a6958441d7924f6e0: 1 (0.4%)
+    68c3bdf26958441d7924f8e8: 1 (0.4%)
+    68c3be886958441d7924fb21: 1 (0.4%)
+    68c3bf746958441d7924fdaa: 1 (0.4%)
+    68c3c10f6958441d79250086: 1 (0.4%)
+    68c3c2d76958441d79250c95: 1 (0.4%)
+    6893bf9f086dc94f5bebc543: 1 (0.4%)
+    68c3c3406958441d79250eac: 1 (0.4%)
+    68c3c37a6958441d79250f23: 1 (0.4%)
+    68c3c3fd6958441d792510be: 1 (0.4%)
+    68c3c4146958441d7925116f: 1 (0.4%)
+    ... and 212 more values
+  Concentration: Top 3 values = 1.3% of data
+  Diversity Score: 1.000 (0=uniform, 1=max diversity)
+
+USERID:
+  Count: 232 | Missing: 0
+  Unique Values: 232
+  Value Distribution:
+    62ee23b90802b72ce2bf5c5d: 1 (0.4%)
+    653b61ed1b54fb6d60f8db21: 1 (0.4%)
+    6821abfbf33892a804fbf158: 1 (0.4%)
+    688ddd49412200ac7f2d501b: 1 (0.4%)
+    66bb0592774aeb15a509aa3c: 1 (0.4%)
+    68512ec54902d63c390256f2: 1 (0.4%)
+    6724dd73b3670e4e5cce20de: 1 (0.4%)
+    6800dc22ee1ecc57ad7c36a8: 1 (0.4%)
+    68657deee7532e93cfc1a9a2: 1 (0.4%)
+    6789674c6e0a05eb4c877398: 1 (0.4%)
+    68c3bd6d6958441d7924f6e7: 1 (0.4%)
+    66d060c5c6697c774a1c6e36: 1 (0.4%)
+    66558f09e014d0fbf23f0c46: 1 (0.4%)
+    68b429525e1ec3adeb99093f: 1 (0.4%)
+    66c628b2600d8b461a14c57f: 1 (0.4%)
+    657b0a936c331bbac2552512: 1 (0.4%)
+    68c2c0a66958441d7922eed7: 1 (0.4%)
+    68a6db087437546bdb474376: 1 (0.4%)
+    6630c069fe6febe10b048db3: 1 (0.4%)
+    6819d01a6b4788fe3598fb9e: 1 (0.4%)
+    ... and 212 more values
+  Concentration: Top 3 values = 1.3% of data
+  Diversity Score: 1.000 (0=uniform, 1=max diversity)
+
+DATA.GENDER:
+  Count: 232 | Missing: 0
+  Unique Values: 4
+  Value Distribution:
+    female: 172 (74.1%)
+    male: 57 (24.6%)
+    prefer_not_say: 2 (0.9%)
+    other: 1 (0.4%)
+  Concentration: Top 3 values = 99.6% of data
+  Diversity Score: 0.455 (0=uniform, 1=max diversity)
+
+DATA.HAS_CHILDREN:
+  Count: 232 | Missing: 0
+  Unique Values: 3
+  Value Distribution:
+    no_children: 173 (74.6%)
+    has_children: 58 (25.0%)
+    partner_pregnant: 1 (0.4%)
+  Concentration: Top 3 values = 100.0% of data
+  Diversity Score: 0.536 (0=uniform, 1=max diversity)
+
+DATA.PERCEIVED_HEALTH:
+  Count: 232 | Missing: 0
+  Unique Values: 5
+  Value Distribution:
+    fair_health: 98 (42.2%)
+    good_health: 57 (24.6%)
+    poor_health: 45 (19.4%)
+    very_poor_health: 17 (7.3%)
+    excellent_health: 15 (6.5%)
+  Concentration: Top 3 values = 86.2% of data
+  Diversity Score: 0.867 (0=uniform, 1=max diversity)
+
+DATA.DEPRESSION_ANHEDONIA:
+  Count: 232 | Missing: 0
+  Unique Values: 4
+  Value Distribution:
+    mild_anhedonia: 117 (50.4%)
+    moderate_anhedonia: 51 (22.0%)
+    full_interest_pleasure: 34 (14.7%)
+    severe_anhedonia: 30 (12.9%)
+  Concentration: Top 3 values = 87.1% of data
+  Diversity Score: 0.883 (0=uniform, 1=max diversity)
+
+DATA.DEPRESSION_MOOD:
+  Count: 232 | Missing: 0
+  Unique Values: 4
+  Value Distribution:
+    occasional_sadness: 112 (48.3%)
+    frequent_sadness: 56 (24.1%)
+    positive_mood: 35 (15.1%)
+    persistent_sadness: 29 (12.5%)
+  Concentration: Top 3 values = 87.5% of data
+  Diversity Score: 0.894 (0=uniform, 1=max diversity)
+
+DATA.STRESS_LEVEL_IRRITABILITY:
+  Count: 232 | Missing: 0
+  Unique Values: 5
+  Value Distribution:
+    sometimes_irritated: 96 (41.4%)
+    often_irritated: 84 (36.2%)
+    rarely_irritated: 25 (10.8%)
+    frequently_irritated: 19 (8.2%)
+    never_irritated: 8 (3.4%)
+  Concentration: Top 3 values = 88.4% of data
+  Diversity Score: 0.804 (0=uniform, 1=max diversity)
+
+DATA.STRESS_LEVEL_LOC:
+  Count: 232 | Missing: 0
+  Unique Values: 5
+  Value Distribution:
+    sometimes_out_of_control: 95 (40.9%)
+    often_out_of_control: 58 (25.0%)
+    mostly_in_control: 39 (16.8%)
+    frequently_out_of_control: 21 (9.1%)
+    always_in_control: 19 (8.2%)
+  Concentration: Top 3 values = 82.8% of data
+  Diversity Score: 0.891 (0=uniform, 1=max diversity)
+
+DATA.LONELINESS:
+  Count: 232 | Missing: 0
+  Unique Values: 5
+  Value Distribution:
+    rarely_lonely: 63 (27.2%)
+    often_lonely: 52 (22.4%)
+    always_lonely: 47 (20.3%)
+    sometimes_lonely: 41 (17.7%)
+    never_lonely: 29 (12.5%)
+  Concentration: Top 3 values = 69.8% of data
+  Diversity Score: 0.981 (0=uniform, 1=max diversity)
+
+DATA.SLEEP_QUALITY:
+  Count: 232 | Missing: 0
+  Unique Values: 5
+  Value Distribution:
+    borderline_sleep: 113 (48.7%)
+    optimal_sleep: 71 (30.6%)
+    insufficient_sleep: 33 (14.2%)
+    long_sleep: 12 (5.2%)
+    excessive_sleep: 3 (1.3%)
+  Concentration: Top 3 values = 93.5% of data
+  Diversity Score: 0.745 (0=uniform, 1=max diversity)
+
+DATA.ACTIVITY_LEVEL:
+  Count: 232 | Missing: 0
+  Unique Values: 5
+  Value Distribution:
+    no_exercise: 112 (48.3%)
+    regular_exercise: 55 (23.7%)
+    weekly_exercise: 35 (15.1%)
+    frequent_exercise: 19 (8.2%)
+    daily_exercise: 11 (4.7%)
+  Concentration: Top 3 values = 87.1% of data
+  Diversity Score: 0.825 (0=uniform, 1=max diversity)
+
+DATA.DAILY_STEPS:
+  Count: 232 | Missing: 0
+  Unique Values: 5
+  Value Distribution:
+    low_steps: 72 (31.0%)
+    very_low_steps: 62 (26.7%)
+    moderate_steps: 47 (20.3%)
+    good_steps: 35 (15.1%)
+    excellent_steps: 16 (6.9%)
+  Concentration: Top 3 values = 78.0% of data
+  Diversity Score: 0.938 (0=uniform, 1=max diversity)
+
+DATA.PHYSICAL_PAIN:
+  Count: 232 | Missing: 0
+  Unique Values: 6
+  Value Distribution:
+    minimal_pain: 95 (40.9%)
+    no_pain: 56 (24.1%)
+    mild_pain: 46 (19.8%)
+    severe_pain: 14 (6.0%)
+    moderate_pain: 13 (5.6%)
+    extreme_pain: 8 (3.4%)
+  Concentration: Top 3 values = 84.9% of data
+  Diversity Score: 0.824 (0=uniform, 1=max diversity)
+
+DATA.WATER_INTAKE:
+  Count: 232 | Missing: 0
+  Unique Values: 5
+  Value Distribution:
+    high_water: 86 (37.1%)
+    adequate_water: 51 (22.0%)
+    good_water: 46 (19.8%)
+    low_water: 41 (17.7%)
+    very_low_water: 8 (3.4%)
+  Concentration: Top 3 values = 78.9% of data
+  Diversity Score: 0.897 (0=uniform, 1=max diversity)
+
+DATA.FRUIT_VEG_INTAKE:
+  Count: 232 | Missing: 0
+  Unique Values: 5
+  Value Distribution:
+    very_poor_nutrition: 129 (55.6%)
+    poor_nutrition: 80 (34.5%)
+    adequate_nutrition: 15 (6.5%)
+    good_nutrition: 5 (2.2%)
+    excellent_nutrition: 3 (1.3%)
+  Concentration: Top 3 values = 96.6% of data
+  Diversity Score: 0.627 (0=uniform, 1=max diversity)
+
+DATA.SUGAR_INTAKE:
+  Count: 232 | Missing: 0
+  Unique Values: 5
+  Value Distribution:
+    minimal_sugar: 75 (32.3%)
+    daily_sugar_weekly: 56 (24.1%)
+    low_sugar: 40 (17.2%)
+    moderate_sugar_weekly: 31 (13.4%)
+    frequent_sugar_weekly: 30 (12.9%)
+  Concentration: Top 3 values = 73.7% of data
+  Diversity Score: 0.960 (0=uniform, 1=max diversity)
+
+DATA.PROCESSED_FOOD_INTAKE:
+  Count: 232 | Missing: 0
+  Unique Values: 5
+  Value Distribution:
+    minimal_processed_food: 126 (54.3%)
+    low_processed_food: 57 (24.6%)
+    moderate_processed_food_weekly: 22 (9.5%)
+    frequent_processed_food_weekly: 19 (8.2%)
+    daily_processed_food_weekly: 8 (3.4%)
+  Concentration: Top 3 values = 88.4% of data
+  Diversity Score: 0.759 (0=uniform, 1=max diversity)
+
+DATA.ALCOHOL_CONSUMPTION:
+  Count: 232 | Missing: 0
+  Unique Values: 6
+  Value Distribution:
+    no_alcohol: 137 (59.1%)
+    light_alcohol: 74 (31.9%)
+    moderate_light_alcohol: 10 (4.3%)
+    moderate_alcohol: 5 (2.2%)
+    very_heavy_alcohol: 3 (1.3%)
+    heavy_alcohol: 3 (1.3%)
+  Concentration: Top 3 values = 95.3% of data
+  Diversity Score: 0.562 (0=uniform, 1=max diversity)
+
+DATA.SMOKING_STATUS:
+  Count: 232 | Missing: 0
+  Unique Values: 5
+  Value Distribution:
+    never_smoked: 99 (42.7%)
+    daily_smoker: 58 (25.0%)
+    occasional_smoker: 49 (21.1%)
+    frequent_smoker: 14 (6.0%)
+    former_smoker: 12 (5.2%)
+  Concentration: Top 3 values = 88.8% of data
+  Diversity Score: 0.846 (0=uniform, 1=max diversity)
+
+DATA.SUPPLEMENT_USAGE:
+  Count: 232 | Missing: 0
+  Unique Values: 2
+  Value Distribution:
+    not_using_supplements: 126 (54.3%)
+    using_supplements: 106 (45.7%)
+  Concentration: Top 3 values = 100.0% of data
+  Diversity Score: 0.995 (0=uniform, 1=max diversity)
+
+DIABETES_STATUS:
+  Count: 232 | Missing: 0
+  Unique Values: 2
+  Value Distribution:
+    no_diabetes: 228 (98.3%)
+    has_diabetes: 4 (1.7%)
+  Concentration: Top 3 values = 100.0% of data
+  Diversity Score: 0.126 (0=uniform, 1=max diversity)
+
+THYROID_DISORDER_STATUS:
+  Count: 232 | Missing: 0
+  Unique Values: 2
+  Value Distribution:
+    no_thyroid: 204 (87.9%)
+    has_thyroid: 28 (12.1%)
+  Concentration: Top 3 values = 100.0% of data
+  Diversity Score: 0.531 (0=uniform, 1=max diversity)
+
+KIDNEY_DISEASE_STATUS:
+  Count: 232 | Missing: 0
+  Unique Values: 2
+  Value Distribution:
+    no_kidney_disease: 230 (99.1%)
+    has_kidney_disease: 2 (0.9%)
+  Concentration: Top 3 values = 100.0% of data
+  Diversity Score: 0.072 (0=uniform, 1=max diversity)
+
+HEART_DISEASE_STATUS:
+  Count: 232 | Missing: 0
+  Unique Values: 2
+  Value Distribution:
+    no_heart_disease: 226 (97.4%)
+    has_heart_disease: 6 (2.6%)
+  Concentration: Top 3 values = 100.0% of data
+  Diversity Score: 0.173 (0=uniform, 1=max diversity)
+
+OBESITY_STATUS:
+  Count: 232 | Missing: 0
+  Unique Values: 2
+  Value Distribution:
+    no_obesity: 224 (96.6%)
+    has_obesity: 8 (3.4%)
+  Concentration: Top 3 values = 100.0% of data
+  Diversity Score: 0.216 (0=uniform, 1=max diversity)
+
+HYPERTENSION_STATUS:
+  Count: 232 | Missing: 0
+  Unique Values: 2
+  Value Distribution:
+    no_hypertension: 225 (97.0%)
+    has_hypertension: 7 (3.0%)
+  Concentration: Top 3 values = 100.0% of data
+  Diversity Score: 0.195 (0=uniform, 1=max diversity)
+
+CANCER_STATUS:
+  Count: 232 | Missing: 0
+  Unique Values: 2
+  Value Distribution:
+    no_cancer: 231 (99.6%)
+    has_cancer: 1 (0.4%)
+  Concentration: Top 3 values = 100.0% of data
+  Diversity Score: 0.040 (0=uniform, 1=max diversity)
+
+OTHER_CONDITION_STATUS:
+  Count: 232 | Missing: 0
+  Unique Values: 2
+  Value Distribution:
+    no_other_condition: 202 (87.1%)
+    has_other_condition: 30 (12.9%)
+  Concentration: Top 3 values = 100.0% of data
+  Diversity Score: 0.556 (0=uniform, 1=max diversity)
+
+BMI_CATEGORY:
+  Count: 230 | Missing: 2
+  Unique Values: 4
+  Value Distribution:
+    normal_weight: 114 (49.6%)
+    overweight: 68 (29.6%)
+    obese: 34 (14.8%)
+    underweight: 14 (6.1%)
+  Concentration: Top 3 values = 93.9% of data
+  Diversity Score: 0.838 (0=uniform, 1=max diversity)
+
+AGE_GROUP:
+  Count: 232 | Missing: 0
+  Unique Values: 5
+  Value Distribution:
+    young_adult: 139 (59.9%)
+    young: 43 (18.5%)
+    middle_adult: 43 (18.5%)
+    mature: 6 (2.6%)
+    senior: 1 (0.4%)
+  Concentration: Top 3 values = 97.0% of data
+  Diversity Score: 0.652 (0=uniform, 1=max diversity)
+
+HEALTH_RISK_LEVEL:
+  Count: 217 | Missing: 15
+  Unique Values: 4
+  Value Distribution:
+    moderate_risk: 142 (65.4%)
+    high_risk: 42 (19.4%)
+    low_risk: 31 (14.3%)
+    very_high_risk: 2 (0.9%)
+  Concentration: Top 3 values = 99.1% of data
+  Diversity Score: 0.661 (0=uniform, 1=max diversity)
+
+================================================================================
+MULTI-DIMENSIONAL CROSS-PATTERN ANALYSIS
+================================================================================
+
+------------------------------------------------------------
+NUMERIC CORRELATIONS
+------------------------------------------------------------
+
+CORRELATION STRENGTH ANALYSIS:
+Strong Correlations (|r| > 0.5):
+  Data.weight ↔ bmi: r = 1.000
+
+Moderate Correlations (0.3 < |r| ≤ 0.5):
+  Perceived_Health_Score ↔ Total_Health_Score: r = 0.496
+
+------------------------------------------------------------
+CATEGORICAL CROSS-PATTERN ANALYSIS
+------------------------------------------------------------
+
+DEMOGRAPHICS vs OUTCOMES:
+------------------------------------------------------------
+AGE-SPECIFIC PATTERN ANALYSIS
+------------------------------------------------------------
+
+AGE GROUP DISTRIBUTION:
+  young_adult: 139 (59.9%)
+  young: 43 (18.5%)
+  middle_adult: 43 (18.5%)
+  mature: 6 (2.6%)
+  senior: 1 (0.4%)
+
+HEALTH_RISK_LEVEL by AGE GROUP:
+  young_adult:
+    high_risk: 23.1%
+    low_risk: 13.8%
+    moderate_risk: 62.3%
+
+  young:
+    high_risk: 15.4%
+    low_risk: 7.7%
+    moderate_risk: 74.4%
+
+  middle_adult:
+    high_risk: 14.6%
+    low_risk: 19.5%
+    moderate_risk: 65.9%
+
+  mature:
+    low_risk: 33.3%
+    moderate_risk: 66.7%
+
+  senior:
+    moderate_risk: 100.0%
+
+TOTAL_HEALTH_SCORE by AGE GROUP:
+  young_adult:
+
+  young:
+    54.0: 5.1%
+    55.5: 5.1%
+    59.0: 7.7%
+    64.5: 5.1%
+    65.0: 5.1%
+    70.0: 5.1%
+    73.5: 5.1%
+
+  middle_adult:
+    66.0: 7.3%
+
+  mature:
+    57.0: 16.7%
+    62.5: 16.7%
+    64.0: 16.7%
+    75.0: 16.7%
+    79.0: 16.7%
+    86.0: 16.7%
+
+  senior:
+    70.0: 100.0%
+
+BMI_CATEGORY by AGE GROUP:
+  young_adult:
+    normal_weight: 56.2%
+    obese: 11.7%
+    overweight: 27.0%
+    underweight: 5.1%
+
+  young:
+    normal_weight: 53.5%
+    obese: 16.3%
+    overweight: 16.3%
+    underweight: 14.0%
+
+  middle_adult:
+    normal_weight: 30.2%
+    obese: 18.6%
+    overweight: 48.8%
+
+  mature:
+    normal_weight: 16.7%
+    obese: 33.3%
+    overweight: 50.0%
+
+  senior:
+    obese: 100.0%
+
+DATA.SMOKING_STATUS by AGE GROUP:
+  young_adult:
+    daily_smoker: 28.8%
+    frequent_smoker: 5.8%
+    never_smoked: 38.8%
+    occasional_smoker: 23.0%
+
+  young:
+    daily_smoker: 23.3%
+    frequent_smoker: 7.0%
+    never_smoked: 51.2%
+    occasional_smoker: 16.3%
+
+  middle_adult:
+    daily_smoker: 18.6%
+    former_smoker: 11.6%
+    frequent_smoker: 7.0%
+    never_smoked: 39.5%
+    occasional_smoker: 23.3%
+
+  mature:
+    former_smoker: 16.7%
+    never_smoked: 83.3%
+
+  senior:
+    never_smoked: 100.0%
+
+DATA.ALCOHOL_CONSUMPTION by AGE GROUP:
+  young_adult:
+    light_alcohol: 35.3%
+    moderate_light_alcohol: 5.0%
+    no_alcohol: 54.0%
+
+  young:
+    light_alcohol: 23.3%
+    no_alcohol: 67.4%
+
+  middle_adult:
+    light_alcohol: 32.6%
+    no_alcohol: 62.8%
+
+  mature:
+    light_alcohol: 16.7%
+    no_alcohol: 83.3%
+
+  senior:
+    no_alcohol: 100.0%
+
+DATA.STRESS_LEVEL_IRRITABILITY by AGE GROUP:
+  young_adult:
+    frequently_irritated: 8.6%
+    often_irritated: 33.1%
+    rarely_irritated: 10.1%
+    sometimes_irritated: 45.3%
+
+  young:
+    frequently_irritated: 11.6%
+    often_irritated: 58.1%
+    sometimes_irritated: 23.3%
+
+  middle_adult:
+    never_irritated: 7.0%
+    often_irritated: 30.2%
+    rarely_irritated: 14.0%
+    sometimes_irritated: 44.2%
+
+  mature:
+    rarely_irritated: 50.0%
+    sometimes_irritated: 50.0%
+
+  senior:
+    sometimes_irritated: 100.0%
+
+DATA.STRESS_LEVEL_LOC by AGE GROUP:
+  young_adult:
+    always_in_control: 6.5%
+    frequently_out_of_control: 6.5%
+    mostly_in_control: 20.1%
+    often_out_of_control: 28.1%
+    sometimes_out_of_control: 38.8%
+
+  young:
+    frequently_out_of_control: 18.6%
+    mostly_in_control: 7.0%
+    often_out_of_control: 30.2%
+    sometimes_out_of_control: 39.5%
+
+  middle_adult:
+    always_in_control: 16.3%
+    frequently_out_of_control: 9.3%
+    mostly_in_control: 14.0%
+    often_out_of_control: 14.0%
+    sometimes_out_of_control: 46.5%
+
+  mature:
+    mostly_in_control: 33.3%
+    sometimes_out_of_control: 66.7%
+
+  senior:
+    always_in_control: 100.0%
+
+DATA.LONELINESS by AGE GROUP:
+  young_adult:
+    always_lonely: 20.9%
+    never_lonely: 11.5%
+    often_lonely: 20.1%
+    rarely_lonely: 28.8%
+    sometimes_lonely: 18.7%
+
+  young:
+    always_lonely: 25.6%
+    never_lonely: 7.0%
+    often_lonely: 30.2%
+    rarely_lonely: 16.3%
+    sometimes_lonely: 20.9%
+
+  middle_adult:
+    always_lonely: 14.0%
+    never_lonely: 16.3%
+    often_lonely: 23.3%
+    rarely_lonely: 34.9%
+    sometimes_lonely: 11.6%
+
+  mature:
+    always_lonely: 16.7%
+    never_lonely: 33.3%
+    often_lonely: 16.7%
+    rarely_lonely: 16.7%
+    sometimes_lonely: 16.7%
+
+  senior:
+    never_lonely: 100.0%
+
+================================================================================
+EDA ANALYSIS COMPLETE
+================================================================================

@@ -1,0 +1,742 @@
+Command: python scripts/simple_eda.py --data /Users/dogapoyraztahan/heltia/hra/preprocessed_data/HRA_data.csv --phase all --verbose\nTimestamp: 2025-08-31 14:52:19.430757\nRuntime: 0.81 seconds\nReturn code: 0\n================================================================================\nSTDOUT:\n✓ Data loaded successfully: 1000 records, 35 columns
+  - Numeric columns: 5
+  - Categorical columns: 30
+
+================================================================================
+PHASE 1: ONE-DIMENSIONAL STATISTICS DUMP
+================================================================================
+
+DATASET OVERVIEW:
+Shape: 1000 rows × 35 columns
+Memory Usage: 1.82 MB
+Duplicate Records: 0 (0.0%)
+
+MISSING DATA ANALYSIS:
+              Missing_Count  Missing_Pct
+bmi_category             12          1.2
+bmi                      12          1.2
+height_cm                 8          0.8
+weight_kg                 4          0.4
+
+------------------------------------------------------------
+NUMERIC COLUMNS STATISTICS (5 columns)
+------------------------------------------------------------
+
+HEIGHT_CM:
+  Count: 992 | Missing: 8
+  Mean: 167.121 | Std: 9.572
+  Min: 142.000 | Max: 196.000
+  Q1: 160.000 | Median: 167.000 | Q3: 173.000
+  Outliers (IQR): 5 (0.5%)
+  Skewness: 0.160 | Kurtosis: -0.295
+  Unique Values: 51 (5.1% of records)
+
+WEIGHT_KG:
+  Count: 996 | Missing: 4
+  Mean: 69.168 | Std: 17.169
+  Min: 37.000 | Max: 160.000
+  Q1: 58.000 | Median: 67.000 | Q3: 77.000
+  Outliers (IQR): 22 (2.2%)
+  Skewness: 1.797 | Kurtosis: 6.699
+  Unique Values: 72 (7.2% of records)
+
+AGE:
+  Count: 1000 | Missing: 0
+  Mean: 34.478 | Std: 10.887
+  Min: 18.000 | Max: 65.000
+  Q1: 26.000 | Median: 34.000 | Q3: 42.000
+  Outliers (IQR): 0 (0.0%)
+  Skewness: 0.320 | Kurtosis: -0.457
+  Unique Values: 48 (4.8% of records)
+
+BMI:
+  Count: 988 | Missing: 12
+  Mean: 24.699 | Std: 5.564
+  Min: 11.198 | Max: 69.252
+  Q1: 21.453 | Median: 24.165 | Q3: 27.367
+  Outliers (IQR): 17 (1.7%)
+  Skewness: 2.747 | Kurtosis: 15.800
+  Unique Values: 718 (72.7% of records)
+
+HEALTH_RISK_SCORE:
+  Count: 1000 | Missing: 0
+  Mean: 0.682 | Std: 1.072
+  Min: 0.000 | Max: 4.000
+  Q1: 0.000 | Median: 0.000 | Q3: 1.000
+  Outliers (IQR): 87 (8.7%)
+  Skewness: 1.332 | Kurtosis: 0.562
+  Unique Values: 5 (0.5% of records)
+  Value Distribution:
+    0: 663 (66.3%)
+    2: 154 (15.4%)
+    1: 96 (9.6%)
+    3: 70 (7.0%)
+    4: 17 (1.7%)
+
+------------------------------------------------------------
+CATEGORICAL COLUMNS STATISTICS (30 columns)
+------------------------------------------------------------
+
+RECORD_ID:
+  Count: 1000 | Missing: 0
+  Unique Values: 1000
+  Value Distribution:
+    d0cdcbea-c9a9-4096-9369-: 1 (0.1%)
+    e1f95801-d736-4415-960a-: 1 (0.1%)
+    956d6d17-c865-436b-9766-: 1 (0.1%)
+    4ce7cfd2-ae41-4942-afb3-: 1 (0.1%)
+    b643a8bd-2e31-4440-9e4c-: 1 (0.1%)
+    530abbf4-5af0-44c1-b55c-: 1 (0.1%)
+    d805c4d9-584e-4339-ba7b-: 1 (0.1%)
+    a0059e81-a0a3-4775-919f-: 1 (0.1%)
+    1e3c9a6c-9df8-4fae-acb7-: 1 (0.1%)
+    64a866b8-4350-46ba-b2d1-: 1 (0.1%)
+    1e0a9dbf-ae1a-4743-b389-: 1 (0.1%)
+    278af19f-de95-4ee5-8b5f-: 1 (0.1%)
+    c83627a2-f64b-4e57-a0b4-: 1 (0.1%)
+    16f56e3f-7850-4be5-ba4e-: 1 (0.1%)
+    75e6a019-5b19-474a-8e49-: 1 (0.1%)
+    ... and 985 more unique values
+  Concentration: Top 3 values = 0.3% of data
+  Diversity Score: 1.000 (0=uniform, 1=max diversity)
+
+USER_ID:
+  Count: 1000 | Missing: 0
+  Unique Values: 1000
+  Value Distribution:
+    74dfd217-637a-4b09-a682-: 1 (0.1%)
+    0189eac9-b506-4670-9d58-: 1 (0.1%)
+    0602de21-7d64-46eb-8fbb-: 1 (0.1%)
+    d5180648-bb8d-461e-a162-: 1 (0.1%)
+    f66ff0fb-7f89-4277-b58d-: 1 (0.1%)
+    e84f5082-7e20-4711-bdd9-: 1 (0.1%)
+    854586a1-229a-42bd-8f8b-: 1 (0.1%)
+    97b76e0a-e909-4682-989c-: 1 (0.1%)
+    506f5623-a35d-400e-a010-: 1 (0.1%)
+    37c85fa7-ce96-4f18-b447-: 1 (0.1%)
+    070dfa62-7a52-4ca5-885f-: 1 (0.1%)
+    a7dcf25a-c231-4bce-bf41-: 1 (0.1%)
+    5ee2ced5-b822-4025-b234-: 1 (0.1%)
+    cd3bd3f3-7527-45a9-9a6d-: 1 (0.1%)
+    6c4a4a94-493e-4555-93c0-: 1 (0.1%)
+    ... and 985 more unique values
+  Concentration: Top 3 values = 0.3% of data
+  Diversity Score: 1.000 (0=uniform, 1=max diversity)
+
+SLEEP_REFRESHED:
+  Count: 1000 | Missing: 0
+  Unique Values: 5
+  Value Distribution:
+    often_positive: 271 (27.1%)
+    sometimes_positive: 269 (26.9%)
+    mostly_positive: 220 (22.0%)
+    rarely_positive: 179 (17.9%)
+    never_positive: 61 (6.1%)
+  Concentration: Top 3 values = 76.0% of data
+  Diversity Score: 0.944 (0=uniform, 1=max diversity)
+
+ACTIVITY_LEVEL:
+  Count: 1000 | Missing: 0
+  Unique Values: 5
+  Value Distribution:
+    moderate_activity: 304 (30.4%)
+    high_activity: 260 (26.0%)
+    light_activity: 236 (23.6%)
+    very_high_activity: 106 (10.6%)
+    sedentary: 94 (9.4%)
+  Concentration: Top 3 values = 80.0% of data
+  Diversity Score: 0.940 (0=uniform, 1=max diversity)
+
+WATER_INTAKE:
+  Count: 1000 | Missing: 0
+  Unique Values: 6
+  Value Distribution:
+    adequate_water: 299 (29.9%)
+    good_water: 230 (23.0%)
+    low_water: 203 (20.3%)
+    high_water: 137 (13.7%)
+    very_low_water: 123 (12.3%)
+    unknown: 8 (0.8%)
+  Concentration: Top 3 values = 73.2% of data
+  Diversity Score: 0.888 (0=uniform, 1=max diversity)
+
+HAS_CHILDREN:
+  Count: 1000 | Missing: 0
+  Unique Values: 3
+  Value Distribution:
+    has_children: 533 (53.3%)
+    no_children: 454 (45.4%)
+    pregnant: 13 (1.3%)
+  Concentration: Top 3 values = 100.0% of data
+  Diversity Score: 0.683 (0=uniform, 1=max diversity)
+
+STRESS_CALM:
+  Count: 1000 | Missing: 0
+  Unique Values: 5
+  Value Distribution:
+    rarely_stressed: 271 (27.1%)
+    sometimes_stressed: 269 (26.9%)
+    never_stressed: 220 (22.0%)
+    often_stressed: 179 (17.9%)
+    mostly_stressed: 61 (6.1%)
+  Concentration: Top 3 values = 76.0% of data
+  Diversity Score: 0.944 (0=uniform, 1=max diversity)
+
+SUGAR_FREQUENCY:
+  Count: 1000 | Missing: 0
+  Unique Values: 5
+  Value Distribution:
+    rare_sugar: 298 (29.8%)
+    moderate_sugar: 292 (29.2%)
+    frequent_sugar: 197 (19.7%)
+    no_sugar: 146 (14.6%)
+    daily_sugar: 67 (6.7%)
+  Concentration: Top 3 values = 78.7% of data
+  Diversity Score: 0.933 (0=uniform, 1=max diversity)
+
+SMOKING_STATUS:
+  Count: 1000 | Missing: 0
+  Unique Values: 6
+  Value Distribution:
+    non_smoker: 649 (64.9%)
+    social_smoker: 174 (17.4%)
+    light_smoker: 93 (9.3%)
+    heavy_smoker: 37 (3.7%)
+    moderate_smoker: 37 (3.7%)
+    very_heavy_smoker: 10 (1.0%)
+  Concentration: Top 3 values = 91.6% of data
+  Diversity Score: 0.612 (0=uniform, 1=max diversity)
+
+MOOD_POSITIVITY:
+  Count: 1000 | Missing: 0
+  Unique Values: 5
+  Value Distribution:
+    often_positive: 271 (27.1%)
+    sometimes_positive: 269 (26.9%)
+    mostly_positive: 220 (22.0%)
+    rarely_positive: 179 (17.9%)
+    never_positive: 61 (6.1%)
+  Concentration: Top 3 values = 76.0% of data
+  Diversity Score: 0.944 (0=uniform, 1=max diversity)
+
+GENDER:
+  Count: 1000 | Missing: 0
+  Unique Values: 4
+  Value Distribution:
+    female: 460 (46.0%)
+    male: 446 (44.6%)
+    prefer_not_say: 77 (7.7%)
+    other: 17 (1.7%)
+  Concentration: Top 3 values = 98.3% of data
+  Diversity Score: 0.710 (0=uniform, 1=max diversity)
+
+SUPPLEMENTS:
+  Count: 1000 | Missing: 0
+  Unique Values: 2
+  Value Distribution:
+    no: 552 (55.2%)
+    yes: 448 (44.8%)
+  Concentration: Top 3 values = 100.0% of data
+  Diversity Score: 0.992 (0=uniform, 1=max diversity)
+
+HEALTH_PERCEPTION:
+  Count: 1000 | Missing: 0
+  Unique Values: 5
+  Value Distribution:
+    good_health: 283 (28.3%)
+    fair_health: 269 (26.9%)
+    poor_health: 208 (20.8%)
+    excellent_health: 142 (14.2%)
+    very_poor_health: 98 (9.8%)
+  Concentration: Top 3 values = 76.0% of data
+  Diversity Score: 0.958 (0=uniform, 1=max diversity)
+
+DEPRESSION_INTEREST:
+  Count: 1000 | Missing: 0
+  Unique Values: 4
+  Value Distribution:
+    no_depression: 477 (47.7%)
+    rare_depression: 302 (30.2%)
+    frequent_depression: 156 (15.6%)
+    daily_depression: 65 (6.5%)
+  Concentration: Top 3 values = 93.5% of data
+  Diversity Score: 0.853 (0=uniform, 1=max diversity)
+
+DEPRESSION_MOOD:
+  Count: 1000 | Missing: 0
+  Unique Values: 4
+  Value Distribution:
+    no_depression: 498 (49.8%)
+    rare_depression: 273 (27.3%)
+    frequent_depression: 154 (15.4%)
+    daily_depression: 75 (7.5%)
+  Concentration: Top 3 values = 92.5% of data
+  Diversity Score: 0.854 (0=uniform, 1=max diversity)
+
+STRESS_IRRITABLE:
+  Count: 1000 | Missing: 0
+  Unique Values: 5
+  Value Distribution:
+    often_stressed: 220 (22.0%)
+    never_stressed: 207 (20.7%)
+    frequently_stressed: 194 (19.4%)
+    sometimes_stressed: 191 (19.1%)
+    rarely_stressed: 188 (18.8%)
+  Concentration: Top 3 values = 62.1% of data
+  Diversity Score: 0.999 (0=uniform, 1=max diversity)
+
+STRESS_CONTROL:
+  Count: 1000 | Missing: 0
+  Unique Values: 5
+  Value Distribution:
+    frequently_stressed: 232 (23.2%)
+    rarely_stressed: 206 (20.6%)
+    never_stressed: 205 (20.5%)
+    often_stressed: 187 (18.7%)
+    sometimes_stressed: 170 (17.0%)
+  Concentration: Top 3 values = 64.3% of data
+  Diversity Score: 0.997 (0=uniform, 1=max diversity)
+
+LONELINESS:
+  Count: 1000 | Missing: 0
+  Unique Values: 5
+  Value Distribution:
+    often_lonely: 207 (20.7%)
+    never_lonely: 207 (20.7%)
+    rarely_lonely: 202 (20.2%)
+    sometimes_lonely: 194 (19.4%)
+    always_lonely: 190 (19.0%)
+  Concentration: Top 3 values = 61.6% of data
+  Diversity Score: 1.000 (0=uniform, 1=max diversity)
+
+SLEEP_DURATION:
+  Count: 1000 | Missing: 0
+  Unique Values: 5
+  Value Distribution:
+    excessive_sleep: 222 (22.2%)
+    optimal_sleep: 209 (20.9%)
+    insufficient_sleep: 199 (19.9%)
+    long_sleep: 187 (18.7%)
+    borderline_sleep: 183 (18.3%)
+  Concentration: Top 3 values = 63.0% of data
+  Diversity Score: 0.998 (0=uniform, 1=max diversity)
+
+EXERCISE_FREQ:
+  Count: 1000 | Missing: 0
+  Unique Values: 5
+  Value Distribution:
+    frequent_exercise: 226 (22.6%)
+    daily_exercise: 202 (20.2%)
+    no_exercise: 196 (19.6%)
+    weekly_exercise: 191 (19.1%)
+    regular_exercise: 185 (18.5%)
+  Concentration: Top 3 values = 62.4% of data
+  Diversity Score: 0.998 (0=uniform, 1=max diversity)
+
+DAILY_STEPS:
+  Count: 1000 | Missing: 0
+  Unique Values: 5
+  Value Distribution:
+    moderate_steps: 217 (21.7%)
+    excellent_steps: 203 (20.3%)
+    very_low_steps: 199 (19.9%)
+    good_steps: 198 (19.8%)
+    low_steps: 183 (18.3%)
+  Concentration: Top 3 values = 61.9% of data
+  Diversity Score: 0.999 (0=uniform, 1=max diversity)
+
+PAIN_LEVEL:
+  Count: 1000 | Missing: 0
+  Unique Values: 6
+  Value Distribution:
+    minimal_pain: 189 (18.9%)
+    severe_pain: 168 (16.8%)
+    moderate_pain: 163 (16.3%)
+    extreme_pain: 162 (16.2%)
+    no_pain: 162 (16.2%)
+    mild_pain: 156 (15.6%)
+  Concentration: Top 3 values = 52.0% of data
+  Diversity Score: 0.999 (0=uniform, 1=max diversity)
+
+NUTRITION_QUALITY:
+  Count: 1000 | Missing: 0
+  Unique Values: 5
+  Value Distribution:
+    excellent_nutrition: 229 (22.9%)
+    adequate_nutrition: 208 (20.8%)
+    poor_nutrition: 195 (19.5%)
+    good_nutrition: 186 (18.6%)
+    very_poor_nutrition: 182 (18.2%)
+  Concentration: Top 3 values = 63.2% of data
+  Diversity Score: 0.998 (0=uniform, 1=max diversity)
+
+PROCESSED_FOOD:
+  Count: 1000 | Missing: 0
+  Unique Values: 5
+  Value Distribution:
+    daily_sugar_weekly: 218 (21.8%)
+    frequent_sugar_weekly: 212 (21.2%)
+    moderate_sugar_weekly: 208 (20.8%)
+    low_sugar: 183 (18.3%)
+    minimal_sugar: 179 (17.9%)
+  Concentration: Top 3 values = 63.8% of data
+  Diversity Score: 0.998 (0=uniform, 1=max diversity)
+
+ALCOHOL_LEVEL:
+  Count: 1000 | Missing: 0
+  Unique Values: 7
+  Value Distribution:
+    moderate_light_alcohol: 150 (15.0%)
+    no_alcohol: 148 (14.8%)
+    heavy_alcohol: 144 (14.4%)
+    excessive_alcohol: 143 (14.3%)
+    light_alcohol: 140 (14.0%)
+    moderate_alcohol: 138 (13.8%)
+    very_heavy_alcohol: 137 (13.7%)
+  Concentration: Top 3 values = 44.2% of data
+  Diversity Score: 1.000 (0=uniform, 1=max diversity)
+
+SMOKING_DETAILED:
+  Count: 1000 | Missing: 0
+  Unique Values: 5
+  Value Distribution:
+    daily_smoker: 222 (22.2%)
+    frequent_smoker: 209 (20.9%)
+    occasional_smoker: 200 (20.0%)
+    former_smoker: 188 (18.8%)
+    never_smoked: 181 (18.1%)
+  Concentration: Top 3 values = 63.1% of data
+  Diversity Score: 0.998 (0=uniform, 1=max diversity)
+
+CHRONIC_CONDITIONS:
+  Count: 1000 | Missing: 0
+  Unique Values: 9
+  Value Distribution:
+    no_chronic_conditions: 127 (12.7%)
+    kidney_disease: 122 (12.2%)
+    cancer: 121 (12.1%)
+    obesity: 119 (11.9%)
+    heart_disease: 109 (10.9%)
+    thyroid_disorder: 108 (10.8%)
+    diabetes: 102 (10.2%)
+    other_condition: 97 (9.7%)
+    hypertension: 95 (9.5%)
+  Concentration: Top 3 values = 37.0% of data
+  Diversity Score: 0.998 (0=uniform, 1=max diversity)
+
+BMI_CATEGORY:
+  Count: 988 | Missing: 12
+  Unique Values: 4
+  Value Distribution:
+    normal: 487 (49.3%)
+    overweight: 322 (32.6%)
+    obese: 95 (9.6%)
+    underweight: 84 (8.5%)
+  Concentration: Top 3 values = 91.5% of data
+  Diversity Score: 0.829 (0=uniform, 1=max diversity)
+
+AGE_GROUP:
+  Count: 1000 | Missing: 0
+  Unique Values: 5
+  Value Distribution:
+    young_adult: 303 (30.3%)
+    middle_adult: 291 (29.1%)
+    young: 241 (24.1%)
+    mature: 131 (13.1%)
+    senior: 34 (3.4%)
+  Concentration: Top 3 values = 83.5% of data
+  Diversity Score: 0.898 (0=uniform, 1=max diversity)
+
+HEALTH_RISK_LEVEL:
+  Count: 1000 | Missing: 0
+  Unique Values: 3
+  Value Distribution:
+    low_risk: 663 (66.3%)
+    moderate_risk: 250 (25.0%)
+    high_risk: 87 (8.7%)
+  Concentration: Top 3 values = 100.0% of data
+  Diversity Score: 0.757 (0=uniform, 1=max diversity)
+
+================================================================================
+PHASE 2: MULTI-DIMENSIONAL CROSS-PATTERN ANALYSIS
+================================================================================
+
+------------------------------------------------------------
+NUMERIC CORRELATIONS
+------------------------------------------------------------
+
+CORRELATION STRENGTH ANALYSIS:
+Strong Correlations (|r| > 0.5):
+  weight_kg ↔ bmi: r = 0.829
+  height_cm ↔ weight_kg: r = 0.525
+
+Moderate Correlations (0.3 < |r| ≤ 0.5):
+  No moderate correlations found
+
+HEALTH RISK SCORE CORRELATIONS:
+
+------------------------------------------------------------
+CATEGORICAL CROSS-PATTERN ANALYSIS
+------------------------------------------------------------
+
+DEMOGRAPHICS vs OUTCOMES:
+  age_group × bmi_category: χ² = 56.87, p = 0.000 ***, Effect = 0.139
+    Crosstab proportions:
+    bmi_category  normal  obese  overweight  underweight
+age_group                                           
+mature         0.446  0.154       0.377        0.023
+middle_adult   0.448  0.094       0.396        0.062
+senior         0.212  0.212       0.515        0.061
+young          0.565  0.068       0.224        0.143
+young_adult    0.530  0.083       0.297        0.090
+  has_children × health_risk_score: χ² = 18.98, p = 0.015 *, Effect = 0.097
+    Crosstab proportions:
+    health_risk_score      0      1      2      3      4
+has_children                                        
+has_children       0.662  0.116  0.133  0.069  0.019
+no_children        0.674  0.070  0.170  0.070  0.015
+pregnant           0.308  0.154  0.462  0.077  0.000
+  has_children × bmi_category: χ² = 16.15, p = 0.013 *, Effect = 0.090
+    Crosstab proportions:
+    bmi_category  normal  obese  overweight  underweight
+has_children                                        
+has_children   0.446  0.104       0.371        0.079
+no_children    0.543  0.086       0.279        0.092
+pregnant       0.692  0.154       0.077        0.077
+  gender × bmi_category: χ² = 16.97, p = 0.049 *, Effect = 0.076
+    Crosstab proportions:
+    bmi_category    normal  obese  overweight  underweight
+gender                                                
+female           0.509  0.090       0.329        0.072
+male             0.472  0.100       0.336        0.093
+other            0.375  0.000       0.312        0.312
+prefer_not_say   0.547  0.133       0.253        0.067
+  has_children × health_risk_level: χ² = 9.71, p = 0.046 *, Effect = 0.070
+    Crosstab proportions:
+    health_risk_level  high_risk  low_risk  moderate_risk
+has_children                                         
+has_children           0.088     0.662          0.250
+no_children            0.086     0.674          0.240
+pregnant               0.077     0.308          0.615
+
+DEMOGRAPHICS vs LIFESTYLE:
+  age_group × alcohol_level: χ² = 40.03, p = 0.021 *, Effect = 0.100
+    Crosstab proportions:
+    alcohol_level  excessive_alcohol  heavy_alcohol  ...  no_alcohol  very_heavy_alcohol
+age_group                                        ...                                
+mature                     0.191          0.160  ...       0.115               0.160
+middle_adult               0.162          0.148  ...       0.144               0.100
+senior                     0.206          0.235  ...       0.118               0.118
+young                      0.120          0.133  ...       0.120               0.170
+young_adult                0.116          0.132  ...       0.191               0.139
+
+[5 rows x 7 columns]
+  age_group × smoking_status: χ² = 33.21, p = 0.032 *, Effect = 0.091
+    Crosstab proportions:
+    smoking_status  heavy_smoker  light_smoker  ...  social_smoker  very_heavy_smoker
+age_group                                   ...                                  
+mature                 0.031         0.053  ...          0.191              0.031
+middle_adult           0.034         0.117  ...          0.172              0.007
+senior                 0.059         0.088  ...          0.176              0.000
+young                  0.033         0.054  ...          0.207              0.000
+young_adult            0.043         0.119  ...          0.142              0.013
+
+[5 rows x 6 columns]
+
+LIFESTYLE vs HEALTH OUTCOMES:
+  smoking_status × health_risk_score: χ² = 344.06, p = 0.000 ***, Effect = 0.293
+    Crosstab proportions:
+    health_risk_score      0      1      2      3      4
+smoking_status                                      
+heavy_smoker       0.000  0.811  0.027  0.108  0.054
+light_smoker       0.613  0.118  0.194  0.065  0.011
+moderate_smoker    0.676  0.054  0.162  0.081  0.027
+non_smoker         0.706  0.059  0.153  0.071  0.012
+social_smoker      0.707  0.046  0.172  0.063  0.011
+very_heavy_smoker  0.000  0.700  0.000  0.000  0.300
+  smoking_status × health_risk_level: χ² = 107.63, p = 0.000 ***, Effect = 0.232
+    Crosstab proportions:
+    health_risk_level  high_risk  low_risk  moderate_risk
+smoking_status                                       
+heavy_smoker           0.162     0.000          0.838
+light_smoker           0.075     0.613          0.312
+moderate_smoker        0.108     0.676          0.216
+non_smoker             0.083     0.706          0.211
+social_smoker          0.075     0.707          0.218
+very_heavy_smoker      0.300     0.000          0.700
+  alcohol_level × bmi_category: χ² = 31.57, p = 0.025 *, Effect = 0.103
+    Crosstab proportions:
+    bmi_category            normal  obese  overweight  underweight
+alcohol_level                                                 
+excessive_alcohol        0.475  0.092       0.326        0.106
+heavy_alcohol            0.469  0.077       0.336        0.119
+light_alcohol            0.540  0.036       0.321        0.102
+moderate_alcohol         0.569  0.066       0.248        0.117
+moderate_light_alcohol   0.456  0.121       0.376        0.047
+no_alcohol               0.469  0.138       0.352        0.041
+very_heavy_alcohol       0.478  0.140       0.316        0.066
+
+MENTAL vs PHYSICAL HEALTH:
+  stress_calm × health_risk_level: χ² = 1190.46, p = 0.000 ***, Effect = 0.772
+    Crosstab proportions:
+    health_risk_level   high_risk  low_risk  moderate_risk
+stress_calm                                           
+mostly_stressed         1.000     0.000          0.000
+never_stressed          0.000     0.864          0.136
+often_stressed          0.145     0.000          0.855
+rarely_stressed         0.000     0.860          0.140
+sometimes_stressed      0.000     0.892          0.108
+  mood_positivity × health_risk_level: χ² = 1190.46, p = 0.000 ***, Effect = 0.772
+    Crosstab proportions:
+    health_risk_level   high_risk  low_risk  moderate_risk
+mood_positivity                                       
+mostly_positive         0.000     0.864          0.136
+never_positive          1.000     0.000          0.000
+often_positive          0.000     0.860          0.140
+rarely_positive         0.145     0.000          0.855
+sometimes_positive      0.000     0.892          0.108
+  mood_positivity × health_risk_score: χ² = 1609.45, p = 0.000 ***, Effect = 0.634
+    Crosstab proportions:
+    health_risk_score       0      1      2      3      4
+mood_positivity                                      
+mostly_positive     0.864  0.136  0.000  0.000  0.000
+never_positive      0.000  0.000  0.000  0.754  0.246
+often_positive      0.860  0.137  0.004  0.000  0.000
+rarely_positive     0.000  0.000  0.855  0.134  0.011
+sometimes_positive  0.892  0.108  0.000  0.000  0.000
+  stress_calm × health_risk_score: χ² = 1609.45, p = 0.000 ***, Effect = 0.634
+    Crosstab proportions:
+    health_risk_score       0      1      2      3      4
+stress_calm                                          
+mostly_stressed     0.000  0.000  0.000  0.754  0.246
+never_stressed      0.864  0.136  0.000  0.000  0.000
+often_stressed      0.000  0.000  0.855  0.134  0.011
+rarely_stressed     0.860  0.137  0.004  0.000  0.000
+sometimes_stressed  0.892  0.108  0.000  0.000  0.000
+
+------------------------------------------------------------
+AGE-SPECIFIC PATTERN ANALYSIS
+------------------------------------------------------------
+
+AGE GROUP DISTRIBUTION:
+  young_adult: 303 (30.3%)
+  middle_adult: 291 (29.1%)
+  young: 241 (24.1%)
+  mature: 131 (13.1%)
+  senior: 34 (3.4%)
+
+HEALTH OUTCOMES BY AGE:
+
+  HEALTH_RISK_LEVEL by age group:
+    young_adult: 100.0% high risk indicators
+    middle_adult: 100.0% high risk indicators
+    young: 100.0% high risk indicators
+    mature: 100.0% high risk indicators
+    senior: 100.0% high risk indicators
+
+  HEALTH_RISK_SCORE by age group:
+
+  BMI_CATEGORY by age group:
+    young_adult: 8.3% high risk indicators
+    middle_adult: 9.4% high risk indicators
+    young: 6.8% high risk indicators
+    mature: 15.4% high risk indicators
+    senior: 21.2% high risk indicators
+
+LIFESTYLE PATTERNS BY AGE:
+
+  SMOKING_STATUS:
+    young_adult: 70.6% concerning patterns
+    middle_adult: 66.7% concerning patterns
+    young: 72.6% concerning patterns
+    mature: 68.7% concerning patterns
+
+  ALCOHOL_LEVEL:
+    young_adult: 57.8% concerning patterns
+    middle_adult: 55.3% concerning patterns
+    young: 54.4% concerning patterns
+    mature: 62.6% concerning patterns
+
+  EXERCISE_FREQ:
+    young_adult: 43.2% concerning patterns
+    middle_adult: 37.8% concerning patterns
+    young: 39.8% concerning patterns
+    mature: 36.6% concerning patterns
+
+------------------------------------------------------------
+HIGH-RISK GROUP DEEP DIVE ANALYSIS
+------------------------------------------------------------
+High-risk employees: 87 (8.7% of population)
+
+DEMOGRAPHIC PROFILE OF HIGH-RISK GROUP:
+
+  AGE_GROUP:
+    young_adult: 30 (34.5%) - Risk Ratio: 1.14x
+    middle_adult: 24 (27.6%) - Risk Ratio: 0.95x
+    young: 19 (21.8%) - Risk Ratio: 0.91x
+    mature: 14 (16.1%) - Risk Ratio: 1.23x
+
+  GENDER:
+    male: 41 (47.1%) - Risk Ratio: 1.06x
+    female: 36 (41.4%) - Risk Ratio: 0.90x
+    prefer_not_say: 6 (6.9%) - Risk Ratio: 0.90x
+    other: 4 (4.6%) - Risk Ratio: 2.70x
+
+  HAS_CHILDREN:
+    has_children: 47 (54.0%) - Risk Ratio: 1.01x
+    no_children: 39 (44.8%) - Risk Ratio: 0.99x
+    pregnant: 1 (1.1%) - Risk Ratio: 0.88x
+
+LIFESTYLE RISK FACTORS:
+
+  SMOKING_STATUS:
+    non_smoker: 62.1%
+    social_smoker: 14.9%
+    light_smoker: 8.0%
+
+  ALCOHOL_LEVEL:
+    excessive_alcohol: 21.8%
+    no_alcohol: 17.2%
+    light_alcohol: 16.1%
+
+  EXERCISE_FREQ:
+    frequent_exercise: 23.0%
+    no_exercise: 21.8%
+    regular_exercise: 19.5%
+
+  NUTRITION_QUALITY:
+    excellent_nutrition: 23.0%
+    adequate_nutrition: 21.8%
+    good_nutrition: 20.7%
+
+  SLEEP_DURATION:
+    long_sleep: 23.0%
+    optimal_sleep: 21.8%
+    insufficient_sleep: 21.8%
+
+HEALTH CONDITIONS:
+
+  CHRONIC_CONDITIONS:
+    cancer: 14.9%
+    heart_disease: 14.9%
+    kidney_disease: 12.6%
+
+  MOOD_POSITIVITY:
+    never_positive: 70.1%
+    rarely_positive: 29.9%
+
+  STRESS_CALM:
+    mostly_stressed: 70.1%
+    often_stressed: 29.9%
+
+  DEPRESSION_MOOD:
+    no_depression: 50.6%
+    rare_depression: 25.3%
+    frequent_depression: 18.4%
+
+  PAIN_LEVEL:
+    mild_pain: 19.5%
+    minimal_pain: 19.5%
+    extreme_pain: 18.4%
+
+✓ Phase all analysis complete. Total records analyzed: 1000

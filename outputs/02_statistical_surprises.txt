@@ -1,0 +1,138 @@
+Command: python scripts_new/statistical_surprise.py --data preprocessed_data/HRA_data.csv --threshold 2.0 --min-sample 10 --verbose
+Timestamp: 2025-09-15 17:56:57.300164
+Return code: 0
+================================================================================
+STDOUT:
+✓ Data loaded: 232 records, 38 columns
+Statistical Surprise Detector
+Minimum sample size: 10
+Surprise threshold: 2.0σ
+
+Analyzing demographic surprises...
+Demographics: ['age_group', 'Data.gender', 'Data.has_children', 'bmi_category']
+Outcomes: ['health_risk_level', 'Total_Health_Score']
+
+Analyzing lifestyle surprises...
+Lifestyle factors: 17 variables
+Variables: ['Data.smoking_status', 'Data.alcohol_consumption', 'Data.stress_level_irritability', 'Data.stress_level_loc', 'Data.loneliness', 'Data.sleep_quality', 'Data.activity_level', 'Data.daily_steps', 'Data.physical_pain', 'Data.water_intake', 'Data.fruit_veg_intake', 'Data.sugar_intake', 'Data.processed_food_intake', 'Data.supplement_usage', 'Data.perceived_health', 'Data.depression_anhedonia', 'Data.depression_mood']
+
+Analyzing compound demographic-lifestyle surprises...
+
+================================================================================
+STATISTICAL SURPRISE ANALYSIS REPORT
+================================================================================
+
+SURPRISE DETECTION SUMMARY:
+Total patterns analyzed: 372
+High confidence surprises: 89
+Categories with surprises: DEMOGRAPHIC, COMPOUND, LIFESTYLE
+
+------------------------------------------------------------
+TOP STATISTICAL SURPRISES
+------------------------------------------------------------
+
+1. [LIFESTYLE] daily_exercise ↑
+   Outcome: Total_Health_Score = 82.0
+   Rate: 18.2% (vs 0.9% population)
+   Magnitude: 5.96σ | Confidence: NONE
+   Sample: 11 employees
+
+2. [LIFESTYLE] daily_smoker ↑
+   Outcome: high_risk in health_risk_level
+   Rate: 50.0% (vs 19.4% population)
+   Magnitude: 5.02σ | Confidence: HIGH
+   Sample: 52 employees
+
+3. [LIFESTYLE] excellent_health ↑
+   Outcome: Total_Health_Score = 80.0
+   Rate: 13.3% (vs 0.9% population)
+   Magnitude: 5.01σ | Confidence: MEDIUM
+   Sample: 15 employees
+
+4. [LIFESTYLE] excellent_steps ↑
+   Outcome: Total_Health_Score = 79.0
+   Rate: 18.8% (vs 1.8% population)
+   Magnitude: 4.98σ | Confidence: NONE
+   Sample: 16 employees
+
+5. [COMPOUND] young_adult + daily_smoker ↑
+   Outcome: high_risk in health_risk_level
+   Rate: 54.1% (vs 19.4% population)
+   Magnitude: 4.8σ | Confidence: HIGH
+   Sample: 37 employees
+
+6. [COMPOUND] female + daily_smoker ↑
+   Outcome: high_risk in health_risk_level
+   Rate: 54.5% (vs 19.4% population)
+   Magnitude: 4.6σ | Confidence: HIGH
+   Sample: 33 employees
+
+7. [LIFESTYLE] frequent_exercise ↑
+   Outcome: Total_Health_Score = 80.0
+   Rate: 11.1% (vs 0.9% population)
+   Magnitude: 4.5σ | Confidence: NONE
+   Sample: 18 employees
+
+8. [LIFESTYLE] moderate_pain ↑
+   Outcome: Total_Health_Score = 48.0
+   Rate: 16.7% (vs 1.4% population)
+   Magnitude: 4.5σ | Confidence: NONE
+   Sample: 12 employees
+
+9. [COMPOUND] no_children + daily_smoker ↑
+   Outcome: high_risk in health_risk_level
+   Rate: 48.9% (vs 19.4% population)
+   Magnitude: 4.5σ | Confidence: HIGH
+   Sample: 45 employees
+
+10. [LIFESTYLE] always_in_control ↑
+   Outcome: Total_Health_Score = 73.0
+   Rate: 15.8% (vs 1.8% population)
+   Magnitude: 4.48σ | Confidence: NONE
+   Sample: 19 employees
+
+------------------------------------------------------------
+DEMOGRAPHIC OUTLIERS
+------------------------------------------------------------
+• underweight → Total_Health_Score=48.0: 15.4% rate
+  (14.0pp higher than population average, n=13)
+• underweight → Total_Health_Score=55.5: 15.4% rate
+  (14.0pp higher than population average, n=13)
+• underweight → Total_Health_Score=14.0: 7.7% rate
+  (7.2pp higher than population average, n=13)
+• underweight → Total_Health_Score=33.0: 7.7% rate
+  (7.2pp higher than population average, n=13)
+• underweight → Total_Health_Score=46.0: 7.7% rate
+  (7.2pp higher than population average, n=13)
+
+------------------------------------------------------------
+LIFESTYLE ANOMALIES
+------------------------------------------------------------
+• daily_exercise → Total_Health_Score=82.0: 18.2% rate
+  (17.3pp higher than population average, n=11)
+• daily_smoker → high_risk: 50.0%
+  (30.6pp higher than population average, n=52)
+• excellent_health → Total_Health_Score=80.0: 13.3% rate
+  (12.4pp higher than population average, n=15)
+• excellent_steps → Total_Health_Score=79.0: 18.8% rate
+  (17.0pp higher than population average, n=16)
+• frequent_exercise → Total_Health_Score=80.0: 11.1% rate
+  (10.2pp higher than population average, n=18)
+
+------------------------------------------------------------
+COMPOUND EFFECTS
+------------------------------------------------------------
+• young_adult + daily_smoker → high_risk: 54.1%
+  (34.7pp higher than population average, n=37)
+• female + daily_smoker → high_risk: 54.5%
+  (35.1pp higher than population average, n=33)
+• no_children + daily_smoker → high_risk: 48.9%
+  (29.5pp higher than population average, n=45)
+• no_children + mostly_in_control → low_risk: 35.5%
+  (21.2pp higher than population average, n=31)
+• female + daily_smoker → very_high_risk: 6.1%
+  (5.2pp higher than population average, n=33)
+
+================================================================================
+STATISTICAL SURPRISE ANALYSIS COMPLETE
+================================================================================

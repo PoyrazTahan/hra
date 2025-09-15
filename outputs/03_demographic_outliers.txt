@@ -1,0 +1,130 @@
+Command: python scripts_new/demographic_outlier_spotter.py --data preprocessed_data/HRA_data.csv --max-size 15.0 --min-risk-ratio 1.5 --min-sample 8 --verbose
+Timestamp: 2025-09-15 17:56:57.558204
+Return code: 0
+================================================================================
+STDOUT:
+✓ Data loaded: 232 records, 38 columns
+Demographic Outlier Spotter
+Max segment size: 15.0% of population
+Min risk ratio: 1.5x
+Min sample size: 8
+Available demographic variables: 13
+Variables: ['age_group', 'Data.gender', 'Data.has_children', 'bmi_category', 'Data.smoking_status', 'Data.stress_level_irritability', 'Data.stress_level_loc', 'Data.activity_level', 'Data.sleep_quality', 'Data.perceived_health', 'Data.loneliness', 'Data.daily_steps', 'Data.physical_pain']
+Outcome variables: ['health_risk_level', 'Total_Health_Score']
+
+Population baselines:
+  health_risk_level.high_risk: 18.1%
+  health_risk_level.moderate_risk: 61.2%
+  health_risk_level.elevated_risk: 79.3%
+  Total_Health_Score.high_score: 23.7%
+  Total_Health_Score.low_score: 47.0%
+
+Analyzing single-variable demographic outliers...
+  Found outlier: bmi_category=underweight (n=14, 6.0%)
+  Found outlier: Data.smoking_status=frequent_smoker (n=14, 6.0%)
+  Found outlier: Data.smoking_status=former_smoker (n=12, 5.2%)
+  Found outlier: Data.stress_level_irritability=rarely_irritated (n=25, 10.8%)
+  Found outlier: Data.stress_level_irritability=frequently_irritated (n=19, 8.2%)
+  Found outlier: Data.stress_level_irritability=never_irritated (n=8, 3.4%)
+  Found outlier: Data.stress_level_loc=frequently_out_of_control (n=21, 9.1%)
+  Found outlier: Data.stress_level_loc=always_in_control (n=19, 8.2%)
+  Found outlier: Data.activity_level=frequent_exercise (n=19, 8.2%)
+  Found outlier: Data.activity_level=daily_exercise (n=11, 4.7%)
+  Found outlier: Data.activity_level=daily_exercise (n=11, 4.7%)
+  Found outlier: Data.sleep_quality=insufficient_sleep (n=33, 14.2%)
+  Found outlier: Data.sleep_quality=long_sleep (n=12, 5.2%)
+  Found outlier: Data.perceived_health=very_poor_health (n=17, 7.3%)
+  Found outlier: Data.perceived_health=very_poor_health (n=17, 7.3%)
+  Found outlier: Data.perceived_health=excellent_health (n=15, 6.5%)
+  Found outlier: Data.perceived_health=excellent_health (n=15, 6.5%)
+  Found outlier: Data.loneliness=never_lonely (n=29, 12.5%)
+  Found outlier: Data.daily_steps=excellent_steps (n=16, 6.9%)
+  Found outlier: Data.daily_steps=excellent_steps (n=16, 6.9%)
+  Found outlier: Data.daily_steps=excellent_steps (n=16, 6.9%)
+  Found outlier: Data.physical_pain=severe_pain (n=14, 6.0%)
+  Found outlier: Data.physical_pain=moderate_pain (n=13, 5.6%)
+  Found outlier: Data.physical_pain=moderate_pain (n=13, 5.6%)
+
+Analyzing two-variable demographic combinations...
+  Found combination outlier: age_group=middle_adult + Data.gender=female (n=25)
+  Found combination outlier: age_group=young_adult + bmi_category=obese (n=13)
+  Found combination outlier: age_group=young + bmi_category=normal_weight (n=21)
+  Found combination outlier: age_group=middle_adult + bmi_category=normal_weight (n=13)
+  Found combination outlier: age_group=young_adult + bmi_category=obese (n=13)
+  Found combination outlier: Data.gender=male + bmi_category=normal_weight (n=21)
+  Found combination outlier: Data.gender=female + bmi_category=underweight (n=13)
+  Found combination outlier: Data.gender=female + bmi_category=obese (n=22)
+  Found combination outlier: Data.gender=male + Data.has_children=has_children (n=19)
+
+================================================================================
+DEMOGRAPHIC OUTLIER ANALYSIS REPORT
+================================================================================
+
+OUTLIER DETECTION SUMMARY:
+Total outlier segments found: 33
+Risk ratio threshold: 1.5x
+Max segment size: 15.0% of population
+Elevated risk segments: 14
+Protected segments: 19
+
+------------------------------------------------------------
+HIGHEST RISK DEMOGRAPHIC OUTLIERS
+------------------------------------------------------------
+
+• Data.physical_pain = moderate_pain
+  Segment size: 13 employees (5.6% of population)
+  high_risk: 61.5% (vs 18.1% population)
+  Risk ratio: 3.4x | Difference: +43.4pp
+
+• Data.sleep_quality = insufficient_sleep
+  Segment size: 33 employees (14.2% of population)
+  high_risk: 42.4% (vs 18.1% population)
+  Risk ratio: 2.34x | Difference: +24.3pp
+
+• Data.perceived_health = very_poor_health
+  Segment size: 17 employees (7.3% of population)
+  high_risk: 41.2% (vs 18.1% population)
+  Risk ratio: 2.27x | Difference: +23.1pp
+
+• age_group = young_adult + bmi_category = obese
+  Segment size: 13 employees (5.6% of population)
+  high_risk: 38.5% (vs 18.1% population)
+  Risk ratio: 2.12x | Difference: +20.4pp
+
+• Data.gender = female + bmi_category = underweight
+  Segment size: 13 employees (5.6% of population)
+  high_risk: 38.5% (vs 18.1% population)
+  Risk ratio: 2.12x | Difference: +20.4pp
+
+------------------------------------------------------------
+STRONGEST DEMOGRAPHIC PROTECTION
+------------------------------------------------------------
+
+• Data.stress_level_irritability = never_irritated
+  Segment size: 8 employees (3.4% of population)
+  high_risk: 0.0% (vs 18.1% population)
+  Protection factor: infx | Difference: -18.1pp
+
+• Data.activity_level = frequent_exercise
+  Segment size: 19 employees (8.2% of population)
+  high_risk: 0.0% (vs 18.1% population)
+  Protection factor: infx | Difference: -18.1pp
+
+• Data.activity_level = daily_exercise
+  Segment size: 11 employees (4.7% of population)
+  high_risk: 0.0% (vs 18.1% population)
+  Protection factor: infx | Difference: -18.1pp
+
+• Data.perceived_health = excellent_health
+  Segment size: 15 employees (6.5% of population)
+  high_risk: 0.0% (vs 18.1% population)
+  Protection factor: infx | Difference: -18.1pp
+
+• age_group = middle_adult + bmi_category = normal_weight
+  Segment size: 13 employees (5.6% of population)
+  high_risk: 0.0% (vs 18.1% population)
+  Protection factor: infx | Difference: -18.1pp
+
+================================================================================
+DEMOGRAPHIC OUTLIER ANALYSIS COMPLETE
+================================================================================

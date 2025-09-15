@@ -1,0 +1,52 @@
+﻿Topics,Questions,PossibleAnswers,AnswerType
+Cinsiyet,Cinsiyetiniz nedir?,"*Erkek
+*Kadın
+*Belirtmek istemiyorum
+*Diğer",SingleSelection
+Yaş,Kaç yaşındasınız?,,Free format
+Ebeveynlik,Çocuğunuz var mı?,"*Hayır
+*Evet
+*Hamileyim",SingleSelection
+Boy,Boyunuz (cm),,Free format
+Kilo,Kilonuz (kg),,Free format
+Mental - Uyku,"Takip eden önermeye ne kadar katıldığınızı belirtin: ""Son iki hafta boyunca, sabahları kendimi taze ve dinlenmiş hissederek uyandım.""","*Hiçbir zaman
+*Bazen
+*Geçen zamanın yarısından azında
+*Geçen zamanın yarısından fazlasında
+*Çoğu zaman
+*Her zaman",SingleSelection
+Mental - Stres,"Takip eden önermeye ne kadar katıldığınızı belirtin: ""Son iki hafta boyunca, kendimi sakin ve gevşemiş hissettim.""","*Hiçbir zaman
+*Bazen
+*Geçen zamanın yarısından azında
+*Geçen zamanın yarısından fazlasında
+*Çoğu zaman
+*Her zaman",SingleSelection
+Mental - İyilik,"Takip eden önermeye ne kadar katıldığınızı belirtin: ""Son iki hafta boyunca, kendimi neşeli ve keyifli hissettim.""","*Hiçbir zaman
+*Bazen
+*Geçen zamanın yarısından azında
+*Geçen zamanın yarısından fazlasında
+*Çoğu zaman
+*Her zaman",SingleSelection
+Fiziksel - Aktivite,Gün boyunca toplam fiziksel aktivite düzeyinizi hangisi en iyi tanımlar?,"*Çok düşük (çoğunlukla oturuyor veya uzanıyorum)
+*Düşük (kısa mesafeleri yürüyor, ara sıra ayakta duruyorum)
+*Orta (her gün düzenli yürüyüş veya basit ev egzersizleri yapıyorum)
+*Yüksek (işe-okula yürüyor, merdiven kullanıyor, hobi olarak spor yapıyorum)
+*Çok yüksek (düzenli yoğun egzersiz veya spor yapıyorum )",SingleSelection
+Beslenme - Şeker,Geçtiğimiz bir hafta içinde şekerli atıştırmalık veya içecekleri ne sıklıkla tükettiniz?,"*Hiç
+*1-2 gün
+*3-4 gün
+*5-6 gün
+*Her gün",SingleSelection
+Beslenme - Su tüketimi,Geçtiğimiz bir hafta içinde günlük ortalama ne kadar su içtiniz?,"*1-2 bardak (200-400 ml)
+*3-4 bardak (600-800 ml)
+*5-6 bardak (1000-1200 ml)
+*7-8 bardak (1400-1600 ml)
+*8 bardaktan fazla (+1600 ml)",SingleSelection
+Sigara,Sigara kullanıyor musunuz?,"*Hayır
+*Sosyal içiciyim (haftada birkaç gün)
+*Günde 3-4 tane
+*Günde yarım paket
+*Günde 1 paket
+*Günde 1 paketten fazla",SingleSelection
+Takviyeler,Düzenli olarak bir vitamin veya mineral takviyesi kullanıyor musunuz?,"*Hayır
+*Evet",SingleSelection

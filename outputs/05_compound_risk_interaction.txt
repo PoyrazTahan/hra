@@ -1,0 +1,54 @@
+Command: python scripts_new/compound_risk_scorer.py --data preprocessed_data/HRA_data.csv --method interaction-weighted --min-sample 15 --verbose
+Timestamp: 2025-09-15 17:56:58.079827
+Return code: 0
+================================================================================
+STDOUT:
+Compound Risk Scorer
+Method: interaction-weighted
+Minimum sample size: 15
+✓ Data loaded: 232 records, 38 columns
+
+Risk factor groups: ['demographic', 'lifestyle', 'stress', 'health']
+  demographic: 4 factors
+  lifestyle: 10 factors
+  stress: 6 factors
+  health: 1 factors
+
+Calculating factor risk weights...
+Population baselines: 18.1% high risk, 79.3% elevated risk
+
+============================================================
+COMPOUND SCORE EVALUATION (INTERACTION-WEIGHTED METHOD)
+============================================================
+
+Threshold 1.5x: Flags 20 employees (8.6%)
+  Precision: 60.0% high risk, 75.0% elevated risk
+  Recall: 28.6% of high risk caught, 8.2% of elevated risk caught
+
+Threshold 2.0x: Flags 4 employees (1.7%)
+  Precision: 25.0% high risk, 25.0% elevated risk
+  Recall: 2.4% of high risk caught, 0.5% of elevated risk caught
+
+============================================================
+HIGH-IMPACT RISK FACTORS
+============================================================
+
+============================================================
+PREDICTION OUTLIERS
+============================================================
+
+Underestimated Risk (30 cases):
+Low compound score but actually high risk
+  Score: 1.03 | Actual: high_risk
+    Profile: age_group=young_adult, Data.gender=male, Data.has_children=no_children, bmi_category=overweight, Data.stress_level_irritability=sometimes_irritated, Data.smoking_status=daily_smoker, Data.physical_pain=minimal_pain
+  Score: 1.02 | Actual: high_risk
+    Profile: age_group=young_adult, Data.gender=female, Data.has_children=no_children, Data.stress_level_irritability=sometimes_irritated, Data.smoking_status=never_smoked, Data.physical_pain=moderate_pain
+  Score: 1.05 | Actual: high_risk
+    Profile: age_group=young_adult, Data.gender=female, Data.has_children=no_children, bmi_category=overweight, Data.stress_level_irritability=often_irritated, Data.smoking_status=daily_smoker, Data.physical_pain=minimal_pain
+
+Overestimated Risk (0 cases):
+High compound score but actually low risk
+
+============================================================
+COMPOUND RISK SCORING COMPLETE
+============================================================

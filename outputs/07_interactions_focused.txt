@@ -1,0 +1,123 @@
+Command: python scripts_new/interaction_scanner.py --data preprocessed_data/HRA_data.csv --mode focused --threshold 1.5 --min-sample 20
+Timestamp: 2025-09-15 17:57:10.006456
+Return code: 0
+================================================================================
+STDOUT:
+Interaction Effect Scanner
+Mode: focused - Targeted analysis on key risk factors
+Threshold: 1.5x amplification
+Minimum sample: 20
+✓ Data loaded: 232 records, 38 columns
+Mode focus: Using 12 key variables
+Auto-excluded: ['_id', 'UserId', 'Perceived_Health_Score', 'thyroid_disorder_status', 'kidney_disease_status']
+Testing: 12 predictors against 2 outcomes
+
+Testing 132 variable pair × outcome combinations...
+Limiting to top 200 most promising combinations
+Found 60 meaningful interactions
+
+================================================================================
+INTERACTION EFFECT ANALYSIS REPORT
+================================================================================
+
+SUMMARY:
+Total meaningful interactions: 60
+High amplifiers (3.0x+): 5
+Moderate amplifiers (2.0x+): 25
+Protective effects (<0.5x): 83
+
+------------------------------------------------------------
+HIGH AMPLIFICATION PATTERNS (3.0x+ RISK)
+------------------------------------------------------------
+
+1. no_exercise + daily_smoker → health_risk_level
+   Risk Rate: 68.8% (vs 19.0% baseline)
+   Amplification: 3.62x | Sample: n=32
+
+2. daily_smoker + overweight → health_risk_level
+   Risk Rate: 65.0% (vs 19.0% baseline)
+   Amplification: 3.43x | Sample: n=20
+
+3. female + daily_smoker → health_risk_level
+   Risk Rate: 60.6% (vs 19.0% baseline)
+   Amplification: 3.2x | Sample: n=33
+
+4. female + persistent_sadness → health_risk_level
+   Risk Rate: 60.0% (vs 19.0% baseline)
+   Amplification: 3.16x | Sample: n=20
+
+5. no_alcohol + daily_smoker → health_risk_level
+   Risk Rate: 60.0% (vs 19.0% baseline)
+   Amplification: 3.16x | Sample: n=25
+
+------------------------------------------------------------
+MODERATE AMPLIFICATION PATTERNS (2.0x+ RISK)
+------------------------------------------------------------
+
+1. daily_smoker + young_adult → health_risk_level
+   Risk Rate: 56.8% (vs 19.0% baseline)
+   Amplification: 2.99x | Sample: n=37
+
+2. always_lonely + no_exercise → health_risk_level
+   Risk Rate: 56.5% (vs 19.0% baseline)
+   Amplification: 2.98x | Sample: n=23
+
+3. always_lonely + young_adult → health_risk_level
+   Risk Rate: 55.6% (vs 19.0% baseline)
+   Amplification: 2.93x | Sample: n=27
+
+4. no_children + persistent_sadness → health_risk_level
+   Risk Rate: 55.0% (vs 19.0% baseline)
+   Amplification: 2.9x | Sample: n=20
+
+5. no_children + insufficient_sleep → health_risk_level
+   Risk Rate: 55.0% (vs 19.0% baseline)
+   Amplification: 2.9x | Sample: n=20
+
+6. frequent_sadness + young_adult → health_risk_level
+   Risk Rate: 51.7% (vs 19.0% baseline)
+   Amplification: 2.73x | Sample: n=29
+
+7. no_children + daily_smoker → health_risk_level
+   Risk Rate: 51.1% (vs 19.0% baseline)
+   Amplification: 2.69x | Sample: n=45
+
+8. female + insufficient_sleep → health_risk_level
+   Risk Rate: 50.0% (vs 19.0% baseline)
+   Amplification: 2.64x | Sample: n=26
+
+9. borderline_sleep + daily_smoker → health_risk_level
+   Risk Rate: 50.0% (vs 19.0% baseline)
+   Amplification: 2.64x | Sample: n=28
+
+10. minimal_pain + daily_smoker → health_risk_level
+   Risk Rate: 50.0% (vs 19.0% baseline)
+   Amplification: 2.64x | Sample: n=22
+
+------------------------------------------------------------
+PROTECTIVE EFFECT PATTERNS (<0.5x RISK)
+------------------------------------------------------------
+
+1. male + normal_weight → health_risk_level
+   Risk Rate: 0.0% (vs 19.0% baseline)
+   Protection: 100% risk reduction | Sample: n=21
+
+2. no_children + positive_mood → health_risk_level
+   Risk Rate: 0.0% (vs 19.0% baseline)
+   Protection: 100% risk reduction | Sample: n=21
+
+3. has_children + never_smoked → health_risk_level
+   Risk Rate: 0.0% (vs 19.0% baseline)
+   Protection: 100% risk reduction | Sample: n=26
+
+4. has_children + normal_weight → health_risk_level
+   Risk Rate: 0.0% (vs 19.0% baseline)
+   Protection: 100% risk reduction | Sample: n=20
+
+5. occasional_sadness + optimal_sleep → health_risk_level
+   Risk Rate: 0.0% (vs 19.0% baseline)
+   Protection: 100% risk reduction | Sample: n=37
+
+================================================================================
+INTERACTION ANALYSIS COMPLETE
+================================================================================

@@ -1,0 +1,201 @@
+_id,UserId,sleep_quality,activity_level,water_intake,height,has_children,stress_level,sugar_intake,weight,smoking_status,mood_level,gender,supplement_usage,age
+6893bf13086dc94f5bebc4bd,62ee23b90802b72ce2bf5c5d,Çoğu zaman,Çok yüksek (düzenli yoğun egzersiz veya spor yapıyorum),7-8 bardak (1400-1600 ml),187,Hayır,Çoğu zaman,1-2 gün,83,Sosyal içiciyim (haftada birkaç gün),Çoğu zaman,Erkek,Evet,32
+6893bf9f086dc94f5bebc543,657b0a936c331bbac2552512,Bazen,,,1,Çocuğum yok,Geçen zamanın yarısından azında,,87,,Bazen,Erkek,,31
+6893c090306074fbc17475df,6682ccad871b64413f8b99a6,Geçen zamanın yarısından azında,Orta (her gün düzenli yürüyüş veya basit ev egzersizleri yapıyorum),3-4 bardak (600-800 ml),170,Çocuğum yok,Geçen zamanın yarısından azında,3-4 gün,50,Hayır,Bazen,Erkek,Evet,52
+6894493c306074fbc174f15c,62ee3fc70802b72ce2bf5c8e,Çoğu zaman,Çok yüksek (düzenli yoğun egzersiz veya spor yapıyorum),5-6 bardak (1000-1200 ml),177,Hayır,Çoğu zaman,1-2 gün,78,Günde 3-4 tane,Çoğu zaman,Erkek,Evet,35
+6894b04d306074fbc176b075,653a41bd7268ded634110467,Bazen,Orta (her gün düzenli yürüyüş veya basit ev egzersizleri yapıyorum),7-8 bardak (1400-1600 ml),163,Çocuğum yok,Bazen,3-4 gün,50,Sosyal içiciyim (haftada birkaç gün),Bazen,Kadın,Evet,27
+6894bf8d306074fbc176d95e,661d19c5932ad82943eaa806,,,,,Çocuğum yok,,,,,,Erkek,,28
+6894c820306074fbc1773e01,64b4e8eb983f1f586ebb871c,Hiçbir zaman,Çok düşük (çoğunlukla oturuyor veya uzanıyorum),,168,Çocuğum yok,Bazen,1-2 gün,63,,Çoğu zaman,Kadın,,35
+6894f6ea306074fbc1780b5a,651c3a89f62dbc8d1acd4547,,,,,Çocuğum yok,,,,,,Kadın,,27
+6894fdce306074fbc1781ae1,67fcd6fce7691472ea93da68,Geçen zamanın yarısından fazlasında,Orta (her gün düzenli yürüyüş veya basit ev egzersizleri yapıyorum),3-4 bardak (600-800 ml),180,Çocuğum yok,Geçen zamanın yarısından fazlasında,Hiç,1,Günde 1 paket,Geçen zamanın yarısından fazlasında,Erkek,Hayır,26
+6895a2c6306074fbc1795050,65a508035167a1812989e0b4,Bazen,Orta (her gün düzenli yürüyüş veya basit ev egzersizleri yapıyorum),7-8 bardak (1400-1600 ml),162,Çocuğum yok,Geçen zamanın yarısından fazlasında,1-2 gün,52,Sosyal içiciyim (haftada birkaç gün),Geçen zamanın yarısından fazlasında,Kadın,Evet,26
+6895b1a3306074fbc1797c77,649486f88a7a933bdb35ff4f,Çoğu zaman,"Yüksek (işe-okula yürüyor, merdiven kullanıyor, hobi olarak spor yapıyorum)",7-8 bardak (1400-1600 ml),175,Çocuğum yok,Geçen zamanın yarısından fazlasında,3-4 gün,72,Hayır,Geçen zamanın yarısından fazlasında,Erkek,Evet,33
+68973a45a73b8c9a0055fb06,65e477f78520ae3726ebc507,,,,170,Çocuğum yok,,,49,,,Kadın,,24
+6898458ba73b8c9a005764cc,62e38d7de53e20ec37a0f7e2,Geçen zamanın yarısından fazlasında,Orta (her gün düzenli yürüyüş veya basit ev egzersizleri yapıyorum),8 bardaktan fazla (+1600 ml),165,Hayır,Geçen zamanın yarısından azında,1-2 gün,65,Hayır,Geçen zamanın yarısından fazlasında,Kadın,Hayır,35
+689851bba73b8c9a00577e0d,65df75ce0e6e986f6dcf34c8,Geçen zamanın yarısından azında,,,163,Çocuğum yok,Bazen,,54,,Çoğu zaman,Kadın,,29
+68999f6fa73b8c9a0059f98b,6455409cda47a2f4af1808ce,Hiçbir zaman,Çok düşük (çoğunlukla oturuyor veya uzanıyorum),1-2 bardak (200-400 ml),160,Çocuğum var,Hiçbir zaman,Her gün,52,Günde 1 paketten fazla,Hiçbir zaman,Kadın,Hayır,42
+6899aa97a73b8c9a005a1d17,6564923c89100547b86e49a3,Geçen zamanın yarısından fazlasında,Orta (her gün düzenli yürüyüş veya basit ev egzersizleri yapıyorum),5-6 bardak (1000-1200 ml),180,Çocuğum var,Geçen zamanın yarısından fazlasında,3-4 gün,80,Günde 1 paket,Geçen zamanın yarısından fazlasında,Erkek,Hayır,40
+689c6aa2a73b8c9a006276bb,64f59407594b6704c8a14bb7,Bazen,Orta (her gün düzenli yürüyüş veya basit ev egzersizleri yapıyorum),7-8 bardak (1400-1600 ml),158,Çocuğum yok,Bazen,1-2 gün,53,Günde yarım paket,Geçen zamanın yarısından fazlasında,Kadın,Evet,27
+689ee1c8ba5021141fe1003a,68028207a96dea63f0221f60,Bazen,Çok düşük (çoğunlukla oturuyor veya uzanıyorum),8 bardaktan fazla (+1600 ml),178,Çocuğum yok,Bazen,1-2 gün,61,Günde 3-4 tane,Bazen,Erkek,Hayır,32
+689ee4a4ba5021141fe1087b,689edddeba5021141fe0f143,,,,,Çocuğum var,,,111,,,Erkek,,30
+689ef105ba5021141fe13259,62f131cf0802b72ce2bf5d3c,,,,,,,,,,,,,30
+689ef522ba5021141fe13ec4,682ade231668acd10efac8e2,,,,,Çocuğum yok,,,,,,Kadın,,23
+689ef6e6ba5021141fe1452c,659feca07210a244b1efa056,,,,,Çocuğum yok,,,,,,Erkek,,31
+689ef9ebba5021141fe15285,680f1bf1242296452981fd7e,,,,,Çocuğum yok,,,,,,Kadın,,29
+689efa0cba5021141fe152e6,681a4a696b4788fe359b5d59,Her zaman,Çok düşük (çoğunlukla oturuyor veya uzanıyorum),5-6 bardak (1000-1200 ml),170,Çocuğum yok,Çoğu zaman,5-6 gün,70,Hayır,Çoğu zaman,Kadın,Hayır,24
+689efdc5ba5021141fe15e20,663f756e0b5f6d5a3b2deceb,,,,,Çocuğum yok,,,,,,Erkek,,28
+689efe36ba5021141fe161b9,671a57a75229c751bdbb6dbb,,,,,Çocuğum yok,,,,,,Kadın,,26
+689f01b8ba5021141fe1701e,67dbfa6a371880cf2c14beec,,,,,Çocuğum yok,,,,,,Erkek,,36
+689f02daba5021141fe1745b,68822e85066865bb24b1d899,,,,,Çocuğum var,,,,,,Erkek,,41
+689f0338ba5021141fe17558,689082ea0234b1d17cc2dd75,Bazen,"Düşük (kısa mesafeleri yürüyor, ara sıra ayakta duruyorum)",7-8 bardak (1400-1600 ml),172,Çocuğum var,Hiçbir zaman,1-2 gün,91,Günde yarım paket,Bazen,Erkek,Hayır,34
+689f0537ba5021141fe17ff8,686623422d740c2342b29b23,Bazen,Orta (her gün düzenli yürüyüş veya basit ev egzersizleri yapıyorum),8 bardaktan fazla (+1600 ml),172,Çocuğum var,Geçen zamanın yarısından azında,3-4 gün,82,Hayır,Geçen zamanın yarısından fazlasında,Erkek,Hayır,39
+689f05c1ba5021141fe1844f,68051ccea96dea63f027ceb6,,,,,Çocuğum var,,,,,,Erkek,,37
+689f0647ba5021141fe1868c,67c010ecae3d46309569b7d5,Geçen zamanın yarısından azında,Orta (her gün düzenli yürüyüş veya basit ev egzersizleri yapıyorum),8 bardaktan fazla (+1600 ml),160,Çocuğum yok,Hiçbir zaman,1-2 gün,55,Günde 1 paket,Bazen,Kadın,Hayır,30
+689f06b4ba5021141fe1893b,689b54c0a73b8c9a00602300,Geçen zamanın yarısından azında,"Düşük (kısa mesafeleri yürüyor, ara sıra ayakta duruyorum)",8 bardaktan fazla (+1600 ml),155,Çocuğum var,Geçen zamanın yarısından azında,3-4 gün,63,Hayır,Bazen,Kadın,Evet,27
+689f0751ba5021141fe18ba2,689ed5d0ba5021141fe0d160,,,,,Partnerim hamile,,,,,,Belirtmek istemiyorum,,94
+689f08dbba5021141fe19347,65b560994f65333d3cb15246,Bazen,,,164,Çocuğum yok,,,79,,,Kadın,,30
+689f0c9bba5021141fe1a0c5,681cf616ae5f2ce24bf106d9,Bazen,Orta (her gün düzenli yürüyüş veya basit ev egzersizleri yapıyorum),8 bardaktan fazla (+1600 ml),168,Çocuğum yok,Bazen,Hiç,83,Hayır,Bazen,Kadın,Evet,26
+689f0dc1ba5021141fe1a249,6800a656ee1ecc57ad7a0b75,Hiçbir zaman,"Düşük (kısa mesafeleri yürüyor, ara sıra ayakta duruyorum)",5-6 bardak (1000-1200 ml),168,Çocuğum yok,Bazen,3-4 gün,65,Günde 3-4 tane,Bazen,Kadın,Hayır,26
+689f0ed6ba5021141fe1a50f,6818abde6b4788fe3595bd27,Bazen,Çok düşük (çoğunlukla oturuyor veya uzanıyorum),5-6 bardak (1000-1200 ml),170,Çocuğum yok,Geçen zamanın yarısından azında,3-4 gün,100,Hayır,Geçen zamanın yarısından fazlasında,Kadın,Evet,27
+689f1435ba5021141fe1dbb9,6880d1bc066865bb24af7ce5,,,,,Çocuğum yok,,,56,,,Kadın,,30
+689f15a6ba5021141fe20a45,6800f181ee1ecc57ad7c8269,,,,,Çocuğum yok,,,,,,Kadın,,23
+689f1627ba5021141fe20d1b,681bb9c1de5d29afa576004a,,,,,Çocuğum var,,,,,,Erkek,,38
+689f1973ba5021141fe219c7,689df84ca73b8c9a00675d95,Geçen zamanın yarısından fazlasında,Orta (her gün düzenli yürüyüş veya basit ev egzersizleri yapıyorum),8 bardaktan fazla (+1600 ml),165,Çocuğum yok,Çoğu zaman,1-2 gün,70,Hayır,Çoğu zaman,Kadın,Hayır,32
+689f1bb7ba5021141fe220dd,6645294e6b51900803ae99a7,,,,,Çocuğum yok,,,,,,Kadın,,25
+689f1ca0ba5021141fe2241c,689359a27b7e607ce503aa1f,Bazen,Çok düşük (çoğunlukla oturuyor veya uzanıyorum),8 bardaktan fazla (+1600 ml),158,Çocuğum var,Bazen,Hiç,70,Hayır,Geçen zamanın yarısından fazlasında,Kadın,Evet,46
+689f24ddba5021141fe23fee,686af1ddae6fa8da37471705,Bazen,Orta (her gün düzenli yürüyüş veya basit ev egzersizleri yapıyorum),8 bardaktan fazla (+1600 ml),180,Çocuğum var,Geçen zamanın yarısından azında,Her gün,101,Hayır,Geçen zamanın yarısından azında,Erkek,Evet,40
+689f25f4ba5021141fe242d2,663cd4500b5f6d5a3b2afe5b,,,,,Çocuğum yok,,,,,,Kadın,,28
+689f2694ba5021141fe24546,6821f319f33892a804fcd848,,,,,Çocuğum yok,,,,,,Erkek,,25
+689f29b1ba5021141fe250a5,67d3d846371880cf2cfd73c0,Geçen zamanın yarısından azında,"Düşük (kısa mesafeleri yürüyor, ara sıra ayakta duruyorum)",3-4 bardak (600-800 ml),155,Çocuğum yok,Geçen zamanın yarısından fazlasında,3-4 gün,47,Hayır,Geçen zamanın yarısından fazlasında,Kadın,Evet,27
+689f30b9ba5021141fe267ba,6425ac85f65ad603203bfcd5,Bazen,Çok düşük (çoğunlukla oturuyor veya uzanıyorum),7-8 bardak (1400-1600 ml),166,Çocuğum yok,Bazen,Hiç,140,Hayır,Geçen zamanın yarısından azında,Kadın,Hayır,31
+689f30dcba5021141fe2688f,680aa4ed24229645297814d4,Bazen,"Yüksek (işe-okula yürüyor, merdiven kullanıyor, hobi olarak spor yapıyorum)",8 bardaktan fazla (+1600 ml),165,Çocuğum var,Geçen zamanın yarısından azında,1-2 gün,63,Sosyal içiciyim (haftada birkaç gün),Geçen zamanın yarısından azında,Erkek,Hayır,33
+689f320bba5021141fe26b76,686ea7e5ae6fa8da374d8550,Geçen zamanın yarısından azında,Çok düşük (çoğunlukla oturuyor veya uzanıyorum),7-8 bardak (1400-1600 ml),184,Çocuğum yok,Geçen zamanın yarısından fazlasında,1-2 gün,84,Günde 3-4 tane,Hiçbir zaman,Erkek,Hayır,24
+689f360cba5021141fe2761b,689f2643ba5021141fe243a1,,,,,Çocuğum yok,,,,,,Erkek,,29
+689f38b8ba5021141fe27bde,688abf6aad678e62e1d5bcc6,,,,,Çocuğum var,,,,,,Erkek,,45
+689f3a37ba5021141fe2811c,68906c830234b1d17cc2875c,,,,,Çocuğum yok,,,,,,Kadın,,33
+689f3a3bba5021141fe28166,6805f2c3a96dea63f02951e3,Bazen,Çok düşük (çoğunlukla oturuyor veya uzanıyorum),7-8 bardak (1400-1600 ml),174,Çocuğum var,Bazen,Her gün,71,Hayır,Geçen zamanın yarısından fazlasında,Erkek,Hayır,30
+689f3a3fba5021141fe28179,68272b6ff33892a8040b3b7c,Hiçbir zaman,,,172,Çocuğum var,Hiçbir zaman,,90,,,Erkek,,37
+689f3a5aba5021141fe28248,6849425592397e29f5708c88,,,,,Çocuğum yok,,,,,,Kadın,,28
+689f3a5cba5021141fe2826c,688e057e412200ac7f2dcae3,Bazen,"Düşük (kısa mesafeleri yürüyor, ara sıra ayakta duruyorum)",8 bardaktan fazla (+1600 ml),170,Çocuğum var,Bazen,3-4 gün,67,Hayır,Çoğu zaman,Kadın,Hayır,34
+689f3a73ba5021141fe28320,65119cc83a224c67c176e99a,,,,,Çocuğum var,,,,,,Kadın,,42
+689f3a79ba5021141fe28361,677f65714f040a4f6c84ffd2,Bazen,Çok düşük (çoğunlukla oturuyor veya uzanıyorum),3-4 bardak (600-800 ml),180,Çocuğum yok,Bazen,Her gün,64,Sosyal içiciyim (haftada birkaç gün),Bazen,Erkek,Hayır,29
+689f3a81ba5021141fe283bd,680f2c43242296452982668f,Bazen,Orta (her gün düzenli yürüyüş veya basit ev egzersizleri yapıyorum),8 bardaktan fazla (+1600 ml),157,Çocuğum var,Geçen zamanın yarısından azında,Hiç,68,Hayır,Bazen,Kadın,Evet,46
+689f3aa5ba5021141fe28475,66bf162f600d8b461a105e90,Çoğu zaman,Orta (her gün düzenli yürüyüş veya basit ev egzersizleri yapıyorum),3-4 bardak (600-800 ml),165,Çocuğum yok,Çoğu zaman,1-2 gün,56,Günde yarım paket,Çoğu zaman,Kadın,Hayır,48
+689f3c8fba5021141fe28bae,6821abc8f33892a804fbf0b5,,,,,Çocuğum var,,,,,,Kadın,,45
+689f3cf2ba5021141fe28d84,64f738aa415ac9822806a3a3,Geçen zamanın yarısından azında,"Düşük (kısa mesafeleri yürüyor, ara sıra ayakta duruyorum)",5-6 bardak (1000-1200 ml),171,Çocuğum yok,Geçen zamanın yarısından azında,Her gün,60,Hayır,Geçen zamanın yarısından fazlasında,Kadın,Evet,29
+689f3d49ba5021141fe28e8e,677e402a817fdcc9da923098,Geçen zamanın yarısından azında,Orta (her gün düzenli yürüyüş veya basit ev egzersizleri yapıyorum),1-2 bardak (200-400 ml),160,Çocuğum yok,Geçen zamanın yarısından azında,1-2 gün,60,Sosyal içiciyim (haftada birkaç gün),Geçen zamanın yarısından azında,Kadın,Hayır,28
+689f3e4dba5021141fe29624,6870b7dbae6fa8da37508aff,,,,,Çocuğum yok,,,,,,Erkek,,33
+689f401eba5021141fe29b43,6821d036f33892a804fc8124,,,,,Çocuğum yok,,,,,,Kadın,,28
+689f407fba5021141fe29c8c,68962101306074fbc17b0f11,Hiçbir zaman,Orta (her gün düzenli yürüyüş veya basit ev egzersizleri yapıyorum),8 bardaktan fazla (+1600 ml),174,Çocuğum yok,Bazen,1-2 gün,74,Günde 1 paket,Geçen zamanın yarısından azında,Erkek,Evet,26
+689f4194ba5021141fe29f01,689c8bb4a73b8c9a0063526f,,,,,Çocuğum yok,,,,,,Erkek,,31
+689f4370ba5021141fe2a43e,6752a9f908159ada121ed323,Hiçbir zaman,Orta (her gün düzenli yürüyüş veya basit ev egzersizleri yapıyorum),,162,Çocuğum yok,Bazen,1-2 gün,51,,Bazen,Kadın,,30
+689f4680ba5021141fe2ad6e,66aec4d1a210f938422daba8,Hiçbir zaman,Çok düşük (çoğunlukla oturuyor veya uzanıyorum),8 bardaktan fazla (+1600 ml),160,Çocuğum var,Hiçbir zaman,Hiç,57,Günde yarım paket,Bazen,Kadın,Evet,45
+689f4cd2ba5021141fe2be98,67c343be666cdc97496ed3af,Geçen zamanın yarısından azında,"Yüksek (işe-okula yürüyor, merdiven kullanıyor, hobi olarak spor yapıyorum)",8 bardaktan fazla (+1600 ml),165,Çocuğum var,Geçen zamanın yarısından azında,1-2 gün,73,Hayır,Geçen zamanın yarısından fazlasında,Erkek,Evet,30
+689f4d6fba5021141fe2c004,6899e409a73b8c9a005b745c,Geçen zamanın yarısından fazlasında,Çok düşük (çoğunlukla oturuyor veya uzanıyorum),8 bardaktan fazla (+1600 ml),158,Çocuğum var,Geçen zamanın yarısından fazlasında,3-4 gün,67,Hayır,Geçen zamanın yarısından fazlasında,Kadın,Hayır,47
+689f51c7ba5021141fe2cd71,681c6824ae5f2ce24beebfe4,,,,,Çocuğum var,,,,,,Erkek,,47
+689f5344ba5021141fe2d59b,671967cd5229c751bdbb0ff8,,,,,Çocuğum var,,,,,,Kadın,,27
+689f5682ba5021141fe2dbcf,68223ed9f33892a804fe5a3b,Geçen zamanın yarısından azında,Çok düşük (çoğunlukla oturuyor veya uzanıyorum),8 bardaktan fazla (+1600 ml),169,Çocuğum yok,Bazen,1-2 gün,68,Hayır,Geçen zamanın yarısından fazlasında,Erkek,Evet,29
+689f5749ba5021141fe2de0c,689f55d9ba5021141fe2dac1,,,,,Çocuğum yok,,,,,,Kadın,,26
+689f58baba5021141fe2e309,681a53046b4788fe359b918e,,,,,Çocuğum var,,,,,,Kadın,,44
+689f59caba5021141fe2ea57,642e6687d30047f94320b8a2,,,,,Çocuğum yok,,,,,,Kadın,,45
+689f5af7ba5021141fe2ee54,675a92315d2425d8f1196575,Çoğu zaman,Çok yüksek (düzenli yoğun egzersiz veya spor yapıyorum),5-6 bardak (1000-1200 ml),173,Çocuğum var,Çoğu zaman,1-2 gün,75,Hayır,Çoğu zaman,Erkek,Evet,48
+689f5bf8ba5021141fe2f09d,67e2dd0d6a39db18e300dbbc,Geçen zamanın yarısından fazlasında,"Düşük (kısa mesafeleri yürüyor, ara sıra ayakta duruyorum)",8 bardaktan fazla (+1600 ml),169,Çocuğum var,Geçen zamanın yarısından fazlasında,1-2 gün,72,Hayır,Çoğu zaman,Erkek,Hayır,43
+689f5c97ba5021141fe2f2be,6707cb1bb66bfb78d448cabd,Geçen zamanın yarısından fazlasında,"Düşük (kısa mesafeleri yürüyor, ara sıra ayakta duruyorum)",5-6 bardak (1000-1200 ml),177,Çocuğum yok,Hiçbir zaman,Hiç,130,Günde 1 paket,Geçen zamanın yarısından azında,Erkek,Hayır,31
+689f620eba5021141fe30283,67bd56fcae3d463095622bd1,Geçen zamanın yarısından azında,,,180,Çocuğum var,,,81,,,Erkek,,45
+689f6235ba5021141fe3030e,67536f79f82bae60061b1bfc,Hiçbir zaman,"Düşük (kısa mesafeleri yürüyor, ara sıra ayakta duruyorum)",5-6 bardak (1000-1200 ml),155,Çocuğum yok,Bazen,Hiç,48,Hayır,Bazen,Kadın,Hayır,46
+689f6356ba5021141fe305e7,6800d409ee1ecc57ad7b93dc,Geçen zamanın yarısından fazlasında,"Düşük (kısa mesafeleri yürüyor, ara sıra ayakta duruyorum)",8 bardaktan fazla (+1600 ml),172,Çocuğum yok,Bazen,1-2 gün,71,Hayır,Geçen zamanın yarısından azında,Kadın,Hayır,29
+689f6449ba5021141fe30842,68710f77ae6fa8da37514ae0,Çoğu zaman,,,162,Çocuğum yok,Çoğu zaman,,81,,,Kadın,,28
+689f67dcba5021141fe313f4,689302e47b7e607ce5025420,,,,,Çocuğum var,,,,,,Erkek,,52
+689f69c4ba5021141fe31b88,677b9454817fdcc9da8ae750,,,,,Çocuğum var,,,,,,Kadın,,41
+689f6ee4ba5021141fe32d98,65199519e32bbc105ea5e04f,,,,158,Çocuğum yok,,,59,,,Kadın,,29
+689f7031ba5021141fe330d6,689f6b30ba5021141fe3236d,,,,,Çocuğum yok,,,,,,Kadın,,40
+689f72d8ba5021141fe33657,68037e32a96dea63f023f959,,,,,Çocuğum yok,,,,,,Erkek,,26
+689f7444ba5021141fe33981,68988d94a73b8c9a005845fe,Bazen,"Yüksek (işe-okula yürüyor, merdiven kullanıyor, hobi olarak spor yapıyorum)",3-4 bardak (600-800 ml),170,Çocuğum yok,Bazen,1-2 gün,72,Hayır,Bazen,Erkek,Hayır,30
+689f7642ba5021141fe342e7,689ad2baa73b8c9a005e2591,Hiçbir zaman,Çok düşük (çoğunlukla oturuyor veya uzanıyorum),3-4 bardak (600-800 ml),171,Çocuğum yok,Bazen,3-4 gün,60,Hayır,Bazen,Erkek,Hayır,26
+689f775fba5021141fe34607,6800d5aeee1ecc57ad7bffa1,,,,,Çocuğum yok,,,,,,Kadın,,35
+689f7963ba5021141fe34e0f,68932e7c7b7e607ce502eb01,,,,,Çocuğum yok,,,,,,Kadın,,31
+689f7986ba5021141fe34e6f,65f2104798166bb024e171a8,,,,,Çocuğum yok,,,,,,Kadın,,33
+689f7ababa5021141fe35146,667d1eefce6717127655697b,Hiçbir zaman,Çok düşük (çoğunlukla oturuyor veya uzanıyorum),8 bardaktan fazla (+1600 ml),164,Çocuğum yok,Hiçbir zaman,1-2 gün,58,Günde 3-4 tane,Hiçbir zaman,Kadın,Hayır,28
+689f81baba5021141fe363bc,684fdc1e971a77f2dbf69730,Bazen,"Düşük (kısa mesafeleri yürüyor, ara sıra ayakta duruyorum)",8 bardaktan fazla (+1600 ml),163,Çocuğum var,Hiçbir zaman,1-2 gün,88,Hayır,Bazen,Kadın,Evet,37
+689f8831ba5021141fe374a6,685fe09de7532e93cfb1cb66,Bazen,Orta (her gün düzenli yürüyüş veya basit ev egzersizleri yapıyorum),8 bardaktan fazla (+1600 ml),168,Çocuğum var,Geçen zamanın yarısından fazlasında,Hiç,78,Hayır,Çoğu zaman,Erkek,Hayır,38
+689f8c68ba5021141fe38264,67b78ef2ae3d463095531d2b,Bazen,Çok düşük (çoğunlukla oturuyor veya uzanıyorum),5-6 bardak (1000-1200 ml),155,Çocuğum yok,Geçen zamanın yarısından azında,1-2 gün,70,Günde yarım paket,Bazen,Kadın,Evet,24
+689f97e2ba5021141fe3a864,677d74cd817fdcc9da90c2c4,Her zaman,"Yüksek (işe-okula yürüyor, merdiven kullanıyor, hobi olarak spor yapıyorum)",8 bardaktan fazla (+1600 ml),186,Çocuğum var,Çoğu zaman,1-2 gün,76,Hayır,Çoğu zaman,Erkek,Hayır,39
+689fa2d0ba5021141fe4140a,67869b136a3b82fac8cf1828,,,,,Çocuğum yok,,,,,,Kadın,,26
+689fa9b2ba5021141fe4203c,680a3b02a96dea63f038972d,,,,,Çocuğum yok,,,,,,Kadın,,28
+689fef71ba5021141fe44ef4,682442c2f33892a80402f3b5,Geçen zamanın yarısından azında,"Yüksek (işe-okula yürüyor, merdiven kullanıyor, hobi olarak spor yapıyorum)",5-6 bardak (1000-1200 ml),172,Çocuğum yok,Geçen zamanın yarısından fazlasında,Her gün,65,Günde 1 paketten fazla,Geçen zamanın yarısından fazlasında,Erkek,Hayır,34
+68a015c2ba5021141fe45de5,6899855ea73b8c9a0059b3ed,Çoğu zaman,"Yüksek (işe-okula yürüyor, merdiven kullanıyor, hobi olarak spor yapıyorum)",8 bardaktan fazla (+1600 ml),165,Çocuğum var,Çoğu zaman,1-2 gün,67,Hayır,Her zaman,Kadın,Evet,41
+68a02620ba5021141fe47bc1,67f4058c94151b9a5439ed78,Hiçbir zaman,Çok düşük (çoğunlukla oturuyor veya uzanıyorum),8 bardaktan fazla (+1600 ml),164,Çocuğum yok,Hiçbir zaman,1-2 gün,54,Hayır,Bazen,Kadın,Hayır,28
+68a02dacba5021141fe4c605,68907d410234b1d17cc2c91d,Hiçbir zaman,"Düşük (kısa mesafeleri yürüyor, ara sıra ayakta duruyorum)",5-6 bardak (1000-1200 ml),176,Çocuğum var,Bazen,3-4 gün,95,Hayır,Bazen,Erkek,Hayır,48
+68a03516ba5021141fe4f525,683038c48a5681fc0149cf91,,,,157,Çocuğum var,,,62,,,Erkek,,47
+68a036d1ba5021141fe4f90a,6576df496b6264ce925fe147,Bazen,"Düşük (kısa mesafeleri yürüyor, ara sıra ayakta duruyorum)",7-8 bardak (1400-1600 ml),180,Çocuğum yok,Bazen,3-4 gün,71,Hayır,Bazen,Erkek,Hayır,25
+68a04062ba5021141fe515d7,67e19c4a371880cf2c21fb10,,,,,Çocuğum var,,,,,,Kadın,,53
+68a04594ba5021141fe5233a,68985987a73b8c9a00578d95,Hiçbir zaman,"Düşük (kısa mesafeleri yürüyor, ara sıra ayakta duruyorum)",3-4 bardak (600-800 ml),164,Çocuğum yok,Bazen,5-6 gün,58,Hayır,Geçen zamanın yarısından azında,Kadın,Hayır,26
+68a05451ba5021141fe55408,6738cce8d81beacdc476cdab,,,,,Çocuğum yok,,,,,,Kadın,,25
+68a05475ba5021141fe55460,68823cdc066865bb24b1f740,,,,,Çocuğum yok,,,,,,Kadın,,30
+68a05b91ba5021141fe56fe5,6821a0d4f33892a804fbb847,,,,,Çocuğum yok,,,,,,Kadın,,32
+68a06699ba5021141fe5ced3,68944684306074fbc174e9f3,Hiçbir zaman,Çok düşük (çoğunlukla oturuyor veya uzanıyorum),8 bardaktan fazla (+1600 ml),170,Çocuğum yok,Bazen,1-2 gün,96,Hayır,Geçen zamanın yarısından azında,Kadın,Hayır,23
+68a06b3cba5021141fe5ebd1,660c09550d4f7cb73c819e4e,Bazen,"Düşük (kısa mesafeleri yürüyor, ara sıra ayakta duruyorum)",,155,Çocuğum yok,Geçen zamanın yarısından azında,3-4 gün,65,,Geçen zamanın yarısından azında,Kadın,,28
+68a06c3fba5021141fe5ee97,6852fcd94902d63c3907ec98,Bazen,Çok düşük (çoğunlukla oturuyor veya uzanıyorum),5-6 bardak (1000-1200 ml),160,Çocuğum var,Bazen,1-2 gün,69,Hayır,Bazen,Kadın,Hayır,42
+68a06e3dba5021141fe5f511,6899ec10a73b8c9a005bcd16,,,,,Çocuğum yok,,,,,,Kadın,,26
+68a07113ba5021141fe5fe79,6759769084171269db11bc76,Hiçbir zaman,Çok düşük (çoğunlukla oturuyor veya uzanıyorum),7-8 bardak (1400-1600 ml),160,Çocuğum yok,Bazen,1-2 gün,85,Sosyal içiciyim (haftada birkaç gün),Bazen,Kadın,Hayır,42
+68a07219ba5021141fe600ba,6768e4aeca76a1d5b3a1c432,Bazen,"Düşük (kısa mesafeleri yürüyor, ara sıra ayakta duruyorum)",5-6 bardak (1000-1200 ml),165,Çocuğum yok,Bazen,5-6 gün,75,Günde 1 paket,Bazen,Kadın,Hayır,43
+68a0735cba5021141fe60648,671e9637d9511465b5c3dc4f,,,,,Çocuğum yok,,,,,,Erkek,,32
+68a0765aba5021141fe6116e,66fe79dddd69cc1ced51c86c,,,,,Çocuğum var,,,,,,Kadın,,43
+68a07d8fba5021141fe622f7,6781315a7816a40e1d217e2e,Bazen,Orta (her gün düzenli yürüyüş veya basit ev egzersizleri yapıyorum),8 bardaktan fazla (+1600 ml),187,Çocuğum yok,Çoğu zaman,Hiç,94,Hayır,Çoğu zaman,Erkek,Hayır,25
+68a07e15ba5021141fe624c4,67b1f2f257615e81bc4a03b2,,,,,Çocuğum yok,,,,,,Kadın,,25
+68a0822aba5021141fe632f3,681201cf6b4788fe35852e13,Bazen,Çok düşük (çoğunlukla oturuyor veya uzanıyorum),3-4 bardak (600-800 ml),170,Çocuğum yok,Bazen,Her gün,110,Hayır,Bazen,Kadın,Hayır,26
+68a08ffeba5021141fe657c0,65f31e5598166bb024e25d5a,,,,,Çocuğum yok,,,,,,Kadın,,29
+68a09c86ba5021141fe6726d,689e2528a73b8c9a0067fc82,,,,,Çocuğum var,,,,,,Erkek,,38
+68a0a86fba5021141fe68ee0,67d6ba0b371880cf2c086330,,,,,Çocuğum yok,,,,,,Erkek,,25
+68a0aa84ba5021141fe691e5,6899b359a73b8c9a005a3a5f,,,,,Çocuğum var,,,,,,Erkek,,22
+68a0ab96ba5021141fe6973c,6802250ba96dea63f0210d04,Geçen zamanın yarısından azında,"Düşük (kısa mesafeleri yürüyor, ara sıra ayakta duruyorum)",8 bardaktan fazla (+1600 ml),168,Çocuğum var,Bazen,1-2 gün,63,Hayır,Geçen zamanın yarısından fazlasında,Kadın,Evet,38
+68a0b0dfba5021141fe6a261,68639fcce7532e93cfbdcd22,Çoğu zaman,"Düşük (kısa mesafeleri yürüyor, ara sıra ayakta duruyorum)",5-6 bardak (1000-1200 ml),173,Çocuğum var,Çoğu zaman,1-2 gün,84,Hayır,Çoğu zaman,Erkek,Hayır,37
+68a0b53fba5021141fe6a974,6724c27ab3670e4e5cce0b9a,Hiçbir zaman,Çok düşük (çoğunlukla oturuyor veya uzanıyorum),7-8 bardak (1400-1600 ml),172,Çocuğum yok,Hiçbir zaman,3-4 gün,70,Günde yarım paket,Hiçbir zaman,Erkek,Evet,39
+68a0bcd4ba5021141fe6bf73,678bc0bd6e0a05eb4c8d06ad,,,,,Çocuğum yok,,,,,,Kadın,,42
+68a0c339ba5021141fe6cc16,67bf4fb4ae3d46309568541f,,,,,Çocuğum var,,,,,,Kadın,,36
+68a0c430ba5021141fe6cd97,688c7e8c412200ac7f2a9a72,,,,,Çocuğum yok,,,,,,Kadın,,27
+68a0caa6ba5021141fe6de1f,6891ebc47b7e607ce500506a,Bazen,"Düşük (kısa mesafeleri yürüyor, ara sıra ayakta duruyorum)",5-6 bardak (1000-1200 ml),160,Çocuğum var,Hiçbir zaman,5-6 gün,56,Hayır,Bazen,Kadın,Evet,43
+68a0d2acba5021141fe6f371,6824ad97f33892a8040446fe,,,,,Çocuğum var,,,,,,Erkek,,33
+68a0d8bbba5021141fe70034,68a0d6bbba5021141fe6fab6,,,,,Çocuğum var,,,,,,Erkek,,33
+68a0dad8ba5021141fe70648,6807de10a96dea63f033a04f,Çoğu zaman,"Yüksek (işe-okula yürüyor, merdiven kullanıyor, hobi olarak spor yapıyorum)",8 bardaktan fazla (+1600 ml),171,Çocuğum var,Çoğu zaman,1-2 gün,76,Hayır,Çoğu zaman,Erkek,Hayır,42
+68a0db94ba5021141fe70834,689d2f3ba73b8c9a006514fb,Geçen zamanın yarısından azında,"Yüksek (işe-okula yürüyor, merdiven kullanıyor, hobi olarak spor yapıyorum)",3-4 bardak (600-800 ml),170,Çocuğum yok,Geçen zamanın yarısından fazlasında,Her gün,57,Hayır,Bazen,Kadın,Hayır,25
+68a0e17fba5021141fe7156b,679bfae4946466f262655aab,Hiçbir zaman,"Düşük (kısa mesafeleri yürüyor, ara sıra ayakta duruyorum)",8 bardaktan fazla (+1600 ml),160,Çocuğum yok,Bazen,3-4 gün,59,Hayır,Bazen,Kadın,Evet,33
+68a0e20aba5021141fe7162e,6890801a0234b1d17cc2d52f,,,,,Çocuğum var,,,,,,Erkek,,38
+68a0ed7aba5021141fe7343e,6894ef2c306074fbc177fa35,,,,,Çocuğum var,,,,,,Erkek,,44
+68a0f27fba5021141fe745c1,6800bd71ee1ecc57ad7a785c,Geçen zamanın yarısından fazlasında,,,173,Çocuğum var,,,71,,,Erkek,,36
+68a12850ba5021141fe79125,680036f9ee1ecc57ad797b10,Bazen,Çok düşük (çoğunlukla oturuyor veya uzanıyorum),3-4 bardak (600-800 ml),160,Çocuğum yok,Geçen zamanın yarısından azında,3-4 gün,58,Hayır,Çoğu zaman,Kadın,Hayır,31
+68a168feba5021141fe7a871,65eb4d74c44f0419b6a75065,Geçen zamanın yarısından azında,"Düşük (kısa mesafeleri yürüyor, ara sıra ayakta duruyorum)",5-6 bardak (1000-1200 ml),167,Çocuğum yok,Geçen zamanın yarısından azında,1-2 gün,59,Günde yarım paket,Geçen zamanın yarısından fazlasında,Kadın,Evet,31
+68a16cc7ba5021141fe7aca0,67333b5103387d83cd5890a9,Hiçbir zaman,Çok düşük (çoğunlukla oturuyor veya uzanıyorum),8 bardaktan fazla (+1600 ml),173,Çocuğum yok,Hiçbir zaman,5-6 gün,81,Hayır,Hiçbir zaman,Kadın,Hayır,35
+68a17017ba5021141fe7b670,6780d7697816a40e1d201661,,,,,Çocuğum yok,,,,,,Kadın,,24
+68a17100ba5021141fe7b790,689b19cfa73b8c9a005f200e,,,,,Çocuğum var,,,,,,Kadın,,33
+68a17d4bba5021141fe7ce04,688b870cd675ffb4451f3b4d,,,,,Çocuğum yok,,,,,,Erkek,,29
+68a19658ba5021141fe80490,6899e673a73b8c9a005ba623,,,,,Çocuğum yok,,,,,,Kadın,,35
+68a1a16cba5021141fe8253f,689f4035ba5021141fe29bb6,Hiçbir zaman,"Düşük (kısa mesafeleri yürüyor, ara sıra ayakta duruyorum)",5-6 bardak (1000-1200 ml),183,Çocuğum yok,Hiçbir zaman,Her gün,82,Günde 1 paket,Bazen,Erkek,Hayır,36
+68a1b07aba5021141fe85bd8,67496657de7fc921aecca3b7,,,,,Çocuğum yok,,,,,,Kadın,,29
+68a1b1ffba5021141fe85ff6,6895a44a306074fbc17953eb,Bazen,Çok düşük (çoğunlukla oturuyor veya uzanıyorum),3-4 bardak (600-800 ml),178,Çocuğum yok,Bazen,1-2 gün,81,Hayır,Bazen,Erkek,Evet,41
+68a1b78cba5021141fe89ec5,64b44e4b983f1f586ebb7af0,Geçen zamanın yarısından fazlasında,Orta (her gün düzenli yürüyüş veya basit ev egzersizleri yapıyorum),5-6 bardak (1000-1200 ml),159,Çocuğum yok,Geçen zamanın yarısından azında,Hiç,47,Günde yarım paket,Geçen zamanın yarısından fazlasında,Kadın,Hayır,46
+68a1b995ba5021141fe8c673,688d129e412200ac7f2c61b7,,,,,Çocuğum var,,,,,,Kadın,,31
+68a1ca57ba5021141fe900f0,68a0ddb5ba5021141fe70d4b,,,,,Çocuğum var,,,,,,Erkek,,31
+68a1e2a2ba5021141fe93ba8,6824f447f33892a804052b64,Bazen,,,169,Çocuğum yok,,,81,,,Kadın,,33
+68a1fdc6ba5021141fe98493,682dc34fc20224841b07c6fc,,,,,Çocuğum yok,,,,,,Kadın,,30
+68a1ff3dba5021141fe98893,657f18d36c331bbac2581a0d,,,,,Çocuğum var,,,,,,Kadın,,35
+68a2005eba5021141fe98af8,67d95780371880cf2c0df586,,,,,Çocuğum yok,,,,,,Erkek,,42
+68a21459ba5021141fe9c3bc,6807afb7a96dea63f03308b6,,,,,Çocuğum var,,,,,,Erkek,,34
+68a218b3ba5021141fe9cfda,68965606a73b8c9a0054752e,,,,,Çocuğum yok,,,,,,Erkek,,29
+68a22c31ba5021141fea0754,6888893cad678e62e1d177d4,Geçen zamanın yarısından azında,"Düşük (kısa mesafeleri yürüyor, ara sıra ayakta duruyorum)",8 bardaktan fazla (+1600 ml),181,Çocuğum var,Geçen zamanın yarısından azında,3-4 gün,101,Günde 1 paket,Geçen zamanın yarısından azında,Erkek,Hayır,36
+68a2317bba5021141fea194a,66447d9417566a602bf1321d,Bazen,"Yüksek (işe-okula yürüyor, merdiven kullanıyor, hobi olarak spor yapıyorum)",5-6 bardak (1000-1200 ml),178,Çocuğum yok,Geçen zamanın yarısından azında,5-6 gün,81,Hayır,Geçen zamanın yarısından azında,Erkek,Hayır,25
+68a2359cba5021141fea265d,68a1d33aba5021141fe915c6,,,,,Çocuğum yok,,,,,,Erkek,,32
+68a235faba5021141fea2700,685c2142e7532e93cfab7a8e,,,,,Çocuğum yok,,,,,,Kadın,,29
+68a250f5ba5021141fea63be,68a1a5b4ba5021141fe83340,,,,,Çocuğum yok,,,,,,Erkek,,24
+68a252a1ba5021141fea6543,67b6c52eae3d4630954f4c84,Bazen,,,160,Çocuğum yok,,,58,,,Kadın,,30
+68a25a3cba5021141fea7169,645e6bd9da47a2f4af1886d2,Geçen zamanın yarısından fazlasında,Orta (her gün düzenli yürüyüş veya basit ev egzersizleri yapıyorum),5-6 bardak (1000-1200 ml),168,Çocuğum yok,Geçen zamanın yarısından fazlasında,5-6 gün,105,Sosyal içiciyim (haftada birkaç gün),Geçen zamanın yarısından fazlasında,Kadın,Evet,38
+68a2cb86ba5021141feaeb5e,6828e47a1668acd10ef80c7d,,,,,Çocuğum yok,,,,,,Kadın,,27
+68a2d430ba5021141feb0c21,65a06459ce349d583ee4bae3,Çoğu zaman,"Düşük (kısa mesafeleri yürüyor, ara sıra ayakta duruyorum)",8 bardaktan fazla (+1600 ml),158,Çocuğum yok,Çoğu zaman,1-2 gün,66,Hayır,Çoğu zaman,Kadın,Evet,28
+68a2d72aba5021141feb15c1,67d92fae371880cf2c0d488c,Hiçbir zaman,Orta (her gün düzenli yürüyüş veya basit ev egzersizleri yapıyorum),8 bardaktan fazla (+1600 ml),174,Çocuğum var,Hiçbir zaman,1-2 gün,107,Günde 1 paket,Bazen,Erkek,Hayır,45
+68a2dcb7ba5021141feb28e7,6881c5bf066865bb24b0dd98,,,,,Çocuğum yok,,,80,,,Kadın,,30
+68a2ef6bba5021141feb7946,680b7d47242296452979e45e,Hiçbir zaman,Çok düşük (çoğunlukla oturuyor veya uzanıyorum),5-6 bardak (1000-1200 ml),167,Çocuğum yok,Bazen,1-2 gün,53,Hayır,Geçen zamanın yarısından azında,Kadın,Hayır,30
+68a2f151ba5021141feb8036,6752a62308159ada121ebf37,Geçen zamanın yarısından azında,Orta (her gün düzenli yürüyüş veya basit ev egzersizleri yapıyorum),8 bardaktan fazla (+1600 ml),164,Çocuğum yok,Bazen,1-2 gün,64,Günde yarım paket,Bazen,Kadın,Evet,27
+68a30753ba5021141febdf74,641d61243d5f6948d34df5ba,,,,,Çocuğum yok,,,,,,Kadın,,28
+68a30962ba5021141fec211a,6800da06ee1ecc57ad7c288e,,,,,Çocuğum var,,,,,,Erkek,,39
+68a30bcdba5021141fec47ec,65eea7cc98166bb024dd9791,Bazen,,,170,Çocuğum yok,,,60,,,Kadın,,33
+68a30d85ba5021141fec561c,6894fec3306074fbc1781caa,,,,,Çocuğum yok,,,,,,Kadın,,33
+68a31424ba5021141fec7da8,67b71fb2ae3d463095508a5d,Geçen zamanın yarısından azında,Çok düşük (çoğunlukla oturuyor veya uzanıyorum),3-4 bardak (600-800 ml),163,Çocuğum yok,Geçen zamanın yarısından azında,1-2 gün,63,Günde 3-4 tane,Geçen zamanın yarısından fazlasında,Kadın,Evet,47
+68a31424ba5021141fec7da9,67067175e32e055d9e3be530,Çoğu zaman,Orta (her gün düzenli yürüyüş veya basit ev egzersizleri yapıyorum),5-6 bardak (1000-1200 ml),175,Çocuğum yok,Çoğu zaman,1-2 gün,80,Hayır,Çoğu zaman,Erkek,Hayır,30
+68a325b7ba5021141feccbc8,681b2b19de5d29afa573f307,,,,,Çocuğum yok,,,,,,Erkek,,32
+68a3297aba5021141fecdab6,675812306c23f9ca38fc2975,,,,,Çocuğum yok,,,,,,Kadın,,32
+68a32ce8ba5021141fece654,6800b139ee1ecc57ad7a3f8f,,,,,Çocuğum yok,,,,,,Kadın,,52
+68a33648ba5021141fed085b,673b3060f94525f269f94bbf,,,,,Çocuğum yok,,,,,,Kadın,,23
+68a33921ba5021141fed10f2,688b28e989793136fd775a32,Hiçbir zaman,"Düşük (kısa mesafeleri yürüyor, ara sıra ayakta duruyorum)",1-2 bardak (200-400 ml),172,Çocuğum yok,Bazen,Her gün,55,Günde yarım paket,Bazen,Kadın,Hayır,24
+68a34b48ba5021141fed52bf,67dbda77371880cf2c140db9,Geçen zamanın yarısından azında,"Yüksek (işe-okula yürüyor, merdiven kullanıyor, hobi olarak spor yapıyorum)",7-8 bardak (1400-1600 ml),160,Çocuğum yok,Bazen,3-4 gün,73,Hayır,Bazen,Kadın,Hayır,28
+68a34d29ba5021141fed59d5,6800d143ee1ecc57ad7b4535,,,,,Çocuğum var,,,,,,Kadın,,45
+68a36264ba5021141fedb76d,66958aa6ac71973e74df62b1,,,,,Çocuğum yok,,,,,,Kadın,,28
+68a363eaba5021141fedbdd5,650c031230402501c8567141,Geçen zamanın yarısından fazlasında,"Yüksek (işe-okula yürüyor, merdiven kullanıyor, hobi olarak spor yapıyorum)",3-4 bardak (600-800 ml),177,Çocuğum var,Geçen zamanın yarısından azında,3-4 gün,72,Sosyal içiciyim (haftada birkaç gün),Geçen zamanın yarısından fazlasında,Erkek,Hayır,42
+68a393daba5021141fee5061,68a392b5ba5021141fee4d92,,,,,Çocuğum var,,,,,,Kadın,,36
+68a3a1adba5021141fee6bf8,6863af54e7532e93cfbe111a,Hiçbir zaman,"Düşük (kısa mesafeleri yürüyor, ara sıra ayakta duruyorum)",7-8 bardak (1400-1600 ml),178,Çocuğum var,Bazen,1-2 gün,72,Günde 1 paket,Bazen,Erkek,Hayır,46
+68a419eaba5021141feef6c3,68a4162fba5021141feee2bd,,,,,Çocuğum var,,,,,,Kadın,,44
+68a41a13ba5021141feef748,68a4160eba5021141feee21a,,,,,Çocuğum yok,,,,,,Kadın,,24
+68a41dc5ba5021141fef03e8,68a418ceba5021141feef22b,,,,,Çocuğum var,,,,,,Erkek,,53
+68a424bcba5021141fef1a0a,689b204fa73b8c9a005f6bcd,,,,,Çocuğum yok,,,,,,Kadın,,28
+68a43d2cba5021141fef7dc4,68a39f73ba5021141fee678c,,,,,Çocuğum yok,,,,,,Kadın,,31
+68a44982ba5021141fefb411,68a44567ba5021141fefa3aa,Bazen,,,181,Çocuğum var,Bazen,,88,,Geçen zamanın yarısından fazlasında,Erkek,,42
+68a44f66ba5021141ff017fe,68a43c0dba5021141fef75d4,,,,,Çocuğum var,,,,,,Kadın,,46
