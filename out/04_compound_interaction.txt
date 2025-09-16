@@ -3,7 +3,7 @@ COMPOUND RISK SCORING ANALYSIS REPORT
 ================================================================================
 
 SCORING METHOD: INTERACTION-WEIGHTED
-Dataset: 232 records, 36 variables
+Dataset: 824 records, 36 variables
 Factor groups: 6 groups, 28 total factors
   demographic_factors: 4 factors
   lifestyle_factors: 6 factors
@@ -13,105 +13,102 @@ Factor groups: 6 groups, 28 total factors
   chronic_condition_factors: 7 factors
 
 Calculating individual factor risk weights...
-Population baselines: 18.1% high risk, 79.3% elevated risk
+Population baselines: 22.2% high risk, 84.3% elevated risk
 
 ------------------------------------------------------------
 COMPOUND SCORE EVALUATION (INTERACTION-WEIGHTED METHOD)
 ------------------------------------------------------------
 
-Threshold 1.5x: Flags 71 employees (30.6%)
-  Precision: 36.6% high risk, 81.7% elevated risk
-  Recall: 61.9% of high risk caught, 31.5% of elevated risk caught
+Threshold 1.5x: Flags 242 employees (29.4%)
+  Precision: 49.6% high risk, 97.5% elevated risk
+  Recall: 65.6% of high risk caught, 34.0% of elevated risk caught
 
-Threshold 2.0x: Flags 12 employees (5.2%)
-  Precision: 50.0% high risk, 58.3% elevated risk
-  Recall: 14.3% of high risk caught, 3.8% of elevated risk caught
+Threshold 2.0x: Flags 63 employees (7.6%)
+  Precision: 71.4% high risk, 93.7% elevated risk
+  Recall: 24.6% of high risk caught, 8.5% of elevated risk caught
 
-Threshold 2.5x: Flags 7 employees (3.0%)
-  Precision: 42.9% high risk, 57.1% elevated risk
-  Recall: 7.1% of high risk caught, 2.2% of elevated risk caught
+Threshold 2.5x: Flags 30 employees (3.6%)
+  Precision: 83.3% high risk, 93.3% elevated risk
+  Recall: 13.7% of high risk caught, 4.0% of elevated risk caught
 
 Best performing threshold: 1.5x
-  Flags 71 employees (30.6% of workforce)
-  81.7% precision on elevated risk
-  Catches 31.5% of all elevated risk employees
+  Flags 242 employees (29.4% of workforce)
+  97.5% precision on elevated risk
+  Catches 34.0% of all elevated risk employees
 
 ------------------------------------------------------------
 UNDERESTIMATED RISK CASES
 ------------------------------------------------------------
 Employees with low compound scores but actually high risk:
 
-• Compound score: 1.32 | Actual: high_risk
+• Compound score: 1.01 | Actual: high_risk
+  Profile: age_group=young, Data.gender=female, Data.has_children=no_children, bmi_category=underweight
+
+• Compound score: 1.33 | Actual: high_risk
   Profile: age_group=young_adult, Data.gender=male, Data.has_children=no_children, bmi_category=overweight
 
-• Compound score: 1.41 | Actual: high_risk
+• Compound score: 1.42 | Actual: high_risk
   Profile: age_group=young_adult, Data.gender=female, Data.has_children=no_children, bmi_category=nan
-
-• Compound score: 1.43 | Actual: high_risk
-  Profile: age_group=young_adult, Data.gender=female, Data.has_children=no_children, bmi_category=overweight
 
 ------------------------------------------------------------
 OVERESTIMATED RISK CASES
 ------------------------------------------------------------
 Employees with high compound scores but actually low risk:
 
-• Compound score: 2.60 | Actual: low_risk
+• Compound score: 2.65 | Actual: low_risk
   Profile: age_group=young, Data.gender=female, Data.has_children=has_children, bmi_category=obese
 
-• Compound score: 2.62 | Actual: low_risk
-  Profile: age_group=young, Data.gender=female, Data.has_children=no_children, bmi_category=obese
-
-• Compound score: 2.59 | Actual: low_risk
-  Profile: age_group=middle_adult, Data.gender=male, Data.has_children=no_children, bmi_category=obese
+• Compound score: 2.66 | Actual: low_risk
+  Profile: age_group=young_adult, Data.gender=female, Data.has_children=has_children, bmi_category=obese
 
 ------------------------------------------------------------
 HIGHEST IMPACT INDIVIDUAL FACTORS
 ------------------------------------------------------------
 
-• Data.smoking_status = daily_smoker (AMPLIFYING)
-  Impact: 2.48x baseline | Risk rate: 84.5%
-  Sample: 58 employees | Group: lifestyle_factors
-
-• Data.sleep_quality = insufficient_sleep (AMPLIFYING)
-  Impact: 2.34x baseline | Risk rate: 84.8%
-  Sample: 33 employees | Group: lifestyle_factors
-
-• Data.perceived_health = very_poor_health (AMPLIFYING)
-  Impact: 2.27x baseline | Risk rate: 64.7%
-  Sample: 17 employees | Group: stress_factors
-
 • Data.depression_anhedonia = severe_anhedonia (AMPLIFYING)
-  Impact: 2.21x baseline | Risk rate: 66.7%
-  Sample: 30 employees | Group: stress_factors
+  Impact: 2.57x baseline | Risk rate: 94.5%
+  Sample: 91 employees | Group: stress_factors
+
+• Data.smoking_status = daily_smoker (AMPLIFYING)
+  Impact: 2.57x baseline | Risk rate: 95.9%
+  Sample: 193 employees | Group: lifestyle_factors
+
+• Data.sleep_quality = excessive_sleep (AMPLIFYING)
+  Impact: 2.50x baseline | Risk rate: 83.3%
+  Sample: 18 employees | Group: lifestyle_factors
+
+• Data.physical_pain = extreme_pain (AMPLIFYING)
+  Impact: 2.37x baseline | Risk rate: 89.5%
+  Sample: 19 employees | Group: physical_health_factors
+
+• Data.stress_level_irritability = frequently_irritated (AMPLIFYING)
+  Impact: 2.28x baseline | Risk rate: 94.4%
+  Sample: 71 employees | Group: stress_factors
 
 • Data.perceived_health = poor_health (AMPLIFYING)
-  Impact: 2.21x baseline | Risk rate: 88.9%
-  Sample: 45 employees | Group: stress_factors
+  Impact: 2.22x baseline | Risk rate: 97.9%
+  Sample: 142 employees | Group: stress_factors
+
+• Data.perceived_health = very_poor_health (AMPLIFYING)
+  Impact: 2.21x baseline | Risk rate: 93.2%
+  Sample: 59 employees | Group: stress_factors
 
 • Data.depression_mood = persistent_sadness (AMPLIFYING)
-  Impact: 2.10x baseline | Risk rate: 69.0%
-  Sample: 29 employees | Group: stress_factors
-
-• Data.activity_level = frequent_exercise (PROTECTIVE)
-  Impact: 0.00x baseline | Risk rate: 63.2%
-  Sample: 19 employees | Group: lifestyle_factors
-
-• Data.daily_steps = good_steps (PROTECTIVE)
-  Impact: 0.00x baseline | Risk rate: 65.7%
-  Sample: 35 employees | Group: lifestyle_factors
+  Impact: 2.21x baseline | Risk rate: 93.0%
+  Sample: 100 employees | Group: stress_factors
 
 ================================================================================
 ANALYSIS SUMMARY
 ================================================================================
-Total records analyzed: 232
+Total records analyzed: 824
 Scoring method: interaction-weighted
 Factor groups analyzed: 6
 Total factors included: 28
 High-impact factors found: 15
-Underestimated risk cases: 16
-Overestimated risk cases: 3
-Optimal threshold: 1.5x (flags 30.6% of workforce)
-Best precision/recall balance: 45.5
+Underestimated risk cases: 63
+Overestimated risk cases: 2
+Optimal threshold: 1.5x (flags 29.4% of workforce)
+Best precision/recall balance: 50.4
 
 This analysis creates predictive risk scores for individual employee assessment
 and identifies high-impact factors for targeted wellness interventions.

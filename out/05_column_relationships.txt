@@ -2,7 +2,7 @@
 COLUMN RELATIONSHIP ANALYSIS REPORT
 ================================================================================
 
-Dataset: 232 records, 34 variables
+Dataset: 824 records, 34 variables
 Analysis focus: Descriptive-to-descriptive relationships
 Excluded from analysis: _id, UserId, health_risk_level, Total_Health_Score
 
@@ -10,12 +10,14 @@ Excluded from analysis: _id, UserId, health_risk_level, Total_Health_Score
 LIFESTYLE CLUSTERING PATTERNS
 ------------------------------------------------------------
 
-No strong lifestyle clustering patterns found above threshold.
-
-DEBUG: Top relationships found (regardless of threshold):
-  Data.smoking_status ↔ Data.supplement_usage: V=0.198, p=0.059
-  Data.activity_level ↔ Data.supplement_usage: V=0.195, p=0.065
-  Data.daily_steps ↔ Data.supplement_usage: V=0.068, p=0.897
+• Strong Clustering: Data.activity_level ↔ Data.supplement_usage (Cramer's V = 0.175)
+  - daily_exercise: 43% not_using_supplements vs 53% population
+  - daily_exercise: 57% using_supplements vs 47% population
+  - frequent_exercise: 40% not_using_supplements vs 53% population
+  - frequent_exercise: 60% using_supplements vs 47% population
+  - no_exercise: 62% not_using_supplements vs 53% population
+  - no_exercise: 38% using_supplements vs 47% population
+  - Insight: moderate clustering between activity_level and supplement_usage
 
 ------------------------------------------------------------
 MENTAL HEALTH CLUSTERING PATTERNS
@@ -33,12 +35,16 @@ No strong demographic behavior differences found above threshold.
 SURPRISING CROSS-CLUSTER CORRELATIONS
 ------------------------------------------------------------
 
-No surprising cross-cluster correlations found above threshold.
+Unexpected relationships between factor groups:
+
+• Mental Health ↔ Nutrition: Data.depression_mood × Data.sugar_intake (V = 0.158)
+  - positive_mood: 51% minimal_sugar vs 28% population
+  - Insight: depression_mood and sugar_intake show unexpected correlation
 
 ================================================================================
 RELATIONSHIP ANALYSIS SUMMARY
 ================================================================================
-Total records analyzed: 232
+Total records analyzed: 824
 Variables analyzed by category:
   - Demographics: 4
   - Lifestyle factors: 6

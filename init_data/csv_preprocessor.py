@@ -9,9 +9,9 @@ import json
 import os
 
 # Configuration
-INPUT_FILE = "HRA_Answers_tab.csv"
-OUTPUT_FILE = "../preprocessed_data/HRA_data.csv"
-MAPPINGS_FILE = "mappings/value_mappings.json"
+INPUT_FILE = "init_data/HRA_Answers_tab.csv"
+OUTPUT_FILE = "./in/HRA_data.csv"
+MAPPINGS_FILE = "./mappings/value_mappings.json"
 
 def load_mappings():
     """Load value mappings"""

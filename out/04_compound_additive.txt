@@ -3,7 +3,7 @@ COMPOUND RISK SCORING ANALYSIS REPORT
 ================================================================================
 
 SCORING METHOD: ADDITIVE
-Dataset: 232 records, 36 variables
+Dataset: 824 records, 36 variables
 Factor groups: 6 groups, 28 total factors
   demographic_factors: 4 factors
   lifestyle_factors: 6 factors
@@ -13,71 +13,75 @@ Factor groups: 6 groups, 28 total factors
   chronic_condition_factors: 7 factors
 
 Calculating individual factor risk weights...
-Population baselines: 18.1% high risk, 79.3% elevated risk
+Population baselines: 22.2% high risk, 84.3% elevated risk
 
 ------------------------------------------------------------
 COMPOUND SCORE EVALUATION (ADDITIVE METHOD)
 ------------------------------------------------------------
+
+Threshold 1.5x: Flags 1 employees (0.1%)
+  Precision: 0.0% high risk, 0.0% elevated risk
+  Recall: 0.0% of high risk caught, 0.0% of elevated risk caught
 
 ------------------------------------------------------------
 UNDERESTIMATED RISK CASES
 ------------------------------------------------------------
 Employees with low compound scores but actually high risk:
 
-• Compound score: 1.36 | Actual: high_risk
+• Compound score: 1.24 | Actual: high_risk
+  Profile: age_group=young_adult, Data.gender=female, Data.has_children=no_children, bmi_category=obese
+
+• Compound score: 1.41 | Actual: high_risk
   Profile: age_group=young_adult, Data.gender=female, Data.has_children=no_children, bmi_category=normal_weight
 
-• Compound score: 1.21 | Actual: high_risk
-  Profile: age_group=young_adult, Data.gender=female, Data.has_children=no_children, bmi_category=overweight
-
-• Compound score: 1.14 | Actual: high_risk
-  Profile: age_group=young_adult, Data.gender=male, Data.has_children=no_children, bmi_category=overweight
+• Compound score: 1.02 | Actual: high_risk
+  Profile: age_group=young, Data.gender=female, Data.has_children=no_children, bmi_category=underweight
 
 ------------------------------------------------------------
 HIGHEST IMPACT INDIVIDUAL FACTORS
 ------------------------------------------------------------
 
-• Data.smoking_status = daily_smoker (AMPLIFYING)
-  Impact: 2.48x baseline | Risk rate: 84.5%
-  Sample: 58 employees | Group: lifestyle_factors
-
-• Data.sleep_quality = insufficient_sleep (AMPLIFYING)
-  Impact: 2.34x baseline | Risk rate: 84.8%
-  Sample: 33 employees | Group: lifestyle_factors
-
-• Data.perceived_health = very_poor_health (AMPLIFYING)
-  Impact: 2.27x baseline | Risk rate: 64.7%
-  Sample: 17 employees | Group: stress_factors
-
 • Data.depression_anhedonia = severe_anhedonia (AMPLIFYING)
-  Impact: 2.21x baseline | Risk rate: 66.7%
-  Sample: 30 employees | Group: stress_factors
+  Impact: 2.57x baseline | Risk rate: 94.5%
+  Sample: 91 employees | Group: stress_factors
+
+• Data.smoking_status = daily_smoker (AMPLIFYING)
+  Impact: 2.57x baseline | Risk rate: 95.9%
+  Sample: 193 employees | Group: lifestyle_factors
+
+• Data.sleep_quality = excessive_sleep (AMPLIFYING)
+  Impact: 2.50x baseline | Risk rate: 83.3%
+  Sample: 18 employees | Group: lifestyle_factors
+
+• Data.physical_pain = extreme_pain (AMPLIFYING)
+  Impact: 2.37x baseline | Risk rate: 89.5%
+  Sample: 19 employees | Group: physical_health_factors
+
+• Data.stress_level_irritability = frequently_irritated (AMPLIFYING)
+  Impact: 2.28x baseline | Risk rate: 94.4%
+  Sample: 71 employees | Group: stress_factors
 
 • Data.perceived_health = poor_health (AMPLIFYING)
-  Impact: 2.21x baseline | Risk rate: 88.9%
-  Sample: 45 employees | Group: stress_factors
+  Impact: 2.22x baseline | Risk rate: 97.9%
+  Sample: 142 employees | Group: stress_factors
+
+• Data.perceived_health = very_poor_health (AMPLIFYING)
+  Impact: 2.21x baseline | Risk rate: 93.2%
+  Sample: 59 employees | Group: stress_factors
 
 • Data.depression_mood = persistent_sadness (AMPLIFYING)
-  Impact: 2.10x baseline | Risk rate: 69.0%
-  Sample: 29 employees | Group: stress_factors
-
-• Data.activity_level = frequent_exercise (PROTECTIVE)
-  Impact: 0.00x baseline | Risk rate: 63.2%
-  Sample: 19 employees | Group: lifestyle_factors
-
-• Data.daily_steps = good_steps (PROTECTIVE)
-  Impact: 0.00x baseline | Risk rate: 65.7%
-  Sample: 35 employees | Group: lifestyle_factors
+  Impact: 2.21x baseline | Risk rate: 93.0%
+  Sample: 100 employees | Group: stress_factors
 
 ================================================================================
 ANALYSIS SUMMARY
 ================================================================================
-Total records analyzed: 232
+Total records analyzed: 824
 Scoring method: additive
 Factor groups analyzed: 6
 Total factors included: 28
 High-impact factors found: 15
-Underestimated risk cases: 42
+Underestimated risk cases: 183
 Overestimated risk cases: 0
 
 This analysis creates predictive risk scores for individual employee assessment

@@ -1,110 +1,110 @@
 ================================================================================
 STATISTICAL SURPRISE ANALYSIS
 ================================================================================
-Dataset: 232 records, 35 variables
+Dataset: 824 records, 35 variables
 Demographics: 4 variables: ['age_group', 'Data.gender', 'Data.has_children', 'bmi_category']
 Lifestyle factors: 22 variables
 Variables: ['Data.smoking_status', 'Data.alcohol_consumption', 'Data.activity_level', 'Data.sleep_quality', 'Data.depression_mood', 'Data.depression_anhedonia', 'Data.stress_level_irritability', 'Data.stress_level_loc', 'Data.loneliness', 'Data.fruit_veg_intake', 'Data.sugar_intake', 'Data.processed_food_intake', 'Data.water_intake', 'Data.daily_steps', 'Data.physical_pain', 'Data.perceived_health', 'Data.supplement_usage', 'diabetes_status', 'hypertension_status', 'heart_disease_status', 'obesity_status', 'thyroid_disorder_status']
 Parameters: min_sample=10, threshold=2.0σ
 
 SURPRISE DETECTION SUMMARY:
-Total patterns analyzed: 414
-High confidence surprises: 338
-Categories with surprises: DEMOGRAPHIC, COMPOUND, LIFESTYLE
+Total patterns analyzed: 1459
+High confidence surprises: 1449
+Categories with surprises: COMPOUND, LIFESTYLE, DEMOGRAPHIC
 
 ------------------------------------------------------------
 TOP STATISTICAL SURPRISES (ALL TARGETS)
 ------------------------------------------------------------
 
-1. [COMPOUND] daily_smoker + frequent_sadness ↑
-   Outcome: high_risk in health_risk_level
-   Rate: 85.7% (vs 19.4% population)
-   Magnitude: 5.64σ | Confidence: HIGH
-   Sample: 14 employees
-
-2. [COMPOUND] daily_smoker + often_out_of_control ↑
-   Outcome: high_risk in health_risk_level
-   Rate: 85.7% (vs 19.4% population)
-   Magnitude: 5.64σ | Confidence: HIGH
-   Sample: 14 employees
-
-3. [COMPOUND] daily_smoker + always_lonely ↑
+1. [COMPOUND] daily_smoker + persistent_sadness ↑
    Outcome: very_high_risk in health_risk_level
-   Rate: 15.4% (vs 0.9% population)
-   Magnitude: 5.43σ | Confidence: HIGH
-   Sample: 13 employees
+   Rate: 16.2% (vs 0.7% population)
+   Magnitude: 11.04σ | Confidence: HIGH
+   Sample: 37 employees
 
-4. [COMPOUND] no_hypertension + daily_smoker ↑
-   Outcome: high_risk in health_risk_level
-   Rate: 51.0% (vs 19.4% population)
-   Magnitude: 5.13σ | Confidence: HIGH
-   Sample: 51 employees
+2. [COMPOUND] obese + persistent_sadness ↑
+   Outcome: very_high_risk in health_risk_level
+   Rate: 23.5% (vs 0.7% population)
+   Magnitude: 11.02σ | Confidence: HIGH
+   Sample: 17 employees
 
-5. [COMPOUND] young_adult + severe_anhedonia ↑
-   Outcome: high_risk in health_risk_level
-   Rate: 90.0% (vs 19.4% population)
-   Magnitude: 5.08σ | Confidence: HIGH
-   Sample: 10 employees
+3. [COMPOUND] obese + daily_processed_food_weekly ↑
+   Outcome: very_high_risk in health_risk_level
+   Rate: 27.3% (vs 0.7% population)
+   Magnitude: 10.32σ | Confidence: HIGH
+   Sample: 11 employees
 
-6. [COMPOUND] daily_smoker + often_irritated ↑
+4. [LIFESTYLE] daily_smoker ↑
    Outcome: high_risk in health_risk_level
-   Rate: 75.0% (vs 19.4% population)
-   Magnitude: 5.06σ | Confidence: HIGH
-   Sample: 16 employees
+   Rate: 57.0% (vs 22.2% population)
+   Magnitude: 10.25σ | Confidence: HIGH
+   Sample: 193 employees
 
-7. [LIFESTYLE] daily_smoker ↑
+5. [COMPOUND] daily_smoker + frequent_sadness ↑
    Outcome: high_risk in health_risk_level
-   Rate: 50.0% (vs 19.4% population)
-   Magnitude: 5.02σ | Confidence: HIGH
-   Sample: 52 employees
+   Rate: 87.3% (vs 22.2% population)
+   Magnitude: 10.24σ | Confidence: HIGH
+   Sample: 55 employees
 
-8. [COMPOUND] no_diabetes + daily_smoker ↑
+6. [COMPOUND] no_diabetes + daily_smoker ↑
    Outcome: high_risk in health_risk_level
-   Rate: 50.0% (vs 19.4% population)
-   Magnitude: 5.02σ | Confidence: HIGH
-   Sample: 52 employees
+   Rate: 57.0% (vs 22.2% population)
+   Magnitude: 10.07σ | Confidence: HIGH
+   Sample: 186 employees
+
+7. [COMPOUND] no_hypertension + daily_smoker ↑
+   Outcome: high_risk in health_risk_level
+   Rate: 56.7% (vs 22.2% population)
+   Magnitude: 10.00σ | Confidence: HIGH
+   Sample: 187 employees
+
+8. [COMPOUND] no_heart_disease + daily_smoker ↑
+   Outcome: high_risk in health_risk_level
+   Rate: 56.5% (vs 22.2% population)
+   Magnitude: 9.91σ | Confidence: HIGH
+   Sample: 186 employees
 
 9. [COMPOUND] no_obesity + daily_smoker ↑
    Outcome: high_risk in health_risk_level
-   Rate: 50.0% (vs 19.4% population)
-   Magnitude: 5.02σ | Confidence: HIGH
-   Sample: 52 employees
+   Rate: 56.2% (vs 22.2% population)
+   Magnitude: 9.82σ | Confidence: HIGH
+   Sample: 185 employees
 
-10. [COMPOUND] no_exercise + severe_anhedonia ↑
+10. [COMPOUND] no_thyroid + daily_smoker ↑
+   Outcome: high_risk in health_risk_level
+   Rate: 55.7% (vs 22.2% population)
+   Magnitude: 9.62σ | Confidence: HIGH
+   Sample: 183 employees
+
+11. [COMPOUND] daily_smoker + often_out_of_control ↑
+   Outcome: high_risk in health_risk_level
+   Rate: 81.8% (vs 22.2% population)
+   Magnitude: 9.38σ | Confidence: HIGH
+   Sample: 55 employees
+
+12. [COMPOUND] never_smoked + never_lonely ↑
+   Outcome: low_risk in health_risk_level
+   Rate: 63.6% (vs 14.9% population)
+   Magnitude: 9.35σ | Confidence: HIGH
+   Sample: 55 employees
+
+13. [COMPOUND] female + daily_smoker ↑
+   Outcome: high_risk in health_risk_level
+   Rate: 60.2% (vs 22.2% population)
+   Magnitude: 9.28σ | Confidence: HIGH
+   Sample: 133 employees
+
+14. [COMPOUND] daily_smoker + severe_anhedonia ↑
    Outcome: very_high_risk in health_risk_level
-   Rate: 12.5% (vs 0.9% population)
-   Magnitude: 4.82σ | Confidence: HIGH
-   Sample: 16 employees
-
-11. [COMPOUND] no_heart_disease + daily_smoker ↑
-   Outcome: high_risk in health_risk_level
-   Rate: 49.0% (vs 19.4% population)
-   Magnitude: 4.82σ | Confidence: HIGH
-   Sample: 51 employees
-
-12. [COMPOUND] young_adult + daily_smoker ↑
-   Outcome: high_risk in health_risk_level
-   Rate: 54.1% (vs 19.4% population)
-   Magnitude: 4.80σ | Confidence: HIGH
+   Rate: 13.5% (vs 0.7% population)
+   Magnitude: 9.11σ | Confidence: HIGH
    Sample: 37 employees
 
-13. [COMPOUND] no_thyroid + daily_smoker ↑
-   Outcome: high_risk in health_risk_level
-   Rate: 49.0% (vs 19.4% population)
-   Magnitude: 4.71σ | Confidence: HIGH
-   Sample: 49 employees
-
-14. [COMPOUND] overweight + daily_smoker ↑
-   Outcome: high_risk in health_risk_level
-   Rate: 65.0% (vs 19.4% population)
-   Magnitude: 4.64σ | Confidence: HIGH
-   Sample: 20 employees
-
-15. [COMPOUND] optimal_sleep + mostly_in_control ↑
+15. [COMPOUND] normal_weight + no_pain ↑
    Outcome: low_risk in health_risk_level
-   Rate: 55.6% (vs 14.3% population)
-   Magnitude: 4.63σ | Confidence: HIGH
-   Sample: 18 employees
+   Rate: 47.0% (vs 14.9% population)
+   Magnitude: 8.98σ | Confidence: HIGH
+   Sample: 117 employees
 
 ============================================================
 SURPRISES FOR HEALTH_RISK_LEVEL
@@ -112,184 +112,214 @@ SURPRISES FOR HEALTH_RISK_LEVEL
 
 HIGH_RISK surprises:
 ----------------------------------------
-1. [COMPOUND] daily_smoker + frequent_sadness ↑
-   Rate: 85.7% (vs 19.4% population)
-   Effect: 66.4pp higher | 5.64σ
-   Sample: n=14
+1. [LIFESTYLE] daily_smoker ↑
+   Rate: 57.0% (vs 22.2% population)
+   Effect: 34.8pp higher | 10.25σ
+   Sample: n=193
 
-2. [COMPOUND] daily_smoker + often_out_of_control ↑
-   Rate: 85.7% (vs 19.4% population)
-   Effect: 66.4pp higher | 5.64σ
-   Sample: n=14
+2. [COMPOUND] daily_smoker + frequent_sadness ↑
+   Rate: 87.3% (vs 22.2% population)
+   Effect: 65.1pp higher | 10.24σ
+   Sample: n=55
 
-3. [COMPOUND] no_hypertension + daily_smoker ↑
-   Rate: 51.0% (vs 19.4% population)
-   Effect: 31.6pp higher | 5.13σ
-   Sample: n=51
+3. [COMPOUND] no_diabetes + daily_smoker ↑
+   Rate: 57.0% (vs 22.2% population)
+   Effect: 34.8pp higher | 10.07σ
+   Sample: n=186
 
-4. [COMPOUND] young_adult + severe_anhedonia ↑
-   Rate: 90.0% (vs 19.4% population)
-   Effect: 70.6pp higher | 5.08σ
-   Sample: n=10
+4. [COMPOUND] no_hypertension + daily_smoker ↑
+   Rate: 56.7% (vs 22.2% population)
+   Effect: 34.5pp higher | 10.00σ
+   Sample: n=187
 
-5. [COMPOUND] daily_smoker + often_irritated ↑
-   Rate: 75.0% (vs 19.4% population)
-   Effect: 55.6pp higher | 5.06σ
-   Sample: n=16
+5. [COMPOUND] no_heart_disease + daily_smoker ↑
+   Rate: 56.5% (vs 22.2% population)
+   Effect: 34.2pp higher | 9.91σ
+   Sample: n=186
 
-6. [LIFESTYLE] daily_smoker ↑
-   Rate: 50.0% (vs 19.4% population)
-   Effect: 30.6pp higher | 5.02σ
-   Sample: n=52
+6. [COMPOUND] no_obesity + daily_smoker ↑
+   Rate: 56.2% (vs 22.2% population)
+   Effect: 34.0pp higher | 9.82σ
+   Sample: n=185
 
-7. [COMPOUND] no_diabetes + daily_smoker ↑
-   Rate: 50.0% (vs 19.4% population)
-   Effect: 30.6pp higher | 5.02σ
-   Sample: n=52
+7. [COMPOUND] no_thyroid + daily_smoker ↑
+   Rate: 55.7% (vs 22.2% population)
+   Effect: 33.5pp higher | 9.62σ
+   Sample: n=183
 
-8. [COMPOUND] no_obesity + daily_smoker ↑
-   Rate: 50.0% (vs 19.4% population)
-   Effect: 30.6pp higher | 5.02σ
-   Sample: n=52
+8. [COMPOUND] daily_smoker + often_out_of_control ↑
+   Rate: 81.8% (vs 22.2% population)
+   Effect: 59.6pp higher | 9.38σ
+   Sample: n=55
 
-9. [COMPOUND] no_heart_disease + daily_smoker ↑
-   Rate: 49.0% (vs 19.4% population)
-   Effect: 29.7pp higher | 4.82σ
-   Sample: n=51
+9. [COMPOUND] female + daily_smoker ↑
+   Rate: 60.2% (vs 22.2% population)
+   Effect: 37.9pp higher | 9.28σ
+   Sample: n=133
 
-10. [COMPOUND] young_adult + daily_smoker ↑
-   Rate: 54.1% (vs 19.4% population)
-   Effect: 34.7pp higher | 4.80σ
-   Sample: n=37
+10. [COMPOUND] no_children + daily_smoker ↑
+   Rate: 56.5% (vs 22.2% population)
+   Effect: 34.3pp higher | 8.81σ
+   Sample: n=147
 
 
 LOW_RISK surprises:
 ----------------------------------------
-1. [COMPOUND] optimal_sleep + mostly_in_control ↑
-   Rate: 55.6% (vs 14.3% population)
-   Effect: 41.3pp higher | 4.63σ
-   Sample: n=18
+1. [COMPOUND] never_smoked + never_lonely ↑
+   Rate: 63.6% (vs 14.9% population)
+   Effect: 48.7pp higher | 9.35σ
+   Sample: n=55
 
-2. [COMPOUND] normal_weight + positive_mood ↑
-   Rate: 56.2% (vs 14.3% population)
-   Effect: 42.0pp higher | 4.44σ
-   Sample: n=16
+2. [COMPOUND] normal_weight + no_pain ↑
+   Rate: 47.0% (vs 14.9% population)
+   Effect: 32.1pp higher | 8.98σ
+   Sample: n=117
 
-3. [COMPOUND] normal_weight + mostly_in_control ↑
-   Rate: 47.8% (vs 14.3% population)
-   Effect: 33.5pp higher | 4.26σ
-   Sample: n=23
+3. [COMPOUND] never_smoked + mostly_in_control ↑
+   Rate: 62.3% (vs 14.9% population)
+   Effect: 47.3pp higher | 8.92σ
+   Sample: n=53
 
-4. [COMPOUND] normal_weight + full_interest_pleasure ↑
-   Rate: 52.9% (vs 14.3% population)
-   Effect: 38.7pp higher | 4.22σ
-   Sample: n=17
+4. [COMPOUND] never_smoked + positive_mood ↑
+   Rate: 58.3% (vs 14.9% population)
+   Effect: 43.4pp higher | 8.70σ
+   Sample: n=60
 
-5. [COMPOUND] has_children + good_steps ↑
-   Rate: 58.3% (vs 14.3% population)
-   Effect: 44.0pp higher | 4.04σ
-   Sample: n=12
+5. [COMPOUND] normal_weight + mostly_in_control ↑
+   Rate: 54.0% (vs 14.9% population)
+   Effect: 39.0pp higher | 8.02σ
+   Sample: n=63
 
-6. [LIFESTYLE] excellent_health ↑
-   Rate: 53.3% (vs 14.3% population)
-   Effect: 39.0pp higher | 4.00σ
-   Sample: n=15
+6. [COMPOUND] normal_weight + good_health ↑
+   Rate: 45.2% (vs 14.9% population)
+   Effect: 30.3pp higher | 7.99σ
+   Sample: n=104
 
-7. [COMPOUND] normal_weight + no_pain ↑
-   Rate: 41.4% (vs 14.3% population)
-   Effect: 27.1pp higher | 3.86σ
-   Sample: n=29
+7. [COMPOUND] never_smoked + full_interest_pleasure ↑
+   Rate: 56.4% (vs 14.9% population)
+   Effect: 41.4pp higher | 7.95σ
+   Sample: n=55
 
-8. [COMPOUND] no_thyroid + daily_exercise ↑
-   Rate: 60.0% (vs 14.3% population)
-   Effect: 45.7pp higher | 3.82σ
-   Sample: n=10
+8. [COMPOUND] no_children + full_interest_pleasure ↑
+   Rate: 55.2% (vs 14.9% population)
+   Effect: 40.2pp higher | 7.93σ
+   Sample: n=58
 
-9. [COMPOUND] normal_weight + minimal_sugar ↑
-   Rate: 37.8% (vs 14.3% population)
-   Effect: 23.6pp higher | 3.79σ
-   Sample: n=37
+9. [COMPOUND] normal_weight + rarely_irritated ↑
+   Rate: 61.9% (vs 14.9% population)
+   Effect: 47.0pp higher | 7.88σ
+   Sample: n=42
 
-10. [LIFESTYLE] excellent_steps ↑
-   Rate: 50.0% (vs 14.3% population)
-   Effect: 35.7pp higher | 3.78σ
-   Sample: n=16
+10. [COMPOUND] normal_weight + full_interest_pleasure ↑
+   Rate: 58.7% (vs 14.9% population)
+   Effect: 43.8pp higher | 7.68σ
+   Sample: n=46
 
 
 MODERATE_RISK surprises:
 ----------------------------------------
-1. [COMPOUND] daily_smoker + often_out_of_control ↓
-   Rate: 7.1% (vs 65.4% population)
-   Effect: 58.3pp lower | 2.70σ
-   Sample: n=14
+1. [COMPOUND] daily_smoker + frequent_sadness ↓
+   Rate: 12.7% (vs 62.1% population)
+   Effect: 49.4pp lower | 4.65σ
+   Sample: n=55
 
-2. [COMPOUND] young_adult + severe_anhedonia ↓
-   Rate: 0.0% (vs 65.4% population)
-   Effect: 65.4pp lower | 2.56σ
-   Sample: n=10
+2. [COMPOUND] daily_smoker + often_out_of_control ↓
+   Rate: 12.7% (vs 62.1% population)
+   Effect: 49.4pp lower | 4.65σ
+   Sample: n=55
 
-3. [COMPOUND] daily_smoker + frequent_sadness ↓
-   Rate: 14.3% (vs 65.4% population)
-   Effect: 51.2pp lower | 2.37σ
-   Sample: n=14
+3. [LIFESTYLE] daily_smoker ↓
+   Rate: 38.9% (vs 62.1% population)
+   Effect: 23.3pp lower | 4.10σ
+   Sample: n=193
 
-4. [COMPOUND] daily_smoker + always_lonely ↓
-   Rate: 15.4% (vs 65.4% population)
-   Effect: 50.1pp lower | 2.23σ
-   Sample: n=13
+4. [COMPOUND] obese + daily_smoker ↓
+   Rate: 6.1% (vs 62.1% population)
+   Effect: 56.1pp lower | 4.09σ
+   Sample: n=33
+
+5. [COMPOUND] no_diabetes + daily_smoker ↓
+   Rate: 38.7% (vs 62.1% population)
+   Effect: 23.4pp lower | 4.05σ
+   Sample: n=186
+
+6. [COMPOUND] daily_smoker + always_lonely ↓
+   Rate: 21.3% (vs 62.1% population)
+   Effect: 40.8pp lower | 4.04σ
+   Sample: n=61
+
+7. [COMPOUND] no_hypertension + daily_smoker ↓
+   Rate: 39.0% (vs 62.1% population)
+   Effect: 23.1pp lower | 4.01σ
+   Sample: n=187
+
+8. [COMPOUND] no_heart_disease + daily_smoker ↓
+   Rate: 39.2% (vs 62.1% population)
+   Effect: 22.9pp lower | 3.96σ
+   Sample: n=186
+
+9. [COMPOUND] no_obesity + daily_smoker ↓
+   Rate: 40.0% (vs 62.1% population)
+   Effect: 22.1pp lower | 3.82σ
+   Sample: n=185
+
+10. [COMPOUND] no_thyroid + daily_smoker ↓
+   Rate: 39.9% (vs 62.1% population)
+   Effect: 22.2pp lower | 3.82σ
+   Sample: n=183
 
 
 VERY_HIGH_RISK surprises:
 ----------------------------------------
-1. [COMPOUND] daily_smoker + always_lonely ↑
-   Rate: 15.4% (vs 0.9% population)
-   Effect: 14.5pp higher | 5.43σ
-   Sample: n=13
+1. [COMPOUND] daily_smoker + persistent_sadness ↑
+   Rate: 16.2% (vs 0.7% population)
+   Effect: 15.5pp higher | 11.04σ
+   Sample: n=37
 
-2. [COMPOUND] no_exercise + severe_anhedonia ↑
-   Rate: 12.5% (vs 0.9% population)
-   Effect: 11.6pp higher | 4.82σ
-   Sample: n=16
+2. [COMPOUND] obese + persistent_sadness ↑
+   Rate: 23.5% (vs 0.7% population)
+   Effect: 22.8pp higher | 11.02σ
+   Sample: n=17
 
-3. [COMPOUND] no_exercise + persistent_sadness ↑
-   Rate: 11.1% (vs 0.9% population)
-   Effect: 10.2pp higher | 4.50σ
-   Sample: n=18
+3. [COMPOUND] obese + daily_processed_food_weekly ↑
+   Rate: 27.3% (vs 0.7% population)
+   Effect: 26.5pp higher | 10.32σ
+   Sample: n=11
 
-4. [COMPOUND] female + severe_anhedonia ↑
-   Rate: 10.5% (vs 0.9% population)
-   Effect: 9.6pp higher | 4.36σ
+4. [COMPOUND] daily_smoker + severe_anhedonia ↑
+   Rate: 13.5% (vs 0.7% population)
+   Effect: 12.8pp higher | 9.11σ
+   Sample: n=37
+
+5. [LIFESTYLE] daily_processed_food_weekly ↑
+   Rate: 12.5% (vs 0.7% population)
+   Effect: 11.8pp higher | 8.72σ
+   Sample: n=40
+
+6. [COMPOUND] female + daily_processed_food_weekly ↑
+   Rate: 12.5% (vs 0.7% population)
+   Effect: 11.8pp higher | 7.80σ
+   Sample: n=32
+
+7. [COMPOUND] obese + severe_anhedonia ↑
+   Rate: 15.8% (vs 0.7% population)
+   Effect: 15.1pp higher | 7.69σ
    Sample: n=19
 
-5. [COMPOUND] female + persistent_sadness ↑
-   Rate: 10.0% (vs 0.9% population)
-   Effect: 9.1pp higher | 4.23σ
-   Sample: n=20
-
-6. [LIFESTYLE] severe_anhedonia ↑
-   Rate: 9.1% (vs 0.9% population)
-   Effect: 8.2pp higher | 3.99σ
-   Sample: n=22
-
-7. [LIFESTYLE] persistent_sadness ↑
-   Rate: 8.7% (vs 0.9% population)
-   Effect: 7.8pp higher | 3.88σ
-   Sample: n=23
-
-8. [COMPOUND] no_exercise + always_lonely ↑
-   Rate: 8.7% (vs 0.9% population)
-   Effect: 7.8pp higher | 3.88σ
-   Sample: n=23
-
-9. [COMPOUND] female + daily_smoker ↑
-   Rate: 6.1% (vs 0.9% population)
-   Effect: 5.1pp higher | 3.08σ
+8. [COMPOUND] obese + daily_smoker ↑
+   Rate: 12.1% (vs 0.7% population)
+   Effect: 11.4pp higher | 7.67σ
    Sample: n=33
 
-10. [COMPOUND] female + always_lonely ↑
-   Rate: 6.1% (vs 0.9% population)
-   Effect: 5.1pp higher | 3.08σ
-   Sample: n=33
+9. [COMPOUND] obese + daily_sugar_weekly ↑
+   Rate: 11.1% (vs 0.7% population)
+   Effect: 10.4pp higher | 7.30σ
+   Sample: n=36
+
+10. [COMPOUND] excessive_sleep + persistent_sadness ↑
+   Rate: 20.0% (vs 0.7% population)
+   Effect: 19.3pp higher | 7.14σ
+   Sample: n=10
 
 
 ================================================================================
