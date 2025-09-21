@@ -84,7 +84,7 @@ Examples:
 
     # 1. Simple EDA - Comprehensive exploratory data analysis
     success = run_script(
-        script_path="scripts/01_simple_eda.py",
+        script_path="_scritps/01_simple_eda.py",
         command_args=f"{data_path} {output_dir / '01_simple_eda.txt'}",
         description="Exploratory Data Analysis (EDA) - Complete statistical overview"
     )
@@ -92,7 +92,7 @@ Examples:
 
     # 2. Statistical Surprise Detection - Find unexpected patterns
     success = run_script(
-        script_path="scripts/02_statistical_surprise_refactored.py",
+        script_path="_scritps/02_statistical_surprise_refactored.py",
         command_args=f"{data_path} {output_dir / '02_statistical_surprises.txt'}",
         description="Statistical Surprise Detection - Unexpected demographic/lifestyle patterns"
     )
@@ -100,7 +100,7 @@ Examples:
 
     # 3. Demographic Outlier Spotting - Small segments with big health impacts
     success = run_script(
-        script_path="scripts/03_demographic_outlier_spotter_refactored.py",
+        script_path="_scritps/03_demographic_outlier_spotter_refactored.py",
         command_args=f"{data_path} {output_dir / '03_demographic_outliers.txt'}",
         description="Demographic Outlier Detection - Small segments with disproportionate health impacts"
     )
@@ -108,7 +108,7 @@ Examples:
 
     # 4. Compound Risk Scoring - Additive Method
     success = run_script(
-        script_path="scripts/04_compound_risk_scorer_refactored.py",
+        script_path="_scritps/04_compound_risk_scorer_refactored.py",
         command_args=f"{data_path} {output_dir / '04_compound_additive.txt'} --method additive",
         description="Compound Risk Scoring - Additive method for multi-factor risk assessment"
     )
@@ -116,7 +116,7 @@ Examples:
 
     # 5. Compound Risk Scoring - Interaction-Weighted Method
     success = run_script(
-        script_path="scripts/04_compound_risk_scorer_refactored.py",
+        script_path="_scritps/04_compound_risk_scorer_refactored.py",
         command_args=f"{data_path} {output_dir / '04_compound_interaction.txt'} --method interaction-weighted",
         description="Compound Risk Scoring - Interaction-weighted method with factor amplification"
     )
@@ -124,7 +124,7 @@ Examples:
 
     # 6. Column Relationship Analysis - Descriptive correlations and patterns
     success = run_script(
-        script_path="scripts/05_column_relation_analysis.py",
+        script_path="_scritps/05_column_relation_analysis.py",
         command_args=f"{data_path} {output_dir / '05_column_relationships.txt'}",
         description="Column Relationship Analysis - Descriptive-to-descriptive correlations and clustering"
     )

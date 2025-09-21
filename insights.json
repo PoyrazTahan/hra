@@ -1,0 +1,287 @@
+{
+  "source_file": "03_answers/answer_800_try3.md",
+  "total_insights": 13,
+  "extraction_date": null,
+  "translation_date": "2025-09-21T13:31:01.412587",
+  "insights": [
+    {
+      "id": "insight_01",
+      "index": 1,
+      "english": {
+        "message": "The dramatic gender skew in health survey participation (78.9% female vs 19.9% male) reveals a critical blind spot in workplace wellness programs. This isn't workforce composition - it's engagement bias. Male employees are systematically disconnected from health initiatives, creating an invisible health crisis among the majority male workforce that companies aren't measuring or addressing.\n\nCompanies should implement male-focused outreach strategies, partner with male employee resource groups, and design wellness communications that appeal to male engagement patterns. Consider gamification, competitive elements, or integration with existing male-dominated company activities to bridge this participation gap.",
+        "proof": "Female participation: 650 employees (78.9%) vs Male participation: 164 employees (19.9%). Gender distribution shows 4:1 female to male engagement ratio in health tracking, indicating massive male participation gap in wellness programs."
+      },
+      "turkish": {
+        "message": ">\nSağlık anketine katılımda görülen dramatik cinsiyet dengesizliği (%78,9 kadın, %19,9 erkek) çalışan sağlığı programlarında kritik bir kör noktayı ortaya çıkarıyor. Bu durum işgücü kompozisyonunu değil, katılım yanlılığını gösteriyor. Erkek çalışanlar sağlık girişimlerinden sistematik olarak kopuk durumda ve bu da şirketlerin ölçemediği ve ele alamadığı görünmez bir sağlık krizi yaratıyor.\n\nŞirketler erkek odaklı tanıtım stratejileri uygulamalı, erkek çalışan kaynak grupları ile ortaklık kurmalı ve erkeklerin katılım örüntülerine hitap eden sağlık iletişimi tasarlamalıdır. Bu katılım açığını kapatmak için oyunlaştırma, rekabet unsurları veya mevcut erkek ağırlıklı şirket faaliyetleriyle entegrasyon düşünülmelidir.\n\nKanıt: Kadın katılımı 650 çalışan (%78,9), erkek katılımı 164 çalışan (%19,9). Cinsiyet dağılımı sağlık takibinde 4:1 kadın-erkek katılım oranı gösteriyor ve bu da sağlık programlarında büyük erkek katılım açığına işaret ediyor.",
+        "score": 9
+      },
+      "categories": [
+        "health_conditions",
+        "lifestyle"
+      ],
+      "health_tags": [],
+      "demographic_tags": [
+        "female",
+        "male"
+      ]
+    },
+    {
+      "id": "insight_02",
+      "index": 2,
+      "english": {
+        "message": "Despite being health-engaged enough to complete detailed assessments, these employees show alarming lifestyle patterns: 92% have poor nutrition, 47.7% don't exercise, and 23.4% smoke daily. This paradox reveals that health awareness doesn't translate to healthy behaviors, even among motivated participants.\n\nThis suggests companies need implementation support, not just awareness programs. Focus resources on behavior change coaching, habit formation programs, and removing structural barriers to healthy choices rather than educational campaigns alone.",
+        "proof": "Poor nutrition: 758 employees (92%), No exercise: 393 employees (47.7%), Daily smokers: 193 employees (23.4%). Even among health-engaged employees, lifestyle patterns indicate high intervention needs."
+      },
+      "turkish": {
+        "message": ">\nDetaylı değerlendirmeleri tamamlayacak kadar sağlık bilincine sahip olmasına rağmen, bu çalışanlar endişe verici yaşam tarzı örüntüleri sergiliyor: %92'si kötü beslenme alışkanlığına sahip, %47,7'si egzersiz yapmıyor ve %23,4'ü günlük sigara içiyor. Bu paradoks sağlık farkındalığının sağlıklı davranışlara dönüşmediğini, motive katılımcılar arasında bile gösteriyor.\n\nBu durum şirketlerin farkındalık programları değil, uygulama desteğine ihtiyaç duyduğunu gösteriyor. Kaynakları sadece eğitim kampanyalarına değil, davranış değişimi koçluğu, alışkanlık oluşturma programları ve sağlıklı seçimlerin önündeki yapısal engelleri kaldırmaya odaklamalıdır.\n\nKanıt: Kötü beslenme 758 çalışan (%92), egzersiz yapmama 393 çalışan (%47,7), günlük sigara içenler 193 çalışan (%23,4). Sağlık konusunda bilinçli çalışanlar arasında bile yaşam tarzı örüntüleri yüksek müdahale ihtiyacı gösteriyor.",
+        "score": 8
+      },
+      "categories": [
+        "nutrition",
+        "activity_level",
+        "lifestyle"
+      ],
+      "health_tags": [
+        "very_poor_nutrition",
+        "poor_nutrition",
+        "no_exercise",
+        "daily_smoker"
+      ],
+      "demographic_tags": []
+    },
+    {
+      "id": "insight_03",
+      "index": 3,
+      "english": {
+        "message": "Young adults comprise 57.6% of health survey participants but have 1.11x higher risk ratios for health problems. This demographic actively engages with health tracking yet exhibits concerning health patterns, suggesting engagement without effective guidance or knowledge translation.\n\nCompanies should create young adult-specific wellness programs focusing on habit formation, financial wellness (affecting food choices), and peer-based interventions. Leverage their tech-savviness with app-based coaching and social challenges to turn engagement into results.",
+        "proof": "Young adults: 475 employees (57.6% of participants) with risk ratio 1.11x for high-risk health outcomes vs population baseline. High engagement but elevated risk suggests need for targeted intervention strategies."
+      },
+      "turkish": {
+        "message": ">\nGenç yetişkinler sağlık anketi katılımcılarının %57,6'sını oluşturuyor ancak sağlık sorunları için 1,11x daha yüksek risk oranlarına sahipler. Bu demografik grup sağlık takibiyle aktif olarak ilgileniyor ama endişe verici sağlık örüntüleri sergiliyor - bu da etkili rehberlik veya bilgi transferi olmaksızın katılımı işaret ediyor.\n\nŞirketler alışkanlık oluşturma, finansal sağlık (yemek seçimlerini etkileyen) ve akran temelli müdahaleler üzerine odaklanan genç yetişkin özel çalışan sağlığı programları oluşturmalıdır. Teknoloji yetkinliklerini uygulama tabanlı koçluk ve sosyal mücadelelerle kullanarak katılımı sonuçlara çevirebilirler.\n\nKanıt: Genç yetişkinler 475 çalışan (katılımcıların %57,6'sı), popülasyon temel seviyesine karşı yüksek riskli sağlık sonuçları için 1,11x risk oranı. Yüksek katılım ama yüksek risk, hedefli müdahale stratejilerinin gerekliliğini gösteriyor.",
+        "score": 7
+      },
+      "categories": [
+        "lifestyle",
+        "health_conditions"
+      ],
+      "health_tags": [],
+      "demographic_tags": [
+        "young_adult"
+      ]
+    },
+    {
+      "id": "insight_04",
+      "index": 4,
+      "english": {
+        "message": "Daily smoking creates explosive compound risk when combined with any other factor. Daily smokers alone have 57% high risk (vs 22.2% population), but daily smoking + persistent sadness creates 16.2% very high risk (11.04 sigma surprise). Smoking amplifies every other risk factor exponentially.\n\nPrioritize smoking cessation as the highest-impact intervention. Combine with mental health support since the mental health-smoking combination creates the most extreme risks. Consider intensive, personalized cessation programs with mental health components rather than general wellness approaches.",
+        "proof": "Daily smokers: 57% high risk vs 22.2% population baseline. Daily smoking + persistent sadness: 16.2% very high risk vs 0.7% population (11.04σ magnitude, n=37). Smoking amplifies all risk factors with statistical significance above 9σ."
+      },
+      "turkish": {
+        "message": ">\nGünlük sigara içimi diğer herhangi bir faktörle birleştiğinde patlayıcı bileşik risk oluşturuyor. Sadece günlük sigara içenler %57 yüksek riske sahip (popülasyonun %22,2'sine karşı), ancak günlük sigara + sürekli üzüntü %16,2 çok yüksek risk yaratıyor (11,04 sigma sürpriz). Sigara diğer tüm risk faktörlerini katlanarak artırıyor.\n\nSigarayı bırakmayı en yüksek etkili müdahale olarak önceliklendirin. Zihinsel sağlık-sigara kombinasyonu en uç riskleri yarattığı için ruh sağlığı desteğiyle birleştirin. Genel sağlık yaklaşımları yerine ruh sağlığı bileşenleri olan yoğun, kişiselleştirilmiş bırakma programları düşünün.\n\nKanıt: Günlük sigara içenler: %57 yüksek risk (popülasyon temel seviyesi %22,2'ye karşı). Günlük sigara + sürekli üzüntü: %16,2 çok yüksek risk (popülasyon %0,7'ye karşı, 11,04σ büyüklük, n=37). Sigara 9σ üzerinde istatistiksel anlamlılıkla tüm risk faktörlerini güçlendiriyor.",
+        "score": 9
+      },
+      "categories": [
+        "lifestyle",
+        "mental_health",
+        "health_conditions"
+      ],
+      "health_tags": [
+        "daily_smoker",
+        "persistent_sadness"
+      ],
+      "demographic_tags": []
+    },
+    {
+      "id": "insight_05",
+      "index": 5,
+      "english": {
+        "message": "Mental health conditions act as hidden risk multipliers across the workforce. Obese employees with persistent sadness have 23.5% very high risk (vs 0.7% population), and severe anhedonia creates 2.57x baseline risk amplification. Mental health isn't just a wellness issue - it's a compound risk factor for all physical health outcomes.\n\nIntegrate mental health screening into all wellness programs and physical health initiatives. Train wellness staff to recognize depression and stress patterns that amplify physical risks. Consider mandatory mental health components in high-risk employee intervention programs.",
+        "proof": "Obese + persistent sadness: 23.5% very high risk vs 0.7% population (11.02σ, n=17). Severe anhedonia: 2.57x baseline risk amplification (94.5% risk rate, n=91). Mental health factors consistently amplify physical health risks."
+      },
+      "turkish": {
+        "message": ">\nRuh sağlığı durumları işgücü genelinde gizli risk çarpanları olarak hareket ediyor. Sürekli üzüntü yaşayan obez çalışanlar %23,5 çok yüksek riske sahip (popülasyon %0,7'ye karşı), ve şiddetli anhedoni 2,57x temel seviye risk artışı yaratıyor. Ruh sağlığı sadece bir sağlık sorunu değil - tüm fiziksel sağlık sonuçları için bileşik risk faktörü.\n\nRuh sağlığı taramasını tüm çalışan sağlığı programlarına ve fiziksel sağlık girişimlerine entegre edin. Sağlık personelini fiziksel riskleri güçlendiren depresyon ve stres örüntülerini tanımaya eğitin. Yüksek riskli çalışan müdahale programlarında zorunlu ruh sağlığı bileşenleri düşünün.\n\nKanıt: Obez + sürekli üzüntü: %23,5 çok yüksek risk (popülasyon %0,7'ye karşı, 11,02σ, n=17). Şiddetli anhedoni: 2,57x temel seviye risk artışı (%94,5 risk oranı, n=91). Ruh sağlığı faktörleri sürekli olarak fiziksel sağlık risklerini güçlendiriyor.",
+        "score": 8
+      },
+      "categories": [
+        "mental_health",
+        "health_conditions"
+      ],
+      "health_tags": [
+        "persistent_sadness",
+        "severe_anhedonia",
+        "has_obesity"
+      ],
+      "demographic_tags": [
+        "obese"
+      ]
+    },
+    {
+      "id": "insight_06",
+      "index": 6,
+      "english": {
+        "message": "Three lifestyle factors create complete protection against high health risks: daily exercise (0% high risk, n=35), never being irritated (0% high risk, n=26), and good nutrition (0% high risk, n=12). These aren't just beneficial - they're protective barriers that companies can actively promote.\n\nDevelop \"complete protection\" programs targeting these three specific factors. Create pathways for employees to achieve daily exercise habits, stress management leading to emotional control, and nutritional excellence. These represent the highest-ROI wellness investments with measurable protective outcomes.",
+        "proof": "Daily exercise: 0% high risk (35 employees), Never irritated: 0% high risk (26 employees), Good nutrition: 0% high risk (12 employees). All three factors show complete protection against high-risk health outcomes despite small sample sizes."
+      },
+      "turkish": {
+        "message": ">\nÜç yaşam tarzı faktörü yüksek sağlık risklerine karşı tam koruma sağlıyor: günlük egzersiz (%0 yüksek risk, n=35), hiç sinirlenme (%0 yüksek risk, n=26), ve iyi beslenme (%0 yüksek risk, n=12). Bunlar sadece faydalı değil - şirketlerin aktif olarak destekleyebileceği koruyucu bariyerler.\n\nBu üç spesifik faktörü hedefleyen \"tam koruma\" programları geliştirin. Çalışanların günlük egzersiz alışkanlıkları, duygusal kontrole yol açan stres yönetimi ve beslenme mükemmelliği elde etmeleri için yollar oluşturun. Bunlar ölçülebilir koruyucu sonuçlarla en yüksek yatırım getirisi sağlayan sağlık yatırımlarını temsil ediyor.\n\nKanıt: Günlük egzersiz: %0 yüksek risk (35 çalışan), hiç sinirlenme: %0 yüksek risk (26 çalışan), iyi beslenme: %0 yüksek risk (12 çalışan). Her üç faktör küçük örneklem boyutlarına rağmen yüksek riskli sağlık sonuçlarına karşı tam koruma gösteriyor.",
+        "score": 9
+      },
+      "categories": [
+        "activity_level",
+        "mental_health",
+        "nutrition"
+      ],
+      "health_tags": [
+        "daily_exercise",
+        "never_irritated",
+        "good_nutrition"
+      ],
+      "demographic_tags": []
+    },
+    {
+      "id": "insight_07",
+      "index": 7,
+      "english": {
+        "message": "Tiny employee micro-segments present massive intervention opportunities. Just 11 employees (1.3% of workforce) with no exercise + excessive sleep have 72.7% high risk - a 3.27x risk ratio. These micro-segments are perfect for personalized, high-intensity interventions with measurable outcomes.\n\nIdentify and prioritize micro-segments for targeted intervention programs. With only 11-25 employees per segment, companies can afford intensive, personalized approaches. Track outcomes to demonstrate ROI and scale successful interventions to similar patterns across the broader workforce.",
+        "proof": "No exercise + excessive sleep: 72.7% high risk vs 22.2% population (3.27x risk ratio, n=11 employees). Multiple micro-segments identified with 8-25 employees each showing 2.5x+ risk ratios, enabling targeted intervention strategies."
+      },
+      "turkish": {
+        "message": ">\nKüçük çalışan mikro-segmentleri büyük müdahale fırsatları sunuyor. Egzersiz yapmayan + aşırı uyuyan sadece 11 çalışan (işgücünün %1,3'ü) %72,7 yüksek riske sahip - 3,27x risk oranı. Bu mikro-segmentler ölçülebilir sonuçlarla kişiselleştirilmiş, yüksek yoğunluklu müdahaleler için mükemmel.\n\nHedefli müdahale programları için mikro-segmentleri belirleyin ve önceliklendirin. Segment başına sadece 11-25 çalışanla şirketler yoğun, kişiselleştirilmiş yaklaşımları karşılayabilir. Yatırım getirisini göstermek için sonuçları takip edin ve başarılı müdahaleleri daha geniş işgücündeki benzer örüntülere ölçeklendirin.\n\nKanıt: Egzersiz yapmama + aşırı uyku: %72,7 yüksek risk (popülasyon %22,2'ye karşı, 3,27x risk oranı, n=11 çalışan). Her biri 8-25 çalışanla 2,5x+ risk oranları gösteren, hedefli müdahale stratejilerini mümkün kılan çoklu mikro-segmentler belirlendi.",
+        "score": 8
+      },
+      "categories": [
+        "activity_level",
+        "sleep"
+      ],
+      "health_tags": [
+        "no_exercise",
+        "excessive_sleep"
+      ],
+      "demographic_tags": []
+    },
+    {
+      "id": "insight_08",
+      "index": 8,
+      "english": {
+        "message": "Sleep quality emerges as an underrecognized risk predictor with excessive sleep showing 2.5x baseline risk amplification. Sleep issues are easier to track and modify than many health factors, yet they predict health outcomes as strongly as smoking or depression patterns.\n\nImplement sleep quality tracking and intervention programs as a primary wellness strategy. Sleep represents a high-impact, measurable intervention point that employees can address through behavioral changes, sleep hygiene education, and potentially medical evaluation for sleep disorders.",
+        "proof": "Excessive sleep: 2.5x baseline risk (83.3% elevated risk, n=18). Sleep quality shows predictive power comparable to smoking (2.57x) and severe anhedonia (2.57x) for health outcome prediction."
+      },
+      "turkish": {
+        "message": ">\nUyku kalitesi, aşırı uykunun 2,5x temel seviye risk artışı gösterdiği, yeterince tanınmayan bir risk öngörücüsü olarak ortaya çıkıyor. Uyku sorunları birçok sağlık faktöründen daha kolay takip edilip değiştirilebilir, ancak sigara içme veya depresyon örüntüleri kadar güçlü bir şekilde sağlık sonuçlarını öngörüyor.\n\nUyku kalitesi takibi ve müdahale programlarını birincil sağlık stratejisi olarak uygulayın. Uyku, çalışanların davranışsal değişiklikler, uyku hijyeni eğitimi ve potansiyel olarak uyku bozuklukları için tıbbi değerlendirme yoluyla ele alabileceği yüksek etkili, ölçülebilir müdahale noktasını temsil ediyor.\n\nKanıt: Aşırı uyku: 2,5x temel seviye riski (%83,3 yüksek risk, n=18). Uyku kalitesi sağlık sonucu öngörüsünde sigara içme (2,57x) ve şiddetli anhedoniye (2,57x) benzer öngörü gücü gösteriyor.",
+        "score": 7
+      },
+      "categories": [
+        "sleep",
+        "health_conditions"
+      ],
+      "health_tags": [
+        "excessive_sleep",
+        "insufficient_sleep",
+        "optimal_sleep"
+      ],
+      "demographic_tags": []
+    },
+    {
+      "id": "insight_09",
+      "index": 9,
+      "english": {
+        "message": "Behavioral clustering reveals distinct health consciousness types among engaged employees. Active employees are 57% more likely to use supplements vs 47% population rate, and positive mood correlates with minimal sugar intake (51% vs 28% population). Health-conscious behaviors cluster together, creating identifiable employee health archetypes.\n\nDevelop tiered wellness programs based on health consciousness archetypes. Leverage behavioral clustering by designing interventions that build on existing healthy patterns. Help employees identify their health archetype and provide pathways to advance to higher levels of health consciousness.",
+        "proof": "Activity level ↔ supplement usage: Cramer's V = 0.175. Daily exercise: 57% use supplements vs 47% population. Depression mood ↔ sugar intake: V = 0.158. Positive mood: 51% minimal sugar vs 28% population. Clear behavioral clustering patterns among health-engaged employees."
+      },
+      "turkish": {
+        "message": ">\nDavranışsal kümeleme bilinçli çalışanlar arasında farklı sağlık bilinci tiplerini ortaya çıkarıyor. Aktif çalışanlar popülasyon oranı %47'ye karşı %57 oranında daha fazla takviye kullanıyor ve pozitif ruh hali minimal şeker alımıyla ilişkili (popülasyon %28'ine karşı %51). Sağlık bilincindeki davranışlar birlikte kümeleniyor ve tanımlanabilir çalışan sağlık arketipleri oluşturuyor.\n\nSağlık bilinci arketiplerine dayalı kademeli çalışan sağlığı programları geliştirin. Mevcut sağlıklı örüntülere dayanan müdahaleler tasarlayarak davranışsal kümelemeden yararlanın. Çalışanların sağlık arketiplerini belirlemelerine yardımcı olun ve daha yüksek sağlık bilinci seviyelerine geçiş yolları sağlayın.\n\nKanıt: Aktivite seviyesi ↔ takviye kullanımı: Cramer's V = 0,175. Günlük egzersiz: popülasyon %47'ye karşı %57 takviye kullanımı. Depresif ruh hali ↔ şeker alımı: V = 0,158. Pozitif ruh hali: popülasyon %28'ine karşı %51 minimal şeker. Sağlık bilincindeki çalışanlar arasında net davranışsal kümelenme örüntüleri.",
+        "score": 6
+      },
+      "categories": [
+        "activity_level",
+        "nutrition",
+        "mental_health"
+      ],
+      "health_tags": [
+        "using_supplements",
+        "daily_exercise",
+        "frequent_exercise",
+        "positive_mood",
+        "minimal_sugar"
+      ],
+      "demographic_tags": []
+    },
+    {
+      "id": "insight_10",
+      "index": 10,
+      "english": {
+        "message": "Female employees with children show unique protective patterns that companies should understand and replicate. This demographic combination appears in multiple low-risk scenarios, suggesting that having children may motivate better health choices among female employees who are already health-engaged.\n\nStudy and replicate the protective factors exhibited by mothers in the workforce. Consider family-focused wellness programs that leverage parental motivation for health. Explore whether childcare support, family fitness programs, or health education framed around family wellbeing could extend these protective patterns to other employee groups.",
+        "proof": "Female employees with children appear in multiple low-risk combinations and protective patterns throughout the analysis. Has_children: 217 employees (26.3%) show different risk patterns compared to no_children: 604 employees (73.3%), particularly among female participants."
+      },
+      "turkish": {
+        "message": ">\nÇocuklu kadın çalışanlar şirketlerin anlaması ve tekrarlaması gereken benzersiz koruyucu örüntüler gösteriyor. Bu demografik kombinasyon çoklu düşük riskli senaryolarda görünüyor ve çocuk sahibi olmanın zaten sağlık bilinçli kadın çalışanlar arasında daha iyi sağlık seçimlerini motive edebileceğini işaret ediyor.\n\nİşgücündeki annelerin sergilediği koruyucu faktörleri inceleyin ve tekrarlayın. Ebeveynlik motivasyonunu sağlık için kullanan aile odaklı çalışan sağlığı programları düşünün. Çocuk bakımı desteği, aile fitness programları veya aile refahı çerçevesindeki sağlık eğitiminin bu koruyucu örüntüleri diğer çalışan gruplarına yayıp yayamayacağını araştırın.\n\nKanıt: Çocuklu kadın çalışanlar analiz boyunca çoklu düşük riskli kombinasyonlarda ve koruyucu örüntülerde görünüyor. Çocuk sahibi: 217 çalışan (%26,3), özellikle kadın katılımcılar arasında çocuk sahibi olmayan 604 çalışana (%73,3) kıyasla farklı risk örüntüleri gösteriyor.",
+        "score": 5
+      },
+      "categories": [
+        "health_conditions",
+        "lifestyle"
+      ],
+      "health_tags": [],
+      "demographic_tags": [
+        "female",
+        "has_children"
+      ]
+    },
+    {
+      "id": "insight_11",
+      "index": 11,
+      "english": {
+        "message": "Stress control represents the ultimate health protector - employees who never feel irritated have 0% high risk despite comprising only 3.2% of health-engaged workers. This rare trait provides complete protection and suggests stress management should be the foundational wellness skill, not an add-on program.\n\nMake stress control and emotional regulation the cornerstone of all wellness initiatives. The rarity of this trait (3.2% achievement rate) combined with its complete protective effect suggests most wellness programs are missing this critical foundation. Prioritize mindfulness, emotional regulation training, and stress management as primary interventions.",
+        "proof": "Never irritated: 0% high risk (26 employees, 3.2% of workforce). Frequently irritated: 2.28x baseline risk (94.4% elevated risk, n=71). Stress control shows complete protection vs extreme risk amplification, representing the strongest protective factor identified."
+      },
+      "turkish": {
+        "message": ">\nStres kontrolü nihai sağlık koruyucusunu temsil ediyor - hiç sinirlenmeyen çalışanlar sağlık bilinçli işçilerin sadece %3,2'sini oluşturmasına rağmen %0 yüksek riske sahipler. Bu nadir özellik tam koruma sağlıyor ve stres yönetiminin ek program değil, temel sağlık becerisi olması gerektiğini gösteriyor.\n\nStres kontrolü ve duygusal düzenlemeyi tüm sağlık girişimlerinin temel taşı yapın. Bu özelliğin nadir oluşu (%3,2 başarı oranı) tam koruyucu etkisiyle birleştiğinde çoğu sağlık programının bu kritik temeli kaçırdığını gösteriyor. Farkındalık, duygusal düzenleme eğitimi ve stres yönetimini birincil müdahaleler olarak önceliklendirin.\n\nKanıt: Hiç sinirlenme: %0 yüksek risk (26 çalışan, işgücünün %3,2'si). Sık sinirlenme: 2,28x temel seviye riski (%94,4 yüksek risk, n=71). Stres kontrolü uç risk güçlendirmesine karşı tam koruma gösteriyor ve belirlenen en güçlü koruyucu faktörü temsil ediyor.",
+        "score": 9
+      },
+      "categories": [
+        "mental_health",
+        "health_conditions"
+      ],
+      "health_tags": [
+        "never_irritated",
+        "rarely_irritated",
+        "frequently_irritated"
+      ],
+      "demographic_tags": []
+    },
+    {
+      "id": "insight_12",
+      "index": 12,
+      "english": {
+        "message": "Compound risk modeling using interaction-weighted factors can flag 29.4% of the workforce (242 employees) with 97.5% precision for elevated health risks. This level of predictive accuracy enables proactive intervention programs that target the right employees before health crises develop.\n\nImplement predictive risk scoring using the interaction-weighted model for workforce health management. This tool can identify nearly 30% of employees who need intervention with exceptional accuracy. Use these scores to allocate wellness resources, prioritize intervention programs, and demonstrate measurable health outcome improvements.",
+        "proof": "Interaction-weighted model: Flags 242 employees (29.4% of workforce) with 97.5% precision on elevated risk detection. Catches 34.0% of all elevated risk employees. Model significantly outperforms additive scoring (0.1% flagged) for practical intervention deployment."
+      },
+      "turkish": {
+        "message": ">\nEtkileşim ağırlıklı faktörler kullanılarak yapılan bileşik risk modellemesi işgücünün %29,4'ünü (242 çalışan) yüksek sağlık riskleri için %97,5 kesinlikle işaretleyebiliyor. Bu düzeyde öngörü doğruluğu sağlık krizleri gelişmeden önce doğru çalışanları hedefleyen proaktif müdahale programlarını mümkün kılıyor.\n\nİşgücü sağlık yönetimi için etkileşim ağırlıklı modeli kullanan öngörü risk puanlaması uygulayın. Bu araç müdahaleye ihtiyaç duyan işgücünün neredeyse %30'unu olağanüstü doğrulukla belirleyebilir. Bu puanları sağlık kaynaklarını tahsis etmek, müdahale programlarını önceliklendirmek ve ölçülebilir sağlık sonucu iyileştirmelerini göstermek için kullanın.\n\nKanıt: Etkileşim ağırlıklı model: Yüksek risk tespitinde %97,5 kesinlikle işgücünün %29,4'ünü (242 çalışan) işaretliyor. Tüm yüksek riskli çalışanların %34,0'ını yakalıyor. Model pratik müdahale dağıtımı için toplam puanlamayı (%0,1 işaretlenen) önemli ölçüde geride bırakıyor.",
+        "score": 9
+      },
+      "categories": [
+        "health_conditions"
+      ],
+      "health_tags": [],
+      "demographic_tags": []
+    },
+    {
+      "id": "insight_13",
+      "index": 13,
+      "english": {
+        "message": "The 22.2% high-risk rate among health-engaged employees who voluntarily complete detailed surveys suggests dramatically higher rates exist in the broader workforce. If engaged employees show these risk levels, companies face a hidden health crisis among non-engaged employees who don't participate in wellness programs.\n\nRecognize that survey data represents the \"best case scenario\" for workforce health. Develop strategies to reach non-engaged employees through mandatory health screenings, manager-led wellness check-ins, or integration with required HR processes. The real workforce health situation is likely significantly worse than survey data indicates.",
+        "proof": "High risk among health-engaged employees: 22.2% (183 employees). Very high risk: 0.7% (6 employees). Total elevated risk: 84.3% among employees motivated enough to complete detailed health assessments, indicating participation bias and suggesting higher rates in full workforce."
+      },
+      "turkish": {
+        "message": ">\nGönüllü olarak detaylı anketleri tamamlayan sağlık bilinçli çalışanlar arasındaki %22,2 yüksek risk oranı, daha geniş işgücünde dramatik olarak daha yüksek oranların var olduğunu gösteriyor. Bilinçli çalışanlar bu risk seviyelerini gösteriyorsa, şirketler sağlık programlarına katılmayan bilinçsiz çalışanlar arasında gizli bir sağlık kriziyle karşı karşıyalar.\n\nAnket verisinin işgücü sağlığı için \"en iyi durum senaryosunu\" temsil ettiğini kabul edin. Zorunlu sağlık taramaları, yönetici liderliğindeki sağlık kontrolleri veya gerekli İK süreçleriyle entegrasyon yoluyla bilinçsiz çalışanlara ulaşma stratejileri geliştirin. Gerçek işgücü sağlık durumu muhtemelen anket verisinin gösterdiğinden önemli ölçüde daha kötü.\n\nKanıt: Sağlık bilinçli çalışanlar arasında yüksek risk: %22,2 (183 çalışan). Çok yüksek risk: %0,7 (6 çalışan). Toplam yüksek risk: Detaylı sağlık değerlendirmelerini tamamlayacak kadar motive çalışanlar arasında %84,3, katılım yanlılığını gösteriyor ve tam işgücünde daha yüksek oranları işaret ediyor.",
+        "score": 6
+      },
+      "categories": [
+        "health_conditions"
+      ],
+      "health_tags": [],
+      "demographic_tags": []
+    }
+  ]
+}
