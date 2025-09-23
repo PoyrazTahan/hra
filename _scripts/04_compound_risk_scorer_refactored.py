@@ -19,55 +19,30 @@ warnings.filterwarnings('ignore')
 # Analysis Configuration
 MIN_SAMPLE_SIZE = 15  # Minimum sample size for factor analysis
 
-# Exclusion columns (ID fields that should not be analyzed)
-EXCLUSION_COLUMNS = ['_id', 'UserId']
-
-# Outcome column (health metrics to analyze)
-OUTCOME_COLUMN = 'health_risk_level'
-
-# Core demographic factors
-DEMOGRAPHIC_FACTORS = ['age_group', 'Data.gender', 'Data.has_children', 'bmi_category']
-
-# Lifestyle and behavior factors
-LIFESTYLE_FACTORS = [
-    'Data.smoking_status', 'Data.alcohol_consumption', 'Data.activity_level',
-    'Data.sleep_quality', 'Data.daily_steps', 'Data.supplement_usage'
-]
-
-# Mental health and stress factors
-STRESS_FACTORS = [
-    'Data.stress_level_irritability', 'Data.stress_level_loc', 'Data.depression_mood',
-    'Data.depression_anhedonia', 'Data.loneliness', 'Data.perceived_health'
-]
-
-# Nutrition factors
-NUTRITION_FACTORS = [
-    'Data.fruit_veg_intake', 'Data.sugar_intake', 'Data.processed_food_intake', 'Data.water_intake'
-]
-
-# Physical health factors
-PHYSICAL_HEALTH_FACTORS = [
-    'Data.physical_pain'
-]
-
-# Chronic conditions (binary flags)
-CHRONIC_CONDITION_FACTORS = [
-    'diabetes_status', 'thyroid_disorder_status', 'kidney_disease_status',
-    'heart_disease_status', 'obesity_status', 'hypertension_status', 'cancer_status'
-]
+# Import standardized column categories
+from categories import (
+    EXCLUSION_COLUMNS,
+    OUTCOME_COLUMNS,
+    DEMOGRAPHIC_VARIABLES,
+    LIFESTYLE_FACTORS,
+    STRESS_FACTORS,
+    NUTRITION_FACTORS,
+    PHYSICAL_HEALTH_FACTORS,
+    CHRONIC_CONDITION_FACTORS
+)
 
 # High-impact interaction pairs for interaction-weighted method
 INTERACTION_PAIRS = [
-    ('Data.stress_level_irritability', 'Data.depression_mood'),  # Mental health stacking
-    ('Data.smoking_status', 'Data.alcohol_consumption'),        # Substance use combination
-    ('Data.activity_level', 'Data.sleep_quality'),             # Lifestyle synergy
-    ('age_group', 'diabetes_status'),                          # Age + chronic condition
-    ('age_group', 'hypertension_status'),                      # Age + chronic condition
-    ('Data.depression_mood', 'Data.loneliness'),               # Mental health amplification
-    ('Data.physical_pain', 'Data.perceived_health'),           # Physical health correlation
-    ('bmi_category', 'Data.activity_level'),                   # Weight + exercise interaction
-    ('Data.stress_level_irritability', 'Data.sleep_quality'),  # Stress + sleep interaction
-    ('Data.smoking_status', 'Data.physical_pain')             # Smoking + pain interaction
+    ('A.stress_level_irritability', 'A.depression_mood'),  # Mental health stacking
+    ('A.smoking_status', 'A.alcohol_consumption'),        # Substance use combination
+    ('A.activity_level', 'A.sleep_quality'),             # Lifestyle synergy
+    # ('age_group', 'diabetes_status'),                          # Age + chronic condition - missing age_group
+    # ('age_group', 'hypertension_status'),                      # Age + chronic condition - missing age_group
+    ('A.depression_mood', 'A.loneliness'),               # Mental health amplification
+    ('A.physical_pain', 'A.perceived_health'),           # Physical health correlation
+    ('bmi_category', 'A.activity_level'),                   # Weight + exercise interaction
+    ('A.stress_level_irritability', 'A.sleep_quality'),  # Stress + sleep interaction
+    ('A.smoking_status', 'A.physical_pain')             # Smoking + pain interaction
 ]
 
 def load_and_prepare_data(input_path):
@@ -83,7 +58,7 @@ def load_and_prepare_data(input_path):
 def get_available_factor_groups(df):
     """Get available factor groups from the dataset."""
     factor_groups = {
-        'demographic_factors': [col for col in DEMOGRAPHIC_FACTORS if col in df.columns],
+        'demographic_factors': [col for col in DEMOGRAPHIC_VARIABLES if col in df.columns],
         'lifestyle_factors': [col for col in LIFESTYLE_FACTORS if col in df.columns],
         'stress_factors': [col for col in STRESS_FACTORS if col in df.columns],
         'nutrition_factors': [col for col in NUTRITION_FACTORS if col in df.columns],
@@ -96,19 +71,19 @@ def get_available_factor_groups(df):
 
     return factor_groups
 
-def calculate_population_baselines(df):
+def calculate_population_baselines(df, outcome_col):
     """Calculate population baseline rates for risk levels."""
-    if OUTCOME_COLUMN not in df.columns:
-        raise ValueError(f"Outcome column '{OUTCOME_COLUMN}' not found in dataset")
+    if outcome_col not in df.columns:
+        raise ValueError(f"Outcome column '{outcome_col}' not found in dataset")
 
     baselines = {
-        'high_risk': (df[OUTCOME_COLUMN] == 'high_risk').mean(),
-        'elevated_risk': df[OUTCOME_COLUMN].isin(['high_risk', 'moderate_risk']).mean()
+        'high_risk': (df[outcome_col] == 'high_risk').mean(),
+        'elevated_risk': df[outcome_col].isin(['high_risk', 'moderate_risk']).mean()
     }
 
     return baselines
 
-def calculate_factor_weights(df, factor_groups, baselines, output_lines):
+def calculate_factor_weights(df, factor_groups, baselines, output_lines, outcome_col):
     """Calculate individual risk contribution weights for each factor value."""
     output_lines.append(f"\nCalculating individual factor risk weights...")
     output_lines.append(f"Population baselines: {baselines['high_risk']*100:.1f}% high risk, {baselines['elevated_risk']*100:.1f}% elevated risk")
@@ -129,8 +104,8 @@ def calculate_factor_weights(df, factor_groups, baselines, output_lines):
                     value_df = df[df[factor] == value]
 
                     # Calculate risk rates
-                    high_risk_rate = (value_df[OUTCOME_COLUMN] == 'high_risk').mean()
-                    elevated_risk_rate = value_df[OUTCOME_COLUMN].isin(['high_risk', 'moderate_risk']).mean()
+                    high_risk_rate = (value_df[outcome_col] == 'high_risk').mean()
+                    elevated_risk_rate = value_df[outcome_col].isin(['high_risk', 'moderate_risk']).mean()
 
                     # Calculate risk multipliers
                     high_risk_multiplier = high_risk_rate / baselines['high_risk'] if baselines['high_risk'] > 0 else 1
@@ -146,7 +121,7 @@ def calculate_factor_weights(df, factor_groups, baselines, output_lines):
 
     return factor_weights
 
-def calculate_additive_score(df, factor_weights, factor_groups):
+def calculate_additive_score(df, factor_weights, factor_groups, outcome_col):
     """Create compound risk score using additive approach (simple average)."""
     compound_scores = []
 
@@ -181,13 +156,13 @@ def calculate_additive_score(df, factor_weights, factor_groups):
             'compound_high_risk_score': round(avg_high_risk_score, 3),
             'compound_elevated_risk_score': round(avg_elevated_risk_score, 3),
             'factors_included': factors_counted,
-            'actual_high_risk': row[OUTCOME_COLUMN] == 'high_risk' if OUTCOME_COLUMN in row else False,
-            'actual_elevated_risk': row[OUTCOME_COLUMN] in ['high_risk', 'moderate_risk'] if OUTCOME_COLUMN in row else False
+            'actual_high_risk': row[outcome_col] == 'high_risk' if outcome_col in row else False,
+            'actual_elevated_risk': row[outcome_col] in ['high_risk', 'moderate_risk'] if outcome_col in row else False
         })
 
     return compound_scores
 
-def calculate_interaction_weighted_score(df, factor_weights, factor_groups):
+def calculate_interaction_weighted_score(df, factor_weights, factor_groups, outcome_col):
     """Create compound score with interaction bonuses for known high-risk combinations."""
     compound_scores = []
 
@@ -222,23 +197,23 @@ def calculate_interaction_weighted_score(df, factor_weights, factor_groups):
 
                 # High-risk interaction patterns
                 bonus = 0
-                if (var1 == 'Data.stress_level_irritability' and var2 == 'Data.depression_mood'):
+                if (var1 == 'A.stress_level_irritability' and var2 == 'A.depression_mood'):
                     if ('often_irritated' in val1 or 'frequently_irritated' in val1) and ('frequent_sadness' in val2 or 'persistent_sadness' in val2):
                         bonus = 0.5  # Stress + depression amplification
 
-                elif (var1 == 'Data.smoking_status' and var2 == 'Data.alcohol_consumption'):
+                elif (var1 == 'A.smoking_status' and var2 == 'A.alcohol_consumption'):
                     if 'daily_smoker' in val1 and val2 != 'no_alcohol':
                         bonus = 0.3  # Smoking + alcohol combination
 
-                elif (var1 == 'Data.activity_level' and var2 == 'Data.sleep_quality'):
+                elif (var1 == 'A.activity_level' and var2 == 'A.sleep_quality'):
                     if 'no_exercise' in val1 and 'insufficient_sleep' in val2:
                         bonus = 0.4  # Sedentary + poor sleep
 
-                elif (var1 == 'Data.depression_mood' and var2 == 'Data.loneliness'):
+                elif (var1 == 'A.depression_mood' and var2 == 'A.loneliness'):
                     if ('frequent_sadness' in val1 or 'persistent_sadness' in val1) and ('often_lonely' in val2 or 'always_lonely' in val2):
                         bonus = 0.4  # Depression + loneliness
 
-                elif (var1 == 'Data.stress_level_irritability' and var2 == 'Data.sleep_quality'):
+                elif (var1 == 'A.stress_level_irritability' and var2 == 'A.sleep_quality'):
                     if ('often_irritated' in val1 or 'frequently_irritated' in val1) and 'insufficient_sleep' in val2:
                         bonus = 0.3  # Stress + poor sleep
 
@@ -263,8 +238,8 @@ def calculate_interaction_weighted_score(df, factor_weights, factor_groups):
             'interaction_bonus': round(interaction_bonus, 3),
             'interactions_found': interactions_found,
             'factors_included': factors_counted,
-            'actual_high_risk': row[OUTCOME_COLUMN] == 'high_risk' if OUTCOME_COLUMN in row else False,
-            'actual_elevated_risk': row[OUTCOME_COLUMN] in ['high_risk', 'moderate_risk'] if OUTCOME_COLUMN in row else False
+            'actual_high_risk': row[outcome_col] == 'high_risk' if outcome_col in row else False,
+            'actual_elevated_risk': row[outcome_col] in ['high_risk', 'moderate_risk'] if outcome_col in row else False
         })
 
     return compound_scores
@@ -409,13 +384,13 @@ def extract_employee_profile(employee_row):
     profile = {}
 
     # Core demographics
-    demo_vars = ['age_group', 'Data.gender', 'Data.has_children', 'bmi_category']
+    demo_vars = ['age_group', 'A.gender', 'A.has_children', 'bmi_category']
     for var in demo_vars:
         if var in employee_row.index:
             profile[var] = str(employee_row[var])
 
     # Key risk factors
-    risk_vars = ['Data.stress_level_irritability', 'Data.depression_mood', 'Data.smoking_status', 'diabetes_status']
+    risk_vars = ['A.stress_level_irritability', 'A.depression_mood', 'A.smoking_status', 'diabetes_status']
     for var in risk_vars:
         if var in employee_row.index:
             profile[var] = str(employee_row[var])
@@ -468,14 +443,14 @@ def run_compound_risk_analysis(input_path, output_path, method='additive'):
     df = load_and_prepare_data(input_path)
     factor_groups = get_available_factor_groups(df)
 
-    if OUTCOME_COLUMN not in df.columns:
-        output_lines.append(f"ERROR: Outcome column '{OUTCOME_COLUMN}' not found in dataset.")
+    # Check which outcome columns exist
+    available_outcomes = [col for col in OUTCOME_COLUMNS if col in df.columns]
+    if not available_outcomes:
+        output_lines.append(f"ERROR: No outcome columns found in dataset.")
+        output_lines.append(f"Expected columns: {OUTCOME_COLUMNS}")
         with open(output_path, 'w', encoding='utf-8') as f:
             f.write('\n'.join(output_lines))
         return
-
-    # Calculate population baselines
-    baselines = calculate_population_baselines(df)
 
     output_lines.append("="*80)
     output_lines.append("COMPOUND RISK SCORING ANALYSIS REPORT")
@@ -490,47 +465,54 @@ def run_compound_risk_analysis(input_path, output_path, method='additive'):
     for group_name, factors in factor_groups.items():
         output_lines.append(f"  {group_name}: {len(factors)} factors")
 
-    # Calculate factor weights
-    factor_weights = calculate_factor_weights(df, factor_groups, baselines, output_lines)
+    # Process each outcome column separately
+    for outcome_col in available_outcomes:
+        output_lines.append(f"\n{'='*80}")
+        output_lines.append(f"ANALYSIS FOR OUTCOME: {outcome_col.upper()}")
+        output_lines.append(f"{'='*80}")
 
-    # Create compound scores based on method
-    if method == 'additive':
-        compound_scores = calculate_additive_score(df, factor_weights, factor_groups)
-    elif method == 'interaction-weighted':
-        compound_scores = calculate_interaction_weighted_score(df, factor_weights, factor_groups)
-    else:
-        output_lines.append(f"\nERROR: Unknown scoring method '{method}'")
-        with open(output_path, 'w', encoding='utf-8') as f:
-            f.write('\n'.join(output_lines))
-        return
+        # Calculate population baselines for this outcome
+        baselines = calculate_population_baselines(df, outcome_col)
 
-    # Evaluate performance
-    evaluation_results, best_threshold = evaluate_score_performance(compound_scores, method, output_lines)
+        # Calculate factor weights for this outcome
+        factor_weights = calculate_factor_weights(df, factor_groups, baselines, output_lines, outcome_col)
 
-    # Find scoring outliers
-    outliers = find_score_outliers(df, compound_scores, method, output_lines)
+        # Create compound scores based on method
+        if method == 'additive':
+            compound_scores = calculate_additive_score(df, factor_weights, factor_groups, outcome_col)
+        elif method == 'interaction-weighted':
+            compound_scores = calculate_interaction_weighted_score(df, factor_weights, factor_groups, outcome_col)
+        else:
+            output_lines.append(f"\nERROR: Unknown scoring method '{method}'")
+            continue
 
-    # Identify high-impact factors
-    high_impact_factors = identify_high_impact_factors(factor_weights, output_lines)
+        # Evaluate performance for this outcome
+        evaluation_results, best_threshold = evaluate_score_performance(compound_scores, method, output_lines)
 
-    # Analysis summary
-    output_lines.append(f"\n" + "="*80)
-    output_lines.append("ANALYSIS SUMMARY")
-    output_lines.append("="*80)
-    output_lines.append(f"Total records analyzed: {len(df)}")
-    output_lines.append(f"Scoring method: {method}")
-    output_lines.append(f"Factor groups analyzed: {len(factor_groups)}")
-    output_lines.append(f"Total factors included: {total_factors}")
-    output_lines.append(f"High-impact factors found: {len(high_impact_factors)}")
-    output_lines.append(f"Underestimated risk cases: {len(outliers['underestimated_risk'])}")
-    output_lines.append(f"Overestimated risk cases: {len(outliers['overestimated_risk'])}")
+        # Find scoring outliers for this outcome
+        outliers = find_score_outliers(df, compound_scores, method, output_lines)
 
-    if best_threshold:
-        output_lines.append(f"Optimal threshold: {best_threshold['threshold']}x (flags {best_threshold['flagged_pct']}% of workforce)")
-        output_lines.append(f"Best precision/recall balance: {best_threshold['balance_score']}")
+        # Identify high-impact factors for this outcome
+        high_impact_factors = identify_high_impact_factors(factor_weights, output_lines)
 
-    output_lines.append(f"\nThis analysis creates predictive risk scores for individual employee assessment")
-    output_lines.append(f"and identifies high-impact factors for targeted wellness interventions.")
+        # Analysis summary for this outcome
+        output_lines.append(f"\n" + "="*80)
+        output_lines.append("ANALYSIS SUMMARY")
+        output_lines.append("="*80)
+        output_lines.append(f"Total records analyzed: {len(df)}")
+        output_lines.append(f"Scoring method: {method}")
+        output_lines.append(f"Factor groups analyzed: {len(factor_groups)}")
+        output_lines.append(f"Total factors included: {total_factors}")
+        output_lines.append(f"High-impact factors found: {len(high_impact_factors)}")
+        output_lines.append(f"Underestimated risk cases: {len(outliers['underestimated_risk'])}")
+        output_lines.append(f"Overestimated risk cases: {len(outliers['overestimated_risk'])}")
+
+        if best_threshold:
+            output_lines.append(f"Optimal threshold: {best_threshold['threshold']}x (flags {best_threshold['flagged_pct']}% of workforce)")
+            output_lines.append(f"Best precision/recall balance: {best_threshold['balance_score']}")
+
+        output_lines.append(f"\nThis analysis creates predictive risk scores for individual employee assessment")
+        output_lines.append(f"and identifies high-impact factors for targeted wellness interventions.")
 
     # Write to output file
     with open(output_path, 'w', encoding='utf-8') as f:

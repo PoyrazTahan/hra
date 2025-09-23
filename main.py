@@ -82,53 +82,95 @@ Examples:
     # Track results
     results = []
 
-    # 1. Simple EDA - Comprehensive exploratory data analysis
-    success = run_script(
-        script_path="_scritps/01_simple_eda.py",
-        command_args=f"{data_path} {output_dir / '01_simple_eda.txt'}",
-        description="Exploratory Data Analysis (EDA) - Complete statistical overview"
-    )
-    results.append(("Simple EDA", success))
+    # Define analysis scripts with their descriptions
+    analyses = [
+        ("_scripts/01_simple_eda.py", "Simple EDA", "Exploratory Data Analysis (EDA) - Complete statistical overview"),
+        ("_scripts/02_statistical_surprise_refactored.py", "Statistical Surprises", "Statistical Surprise Detection - Unexpected demographic/lifestyle patterns"),
+        ("_scripts/03_demographic_outlier_spotter_refactored.py", "Demographic Outliers", "Demographic Outlier Detection - Small segments with disproportionate health impacts"),
+        ("_scripts/04_compound_risk_scorer_refactored.py", "Compound Risk (Additive)", "Compound Risk Scoring - Additive method for multi-factor risk assessment", "--method additive"),
+        ("_scripts/04_compound_risk_scorer_refactored.py", "Compound Risk (Interaction)", "Compound Risk Scoring - Interaction-weighted method with factor amplification", "--method interaction-weighted"),
+        ("_scripts/05_column_relation_analysis.py", "Column Relationships", "Column Relationship Analysis - Descriptive-to-descriptive correlations and clustering")
+    ]
 
-    # 2. Statistical Surprise Detection - Find unexpected patterns
-    success = run_script(
-        script_path="_scritps/02_statistical_surprise_refactored.py",
-        command_args=f"{data_path} {output_dir / '02_statistical_surprises.txt'}",
-        description="Statistical Surprise Detection - Unexpected demographic/lifestyle patterns"
-    )
-    results.append(("Statistical Surprises", success))
+    # Create unified output file
+    unified_output = output_dir / "unified_analysis_report.txt"
 
-    # 3. Demographic Outlier Spotting - Small segments with big health impacts
-    success = run_script(
-        script_path="_scritps/03_demographic_outlier_spotter_refactored.py",
-        command_args=f"{data_path} {output_dir / '03_demographic_outliers.txt'}",
-        description="Demographic Outlier Detection - Small segments with disproportionate health impacts"
-    )
-    results.append(("Demographic Outliers", success))
+    # Initialize unified report
+    with open(unified_output, 'w') as f:
+        f.write("="*80 + "\n")
+        f.write("HEALTH RISK ASSESSMENT - UNIFIED ANALYSIS REPORT\n")
+        f.write("="*80 + "\n")
+        f.write(f"Data Source: {data_path}\n")
+        f.write(f"Generated: {datetime.now()}\n")
+        f.write("="*80 + "\n\n")
 
-    # 4. Compound Risk Scoring - Additive Method
-    success = run_script(
-        script_path="_scritps/04_compound_risk_scorer_refactored.py",
-        command_args=f"{data_path} {output_dir / '04_compound_additive.txt'} --method additive",
-        description="Compound Risk Scoring - Additive method for multi-factor risk assessment"
-    )
-    results.append(("Compound Risk (Additive)", success))
+    # Run each analysis and collect results (fail-fast approach)
+    temp_files_created = []
 
-    # 5. Compound Risk Scoring - Interaction-Weighted Method
-    success = run_script(
-        script_path="_scritps/04_compound_risk_scorer_refactored.py",
-        command_args=f"{data_path} {output_dir / '04_compound_interaction.txt'} --method interaction-weighted",
-        description="Compound Risk Scoring - Interaction-weighted method with factor amplification"
-    )
-    results.append(("Compound Risk (Interaction)", success))
+    for analysis in analyses:
+        script_path = analysis[0]
+        analysis_name = analysis[1]
+        description = analysis[2]
+        extra_args = analysis[3] if len(analysis) > 3 else ""
 
-    # 6. Column Relationship Analysis - Descriptive correlations and patterns
-    success = run_script(
-        script_path="_scritps/05_column_relation_analysis.py",
-        command_args=f"{data_path} {output_dir / '05_column_relationships.txt'}",
-        description="Column Relationship Analysis - Descriptive-to-descriptive correlations and clustering"
-    )
-    results.append(("Column Relationships", success))
+        # Create temporary output file
+        temp_output = output_dir / f"temp_{analysis_name.replace(' ', '_').replace('(', '').replace(')', '').lower()}.txt"
+        temp_files_created.append(temp_output)
+
+        # Run script with temp output
+        command_args = f"{data_path} {temp_output} {extra_args}".strip()
+        success = run_script(
+            script_path=script_path,
+            command_args=command_args,
+            description=description
+        )
+        results.append((analysis_name, success))
+
+        # FAIL-FAST: If any script fails, clean up and exit
+        if not success:
+            print(f"\n❌ ANALYSIS FAILED - STOPPING PIPELINE")
+            print(f"   Failed script: {analysis_name}")
+            print(f"   Error occurred in: {script_path}")
+
+            # Clean up any temp files created
+            for temp_file in temp_files_created:
+                if temp_file.exists():
+                    temp_file.unlink()
+
+            # Remove incomplete unified output file
+            if unified_output.exists():
+                unified_output.unlink()
+
+            print(f"\n   Temporary files cleaned up.")
+            print(f"   Fix the error in {script_path} and try again.")
+            sys.exit(1)
+
+        # Append to unified report if successful
+        if temp_output.exists():
+            with open(unified_output, 'a') as unified_file:
+                unified_file.write(f"\n{'='*60}\n")
+                unified_file.write(f"ANALYSIS: {analysis_name.upper()}\n")
+                unified_file.write(f"{'='*60}\n\n")
+
+                with open(temp_output, 'r') as temp_file:
+                    unified_file.write(temp_file.read())
+
+                unified_file.write(f"\n{'='*60}\n")
+                unified_file.write(f"END: {analysis_name.upper()}\n")
+                unified_file.write(f"{'='*60}\n\n")
+
+            # Clean up temp file
+            temp_output.unlink()
+        else:
+            # Script succeeded but no output file created
+            with open(unified_output, 'a') as unified_file:
+                unified_file.write(f"\n{'='*60}\n")
+                unified_file.write(f"ANALYSIS: {analysis_name.upper()}\n")
+                unified_file.write(f"{'='*60}\n\n")
+                unified_file.write("No output generated by script.\n")
+                unified_file.write(f"\n{'='*60}\n")
+                unified_file.write(f"END: {analysis_name.upper()}\n")
+                unified_file.write(f"{'='*60}\n\n")
 
     # Final Summary
     print(f"\n{'='*80}")
@@ -150,10 +192,11 @@ Examples:
         print(f"  {status} {analysis_name}")
 
     if success_count == total_count:
-        print(f"\n All analyses completed successfully!")
-        print(f" Check {output_dir}/ for detailed results")
+        print(f"\n✓ All analyses completed successfully!")
+        print(f"  Unified report: {unified_output}")
     else:
-        print(f"\n  {total_count - success_count} analyses failed - check output files for details")
+        print(f"\n⚠ {total_count - success_count} analyses failed - check unified report for details")
+        print(f"  Unified report: {unified_output}")
 
     print(f"\nFinished: {datetime.now()}")
 

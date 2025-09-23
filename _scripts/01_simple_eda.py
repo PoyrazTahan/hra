@@ -18,45 +18,18 @@ from itertools import combinations
 import warnings
 warnings.filterwarnings('ignore')
 
-# Column Configuration
-# Exclusion columns (ID fields that should not be analyzed)
-EXCLUSION_COLUMNS = ['_id', 'UserId']
-
-# Outcome columns (health metrics to analyze)
-OUTCOME_COLUMNS = ['health_risk_level', 'Total_Health_Score']
-
-# Core demographic segmentation variables
-DEMOGRAPHIC_VARIABLES = ['age_group', 'Data.gender', 'Data.has_children', 'bmi_category']
-
-# Lifestyle variables that can create demographic segments
-LIFESTYLE_DEMOGRAPHICS = [
-    'Data.smoking_status', 'Data.alcohol_consumption', 'Data.activity_level',
-    'Data.sleep_quality', 'Data.perceived_health', 'Data.daily_steps'
-]
-
-# Mental health and stress factors
-STRESS_FACTORS = [
-    'Data.stress_level_irritability', 'Data.stress_level_loc', 'Data.depression_mood',
-    'Data.depression_anhedonia', 'Data.loneliness'
-]
-
-# Nutrition factors
-NUTRITION_FACTORS = [
-    'Data.fruit_veg_intake', 'Data.sugar_intake', 'Data.processed_food_intake', 'Data.water_intake'
-]
-
-# Physical health factors
-PHYSICAL_HEALTH_FACTORS = [
-    'Data.physical_pain', 'Data.supplement_usage'
-]
-
-# Chronic conditions (binary flags)
-CHRONIC_CONDITION_DEMOGRAPHICS = [
-    'Data.chronic_conditions_diabetes', 'Data.chronic_conditions_obesity',
-    'Data.chronic_conditions_hypertension', 'Data.chronic_conditions_heart_disease',
-    'Data.chronic_conditions_thyroid', 'Data.chronic_conditions_kidney_disease',
-    'Data.chronic_conditions_cancer'
-]
+# Import standardized column categories
+from categories import (
+    EXCLUSION_COLUMNS,
+    OUTCOME_COLUMNS,
+    DEMOGRAPHIC_VARIABLES,
+    LIFESTYLE_FACTORS,
+    STRESS_FACTORS,
+    NUTRITION_FACTORS,
+    PHYSICAL_HEALTH_FACTORS,
+    CHRONIC_CONDITION_FACTORS,
+    NON_EXCLUDED_NON_TARGET_COLUMNS
+)
 
 def load_and_prepare_data(input_path):
     """Load and prepare the health risk assessment data."""
@@ -344,7 +317,7 @@ def analyze_age_patterns(df, output_lines):
                         output_lines.append(f"    {age_group}: {risk_pct:.1f}% high risk indicators")
 
     # Lifestyle patterns by age
-    available_lifestyle = [col for col in LIFESTYLE_DEMOGRAPHICS if col in df.columns]
+    available_lifestyle = [col for col in LIFESTYLE_FACTORS if col in df.columns]
     if available_lifestyle:
         output_lines.append(f"\nLifestyle Patterns by Age:")
 
@@ -408,7 +381,7 @@ def analyze_high_risk_patterns(df, output_lines):
                 output_lines.append(f"    {val}: {count} ({high_risk_pct:.1f}%) - Risk Ratio: {risk_ratio:.2f}x")
 
     # Lifestyle factors in high-risk group
-    available_lifestyle = [col for col in LIFESTYLE_DEMOGRAPHICS if col in df.columns]
+    available_lifestyle = [col for col in LIFESTYLE_FACTORS if col in df.columns]
     if available_lifestyle:
         output_lines.append(f"\nLifestyle Risk Factors:")
         for lifestyle_var in available_lifestyle[:5]:
@@ -449,10 +422,10 @@ def run_comprehensive_analysis(input_path, output_path):
     analyze_cross_patterns(df, DEMOGRAPHIC_VARIABLES, OUTCOME_COLUMNS,
                           "DEMOGRAPHICS vs HEALTH OUTCOMES", output_lines)
 
-    analyze_cross_patterns(df, DEMOGRAPHIC_VARIABLES, LIFESTYLE_DEMOGRAPHICS,
+    analyze_cross_patterns(df, DEMOGRAPHIC_VARIABLES, LIFESTYLE_FACTORS,
                           "DEMOGRAPHICS vs LIFESTYLE PATTERNS", output_lines)
 
-    analyze_cross_patterns(df, LIFESTYLE_DEMOGRAPHICS, OUTCOME_COLUMNS,
+    analyze_cross_patterns(df, LIFESTYLE_FACTORS, OUTCOME_COLUMNS,
                           "LIFESTYLE vs HEALTH OUTCOMES", output_lines)
 
     analyze_cross_patterns(df, STRESS_FACTORS, OUTCOME_COLUMNS,
@@ -461,7 +434,7 @@ def run_comprehensive_analysis(input_path, output_path):
     analyze_cross_patterns(df, NUTRITION_FACTORS, OUTCOME_COLUMNS,
                           "NUTRITION vs HEALTH OUTCOMES", output_lines)
 
-    analyze_cross_patterns(df, CHRONIC_CONDITION_DEMOGRAPHICS, OUTCOME_COLUMNS,
+    analyze_cross_patterns(df, CHRONIC_CONDITION_FACTORS, OUTCOME_COLUMNS,
                           "CHRONIC CONDITIONS vs HEALTH OUTCOMES", output_lines)
 
     # Age-specific analysis

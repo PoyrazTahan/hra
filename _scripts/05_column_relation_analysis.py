@@ -22,34 +22,16 @@ MIN_SAMPLE_SIZE = 3        # Minimum sample per cell for reliable analysis
 MIN_EFFECT_SIZE = 0.15     # Minimum Cramer's V for small-medium effect
 MIN_PROPORTION_DIFF = 3.0  # Minimum percentage point difference to report
 
-# Exclusion columns (ID fields and target variables)
-EXCLUSION_COLUMNS = ['_id', 'UserId', 'health_risk_level', 'Total_Health_Score']
-
-# Lifestyle behavior cluster
-LIFESTYLE_FACTORS = [
-    'Data.smoking_status', 'Data.alcohol_consumption', 'Data.activity_level',
-    'Data.sleep_quality', 'Data.daily_steps', 'Data.supplement_usage'
-]
-
-# Mental health & stress cluster
-MENTAL_HEALTH_FACTORS = [
-    'Data.stress_level_irritability', 'Data.stress_level_loc', 'Data.depression_mood',
-    'Data.depression_anhedonia', 'Data.loneliness', 'Data.perceived_health'
-]
-
-# Nutrition behavior cluster
-NUTRITION_FACTORS = [
-    'Data.fruit_veg_intake', 'Data.sugar_intake', 'Data.processed_food_intake', 'Data.water_intake'
-]
-
-# Core demographics
-DEMOGRAPHIC_FACTORS = ['age_group', 'Data.gender', 'Data.has_children', 'bmi_category']
-
-# Physical health descriptors
-PHYSICAL_HEALTH_FACTORS = [
-    'Data.physical_pain', 'Data.chronic_conditions_diabetes', 'Data.chronic_conditions_obesity',
-    'Data.chronic_conditions_hypertension', 'Data.chronic_conditions_heart_disease'
-]
+# Import standardized column categories
+from categories import (
+    EXCLUSION_COLUMNS,
+    DEMOGRAPHIC_VARIABLES,
+    LIFESTYLE_FACTORS,
+    STRESS_FACTORS,
+    NUTRITION_FACTORS,
+    PHYSICAL_HEALTH_FACTORS,
+    CHRONIC_CONDITION_FACTORS
+)
 
 def load_and_prepare_data(input_path):
     """Load and prepare the health data for relationship analysis."""
@@ -165,7 +147,7 @@ def analyze_lifestyle_clustering(df, output_lines):
 
             # Add interpretive insight
             effect_desc = "very strong" if cramers_v > 0.5 else "strong" if cramers_v > 0.4 else "moderate"
-            output_lines.append(f"  - Insight: {effect_desc} clustering between {var1.replace('Data.', '')} and {var2.replace('Data.', '')}")
+            output_lines.append(f"  - Insight: {effect_desc} clustering between {var1.replace('A.', '')} and {var2.replace('A.', '')}")
     else:
         output_lines.append("\nNo strong lifestyle clustering patterns found above threshold.")
 
@@ -192,7 +174,7 @@ def analyze_mental_health_clustering(df, output_lines):
     output_lines.append("MENTAL HEALTH CLUSTERING PATTERNS")
     output_lines.append("-"*60)
 
-    available_mental = [col for col in MENTAL_HEALTH_FACTORS if col in df.columns]
+    available_mental = [col for col in STRESS_FACTORS if col in df.columns]
     mental_associations = []
 
     # Test all pairs within mental health factors
@@ -240,8 +222,8 @@ def analyze_demographic_differences(df, output_lines):
     output_lines.append("DEMOGRAPHIC BEHAVIOR DIFFERENCES")
     output_lines.append("-"*60)
 
-    available_demographics = [col for col in DEMOGRAPHIC_FACTORS if col in df.columns]
-    behavior_factors = LIFESTYLE_FACTORS + MENTAL_HEALTH_FACTORS + NUTRITION_FACTORS
+    available_demographics = [col for col in DEMOGRAPHIC_VARIABLES if col in df.columns]
+    behavior_factors = LIFESTYLE_FACTORS + STRESS_FACTORS + NUTRITION_FACTORS
     available_behaviors = [col for col in behavior_factors if col in df.columns]
 
     demographic_insights = []
@@ -265,7 +247,7 @@ def analyze_demographic_differences(df, output_lines):
             demo_groups[demo_var].append(insight)
 
         for demo_var, insights in list(demo_groups.items())[:3]:  # Top 3 demo variables
-            output_lines.append(f"\n• {demo_var.replace('Data.', '').title()} Behavior Patterns:")
+            output_lines.append(f"\n• {demo_var.replace('A.', '').title()} Behavior Patterns:")
 
             for insight in insights[:2]:  # Top 2 insights per demographic
                 behavior_var = insight['variable2']
@@ -304,7 +286,7 @@ def find_surprising_correlations(df, output_lines):
     # Define factor groups for cross-cluster analysis
     factor_groups = {
         'Physical Health': [col for col in PHYSICAL_HEALTH_FACTORS if col in df.columns],
-        'Mental Health': [col for col in MENTAL_HEALTH_FACTORS if col in df.columns],
+        'Mental Health': [col for col in STRESS_FACTORS if col in df.columns],
         'Lifestyle': [col for col in LIFESTYLE_FACTORS if col in df.columns],
         'Nutrition': [col for col in NUTRITION_FACTORS if col in df.columns]
     }
@@ -359,7 +341,7 @@ def find_surprising_correlations(df, output_lines):
             if best_example:
                 val1, val2, segment_pct, population_pct = best_example
                 output_lines.append(f"  - {val1}: {segment_pct:.0f}% {val2} vs {population_pct:.0f}% population")
-                output_lines.append(f"  - Insight: {var1.replace('Data.', '')} and {var2.replace('Data.', '')} show unexpected correlation")
+                output_lines.append(f"  - Insight: {var1.replace('A.', '')} and {var2.replace('A.', '')} show unexpected correlation")
     else:
         output_lines.append("\nNo surprising cross-cluster correlations found above threshold.")
 
@@ -371,9 +353,9 @@ def generate_summary_insights(df, output_lines):
 
     # Count available variables by category
     lifestyle_count = len([col for col in LIFESTYLE_FACTORS if col in df.columns])
-    mental_count = len([col for col in MENTAL_HEALTH_FACTORS if col in df.columns])
+    mental_count = len([col for col in STRESS_FACTORS if col in df.columns])
     nutrition_count = len([col for col in NUTRITION_FACTORS if col in df.columns])
-    demo_count = len([col for col in DEMOGRAPHIC_FACTORS if col in df.columns])
+    demo_count = len([col for col in DEMOGRAPHIC_VARIABLES if col in df.columns])
     physical_count = len([col for col in PHYSICAL_HEALTH_FACTORS if col in df.columns])
 
     output_lines.append(f"Total records analyzed: {len(df)}")
@@ -413,8 +395,8 @@ def run_column_relationship_analysis(input_path, output_path):
 
     # Debug: Check which factor columns exist
     lifestyle_found = [col for col in LIFESTYLE_FACTORS if col in df.columns]
-    mental_found = [col for col in MENTAL_HEALTH_FACTORS if col in df.columns]
-    demo_found = [col for col in DEMOGRAPHIC_FACTORS if col in df.columns]
+    mental_found = [col for col in STRESS_FACTORS if col in df.columns]
+    demo_found = [col for col in DEMOGRAPHIC_VARIABLES if col in df.columns]
     nutrition_found = [col for col in NUTRITION_FACTORS if col in df.columns]
     physical_found = [col for col in PHYSICAL_HEALTH_FACTORS if col in df.columns]
 

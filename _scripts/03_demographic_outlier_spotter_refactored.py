@@ -21,62 +21,35 @@ MAX_SEGMENT_SIZE = 15.0  # Maximum % of population for "small segment"
 MIN_RISK_RATIO = 2.5    # Minimum risk ratio to be considered outlier (1.5x = 50% higher)
 MIN_SAMPLE_SIZE = 8    # Minimum sample size for reliable analysis
 
-# Exclusion columns (ID fields that should not be analyzed)
-EXCLUSION_COLUMNS = ['_id', 'UserId']
-
-# Outcome columns (health metrics to analyze)
-OUTCOME_COLUMNS = ['health_risk_level']
-
-# Core demographic segmentation variables
-DEMOGRAPHIC_VARIABLES = ['age_group', 'Data.gender', 'Data.has_children', 'bmi_category']
-
-# Lifestyle variables that can create demographic segments
-LIFESTYLE_DEMOGRAPHICS = [
-    'Data.smoking_status', 'Data.alcohol_consumption', 'Data.activity_level',
-    'Data.sleep_quality', 'Data.perceived_health', 'Data.daily_steps'
-]
-
-# Mental health and stress factors (key for outlier combinations)
-STRESS_FACTORS = [
-    'Data.stress_level_irritability', 'Data.stress_level_loc', 'Data.depression_mood',
-    'Data.depression_anhedonia', 'Data.loneliness'
-]
-
-# Nutrition factors
-NUTRITION_FACTORS = [
-    'Data.fruit_veg_intake', 'Data.sugar_intake', 'Data.processed_food_intake', 'Data.water_intake'
-]
-
-# Physical health factors
-PHYSICAL_HEALTH_FACTORS = [
-    'Data.physical_pain', 'Data.supplement_usage'
-]
-
-# Chronic conditions (binary flags)
-CHRONIC_CONDITION_DEMOGRAPHICS = [
-    'Data.chronic_conditions_diabetes', 'Data.chronic_conditions_obesity',
-    'Data.chronic_conditions_hypertension', 'Data.chronic_conditions_heart_disease',
-    'Data.chronic_conditions_thyroid', 'Data.chronic_conditions_kidney_disease',
-    'Data.chronic_conditions_cancer'
-]
+# Import standardized column categories
+from categories import (
+    EXCLUSION_COLUMNS,
+    OUTCOME_COLUMNS,
+    DEMOGRAPHIC_VARIABLES,
+    LIFESTYLE_FACTORS,
+    STRESS_FACTORS,
+    NUTRITION_FACTORS,
+    PHYSICAL_HEALTH_FACTORS,
+    CHRONIC_CONDITION_FACTORS
+)
 
 # Strategic two-variable combinations for analysis (avoid combinatorial explosion)
 STRATEGIC_COMBINATIONS = [
-    ('age_group', 'Data.gender'),
-    ('age_group', 'bmi_category'),
-    ('Data.gender', 'Data.has_children'),
-    ('bmi_category', 'Data.activity_level'),
-    ('Data.smoking_status', 'Data.alcohol_consumption'),
-    ('Data.stress_level_irritability', 'Data.sleep_quality'),
-    ('Data.depression_mood', 'Data.loneliness'),
-    ('age_group', 'Data.chronic_conditions_diabetes'),
-    ('age_group', 'Data.chronic_conditions_hypertension'),
-    ('Data.gender', 'Data.smoking_status'),
-    ('bmi_category', 'Data.chronic_conditions_obesity'),
-    ('Data.activity_level', 'Data.sleep_quality'),
-    ('Data.stress_level_irritability', 'Data.depression_mood'),
-    ('Data.perceived_health', 'Data.physical_pain'),
-    ('Data.alcohol_consumption', 'Data.stress_level_irritability')
+    # ('age_group', 'A.gender'),  # Missing demographic variables
+    # ('age_group', 'bmi_category'),  # Missing age_group
+    # ('A.gender', 'A.has_children'),  # Missing demographic variables
+    ('bmi_category', 'A.activity_level'),
+    ('A.smoking_status', 'A.alcohol_consumption'),
+    ('A.stress_level_irritability', 'A.sleep_quality'),
+    ('A.depression_mood', 'A.loneliness'),
+    # ('age_group', 'diabetes_status'),  # Missing age_group
+    # ('age_group', 'hypertension_status'),  # Missing age_group
+    # ('A.gender', 'A.smoking_status'),  # Missing A.gender
+    ('bmi_category', 'obesity_status'),
+    ('A.activity_level', 'A.sleep_quality'),
+    ('A.stress_level_irritability', 'A.depression_mood'),
+    ('A.perceived_health', 'A.physical_pain'),
+    ('A.alcohol_consumption', 'A.stress_level_irritability')
 ]
 
 def load_and_prepare_data(input_path):
@@ -91,9 +64,9 @@ def load_and_prepare_data(input_path):
 
 def get_available_variables(df):
     """Get available demographic and outcome variables from the dataset."""
-    all_demographic_vars = (DEMOGRAPHIC_VARIABLES + LIFESTYLE_DEMOGRAPHICS +
+    all_demographic_vars = (DEMOGRAPHIC_VARIABLES + LIFESTYLE_FACTORS +
                            STRESS_FACTORS + NUTRITION_FACTORS +
-                           PHYSICAL_HEALTH_FACTORS + CHRONIC_CONDITION_DEMOGRAPHICS)
+                           PHYSICAL_HEALTH_FACTORS + CHRONIC_CONDITION_FACTORS)
 
     available_demographics = [col for col in all_demographic_vars if col in df.columns]
     available_outcomes = [col for col in OUTCOME_COLUMNS if col in df.columns]
@@ -277,8 +250,8 @@ def analyze_outlier_patterns(df, outliers, output_lines):
                 segment_df = df[(df[var1] == val1) & (df[var2] == val2)]
 
             # Look for distinguishing lifestyle characteristics
-            lifestyle_vars = ['Data.activity_level', 'Data.sleep_quality', 'Data.smoking_status',
-                            'Data.stress_level_irritability', 'Data.perceived_health']
+            lifestyle_vars = ['A.activity_level', 'A.sleep_quality', 'A.smoking_status',
+                            'A.stress_level_irritability', 'A.perceived_health']
 
             distinctive_chars = []
             for var in lifestyle_vars:

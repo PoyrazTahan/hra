@@ -25,59 +25,20 @@ warnings.filterwarnings('ignore')
 DEFAULT_MIN_SAMPLE_SIZE = 10
 DEFAULT_SURPRISE_THRESHOLD = 2.0
 
-# Exclusion columns (ID fields that should not be analyzed)
-EXCLUSION_COLUMNS = ['_id', 'UserId','Total_Health_Score']
 
-# Outcome variables (health outcomes we want to predict/understand)
-OUTCOME_VARIABLES = [
-    'health_risk_level',   
-]
+# Import standardized column categories
+from categories import (
+    EXCLUSION_COLUMNS,
+    OUTCOME_COLUMNS,
+    DEMOGRAPHIC_VARIABLES,
+    LIFESTYLE_FACTORS,
+    STRESS_FACTORS,
+    NUTRITION_FACTORS,
+    PHYSICAL_HEALTH_FACTORS,
+    CHRONIC_CONDITION_FACTORS
+)
 
-# Core demographic variables
-DEMOGRAPHIC_VARIABLES = [
-    'age_group',
-    'Data.gender',
-    'Data.has_children',
-    'bmi_category'
-]
 
-# Lifestyle and health factors - organized by impact potential
-HIGH_IMPACT_LIFESTYLE = [
-    'Data.smoking_status',
-    'Data.alcohol_consumption',
-    'Data.activity_level',
-    'Data.sleep_quality'
-]
-
-MENTAL_HEALTH_FACTORS = [
-    'Data.depression_mood',
-    'Data.depression_anhedonia',
-    'Data.stress_level_irritability',
-    'Data.stress_level_loc',
-    'Data.loneliness'
-]
-
-NUTRITION_FACTORS = [
-    'Data.fruit_veg_intake',
-    'Data.sugar_intake',
-    'Data.processed_food_intake',
-    'Data.water_intake'
-]
-
-PHYSICAL_FACTORS = [
-    'Data.daily_steps',
-    'Data.physical_pain',
-    'Data.perceived_health',
-    'Data.supplement_usage'
-]
-
-CHRONIC_CONDITIONS = [
-    'diabetes_status',
-    'hypertension_status',
-    'heart_disease_status',
-    'obesity_status',
-    'thyroid_disorder_status'
-]
 
 def load_and_prepare_data(input_path):
     """Load and prepare the health risk assessment data."""
@@ -202,11 +163,16 @@ def run_statistical_surprise_analysis(input_path, output_path, min_sample_size=D
 
     # Get available variables
     demographics = get_available_variables(df, DEMOGRAPHIC_VARIABLES)
-    outcomes = get_available_variables(df, OUTCOME_VARIABLES)
+    outcomes = get_available_variables(df, OUTCOME_COLUMNS)
 
     # Combine all lifestyle factors
-    all_lifestyle = (HIGH_IMPACT_LIFESTYLE + MENTAL_HEALTH_FACTORS +
-                    NUTRITION_FACTORS + PHYSICAL_FACTORS + CHRONIC_CONDITIONS)
+    all_lifestyle = (
+        LIFESTYLE_FACTORS +
+        STRESS_FACTORS +
+        NUTRITION_FACTORS + 
+        PHYSICAL_HEALTH_FACTORS +
+        CHRONIC_CONDITION_FACTORS
+    )
     lifestyle_vars = get_available_variables(df, all_lifestyle)
 
     output_lines.append("="*80)
@@ -229,8 +195,8 @@ def run_statistical_surprise_analysis(input_path, output_path, min_sample_size=D
     compound_surprises.extend(calculate_compound_surprises(df, demographics, lifestyle_vars, outcomes, min_sample_size, surprise_threshold))
 
     # Additional high-value combinations
-    compound_surprises.extend(calculate_compound_surprises(df, HIGH_IMPACT_LIFESTYLE, MENTAL_HEALTH_FACTORS, outcomes, min_sample_size, surprise_threshold))
-    compound_surprises.extend(calculate_compound_surprises(df, CHRONIC_CONDITIONS, HIGH_IMPACT_LIFESTYLE, outcomes, min_sample_size, surprise_threshold))
+    compound_surprises.extend(calculate_compound_surprises(df, LIFESTYLE_FACTORS, STRESS_FACTORS, outcomes, min_sample_size, surprise_threshold))
+    compound_surprises.extend(calculate_compound_surprises(df, CHRONIC_CONDITION_FACTORS, LIFESTYLE_FACTORS, outcomes, min_sample_size, surprise_threshold))
 
     # Combine and categorize all surprises
     all_surprises = []
