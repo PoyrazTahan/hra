@@ -3,7 +3,7 @@ HEALTH RISK ASSESSMENT - MAIN DATASET ANALYSIS REPORT
 ================================================================================
 Data Source: 01_in/HRA_data.csv
 Records: 1457
-Generated: 2025-09-23 12:51:16.348170
+Generated: 2025-09-23 12:53:32.307087
 ================================================================================
 
 
@@ -453,7 +453,7 @@ Parameters: min_sample=10, threshold=2.0σ
 SURPRISE DETECTION SUMMARY:
 Total patterns analyzed: 1641
 High confidence surprises: 1639
-Categories with surprises: LIFESTYLE, DEMOGRAPHIC, COMPOUND
+Categories with surprises: DEMOGRAPHIC, LIFESTYLE, COMPOUND
 
 ------------------------------------------------------------
 TOP STATISTICAL SURPRISES (ALL TARGETS)

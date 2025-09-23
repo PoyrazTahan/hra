@@ -3,7 +3,7 @@ HEALTH RISK ASSESSMENT - COMPANY_73 ANALYSIS REPORT
 ================================================================================
 Data Source: 01_in/company/Company_73.csv
 Records: 84
-Generated: 2025-09-23 12:51:27.613286
+Generated: 2025-09-23 12:53:43.802821
 ================================================================================
 
 
@@ -439,7 +439,7 @@ Parameters: min_sample=10, threshold=2.0σ
 SURPRISE DETECTION SUMMARY:
 Total patterns analyzed: 57
 High confidence surprises: 33
-Categories with surprises: LIFESTYLE, COMPOUND
+Categories with surprises: COMPOUND, LIFESTYLE
 
 ------------------------------------------------------------
 TOP STATISTICAL SURPRISES (ALL TARGETS)

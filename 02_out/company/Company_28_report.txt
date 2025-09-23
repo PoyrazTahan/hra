@@ -3,7 +3,7 @@ HEALTH RISK ASSESSMENT - COMPANY_28 ANALYSIS REPORT
 ================================================================================
 Data Source: 01_in/company/Company_28.csv
 Records: 798
-Generated: 2025-09-23 12:51:22.108739
+Generated: 2025-09-23 12:53:38.348023
 ================================================================================
 
 
@@ -452,7 +452,7 @@ Parameters: min_sample=10, threshold=2.0σ
 SURPRISE DETECTION SUMMARY:
 Total patterns analyzed: 1031
 High confidence surprises: 1013
-Categories with surprises: LIFESTYLE, COMPOUND, DEMOGRAPHIC
+Categories with surprises: DEMOGRAPHIC, COMPOUND, LIFESTYLE
 
 ------------------------------------------------------------
 TOP STATISTICAL SURPRISES (ALL TARGETS)

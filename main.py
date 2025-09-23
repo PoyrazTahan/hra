@@ -26,12 +26,12 @@ def count_records(csv_file):
         reader = csv.reader(f)
         return sum(1 for row in reader) - 1
 
-def process_dataset(data_path, output_file, dataset_name="Dataset"):
+def process_dataset(data_path, output_file, dataset_name="Dataset", record_threshold=30):
     """Process a single dataset through all analysis scripts."""
 
     # Check if dataset has enough records
     record_count = count_records(data_path)
-    if record_count < 30:
+    if record_count < record_threshold:
         print(f"⚠ SKIPPING {dataset_name}: Only {record_count} records (minimum 30 required)")
         return False
 
