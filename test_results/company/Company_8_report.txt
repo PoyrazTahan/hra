@@ -1,0 +1,844 @@
+================================================================================
+HEALTH RISK ASSESSMENT - COMPANY_8 ANALYSIS REPORT
+================================================================================
+Data Source: 01_in/company/Company_8.csv
+Records: 32
+Generated: 2025-09-23 12:51:30.219238
+================================================================================
+
+
+============================================================
+ANALYSIS: SIMPLE EDA
+============================================================
+
+================================================================================
+COMPREHENSIVE HEALTH RISK ASSESSMENT DATA ANALYSIS
+================================================================================
+
+DATASET OVERVIEW:
+Shape: 32 records × 29 columns
+Memory Usage: 0.05 MB
+Duplicate Records: 0 (0.0%)
+
+EXCLUDED FROM ANALYSIS:
+ID Columns: _id, UserId, A.perceived_health, Evaluation.TotalScore, Evaluation.QuestionnaireScores.Aktivite, Evaluation.QuestionnaireScores.Beslenme, Evaluation.QuestionnaireScores.Fiziksel sağlık, Evaluation.QuestionnaireScores.Genel sağlık, Evaluation.QuestionnaireScores.Mental sağlık, Evaluation.QuestionnaireScores.Sağlık öyküsü, Evaluation.QuestionnaireScores.Uyku, Evaluation.QuestionnaireScores.Yaşam tarzı, SponsorId
+These columns contain unique identifiers and are not included in statistical analysis
+
+MISSING DATA ANALYSIS:
+✓ No missing values detected in any column
+
+------------------------------------------------------------
+NUMERIC COLUMNS COMPREHENSIVE STATISTICS (3 columns)
+------------------------------------------------------------
+
+A.HEIGHT:
+  Count: 32 | Missing: 0
+  Mean: 163.844 | Std: 20.718
+  Min: 62.000 | Max: 183.000
+  Q1: 160.000 | Median: 167.000 | Q3: 172.250
+  Outliers (IQR): 1 (3.1%)
+  Skewness: -3.963 | Kurtosis: 19.693
+  Unique Values: 18 (56.2% of records)
+  Value Distribution:
+    160: 5 (15.6%)
+    180: 3 (9.4%)
+    162: 3 (9.4%)
+    172: 2 (6.2%)
+    170: 2 (6.2%)
+    155: 2 (6.2%)
+    167: 2 (6.2%)
+    168: 2 (6.2%)
+    183: 2 (6.2%)
+    156: 1 (3.1%)
+
+A.WEIGHT:
+  Count: 32 | Missing: 0
+  Mean: 72.594 | Std: 18.615
+  Min: 40.000 | Max: 126.000
+  Q1: 58.500 | Median: 75.000 | Q3: 82.750
+  Outliers (IQR): 1 (3.1%)
+  Skewness: 0.558 | Kurtosis: 0.620
+  Unique Values: 20 (62.5% of records)
+  Value Distribution:
+    75: 4 (12.5%)
+    50: 3 (9.4%)
+    80: 2 (6.2%)
+    57: 2 (6.2%)
+    61: 2 (6.2%)
+    90: 2 (6.2%)
+    60: 2 (6.2%)
+    78: 2 (6.2%)
+    82: 2 (6.2%)
+    85: 1 (3.1%)
+
+A.BMI:
+  Count: 32 | Missing: 0
+  Mean: 31.098 | Std: 30.449
+  Min: 16.670 | Max: 195.110
+  Q1: 20.677 | Median: 26.020 | Q3: 30.928
+  Outliers (IQR): 1 (3.1%)
+  Skewness: 5.354 | Kurtosis: 29.655
+  Unique Values: 32 (100.0% of records)
+
+------------------------------------------------------------
+CATEGORICAL COLUMNS COMPREHENSIVE STATISTICS (26 columns)
+------------------------------------------------------------
+
+A.DEPRESSION_ANHEDONIA:
+  Count: 32 | Missing: 0
+  Unique Values: 3
+  Value Distribution:
+    mild_anhedonia: 15 (46.9%)
+    moderate_anhedonia: 12 (37.5%)
+    severe_anhedonia: 5 (15.6%)
+  Concentration: Top 3 values represent 100.0% of data
+  Diversity Score: 0.922 (0=concentrated, 1=evenly distributed)
+
+A.DEPRESSION_MOOD:
+  Count: 32 | Missing: 0
+  Unique Values: 4
+  Value Distribution:
+    occasional_sadness: 16 (50.0%)
+    frequent_sadness: 8 (25.0%)
+    persistent_sadness: 7 (21.9%)
+    positive_mood: 1 (3.1%)
+  Concentration: Top 3 values represent 96.9% of data
+  Diversity Score: 0.818 (0=concentrated, 1=evenly distributed)
+
+A.STRESS_LEVEL_IRRITABILITY:
+  Count: 32 | Missing: 0
+  Unique Values: 4
+  Value Distribution:
+    sometimes_irritated: 14 (43.8%)
+    often_irritated: 14 (43.8%)
+    rarely_irritated: 2 (6.2%)
+    frequently_irritated: 2 (6.2%)
+  Concentration: Top 3 values represent 93.8% of data
+  Diversity Score: 0.772 (0=concentrated, 1=evenly distributed)
+
+A.STRESS_LEVEL_LOC:
+  Count: 32 | Missing: 0
+  Unique Values: 4
+  Value Distribution:
+    sometimes_out_of_control: 17 (53.1%)
+    often_out_of_control: 8 (25.0%)
+    mostly_in_control: 4 (12.5%)
+    frequently_out_of_control: 3 (9.4%)
+  Concentration: Top 3 values represent 90.6% of data
+  Diversity Score: 0.840 (0=concentrated, 1=evenly distributed)
+
+A.LONELINESS:
+  Count: 32 | Missing: 0
+  Unique Values: 4
+  Value Distribution:
+    always_lonely: 13 (40.6%)
+    sometimes_lonely: 10 (31.2%)
+    rarely_lonely: 6 (18.8%)
+    often_lonely: 3 (9.4%)
+  Concentration: Top 3 values represent 90.6% of data
+  Diversity Score: 0.913 (0=concentrated, 1=evenly distributed)
+
+A.SLEEP_QUALITY:
+  Count: 32 | Missing: 0
+  Unique Values: 4
+  Value Distribution:
+    borderline_sleep: 16 (50.0%)
+    optimal_sleep: 8 (25.0%)
+    insufficient_sleep: 7 (21.9%)
+    excessive_sleep: 1 (3.1%)
+  Concentration: Top 3 values represent 96.9% of data
+  Diversity Score: 0.818 (0=concentrated, 1=evenly distributed)
+
+A.ACTIVITY_LEVEL:
+  Count: 32 | Missing: 0
+  Unique Values: 4
+  Value Distribution:
+    no_exercise: 18 (56.2%)
+    weekly_exercise: 6 (18.8%)
+    regular_exercise: 5 (15.6%)
+    frequent_exercise: 3 (9.4%)
+  Concentration: Top 3 values represent 90.6% of data
+  Diversity Score: 0.829 (0=concentrated, 1=evenly distributed)
+
+A.DAILY_STEPS:
+  Count: 32 | Missing: 0
+  Unique Values: 5
+  Value Distribution:
+    very_low_steps: 12 (37.5%)
+    low_steps: 9 (28.1%)
+    good_steps: 6 (18.8%)
+    moderate_steps: 4 (12.5%)
+    excellent_steps: 1 (3.1%)
+  Concentration: Top 3 values represent 84.4% of data
+  Diversity Score: 0.874 (0=concentrated, 1=evenly distributed)
+
+A.PHYSICAL_PAIN:
+  Count: 32 | Missing: 0
+  Unique Values: 6
+  Value Distribution:
+    minimal_pain: 11 (34.4%)
+    mild_pain: 8 (25.0%)
+    no_pain: 6 (18.8%)
+    severe_pain: 3 (9.4%)
+    moderate_pain: 3 (9.4%)
+    extreme_pain: 1 (3.1%)
+  Concentration: Top 3 values represent 78.1% of data
+  Diversity Score: 0.882 (0=concentrated, 1=evenly distributed)
+
+A.WATER_INTAKE:
+  Count: 32 | Missing: 0
+  Unique Values: 5
+  Value Distribution:
+    good_water: 11 (34.4%)
+    high_water: 9 (28.1%)
+    adequate_water: 6 (18.8%)
+    low_water: 4 (12.5%)
+    very_low_water: 2 (6.2%)
+  Concentration: Top 3 values represent 81.2% of data
+  Diversity Score: 0.914 (0=concentrated, 1=evenly distributed)
+
+A.FRUIT_VEG_INTAKE:
+  Count: 32 | Missing: 0
+  Unique Values: 3
+  Value Distribution:
+    poor_nutrition: 15 (46.9%)
+    very_poor_nutrition: 11 (34.4%)
+    adequate_nutrition: 6 (18.8%)
+  Concentration: Top 3 values represent 100.0% of data
+  Diversity Score: 0.943 (0=concentrated, 1=evenly distributed)
+
+A.SUGAR_INTAKE:
+  Count: 32 | Missing: 0
+  Unique Values: 5
+  Value Distribution:
+    moderate_sugar_weekly: 9 (28.1%)
+    low_sugar: 8 (25.0%)
+    frequent_sugar_weekly: 6 (18.8%)
+    minimal_sugar: 5 (15.6%)
+    daily_sugar_weekly: 4 (12.5%)
+  Concentration: Top 3 values represent 71.9% of data
+  Diversity Score: 0.974 (0=concentrated, 1=evenly distributed)
+
+A.PROCESSED_FOOD_INTAKE:
+  Count: 32 | Missing: 0
+  Unique Values: 5
+  Value Distribution:
+    minimal_processed_food: 19 (59.4%)
+    low_processed_food: 9 (28.1%)
+    daily_processed_food_weekly: 2 (6.2%)
+    frequent_processed_food_weekly: 1 (3.1%)
+    moderate_processed_food_weekly: 1 (3.1%)
+  Concentration: Top 3 values represent 93.8% of data
+  Diversity Score: 0.656 (0=concentrated, 1=evenly distributed)
+
+A.ALCOHOL_CONSUMPTION:
+  Count: 32 | Missing: 0
+  Unique Values: 5
+  Value Distribution:
+    no_alcohol: 15 (46.9%)
+    light_alcohol: 14 (43.8%)
+    moderate_alcohol: 1 (3.1%)
+    heavy_alcohol: 1 (3.1%)
+    very_heavy_alcohol: 1 (3.1%)
+  Concentration: Top 3 values represent 93.8% of data
+  Diversity Score: 0.647 (0=concentrated, 1=evenly distributed)
+
+A.SMOKING_STATUS:
+  Count: 32 | Missing: 0
+  Unique Values: 5
+  Value Distribution:
+    never_smoked: 14 (43.8%)
+    daily_smoker: 11 (34.4%)
+    frequent_smoker: 4 (12.5%)
+    occasional_smoker: 2 (6.2%)
+    former_smoker: 1 (3.1%)
+  Concentration: Top 3 values represent 90.6% of data
+  Diversity Score: 0.789 (0=concentrated, 1=evenly distributed)
+
+A.SUPPLEMENT_USAGE:
+  Count: 32 | Missing: 0
+  Unique Values: 2
+  Value Distribution:
+    using_supplements: 17 (53.1%)
+    not_using_supplements: 15 (46.9%)
+  Concentration: Top 3 values represent 100.0% of data
+  Diversity Score: 0.997 (0=concentrated, 1=evenly distributed)
+
+DIABETES_STATUS:
+  Count: 32 | Missing: 0
+  Unique Values: 2
+  Value Distribution:
+    no_diabetes: 31 (96.9%)
+    has_diabetes: 1 (3.1%)
+  Concentration: Top 3 values represent 100.0% of data
+  Diversity Score: 0.201 (0=concentrated, 1=evenly distributed)
+
+THYROID_DISORDER_STATUS:
+  Count: 32 | Missing: 0
+  Unique Values: 2
+  Value Distribution:
+    no_thyroid: 30 (93.8%)
+    has_thyroid: 2 (6.2%)
+  Concentration: Top 3 values represent 100.0% of data
+  Diversity Score: 0.337 (0=concentrated, 1=evenly distributed)
+
+KIDNEY_DISEASE_STATUS:
+  Count: 32 | Missing: 0
+  Unique Values: 1
+  Value Distribution:
+    no_kidney_disease: 32 (100.0%)
+  Concentration: Top 3 values represent 100.0% of data
+  Diversity Score: 0.000 (0=concentrated, 1=evenly distributed)
+
+HEART_DISEASE_STATUS:
+  Count: 32 | Missing: 0
+  Unique Values: 2
+  Value Distribution:
+    no_heart_disease: 30 (93.8%)
+    has_heart_disease: 2 (6.2%)
+  Concentration: Top 3 values represent 100.0% of data
+  Diversity Score: 0.337 (0=concentrated, 1=evenly distributed)
+
+OBESITY_STATUS:
+  Count: 32 | Missing: 0
+  Unique Values: 2
+  Value Distribution:
+    no_obesity: 31 (96.9%)
+    has_obesity: 1 (3.1%)
+  Concentration: Top 3 values represent 100.0% of data
+  Diversity Score: 0.201 (0=concentrated, 1=evenly distributed)
+
+HYPERTENSION_STATUS:
+  Count: 32 | Missing: 0
+  Unique Values: 1
+  Value Distribution:
+    no_hypertension: 32 (100.0%)
+  Concentration: Top 3 values represent 100.0% of data
+  Diversity Score: 0.000 (0=concentrated, 1=evenly distributed)
+
+CANCER_STATUS:
+  Count: 32 | Missing: 0
+  Unique Values: 1
+  Value Distribution:
+    no_cancer: 32 (100.0%)
+  Concentration: Top 3 values represent 100.0% of data
+  Diversity Score: 0.000 (0=concentrated, 1=evenly distributed)
+
+OTHER_CONDITION_STATUS:
+  Count: 32 | Missing: 0
+  Unique Values: 2
+  Value Distribution:
+    no_other_condition: 23 (71.9%)
+    has_other_condition: 9 (28.1%)
+  Concentration: Top 3 values represent 100.0% of data
+  Diversity Score: 0.857 (0=concentrated, 1=evenly distributed)
+
+BMI_CATEGORY:
+  Count: 32 | Missing: 0
+  Unique Values: 4
+  Value Distribution:
+    normal_weight: 13 (40.6%)
+    obese: 10 (31.2%)
+    overweight: 7 (21.9%)
+    underweight: 2 (6.2%)
+  Concentration: Top 3 values represent 93.8% of data
+  Diversity Score: 0.891 (0=concentrated, 1=evenly distributed)
+
+HEALTH_RISK_LEVEL:
+  Count: 32 | Missing: 0
+  Unique Values: 4
+  Value Distribution:
+    moderate_risk: 18 (56.2%)
+    high_risk: 12 (37.5%)
+    low_risk: 1 (3.1%)
+    very_high_risk: 1 (3.1%)
+  Concentration: Top 3 values represent 96.9% of data
+  Diversity Score: 0.655 (0=concentrated, 1=evenly distributed)
+
+------------------------------------------------------------
+NUMERIC CORRELATIONS ANALYSIS
+------------------------------------------------------------
+
+Strong Correlations (|r| > 0.5):
+  A.weight ↔ A.bmi: r = 0.841
+
+Moderate Correlations (0.3 < |r| ≤ 0.5):
+  A.height ↔ A.weight: r = 0.485
+
+================================================================================
+CROSS-PATTERN RELATIONSHIP ANALYSIS
+================================================================================
+
+DEMOGRAPHICS vs HEALTH OUTCOMES:
+  No significant associations found
+
+DEMOGRAPHICS vs LIFESTYLE PATTERNS:
+  No significant associations found
+
+LIFESTYLE vs HEALTH OUTCOMES:
+  No significant associations found
+
+MENTAL HEALTH vs HEALTH OUTCOMES:
+  No significant associations found
+
+NUTRITION vs HEALTH OUTCOMES:
+  No significant associations found
+
+CHRONIC CONDITIONS vs HEALTH OUTCOMES:
+  No significant associations found
+
+------------------------------------------------------------
+HIGH-RISK GROUP DEEP DIVE ANALYSIS
+------------------------------------------------------------
+High-risk employees: 13 (40.6% of population)
+
+Demographic Profile of High-Risk Group:
+
+  BMI_CATEGORY:
+    obese: 6 (46.2%) - Risk Ratio: 1.48x
+    overweight: 4 (30.8%) - Risk Ratio: 1.41x
+    underweight: 2 (15.4%) - Risk Ratio: 2.46x
+    normal_weight: 1 (7.7%) - Risk Ratio: 0.19x
+
+Lifestyle Risk Factors:
+
+  A.SMOKING_STATUS:
+    daily_smoker: 61.5%
+    never_smoked: 23.1%
+    frequent_smoker: 15.4%
+
+  A.ALCOHOL_CONSUMPTION:
+    light_alcohol: 46.2%
+    no_alcohol: 38.5%
+    heavy_alcohol: 7.7%
+
+  A.ACTIVITY_LEVEL:
+    no_exercise: 61.5%
+    regular_exercise: 23.1%
+    weekly_exercise: 15.4%
+
+  A.SLEEP_QUALITY:
+    borderline_sleep: 46.2%
+    insufficient_sleep: 38.5%
+    optimal_sleep: 7.7%
+
+  A.DAILY_STEPS:
+    low_steps: 38.5%
+    very_low_steps: 30.8%
+    good_steps: 15.4%
+
+================================================================================
+ANALYSIS SUMMARY
+================================================================================
+Total records analyzed: 32
+Total variables analyzed: 29
+Variables excluded: 13 (_id, UserId, A.perceived_health, Evaluation.TotalScore, Evaluation.QuestionnaireScores.Aktivite, Evaluation.QuestionnaireScores.Beslenme, Evaluation.QuestionnaireScores.Fiziksel sağlık, Evaluation.QuestionnaireScores.Genel sağlık, Evaluation.QuestionnaireScores.Mental sağlık, Evaluation.QuestionnaireScores.Sağlık öyküsü, Evaluation.QuestionnaireScores.Uyku, Evaluation.QuestionnaireScores.Yaşam tarzı, SponsorId)
+Numeric variables: 3
+Categorical variables: 26
+Statistical significance threshold used: 0.05
+
+This analysis provides comprehensive insights into employee health risk patterns
+suitable for LLM interpretation and further analysis.
+============================================================
+END: SIMPLE EDA
+============================================================
+
+
+============================================================
+ANALYSIS: STATISTICAL SURPRISES
+============================================================
+
+================================================================================
+STATISTICAL SURPRISE ANALYSIS
+================================================================================
+Dataset: 32 records, 29 variables
+Demographics: 1 variables: ['bmi_category']
+Lifestyle factors: 27 variables
+Variables: ['A.smoking_status', 'A.alcohol_consumption', 'A.activity_level', 'A.sleep_quality', 'A.daily_steps', 'A.stress_level_irritability', 'A.stress_level_loc', 'A.depression_mood', 'A.depression_anhedonia', 'A.loneliness', 'A.fruit_veg_intake', 'A.sugar_intake', 'A.processed_food_intake', 'A.water_intake', 'A.physical_pain', 'A.supplement_usage', 'A.bmi', 'A.height', 'A.weight', 'diabetes_status', 'thyroid_disorder_status', 'kidney_disease_status', 'heart_disease_status', 'obesity_status', 'hypertension_status', 'cancer_status', 'other_condition_status']
+Parameters: min_sample=10, threshold=2.0σ
+
+SURPRISE DETECTION SUMMARY:
+Total patterns analyzed: 8
+High confidence surprises: 0
+Categories with surprises: DEMOGRAPHIC, COMPOUND
+
+------------------------------------------------------------
+TOP STATISTICAL SURPRISES (ALL TARGETS)
+------------------------------------------------------------
+
+1. [DEMOGRAPHIC] normal_weight ↓
+   Outcome: high_risk in health_risk_level
+   Rate: 0.0% (vs 37.5% population)
+   Magnitude: 2.21σ | Confidence: NONE
+   Sample: 13 employees
+
+2. [COMPOUND] normal_weight + no_diabetes ↓
+   Outcome: high_risk in health_risk_level
+   Rate: 0.0% (vs 37.5% population)
+   Magnitude: 2.21σ | Confidence: NONE
+   Sample: 13 employees
+
+3. [COMPOUND] normal_weight + no_kidney_disease ↓
+   Outcome: high_risk in health_risk_level
+   Rate: 0.0% (vs 37.5% population)
+   Magnitude: 2.21σ | Confidence: NONE
+   Sample: 13 employees
+
+4. [COMPOUND] normal_weight + no_obesity ↓
+   Outcome: high_risk in health_risk_level
+   Rate: 0.0% (vs 37.5% population)
+   Magnitude: 2.21σ | Confidence: NONE
+   Sample: 13 employees
+
+5. [COMPOUND] normal_weight + no_hypertension ↓
+   Outcome: high_risk in health_risk_level
+   Rate: 0.0% (vs 37.5% population)
+   Magnitude: 2.21σ | Confidence: NONE
+   Sample: 13 employees
+
+6. [COMPOUND] normal_weight + no_cancer ↓
+   Outcome: high_risk in health_risk_level
+   Rate: 0.0% (vs 37.5% population)
+   Magnitude: 2.21σ | Confidence: NONE
+   Sample: 13 employees
+
+7. [COMPOUND] normal_weight + no_heart_disease ↓
+   Outcome: high_risk in health_risk_level
+   Rate: 0.0% (vs 37.5% population)
+   Magnitude: 2.12σ | Confidence: NONE
+   Sample: 12 employees
+
+8. [COMPOUND] normal_weight + no_thyroid ↓
+   Outcome: high_risk in health_risk_level
+   Rate: 0.0% (vs 37.5% population)
+   Magnitude: 2.03σ | Confidence: NONE
+   Sample: 11 employees
+
+============================================================
+SURPRISES FOR HEALTH_RISK_LEVEL
+============================================================
+
+HIGH_RISK surprises:
+----------------------------------------
+1. [DEMOGRAPHIC] normal_weight ↓
+   Rate: 0.0% (vs 37.5% population)
+   Effect: 37.5pp lower | 2.21σ
+   Sample: n=13
+
+2. [COMPOUND] normal_weight + no_diabetes ↓
+   Rate: 0.0% (vs 37.5% population)
+   Effect: 37.5pp lower | 2.21σ
+   Sample: n=13
+
+3. [COMPOUND] normal_weight + no_kidney_disease ↓
+   Rate: 0.0% (vs 37.5% population)
+   Effect: 37.5pp lower | 2.21σ
+   Sample: n=13
+
+4. [COMPOUND] normal_weight + no_obesity ↓
+   Rate: 0.0% (vs 37.5% population)
+   Effect: 37.5pp lower | 2.21σ
+   Sample: n=13
+
+5. [COMPOUND] normal_weight + no_hypertension ↓
+   Rate: 0.0% (vs 37.5% population)
+   Effect: 37.5pp lower | 2.21σ
+   Sample: n=13
+
+6. [COMPOUND] normal_weight + no_cancer ↓
+   Rate: 0.0% (vs 37.5% population)
+   Effect: 37.5pp lower | 2.21σ
+   Sample: n=13
+
+7. [COMPOUND] normal_weight + no_heart_disease ↓
+   Rate: 0.0% (vs 37.5% population)
+   Effect: 37.5pp lower | 2.12σ
+   Sample: n=12
+
+8. [COMPOUND] normal_weight + no_thyroid ↓
+   Rate: 0.0% (vs 37.5% population)
+   Effect: 37.5pp lower | 2.03σ
+   Sample: n=11
+
+
+================================================================================
+ANALYSIS COMPLETE
+================================================================================
+============================================================
+END: STATISTICAL SURPRISES
+============================================================
+
+
+============================================================
+ANALYSIS: DEMOGRAPHIC OUTLIERS
+============================================================
+
+Demographic Outlier Analysis
+Dataset: 32 records, 29 variables
+Available demographics: 28
+Available outcomes: 1
+
+Population Baselines:
+  health_risk_level.high_risk: 37.5%
+  health_risk_level.moderate_risk: 56.2%
+  health_risk_level.elevated_risk: 93.8%
+
+Analyzing single-variable demographic outliers...
+
+Analyzing strategic two-variable demographic combinations...
+
+Outlier Detection Results:
+Single-variable outliers: 0
+Two-variable outliers: 0
+Total outliers: 0
+================================================================================
+DEMOGRAPHIC OUTLIER ANALYSIS REPORT
+================================================================================
+
+OUTLIER DETECTION SUMMARY:
+Total outlier segments found: 0
+Max segment size threshold: 15.0% of population
+Min risk ratio threshold: 2.5x
+Min sample size: 8
+Elevated risk segments: 0
+Protected segments: 0
+
+No demographic outliers detected with current thresholds.
+Consider adjusting parameters or analyzing larger demographic groups.
+
+================================================================================
+ANALYSIS SUMMARY
+================================================================================
+Total records analyzed: 32
+Demographic variables analyzed: 28
+Outcome variables: health_risk_level
+Strategic combinations tested: 8
+Max segment size: 15.0%
+Min risk ratio: 2.5x
+Min sample size: 8
+
+This analysis identifies small demographic segments with disproportionate health risks
+suitable for targeted wellness interventions and LLM-based insights.
+============================================================
+END: DEMOGRAPHIC OUTLIERS
+============================================================
+
+
+============================================================
+ANALYSIS: COMPOUND RISK (ADDITIVE)
+============================================================
+
+================================================================================
+COMPOUND RISK SCORING ANALYSIS REPORT
+================================================================================
+
+SCORING METHOD: ADDITIVE
+Dataset: 32 records, 29 variables
+Factor groups: 6 groups, 28 total factors
+  demographic_factors: 1 factors
+  lifestyle_factors: 5 factors
+  stress_factors: 5 factors
+  nutrition_factors: 4 factors
+  physical_health_factors: 5 factors
+  chronic_condition_factors: 8 factors
+
+================================================================================
+ANALYSIS FOR OUTCOME: HEALTH_RISK_LEVEL
+================================================================================
+
+Calculating individual factor risk weights...
+Population baselines: 37.5% high risk, 93.8% elevated risk
+
+------------------------------------------------------------
+COMPOUND SCORE EVALUATION (ADDITIVE METHOD)
+------------------------------------------------------------
+
+------------------------------------------------------------
+UNDERESTIMATED RISK CASES
+------------------------------------------------------------
+Employees with low compound scores but actually high risk:
+
+• Compound score: 0.97 | Actual: high_risk
+  Profile: bmi_category=overweight, A.stress_level_irritability=rarely_irritated, A.depression_mood=occasional_sadness, A.smoking_status=never_smoked
+
+• Compound score: 0.95 | Actual: high_risk
+  Profile: bmi_category=obese, A.stress_level_irritability=often_irritated, A.depression_mood=occasional_sadness, A.smoking_status=never_smoked
+
+• Compound score: 0.94 | Actual: high_risk
+  Profile: bmi_category=obese, A.stress_level_irritability=often_irritated, A.depression_mood=occasional_sadness, A.smoking_status=daily_smoker
+
+------------------------------------------------------------
+HIGHEST IMPACT INDIVIDUAL FACTORS
+------------------------------------------------------------
+
+• A.depression_anhedonia = mild_anhedonia (PROTECTIVE)
+  Impact: 0.53x baseline | Risk rate: 93.3%
+  Sample: 15 employees | Group: stress_factors
+
+================================================================================
+ANALYSIS SUMMARY
+================================================================================
+Total records analyzed: 32
+Scoring method: additive
+Factor groups analyzed: 6
+Total factors included: 28
+High-impact factors found: 1
+Underestimated risk cases: 12
+Overestimated risk cases: 0
+
+This analysis creates predictive risk scores for individual employee assessment
+and identifies high-impact factors for targeted wellness interventions.
+============================================================
+END: COMPOUND RISK (ADDITIVE)
+============================================================
+
+
+============================================================
+ANALYSIS: COMPOUND RISK (INTERACTION)
+============================================================
+
+================================================================================
+COMPOUND RISK SCORING ANALYSIS REPORT
+================================================================================
+
+SCORING METHOD: INTERACTION-WEIGHTED
+Dataset: 32 records, 29 variables
+Factor groups: 6 groups, 28 total factors
+  demographic_factors: 1 factors
+  lifestyle_factors: 5 factors
+  stress_factors: 5 factors
+  nutrition_factors: 4 factors
+  physical_health_factors: 5 factors
+  chronic_condition_factors: 8 factors
+
+================================================================================
+ANALYSIS FOR OUTCOME: HEALTH_RISK_LEVEL
+================================================================================
+
+Calculating individual factor risk weights...
+Population baselines: 37.5% high risk, 93.8% elevated risk
+
+------------------------------------------------------------
+COMPOUND SCORE EVALUATION (INTERACTION-WEIGHTED METHOD)
+------------------------------------------------------------
+
+Threshold 1.5x: Flags 13 employees (40.6%)
+  Precision: 53.8% high risk, 92.3% elevated risk
+  Recall: 58.3% of high risk caught, 40.0% of elevated risk caught
+
+Threshold 2.0x: Flags 5 employees (15.6%)
+  Precision: 60.0% high risk, 80.0% elevated risk
+  Recall: 25.0% of high risk caught, 13.3% of elevated risk caught
+
+Threshold 2.5x: Flags 3 employees (9.4%)
+  Precision: 66.7% high risk, 100.0% elevated risk
+  Recall: 16.7% of high risk caught, 10.0% of elevated risk caught
+
+Best performing threshold: 1.5x
+  Flags 13 employees (40.6% of workforce)
+  92.3% precision on elevated risk
+  Catches 40.0% of all elevated risk employees
+
+------------------------------------------------------------
+UNDERESTIMATED RISK CASES
+------------------------------------------------------------
+Employees with low compound scores but actually high risk:
+
+• Compound score: 1.41 | Actual: high_risk
+  Profile: bmi_category=overweight, A.stress_level_irritability=rarely_irritated, A.depression_mood=occasional_sadness, A.smoking_status=never_smoked
+
+• Compound score: 1.29 | Actual: high_risk
+  Profile: bmi_category=obese, A.stress_level_irritability=often_irritated, A.depression_mood=occasional_sadness, A.smoking_status=never_smoked
+
+• Compound score: 1.31 | Actual: high_risk
+  Profile: bmi_category=obese, A.stress_level_irritability=often_irritated, A.depression_mood=occasional_sadness, A.smoking_status=daily_smoker
+
+------------------------------------------------------------
+HIGHEST IMPACT INDIVIDUAL FACTORS
+------------------------------------------------------------
+
+• A.depression_anhedonia = mild_anhedonia (PROTECTIVE)
+  Impact: 0.53x baseline | Risk rate: 93.3%
+  Sample: 15 employees | Group: stress_factors
+
+================================================================================
+ANALYSIS SUMMARY
+================================================================================
+Total records analyzed: 32
+Scoring method: interaction-weighted
+Factor groups analyzed: 6
+Total factors included: 28
+High-impact factors found: 1
+Underestimated risk cases: 5
+Overestimated risk cases: 0
+Optimal threshold: 1.5x (flags 40.6% of workforce)
+Best precision/recall balance: 55.8
+
+This analysis creates predictive risk scores for individual employee assessment
+and identifies high-impact factors for targeted wellness interventions.
+============================================================
+END: COMPOUND RISK (INTERACTION)
+============================================================
+
+
+============================================================
+ANALYSIS: COLUMN RELATIONSHIPS
+============================================================
+
+================================================================================
+COLUMN RELATIONSHIP ANALYSIS REPORT
+================================================================================
+
+Dataset: 32 records, 29 variables
+Analysis focus: Descriptive-to-descriptive relationships
+Excluded from analysis: _id, UserId, A.perceived_health, Evaluation.TotalScore, Evaluation.QuestionnaireScores.Aktivite, Evaluation.QuestionnaireScores.Beslenme, Evaluation.QuestionnaireScores.Fiziksel sağlık, Evaluation.QuestionnaireScores.Genel sağlık, Evaluation.QuestionnaireScores.Mental sağlık, Evaluation.QuestionnaireScores.Sağlık öyküsü, Evaluation.QuestionnaireScores.Uyku, Evaluation.QuestionnaireScores.Yaşam tarzı, SponsorId
+
+------------------------------------------------------------
+LIFESTYLE CLUSTERING PATTERNS
+------------------------------------------------------------
+
+No strong lifestyle clustering patterns found above threshold.
+
+DEBUG: Top relationships found (regardless of threshold):
+
+------------------------------------------------------------
+MENTAL HEALTH CLUSTERING PATTERNS
+------------------------------------------------------------
+
+No strong mental health clustering patterns found above threshold.
+
+------------------------------------------------------------
+DEMOGRAPHIC BEHAVIOR DIFFERENCES
+------------------------------------------------------------
+
+No strong demographic behavior differences found above threshold.
+
+------------------------------------------------------------
+SURPRISING CROSS-CLUSTER CORRELATIONS
+------------------------------------------------------------
+
+No surprising cross-cluster correlations found above threshold.
+
+================================================================================
+RELATIONSHIP ANALYSIS SUMMARY
+================================================================================
+Total records analyzed: 32
+Variables analyzed by category:
+  - Demographics: 1
+  - Lifestyle factors: 5
+  - Mental health factors: 5
+  - Nutrition factors: 4
+  - Physical health factors: 5
+
+Analysis parameters:
+  - Minimum effect size (Cramer's V): 0.15
+  - Minimum sample size per cell: 3
+  - Minimum proportion difference: 3.0%
+
+This analysis reveals descriptive relationships between employee characteristics,
+behaviors, and health factors independent of outcome prediction.
+Findings help understand employee behavior patterns and clustering for targeted interventions.
+============================================================
+END: COLUMN RELATIONSHIPS
+============================================================
+
