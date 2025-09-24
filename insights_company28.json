@@ -1,0 +1,279 @@
+{
+  "total_insights": 13,
+  "insights": [
+    {
+      "id": "insight_01",
+      "index": 1,
+      "english": {
+        "message": "Daily smoking emerges as the single most powerful predictor of high health risk among your health-engaged workforce, with 63% of daily smokers classified as high risk compared to just 24.9% company-wide. This finding is particularly concerning because it represents employees who are already health-conscious enough to complete wellness surveys. Companies should implement immediate smoking cessation programs with personalized coaching, nicotine replacement therapy coverage, and financial incentives for quitting, as this single intervention could reduce your high-risk population by over one-third.",
+        "proof": "Daily smokers show 63.0% high risk rate vs 24.9% population baseline (2.53x risk ratio). Sample size: 181 employees (22.7% of workforce). Statistical significance: 10.25σ magnitude."
+      },
+      "turkish": {
+        "message": "Şirketinizdeki sağlık bilincinde olan çalışanlar arasında bile günlük sigara kullanımı en güçlü risk faktörü olarak öne çıkıyor. Günlük sigara içenlerin %63'ü yüksek risk grubunda yer alırken, şirket genelinde bu oran sadece %24,9. Bu bulgu, zaten sağlık anketini dolduracak kadar bilinçli çalışanları kapsadığı için daha da endişe verici. Kişiselleştirilmiş koçluk, nikotin replasman tedavisi kapsamı ve sigarayı bırakma için finansal teşvikler içeren acil sigara bırakma programları uygulanmalı. Bu tek müdahale yüksek riskli çalışan sayısını üçte birden fazla azaltabilir.",
+        "score": 9
+      },
+      "categories": [
+        "lifestyle",
+        "health_conditions"
+      ],
+      "health_tags": [
+        "daily_smoker"
+      ],
+      "demographic_tags": []
+    },
+    {
+      "id": "insight_02",
+      "index": 2,
+      "english": {
+        "message": "A dangerous compound effect emerges when daily smoking combines with severe mental health symptoms, creating a \"very high risk\" category that affects 14.3% of smoking employees with severe anhedonia compared to just 0.8% company-wide. This 18x increased risk represents your most vulnerable employee segment requiring immediate, coordinated intervention. Companies should establish integrated mental health and smoking cessation programs, train managers to recognize these warning signs, and provide emergency mental health resources for this high-priority group.",
+        "proof": "Daily smokers with severe anhedonia show 14.3% very high risk rate vs 0.8% population baseline (17.9x risk ratio). Sample size: 42 employees. Statistical significance: 10.12σ magnitude."
+      },
+      "turkish": {
+        "message": "Günlük sigara kullanımı ciddi anhedoni (ilgi ve zevk alamama) ile birleştiğinde tehlikeli bir bileşik etki ortaya çıkıyor. Bu kombinasyondaki çalışanların %14,3'ü \"çok yüksek risk\" kategorisinde yer alırken, şirket genelinde bu oran sadece %0,8. Bu 18 kat artan risk, acil ve koordineli müdahale gerektiren en savunmasız çalışan segmentinizi temsil ediyor. Şirketler entegre mental sağlık ve sigara bırakma programları kurmalı, yöneticileri bu uyarı belirtilerini tanımaları için eğitmeli ve bu yüksek öncelikli grup için acil durum mental sağlık kaynakları sağlamalı.",
+        "score": 10
+      },
+      "categories": [
+        "mental_health",
+        "lifestyle"
+      ],
+      "health_tags": [
+        "daily_smoker",
+        "severe_anhedonia"
+      ],
+      "demographic_tags": []
+    },
+    {
+      "id": "insight_03",
+      "index": 3,
+      "english": {
+        "message": "Despite being health-conscious enough to complete wellness surveys, 53.4% of your workforce reports no regular exercise, revealing a critical gap in workplace wellness engagement. This sedentary behavior, combined with insufficient sleep, creates a high-risk profile affecting 71.6% of this segment compared to 24.9% company-wide. Companies should redesign wellness programs to address barriers preventing health-aware employees from exercising, such as providing on-site fitness facilities, flexible workout schedules, walking meetings, and activity challenges that integrate seamlessly into work routines.",
+        "proof": "53.4% report no exercise (426 employees). No exercise + insufficient sleep combination shows 71.6% high risk vs 24.9% population (2.87x risk ratio). Sample size: 67 employees."
+      },
+      "turkish": {
+        "message": "Sağlık anketini dolduracak kadar bilinçli olmalarına rağmen, iş gücünüzün %53,4'ü hiç düzenli egzersiz yapmadığını bildiriyor. Bu durum işyeri sağlık programlarında kritik bir boşluğu ortaya koyuyor. Hareketsiz yaşam tarzı yetersiz uyku ile birleştiğinde, bu segmentin %71,6'sını etkileyen yüksek risk profili oluşturuyor (şirket geneli %24,9). Şirketler sağlık bilincindeki çalışanların egzersiz yapmasını engelleyen bariyerleri ele alacak şekilde wellness programlarını yeniden tasarlamalı: yerinde fitness olanakları, esnek antrenman programları, yürüyerek toplantılar ve iş rutinlerine sorunsuzca entegre olan aktivite yarışmaları gibi.",
+        "score": 8
+      },
+      "categories": [
+        "activity_level",
+        "sleep"
+      ],
+      "health_tags": [
+        "no_exercise",
+        "insufficient_sleep"
+      ],
+      "demographic_tags": []
+    },
+    {
+      "id": "insight_04",
+      "index": 4,
+      "english": {
+        "message": "Normal weight employees who maintain optimal sleep patterns represent your healthiest demographic, with 34.4% achieving low risk status compared to just 10.2% company-wide. This 3.4x protection factor reveals the powerful synergy between weight management and sleep quality. Companies should prioritize sleep hygiene programs alongside weight management initiatives, offering sleep coaching, flexible work schedules to accommodate natural sleep patterns, and creating sleep-friendly workplace environments with proper lighting and noise control.",
+        "proof": "Normal weight + optimal sleep combination shows 34.4% low risk vs 10.2% population baseline (3.37x protection factor). Sample size: 128 employees. Statistical significance: 8.60σ magnitude."
+      },
+      "turkish": {
+        "message": "Normal kiloda olan ve optimal uyku kalitesi sürdüren çalışanlar en sağlıklı demografik grubunuzu oluşturuyor. Bu grubun %34,4'ü düşük risk kategorisinde yer alırken şirket genelinde bu oran sadece %10,2. Bu 3,4 kat koruyucu faktör, kilo yönetimi ve uyku kalitesi arasındaki güçlü sinerjik etkiyi ortaya koyuyor. Şirketler kilo yönetimi girişimleriyle birlikte uyku hijyeni programlarına öncelik vermeli: uyku koçluğu, doğal uyku düzenlerine uyum sağlayacak esnek çalışma programları ve uygun aydınlatma ile gürültü kontrolü içeren uyku dostu çalışma ortamları yaratmalı.",
+        "score": 8
+      },
+      "categories": [
+        "sleep",
+        "physical_health"
+      ],
+      "health_tags": [
+        "optimal_sleep"
+      ],
+      "demographic_tags": [
+        "normal_weight"
+      ]
+    },
+    {
+      "id": "insight_05",
+      "index": 5,
+      "english": {
+        "message": "A nutrition crisis exists even among your health-engaged workforce, with 93.6% reporting poor to very poor fruit and vegetable intake despite being motivated enough to complete health surveys. This suggests that awareness alone isn't sufficient to drive dietary change. Companies should move beyond education to environmental interventions: subsidized healthy meals, on-site fresh produce markets, healthy catering policies for meetings, and partnerships with local farms or meal delivery services to make nutritious options more accessible and affordable than processed alternatives.",
+        "proof": "Very poor nutrition: 55.8% (445 employees), Poor nutrition: 37.8% (302 employees). Combined poor nutrition rate: 93.6% of health-engaged workforce."
+      },
+      "turkish": {
+        "message": "Sağlık anketini dolduracak kadar motive olmalarına rağmen, sağlık bilincinde olan iş gücünüzde bir beslenme krizi mevcut. Çalışanların %93,6'sı kötüden çok kötüye değişen meyve ve sebze tüketimi bildiriyor. Bu durum farkındalığın tek başına beslenme değişikliği sağlamada yeterli olmadığını gösteriyor. Şirketler eğitimin ötesine geçerek çevresel müdahalelere odaklanmalı: sübvansiyonlu sağlıklı yemekler, işyerinde taze ürün pazarları, toplantılar için sağlıklı catering politikaları ve yerel çiftlikler veya yemek teslimat servisleriyle ortaklıklar kurarak besleyici seçenekleri işlenmiş alternatiflerden daha erişilebilir ve uygun fiyatlı hale getirmeli.",
+        "score": 7
+      },
+      "categories": [
+        "nutrition"
+      ],
+      "health_tags": [
+        "very_poor_nutrition",
+        "poor_nutrition"
+      ],
+      "demographic_tags": []
+    },
+    {
+      "id": "insight_06",
+      "index": 6,
+      "english": {
+        "message": "Employees experiencing extreme physical pain represent a hidden high-risk segment, with 68.4% classified as high risk compared to 24.9% company-wide, yet this affects only 19 employees (2.4% of workforce). This small but critically vulnerable group often goes unnoticed in broad wellness initiatives. Companies should implement pain management screening protocols, provide ergonomic assessments, offer physical therapy benefits, and create modified work arrangements for employees with chronic pain conditions to prevent them from becoming your highest-risk cases.",
+        "proof": "Extreme pain shows 68.4% high risk rate vs 24.9% population baseline (2.74x risk ratio). Sample size: 19 employees (2.4% of workforce). Statistical significance: >8.0σ magnitude."
+      },
+      "turkish": {
+        "message": "Aşırı fiziksel ağrı yaşayan çalışanlar gizli bir yüksek risk segmentini oluşturuyor. Bu grubun %68,4'ü yüksek risk kategorisinde yer alırken şirket genelinde bu oran %24,9. Ancak bu durum sadece 19 çalışanı (%2,4) etkiliyor. Bu küçük ama kritik derecede savunmasız grup genellikle geniş kapsamlı wellness girişimlerinde gözden kaçıyor. Şirketler ağrı yönetimi tarama protokolleri uygulamalı, ergonomik değerlendirmeler sağlamalı, fizik tedavi yardımları sunmalı ve kronik ağrı durumları olan çalışanlar için modifiye edilmiş çalışma düzenlemeleri yaratmalı. Bu önlemler onların en yüksek riskli vakalarınız haline gelmesini önleyebilir.",
+        "score": 9
+      },
+      "categories": [
+        "physical_health"
+      ],
+      "health_tags": [
+        "extreme_pain"
+      ],
+      "demographic_tags": []
+    },
+    {
+      "id": "insight_07",
+      "index": 7,
+      "english": {
+        "message": "Daily exercise provides absolute protection against high health risks, with 0% of daily exercisers classified as high risk despite representing 27 employees across various demographics. This protective effect transcends other risk factors, making physical activity your most powerful wellness intervention. Companies should prioritize making daily movement non-negotiable through gym memberships, workplace fitness facilities, mandatory walking breaks, active workstations, and cultural shifts that normalize exercise during work hours rather than treating it as an after-work luxury.",
+        "proof": "Daily exercise shows 0.0% high risk rate (0 out of 27 employees) vs 24.9% population baseline. Provides infinite protection factor across all demographics."
+      },
+      "turkish": {
+        "message": "Günlük egzersiz yüksek sağlık risklerine karşı mutlak koruma sağlıyor. Çeşitli demografik gruplardan 27 çalışanı temsil etmesine rağmen günlük egzersiz yapanların %0'ı yüksek risk olarak sınıflandırılıyor. Bu koruyucu etki diğer risk faktörlerini aşıyor ve fiziksel aktiviteyi en güçlü wellness müdahaleniz haline getiriyor. Şirketler spor salonu üyelikleri, işyeri fitness olanakları, zorunlu yürüyüş molaları, aktif çalışma istasyonları ve egzersizi iş sonrası lüks değil, çalışma saatleri içinde normal karşılayan kültürel değişimler aracılığıyla günlük hareketi pazarlık konusu olmayan bir unsur haline getirmeye öncelik vermelidir.",
+        "score": 10
+      },
+      "categories": [
+        "activity_level"
+      ],
+      "health_tags": [
+        "daily_exercise"
+      ],
+      "demographic_tags": []
+    },
+    {
+      "id": "insight_08",
+      "index": 8,
+      "english": {
+        "message": "Overweight employees who engage in frequent exercise achieve complete protection from high health risks (0% high risk), demonstrating that fitness level trumps weight status in health outcomes. This challenges traditional weight-focused wellness programs and suggests companies should prioritize fitness over weight loss. Implement body-positive wellness initiatives that celebrate movement and strength rather than scale numbers, offer diverse physical activities to accommodate different fitness levels, and train wellness staff to focus on behavioral changes rather than weight metrics.",
+        "proof": "Overweight + frequent exercise combination shows 0.0% high risk rate (0 out of 10 employees) vs 24.9% population baseline. Provides complete protection despite overweight status."
+      },
+      "turkish": {
+        "message": "Sık egzersiz yapan kilolu çalışanlar yüksek sağlık risklerine karşı tam koruma elde ediyor (%0 yüksek risk). Bu durum fitness seviyesinin sağlık sonuçlarında kilo durumunu geçtiğini gösteriyor. Bu bulgu geleneksel kilo odaklı wellness programlarını sorguluyor ve şirketlerin kilo verme yerine fitness'a öncelik vermesi gerektiğini öneriyor. Tartı rakamları yerine hareketi ve gücü kutlayan beden-pozitif wellness girişimleri uygulayın, farklı fitness seviyelerine uyum sağlayan çeşitli fiziksel aktiviteler sunun ve wellness personelini kilo ölçümleri yerine davranış değişikliklerine odaklanmaları için eğitin.",
+        "score": 8
+      },
+      "categories": [
+        "activity_level",
+        "physical_health"
+      ],
+      "health_tags": [
+        "frequent_exercise"
+      ],
+      "demographic_tags": [
+        "overweight"
+      ]
+    },
+    {
+      "id": "insight_09",
+      "index": 9,
+      "english": {
+        "message": "Employees who feel \"always in control\" combined with optimal sleep patterns achieve exceptional low-risk outcomes, with 52.5% reaching low risk status compared to 10.2% company-wide. This psychological-physical health synergy reveals the importance of stress management alongside sleep hygiene. Companies should integrate mindfulness training with sleep wellness programs, teach stress management techniques alongside sleep coaching, and create workplace environments that support both psychological autonomy and healthy sleep patterns through flexible scheduling and stress-reduction initiatives.",
+        "proof": "Optimal sleep + always in control combination shows 52.5% low risk vs 10.2% population baseline (5.15x protection factor). Sample size: 40 employees. Statistical significance: 8.41σ magnitude."
+      },
+      "turkish": {
+        "message": "Kendilerini \"her zaman kontrol halinde\" hisseden ve optimal uyku düzeni olan çalışanlar olağanüstü düşük risk sonuçları elde ediyor. Bu grubun %52,5'i düşük risk durumuna ulaşırken şirket genelinde bu oran %10,2. Bu psikolojik-fiziksel sağlık sinerjisi, uyku hijyeni ile birlikte stres yönetiminin önemini ortaya koyuyor. Şirketler farkındalık eğitimini uyku sağlığı programlarıyla entegre etmeli, uyku koçluğuyla birlikte stres yönetimi tekniklerini öğretmeli ve esnek programlama ile stres azaltma girişimleri aracılığıyla hem psikolojik özerkliği hem de sağlıklı uyku düzenlerini destekleyen çalışma ortamları yaratmalı.",
+        "score": 8
+      },
+      "categories": [
+        "mental_health",
+        "sleep"
+      ],
+      "health_tags": [
+        "optimal_sleep",
+        "always_in_control"
+      ],
+      "demographic_tags": []
+    },
+    {
+      "id": "insight_10",
+      "index": 10,
+      "english": {
+        "message": "Frequent irritability combined with insufficient sleep creates a micro-crisis affecting just 22 employees (2.8% of workforce) but with devastating health outcomes - 81.8% are high risk compared to 24.9% company-wide. This small, precisely identifiable group offers the highest ROI for targeted intervention. Companies should implement stress and sleep screening protocols to identify these individuals early, provide personalized stress management coaching, offer sleep therapy resources, and create quiet spaces for stress recovery during work hours.",
+        "proof": "Frequent irritability + insufficient sleep shows 81.8% high risk vs 24.9% population baseline (3.28x risk ratio). Sample size: 22 employees (2.8% of workforce). Statistical significance: >8.0σ magnitude."
+      },
+      "turkish": {
+        "message": "Sık sinirlilik ile yetersiz uyku birleşimi sadece 22 çalışanı (%2,8) etkileyen ancak yıkıcı sağlık sonuçları yaratan bir mikro kriz oluşturuyor. Bu grubun %81,8'i yüksek risk kategorisinde yer alırken şirket genelinde bu oran %24,9. Bu küçük, kesin olarak tanımlanabilir grup hedefli müdahale için en yüksek yatırım getirisini sunuyor. Şirketler bu bireyleri erken tespit etmek için stres ve uyku tarama protokolleri uygulamalı, kişiselleştirilmiş stres yönetimi koçluğu sağlamalı, uyku terapisi kaynakları sunmalı ve çalışma saatleri içinde stres toparlanması için sessiz alanlar yaratmalı.",
+        "score": 10
+      },
+      "categories": [
+        "mental_health",
+        "sleep"
+      ],
+      "health_tags": [
+        "frequently_irritated",
+        "insufficient_sleep"
+      ],
+      "demographic_tags": []
+    },
+    {
+      "id": "insight_11",
+      "index": 11,
+      "english": {
+        "message": "A paradoxical pattern emerges where supplement users show unexpected correlations with both depression and sedentary behavior, challenging assumptions about health-conscious behaviors clustering together. Among supplement users, 59% report occasional sadness vs 50% company-wide, and 45% report no exercise vs 53% company-wide. This suggests supplement use might compensate for other health gaps rather than indicating overall wellness commitment. Companies should investigate whether employees view supplements as shortcuts to health and redirect focus toward fundamental lifestyle changes through education and behavioral support programs.",
+        "proof": "Supplement users show unexpected patterns: 59% occasional sadness vs 50% population, 45% no exercise vs 53% population. Cramer's V correlation: 0.198 with depression mood, 0.173 with activity level."
+      },
+      "turkish": {
+        "message": "Takviye kullanıcıları arasında hem depresyon hem de hareketsiz yaşam tarzıyla beklenmedik korelasyonlar gösteren paradoksal bir kalıp ortaya çıkıyor. Bu durum sağlık bilincindeki davranışların bir arada kümelendiği varsayımını sorguluyor. Takviye kullananların %59'u ara sıra üzüntü yaşadığını bildirirken şirket genelinde bu oran %50; %45'i hiç egzersiz yapmadığını söylerken şirket genelinde bu oran %53. Bu durum takviye kullanımının genel wellness bağlılığını göstermekten çok diğer sağlık açıklarını telafi ettiğini düşündürüyor. Şirketler çalışanların takviyeleri sağlığa kısa yol olarak görüp görmediğini araştırmalı ve eğitim ile davranışsal destek programları aracılığıyla odağı temel yaşam tarzı değişikliklerine yönlendirmeli.",
+        "score": 7
+      },
+      "categories": [
+        "mental_health",
+        "activity_level",
+        "lifestyle"
+      ],
+      "health_tags": [
+        "using_supplements",
+        "occasional_sadness",
+        "no_exercise"
+      ],
+      "demographic_tags": []
+    },
+    {
+      "id": "insight_12",
+      "index": 12,
+      "english": {
+        "message": "Obesity combined with persistent sadness creates an extremely vulnerable micro-segment where 16.7% reach very high risk status compared to just 0.8% company-wide - a 21x increased risk affecting only 18 employees. This intersection of physical and mental health challenges requires specialized, coordinated care that most standard wellness programs miss. Companies should develop integrated physical-mental health protocols, train wellness coordinators to identify these intersectional risks, and provide comprehensive support combining medical weight management with mental health counseling.",
+        "proof": "Obese + persistent sadness combination shows 16.7% very high risk vs 0.8% population baseline (20.9x risk ratio). Sample size: 18 employees. Statistical significance: 7.79σ magnitude."
+      },
+      "turkish": {
+        "message": "Obezite ile sürekli üzüntünün birleşimi, sadece 18 çalışanı etkileyen ancak %16,7'sinin çok yüksek risk durumuna ulaştığı son derece savunmasız bir mikro segment yaratıyor (şirket geneli %0,8 - 21 kat artmış risk). Bu fiziksel ve mental sağlık zorluklarının kesişimi, çoğu standart wellness programının kaçırdığı özelleşmiş, koordineli bakım gerektiriyor. Şirketler entegre fiziksel-mental sağlık protokolleri geliştirmeli, wellness koordinatörlerini bu kesişimsel riskleri tanımaları için eğitmeli ve medikal kilo yönetimini mental sağlık danışmanlığıyla birleştiren kapsamlı destek sağlamalı.",
+        "score": 9
+      },
+      "categories": [
+        "mental_health",
+        "physical_health"
+      ],
+      "health_tags": [
+        "persistent_sadness"
+      ],
+      "demographic_tags": [
+        "obese"
+      ]
+    },
+    {
+      "id": "insight_13",
+      "index": 13,
+      "english": {
+        "message": "The fact that 89.1% of employees who completed health surveys still fall into elevated risk categories reveals the limitation of participation-based wellness programs. Your health-engaged workforce - those motivated enough to take surveys - still shows widespread risk factors, suggesting that traditional awareness campaigns aren't sufficient. Companies need to shift from voluntary participation models to environmental and policy interventions: healthier default options in cafeterias, walking-friendly office design, mandatory movement breaks, and making healthy choices the easiest choices rather than relying on individual motivation.",
+        "proof": "89.1% of health survey participants classified as elevated risk (high_risk + very_high_risk + moderate_risk). Population shows high participation bias yet still widespread risk factors."
+      },
+      "turkish": {
+        "message": "Sağlık anketini tamamlayan çalışanların %89,1'inin hala yüksek risk kategorilerinde yer alması, katılım temelli wellness programlarının sınırlılığını ortaya koyuyor. Anket dolduracak kadar motive olan sağlık bilincindeki iş gücünüz bile yaygın risk faktörleri gösteriyor. Bu durum geleneksel farkındalık kampanyalarının yeterli olmadığını düşündürüyor. Şirketler gönüllü katılım modellerinden çevresel ve politika müdahalelerine geçmeli: kafeteryalarda daha sağlıklı varsayılan seçenekler, yürümeye uygun ofis tasarımı, zorunlu hareket molaları ve bireysel motivasyona güvenmek yerine sağlıklı seçimleri en kolay seçimler haline getirme.",
+        "score": 8
+      },
+      "categories": [
+        "lifestyle",
+        "mental_health",
+        "activity_level"
+      ],
+      "health_tags": [],
+      "demographic_tags": []
+    }
+  ],
+  "source_report": "02_out/company/Company_28_report.txt",
+  "prompt_used": "03_ai/prompts/unified_insights.md",
+  "processing_date": "2025-09-23T17:52:39.587920",
+  "claude_model": "claude-3-5-sonnet-20241022"
+}
