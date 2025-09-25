@@ -19,8 +19,8 @@ from xml_parser import XMLInsightParser
 
 
 # Global Configuration
-DEFAULT_PROMPT = 'scripts/llm/prompts/unified_insights.md'
-DEFAULT_TIMEOUT = 600  # 10 minutes in seconds
+DEFAULT_PROMPT = 'think: Please follow the prompt in scripts/llm/prompts/unified_insights.md'
+DEFAULT_TIMEOUT = 900  # 15 minutes in seconds (increased for thinking time)
 CLAUDE_MODEL = 'sonnet'
 
 
@@ -45,7 +45,7 @@ class ClaudeProcessor:
         """Read the system prompt content."""
         return self.prompt_file.read_text(encoding='utf-8')
 
-    def call_claude_cli(self, prompt: str, report_content: str, log_file_path: str) -> str:
+    def call_claude_cli(self, prompt: str, report_content: str, log_file_path: str) -> tuple[str, str]:
         """
         Call Claude CLI with stream-json format to capture thinking process.
 
@@ -55,7 +55,7 @@ class ClaudeProcessor:
             log_file_path: Path to save complete stream-json log
 
         Returns:
-            Final response content for XML parsing
+            Tuple of (final_response, complete_thinking_content)
         """
         # Combine system prompt with report content
         full_prompt = f"{prompt}\n\n## Health Analysis Report to Process:\n\n{report_content}"
@@ -114,8 +114,10 @@ class ClaudeProcessor:
                 process.stdin.write(full_prompt)
                 process.stdin.close()
 
-                # Collect all stream json and final response
+                # Collect all stream json, thinking content, and final response
                 final_response = ""
+                complete_thinking = ""
+                thinking_events = 0
                 stream_lines = []
 
                 # Stream output and save to log
@@ -140,7 +142,14 @@ class ClaudeProcessor:
                                     elif delta.get('type') == 'thinking_delta':
                                         thinking = delta.get('thinking', '')
                                         if thinking:
-                                            print(f"[Thinking] {thinking[:100]}...", flush=True)
+                                            complete_thinking += thinking
+                                            thinking_events += 1
+
+                                            # Show thinking progress every 10 events, not every chunk
+                                            if thinking_events % 10 == 0:
+                                                print(f"[Thinking Progress] {thinking_events} events, {len(complete_thinking):,} characters so far...", flush=True)
+                                            elif thinking_events <= 3:
+                                                print(f"[Thinking Started] Event {thinking_events}...", flush=True)
                                 elif event.get('type') == 'content_block_start':
                                     content_block = event.get('content_block', {})
                                     if content_block.get('type') == 'text':
@@ -161,12 +170,19 @@ class ClaudeProcessor:
                 print("\n" + "="*60)
                 print(f"✅ Claude CLI completed in {elapsed_time:.2f} seconds")
 
+                # Display thinking summary
+                if complete_thinking:
+                    print(f"💭 Thinking Summary: {thinking_events} events, {len(complete_thinking):,} characters")
+                    print(f"📊 Thinking/Response ratio: {len(complete_thinking)/max(len(final_response), 1):.1f}:1")
+                else:
+                    print("💭 No thinking detected (baseline mode)")
+
                 if process.returncode != 0:
                     stderr_output = process.stderr.read()
                     print(f"Claude CLI error: {stderr_output}")
                     raise subprocess.CalledProcessError(process.returncode, 'claude')
 
-                return final_response.strip()
+                return final_response.strip(), complete_thinking.strip()
 
         except subprocess.TimeoutExpired:
             elapsed_time = time.time() - start_time
@@ -201,7 +217,7 @@ class ClaudeProcessor:
         log_file_path = self.output_file.parent / f"{self.output_file.stem}.log"
 
         # Call Claude CLI with stream-json logging
-        claude_response = self.call_claude_cli(system_prompt, report_content, str(log_file_path))
+        claude_response, thinking_content = self.call_claude_cli(system_prompt, report_content, str(log_file_path))
 
         print("Parsing XML response...")
 
@@ -209,13 +225,19 @@ class ClaudeProcessor:
         parser = XMLInsightParser()
         insights_data = parser.parse_claude_response(claude_response)
 
-        # Add metadata
+        # Add metadata and thinking content
         insights_data.update({
             'source_report': str(self.input_file),
             'prompt_used': str(self.prompt_file),
             'processing_date': datetime.now().isoformat(),
             'claude_model': f'claude-{CLAUDE_MODEL}',
-            'log_file': str(log_file_path)
+            'log_file': str(log_file_path),
+            'thinking_content': thinking_content,
+            'thinking_stats': {
+                'thinking_characters': len(thinking_content),
+                'thinking_enabled': len(thinking_content) > 0,
+                'estimated_thinking_tokens': len(thinking_content) // 4
+            }
         })
 
         return insights_data
@@ -230,6 +252,14 @@ class ClaudeProcessor:
 
         print(f"Saved insights: {self.output_file}")
         print(f"Total insights: {insights_data.get('total_insights', 0)}")
+
+        # Show thinking statistics
+        thinking_stats = insights_data.get('thinking_stats', {})
+        if thinking_stats.get('thinking_enabled'):
+            print(f"💭 Thinking enabled: {thinking_stats.get('thinking_characters', 0):,} characters")
+            print(f"🧠 Estimated thinking tokens: {thinking_stats.get('estimated_thinking_tokens', 0):,}")
+        else:
+            print("💭 No thinking detected (baseline mode)")
 
         # Show score distribution if available
         insights = insights_data.get('insights', [])

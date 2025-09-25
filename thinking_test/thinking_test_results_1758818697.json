@@ -1,0 +1,58 @@
+{
+  "baseline": {
+    "mode": "baseline",
+    "total_thinking_chars": 0,
+    "thinking_events": 0,
+    "total_time": 133.05452704429626,
+    "first_thinking_time": 0,
+    "thinking_duration": 0,
+    "avg_thinking_length": 0.0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "thinking_tokens_estimate": 0,
+    "response_chars": 12218,
+    "thinking_to_response_ratio": 0.0
+  },
+  "think": {
+    "mode": "think",
+    "total_thinking_chars": 2948,
+    "thinking_events": 60,
+    "total_time": 169.22604417800903,
+    "first_thinking_time": 4.537344932556152,
+    "thinking_duration": 152.21691489219666,
+    "avg_thinking_length": 49.13333333333333,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "thinking_tokens_estimate": 737,
+    "response_chars": 14015,
+    "thinking_to_response_ratio": 0.21034605779521942
+  },
+  "think harder": {
+    "mode": "think harder",
+    "total_thinking_chars": 5075,
+    "thinking_events": 110,
+    "total_time": 198.8701729774475,
+    "first_thinking_time": 4.557844877243042,
+    "thinking_duration": 187.20153903961182,
+    "avg_thinking_length": 46.13636363636363,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "thinking_tokens_estimate": 1268,
+    "response_chars": 1500,
+    "thinking_to_response_ratio": 3.3833333333333333
+  },
+  "ultrathink": {
+    "mode": "ultrathink",
+    "total_thinking_chars": 5941,
+    "thinking_events": 124,
+    "total_time": 567.1436700820923,
+    "first_thinking_time": 4.470253944396973,
+    "thinking_duration": 550.5673909187317,
+    "avg_thinking_length": 47.91129032258065,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "thinking_tokens_estimate": 1485,
+    "response_chars": 2272,
+    "thinking_to_response_ratio": 2.6148767605633805
+  }
+}
