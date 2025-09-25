@@ -68,8 +68,58 @@ class XMLInsightParser:
         try:
             root = ET.fromstring(xml_content)
         except ET.ParseError as e:
-            raise ValueError(f"Invalid XML structure: {e}")
+            # Enhanced debugging for XML parse errors
+            print(f"\n❌ XML Parse Error: {e}")
 
+            # Save the problematic XML for debugging
+            with open('problematic_xml_debug.txt', 'w', encoding='utf-8') as f:
+                f.write(xml_content)
+
+            # Try to show context around the error
+            error_str = str(e)
+            if 'line' in error_str and 'column' in error_str:
+                import re
+                line_match = re.search(r'line (\d+)', error_str)
+                col_match = re.search(r'column (\d+)', error_str)
+
+                if line_match and col_match:
+                    error_line = int(line_match.group(1))
+                    error_col = int(col_match.group(1))
+
+                    lines = xml_content.split('\n')
+                    print(f"\nProblematic area around line {error_line}, column {error_col}:")
+
+                    # Show context: 2 lines before and after the error
+                    start_line = max(0, error_line - 3)
+                    end_line = min(len(lines), error_line + 2)
+
+                    for i in range(start_line, end_line):
+                        line_num = i + 1
+                        line_content = lines[i] if i < len(lines) else ""
+                        marker = " --> " if line_num == error_line else "     "
+                        print(f"{marker}Line {line_num:3d}: {line_content}")
+
+                        # Show column indicator for error line
+                        if line_num == error_line and error_col <= len(line_content):
+                            print(f"          {' ' * (error_col - 1)}^-- Error here")
+
+                    # Try to fix common XML escaping issues and retry
+                    print(f"\nAttempting to fix common XML escaping issues...")
+                    fixed_xml = self._fix_xml_escaping(xml_content)
+                    if fixed_xml != xml_content:
+                        try:
+                            root = ET.fromstring(fixed_xml)
+                            print("✅ Successfully parsed after fixing XML escaping!")
+                            return self._extract_insights_from_root(root)
+                        except ET.ParseError as e2:
+                            print(f"❌ Still failed after escaping fix: {e2}")
+
+            raise ValueError(f"Invalid XML structure: {e}. Problematic XML saved to 'problematic_xml_debug.txt'")
+
+        return self._extract_insights_from_root(root)
+
+    def _extract_insights_from_root(self, root: ET.Element) -> List[Dict[str, Any]]:
+        """Extract insights from parsed XML root element."""
         insights = []
         for i, insight_elem in enumerate(root.findall('insight')):
             insight_data = self._parse_single_insight(insight_elem, i + 1)
@@ -77,6 +127,48 @@ class XMLInsightParser:
                 insights.append(insight_data)
 
         return insights
+
+    def _fix_xml_escaping(self, xml_content: str) -> str:
+        """Fix common XML character escaping issues."""
+        # Common XML character escaping fixes
+        fixes = [
+            ('&', '&amp;'),  # Must be first to avoid double-escaping
+            ('<', '&lt;'),
+            ('>', '&gt;'),
+        ]
+
+        # Apply fixes but avoid breaking XML tags
+        fixed_content = xml_content
+
+        # Split content into text and XML tags to avoid escaping tag content
+        import re
+
+        # Find all XML tags
+        tag_pattern = r'<[^>]+>'
+        tags = re.findall(tag_pattern, fixed_content)
+
+        # Split by tags to process only text content
+        parts = re.split(tag_pattern, fixed_content)
+
+        # Fix text parts only
+        fixed_parts = []
+        for part in parts:
+            # Apply escaping fixes to text content only
+            fixed_part = part
+            for find, replace in fixes:
+                # Skip if this looks like it's already properly escaped
+                if '&amp;' not in fixed_part and '&lt;' not in fixed_part and '&gt;' not in fixed_part:
+                    fixed_part = fixed_part.replace(find, replace)
+            fixed_parts.append(fixed_part)
+
+        # Reconstruct with original tags
+        result = ""
+        for i, part in enumerate(fixed_parts):
+            result += part
+            if i < len(tags):
+                result += tags[i]
+
+        return result
 
     def _parse_single_insight(self, insight_elem: ET.Element, index: int) -> Dict[str, Any]:
         """Parse a single insight XML element."""
