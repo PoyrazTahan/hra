@@ -19,7 +19,7 @@ from xml_parser import XMLInsightParser
 
 
 # Global Configuration
-DEFAULT_PROMPT = 'think: Please follow the prompt in scripts/llm/prompts/unified_insights.md'
+DEFAULT_PROMPT = 'ultrathink: Please follow the prompt in scripts/llm/prompts/unified_insights.md'
 DEFAULT_TIMEOUT = 900  # 15 minutes in seconds (increased for thinking time)
 CLAUDE_MODEL = 'sonnet'
 
