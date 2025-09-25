@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 """
-Simple Orchestrator for Health Risk Assessment Analysis Scripts
+Health Risk Assessment Data Science Analysis Pipeline
 
-Runs all analysis scripts in scripts_new/ and saves outputs to text files.
-Clear, simple, and easy to understand what's being executed.
+Orchestrates data science analysis scripts to generate unified reports.
+Pure data science processing - produces analysis reports for downstream LLM processing.
 
 Usage:
-    python main.py                                     # Process default main dataset and all eligible companies
-  python main.py --main-only                           # Process only main dataset
-  python main.py --data custom.csv                     # Process custom dataset and companies
-  python main.py --data data.csv --output-dir results  # Custom input and output
+    python analysis.py                                     # Process default main dataset and all eligible companies
+    python analysis.py --main-only                        # Process only main dataset
+    python analysis.py --data custom.csv                  # Process custom dataset and companies
+    python analysis.py --data data.csv --output-dir results  # Custom input and output
 """
 
 import subprocess
@@ -39,12 +39,12 @@ def process_dataset(data_path, output_file, dataset_name="Dataset", record_thres
 
     # Define analysis scripts with their descriptions
     analyses = [
-        ("_scripts/01_simple_eda.py", "Simple EDA", "Exploratory Data Analysis (EDA) - Complete statistical overview"),
-        ("_scripts/02_statistical_surprise_refactored.py", "Statistical Surprises", "Statistical Surprise Detection - Unexpected demographic/lifestyle patterns"),
-        ("_scripts/03_demographic_outlier_spotter_refactored.py", "Demographic Outliers", "Demographic Outlier Detection - Small segments with disproportionate health impacts"),
-        ("_scripts/04_compound_risk_scorer_refactored.py", "Compound Risk (Additive)", "Compound Risk Scoring - Additive method for multi-factor risk assessment", "--method additive"),
-        ("_scripts/04_compound_risk_scorer_refactored.py", "Compound Risk (Interaction)", "Compound Risk Scoring - Interaction-weighted method with factor amplification", "--method interaction-weighted"),
-        ("_scripts/05_column_relation_analysis.py", "Column Relationships", "Column Relationship Analysis - Descriptive-to-descriptive correlations and clustering")
+        ("scripts/stats/01_simple_eda.py", "Simple EDA", "Exploratory Data Analysis (EDA) - Complete statistical overview"),
+        ("scripts/stats/02_statistical_surprise_refactored.py", "Statistical Surprises", "Statistical Surprise Detection - Unexpected demographic/lifestyle patterns"),
+        ("scripts/stats/03_demographic_outlier_spotter_refactored.py", "Demographic Outliers", "Demographic Outlier Detection - Small segments with disproportionate health impacts"),
+        ("scripts/stats/04_compound_risk_scorer_refactored.py", "Compound Risk (Additive)", "Compound Risk Scoring - Additive method for multi-factor risk assessment", "--method additive"),
+        ("scripts/stats/04_compound_risk_scorer_refactored.py", "Compound Risk (Interaction)", "Compound Risk Scoring - Interaction-weighted method with factor amplification", "--method interaction-weighted"),
+        ("scripts/stats/05_column_relation_analysis.py", "Column Relationships", "Column Relationship Analysis - Descriptive-to-descriptive correlations and clustering")
     ]
 
     # Initialize report
