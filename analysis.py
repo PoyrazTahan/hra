@@ -152,6 +152,28 @@ def run_script(script_path, command_args, description):
         print(f"✗ ERROR: {e}")
         return False
 
+def ensure_data_preprocessing():
+    """Ensure 01_in directory exists and run csv_preprocessor.py if needed."""
+    input_dir = Path("01_in")
+
+    if not input_dir.exists():
+        print("01_in directory not found. Creating and running preprocessing...")
+        input_dir.mkdir(exist_ok=True)
+
+        # Run csv_preprocessor.py
+        preprocessor_script = "00_init_data/csv_preprocessor.py"
+        if Path(preprocessor_script).exists():
+            print(f"Running {preprocessor_script}...")
+            result = subprocess.run([sys.executable, preprocessor_script],
+                                  capture_output=True, text=True)
+            if result.returncode != 0:
+                print(f"Error running preprocessor: {result.stderr}")
+                sys.exit(1)
+            print("Preprocessing completed successfully.")
+        else:
+            print(f"Error: Preprocessor script not found: {preprocessor_script}")
+            sys.exit(1)
+
 def main():
     parser = argparse.ArgumentParser(
         description='Health Risk Assessment Multi-Company Analysis Pipeline',
@@ -181,6 +203,9 @@ Examples:
 
     print(f"Health Risk Assessment Multi-Company Analysis Pipeline")
     print(f"Started: {datetime.now()}")
+
+    # Ensure preprocessing is done
+    ensure_data_preprocessing()
 
     # Create output directories
     output_dir = Path(args.output_dir)
