@@ -34,7 +34,7 @@ class ProcessingResult:
 class AIOrchestrator:
     """Orchestrates AI processing across multiple health analysis reports."""
 
-    def __init__(self, input_dir: Path, output_dir: Path, main_only: bool = False, parallel: bool = False, max_workers: int = 3):
+    def __init__(self, input_dir: Path, output_dir: Path, main_only: bool = False, parallel: bool = False, max_workers: int = 3, csv_path: Path = None):
         self.input_dir = input_dir
         self.output_dir = output_dir
         self.main_only = main_only
@@ -44,12 +44,24 @@ class AIOrchestrator:
         # Fixed prompt file path - internal to processor
         self.prompt_file = Path('scripts/llm/prompts/unified_insights.md')
 
+        # CSV path for group size calculation
+        if csv_path:
+            self.csv_path = csv_path
+        else:
+            # Default to main CSV in 01_in
+            self.csv_path = Path('01_in/HRA_data.csv')
+
         # Validate directories
         if not self.input_dir.exists():
             raise FileNotFoundError(f"Input directory not found: {self.input_dir}")
 
         if not self.prompt_file.exists():
             raise FileNotFoundError(f"Prompt file not found: {self.prompt_file}")
+
+        if not self.csv_path.exists():
+            print(f"⚠️  Warning: CSV file not found at {self.csv_path}")
+            print("   Group size calculation will be skipped.")
+            self.csv_path = None
 
     def discover_files(self) -> List[Tuple[Path, Path]]:
         """
@@ -98,11 +110,15 @@ class AIOrchestrator:
         start_time = time.time()
 
         try:
+            # Ensure output directory exists before processing
+            output_path.parent.mkdir(parents=True, exist_ok=True)
+
             # Create processor and run it
             processor = ClaudeProcessor(
                 input_file=str(input_path),
                 output_file=str(output_path),
-                prompt_file=str(self.prompt_file)
+                prompt_file=str(self.prompt_file),
+                csv_path=str(self.csv_path) if self.csv_path else None
             )
 
             print(f"\n🔄 Starting: {input_path.name}")
@@ -309,6 +325,12 @@ Examples:
         help='Maximum number of parallel workers (default: 3)'
     )
 
+    parser.add_argument(
+        '--csv',
+        type=Path,
+        help='Path to CSV data file for group size calculation (default: 01_in/HRA_data.csv)'
+    )
+
     args = parser.parse_args()
 
     try:
@@ -317,7 +339,8 @@ Examples:
             output_dir=args.output_dir,
             main_only=args.main_only,
             parallel=args.parallel,
-            max_workers=args.max_workers
+            max_workers=args.max_workers,
+            csv_path=args.csv
         )
         orchestrator.run()
 

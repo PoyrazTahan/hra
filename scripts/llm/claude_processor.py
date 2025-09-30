@@ -16,6 +16,7 @@ from pathlib import Path
 from typing import Dict, Any, Optional
 
 from xml_parser import XMLInsightParser
+from group_size_calculator import GroupSizeCalculator
 
 
 # Global Configuration
@@ -25,7 +26,7 @@ CLAUDE_MODEL = 'sonnet'
 
 
 class ClaudeProcessor:
-    def __init__(self, input_file: str, output_file: str, prompt_file: str):
+    def __init__(self, input_file: str, output_file: str, prompt_file: str, csv_path: str = None):
         self.input_file = Path(input_file)
         self.output_file = Path(output_file)
         self.prompt_file = Path(prompt_file)
@@ -36,6 +37,18 @@ class ClaudeProcessor:
             raise FileNotFoundError(f"Input file not found: {self.input_file}")
         if not self.prompt_file.exists():
             raise FileNotFoundError(f"Prompt file not found: {self.prompt_file}")
+
+        # Determine CSV path for group size calculation
+        if csv_path:
+            self.csv_path = Path(csv_path)
+        else:
+            # Default: assume main CSV in 01_in directory
+            self.csv_path = self.project_root / '01_in' / 'HRA_data.csv'
+
+        if not self.csv_path.exists():
+            print(f"⚠️  Warning: CSV file not found at {self.csv_path}")
+            print("   Group size calculation will be skipped.")
+            self.csv_path = None
 
     def read_report(self) -> str:
         """Read the analysis report content."""
@@ -91,6 +104,10 @@ class ClaudeProcessor:
         try:
             # Start timing
             start_time = time.time()
+
+            # Ensure log directory exists before creating log file
+            log_path = Path(log_file_path)
+            log_path.parent.mkdir(parents=True, exist_ok=True)
 
             # Create log file and call Claude with stream-json
             with open(log_file_path, 'w') as log_file:
@@ -179,24 +196,34 @@ class ClaudeProcessor:
 
                 if process.returncode != 0:
                     stderr_output = process.stderr.read()
-                    print(f"Claude CLI error: {stderr_output}")
-                    raise subprocess.CalledProcessError(process.returncode, 'claude')
+                    print(f"\n❌ Claude CLI error (exit code {process.returncode}):")
+                    print(f"   {stderr_output}")
+                    raise subprocess.CalledProcessError(process.returncode, 'claude', stderr=stderr_output)
 
                 return final_response.strip(), complete_thinking.strip()
 
-        except subprocess.TimeoutExpired:
+        except subprocess.TimeoutExpired as e:
             elapsed_time = time.time() - start_time
             raise TimeoutError(
                 f"Claude CLI timed out after {elapsed_time:.2f} seconds (limit: {DEFAULT_TIMEOUT}s). "
                 f"Report may be too large."
             )
         except subprocess.CalledProcessError as e:
-            print(f"Claude CLI error: {e}")
-            print(f"Error output: {e.stderr}")
-            raise
-        except FileNotFoundError:
+            raise RuntimeError(
+                f"Claude CLI failed with exit code {e.returncode}.\n"
+                f"Error output: {e.stderr if e.stderr else 'No error output captured'}"
+            )
+        except FileNotFoundError as e:
+            # Provide more specific error information
             raise FileNotFoundError(
-                "Claude CLI not found. Please install Claude CLI and ensure it's in your PATH."
+                f"File operation failed: {e}. "
+                f"This might be due to: 1) Claude CLI not found in PATH, "
+                f"2) Output directory doesn't exist, or 3) Permission issues."
+            )
+        except Exception as e:
+            # Catch-all for unexpected errors with full context
+            raise RuntimeError(
+                f"Unexpected error during Claude CLI execution: {type(e).__name__}: {e}"
             )
 
     def process_report(self) -> Dict[str, Any]:
@@ -224,6 +251,21 @@ class ClaudeProcessor:
         # Parse XML from response
         parser = XMLInsightParser()
         insights_data = parser.parse_claude_response(claude_response)
+
+        # Calculate group sizes for each insight
+        if self.csv_path:
+            print("Calculating target group sizes...")
+            try:
+                calculator = GroupSizeCalculator(str(self.csv_path))
+                insights_data['insights'] = calculator.calculate_sizes_for_insights(
+                    insights_data['insights']
+                )
+                print(f"✅ Group sizes calculated for {len(insights_data['insights'])} insights")
+            except Exception as e:
+                print(f"⚠️  Warning: Failed to calculate group sizes: {e}")
+                print("   Insights will be saved without group size information.")
+        else:
+            print("⚠️  Skipping group size calculation (CSV not available)")
 
         # Add metadata and thinking content
         insights_data.update({
@@ -321,10 +363,15 @@ Examples:
         help='Path to system prompt file (default: scripts/llm/prompts/unified_insights.md)'
     )
 
+    parser.add_argument(
+        '--csv',
+        help='Path to CSV data file for group size calculation (default: 01_in/HRA_data.csv)'
+    )
+
     args = parser.parse_args()
 
     try:
-        processor = ClaudeProcessor(args.input, args.output, args.prompt)
+        processor = ClaudeProcessor(args.input, args.output, args.prompt, args.csv)
         processor.run()
 
     except Exception as e:
