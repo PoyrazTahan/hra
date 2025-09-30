@@ -61,6 +61,10 @@ class XMLInsightParser:
 
         # Wrap insights in a root element for valid XML
         wrapped_xml = '<insights>\n' + '\n'.join(insight_matches) + '\n</insights>'
+
+        # IMPORTANT: Escape XML special characters before parsing
+        wrapped_xml = self._fix_xml_escaping(wrapped_xml)
+
         return wrapped_xml
 
     def _parse_insights(self, xml_content: str) -> List[Dict[str, Any]]:
@@ -103,17 +107,6 @@ class XMLInsightParser:
                         if line_num == error_line and error_col <= len(line_content):
                             print(f"          {' ' * (error_col - 1)}^-- Error here")
 
-                    # Try to fix common XML escaping issues and retry
-                    print(f"\nAttempting to fix common XML escaping issues...")
-                    fixed_xml = self._fix_xml_escaping(xml_content)
-                    if fixed_xml != xml_content:
-                        try:
-                            root = ET.fromstring(fixed_xml)
-                            print("✅ Successfully parsed after fixing XML escaping!")
-                            return self._extract_insights_from_root(root)
-                        except ET.ParseError as e2:
-                            print(f"❌ Still failed after escaping fix: {e2}")
-
             raise ValueError(f"Invalid XML structure: {e}. Problematic XML saved to 'problematic_xml_debug.txt'")
 
         return self._extract_insights_from_root(root)
@@ -130,45 +123,48 @@ class XMLInsightParser:
 
     def _fix_xml_escaping(self, xml_content: str) -> str:
         """Fix common XML character escaping issues."""
-        # Common XML character escaping fixes
-        fixes = [
-            ('&', '&amp;'),  # Must be first to avoid double-escaping
-            ('<', '&lt;'),
-            ('>', '&gt;'),
-        ]
-
-        # Apply fixes but avoid breaking XML tags
-        fixed_content = xml_content
-
-        # Split content into text and XML tags to avoid escaping tag content
         import re
 
-        # Find all XML tags
-        tag_pattern = r'<[^>]+>'
-        tags = re.findall(tag_pattern, fixed_content)
+        # More precise tag pattern: matches proper XML tags only (starting with < and letter/slash)
+        tag_pattern = r'</?[a-zA-Z_][a-zA-Z0-9_]*(?:\s+[a-zA-Z_][a-zA-Z0-9_]*\s*=\s*"[^"]*")*\s*/?>'
 
-        # Split by tags to process only text content
-        parts = re.split(tag_pattern, fixed_content)
+        # Find all tags and their positions
+        tag_matches = list(re.finditer(tag_pattern, xml_content))
 
-        # Fix text parts only
-        fixed_parts = []
-        for part in parts:
-            # Apply escaping fixes to text content only
-            fixed_part = part
-            for find, replace in fixes:
-                # Skip if this looks like it's already properly escaped
-                if '&amp;' not in fixed_part and '&lt;' not in fixed_part and '&gt;' not in fixed_part:
-                    fixed_part = fixed_part.replace(find, replace)
-            fixed_parts.append(fixed_part)
+        if not tag_matches:
+            # No tags found, just escape everything
+            result = xml_content
+            result = re.sub(r'&(?!(amp|lt|gt|quot|apos);)', r'&amp;', result)
+            result = result.replace('<', '&lt;')
+            result = result.replace('>', '&gt;')
+            return result
 
-        # Reconstruct with original tags
-        result = ""
-        for i, part in enumerate(fixed_parts):
-            result += part
-            if i < len(tags):
-                result += tags[i]
+        # Build result by escaping text between tags
+        result = []
+        last_end = 0
 
-        return result
+        for match in tag_matches:
+            # Get text before this tag
+            text_before = xml_content[last_end:match.start()]
+
+            # Escape special characters in text
+            text_before = re.sub(r'&(?!(amp|lt|gt|quot|apos);)', r'&amp;', text_before)
+            text_before = text_before.replace('<', '&lt;')
+            text_before = text_before.replace('>', '&gt;')
+
+            result.append(text_before)
+            result.append(match.group(0))  # Add the tag as-is
+
+            last_end = match.end()
+
+        # Don't forget text after the last tag
+        text_after = xml_content[last_end:]
+        text_after = re.sub(r'&(?!(amp|lt|gt|quot|apos);)', r'&amp;', text_after)
+        text_after = text_after.replace('<', '&lt;')
+        text_after = text_after.replace('>', '&gt;')
+        result.append(text_after)
+
+        return ''.join(result)
 
     def _parse_single_insight(self, insight_elem: ET.Element, index: int) -> Dict[str, Any]:
         """Parse a single insight XML element."""

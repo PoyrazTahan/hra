@@ -64,6 +64,23 @@ Analyze the provided health analysis report with creative analytical thinking an
 - young_adult, middle_aged, older_adult
 - normal_weight, overweight, underweight, obese
 
+## Statistical Notation Guidelines
+
+**Use proper statistical notation freely** - the parser will handle XML escaping automatically:
+
+✅ **These are all fine to use:**
+- Statistical comparisons: `p < 0.001`, `p > 0.05`, `p ≤ 0.01`
+- Value ranges: `BMI > 30`, `Age < 25`, `18-65 years`
+- Mathematical notation: `±`, `≥`, `≤`, standard deviation `σ`
+- Percentages: `47.7%`, ratios: `2.5x`
+- Correlation coefficients: `r = 0.85`, `Cramer's V = 0.35`
+
+**Only avoid literal ampersands** in plain text - use "and" instead:
+- ❌ `Obesity & Diabetes`
+- ✅ `Obesity and Diabetes` or `Obesity + Diabetes`
+
+The XML parser automatically escapes special characters (`<`, `>`, `&`) in your content, so write naturally with proper statistical notation.
+
 ## REQUIRED Output Format
 
 Structure each insight EXACTLY as follows:
@@ -127,10 +144,47 @@ Structure each insight EXACTLY as follows:
 - **İşyeri sağlığı** (Workplace wellness)
 - **Davranış değişimi koçluğu** (Behavior change coaching)
 
+### Simplifying Clinical Terms for HR Audience
+
+**IMPORTANT: Use accessible language instead of clinical terminology:**
+
+**Depression metrics** (`depression_anhedonia` / `depression_mood`):
+- These measure different aspects of depression but should be discussed simply as **"depresyon"** or **"ruh hali"**
+- ❌ Don't use: "anhedonia", "anhedoni", technical psychiatric terms
+- ✅ Use instead: "depresyon belirtileri", "ruh hali sorunları", "moral düşüklüğü", "üzüntü hissi"
+- Example: "severe anhedonia + persistent sadness" → "şiddetli depresyon belirtileri" or "sürekli üzüntü ve motivasyon kaybı"
+
+**Stress metrics** (`stress_level_irritability` / `stress_level_loc`):
+- These measure different stress dimensions but should be discussed simply as **"stres"**
+- ❌ Don't use: "irritability", "locus of control", "LOC"
+- ✅ Use instead: "stres seviyesi", "sinirlilik", "stres yönetimi", "kontrol hissi kaybı"
+- Example: "high irritability + low LOC" → "yüksek stres seviyeleri" or "stres ve kontrol kaybı hissi"
+
+**General principle**: HR professionals need actionable insights, not clinical diagnoses. Focus on workplace impact and interventions rather than medical terminology.
+
 ### Number Formatting
-- Keep percentages: **47.7%** → **%47,7**
+- Convert percentages: **47.7%** → **%47,7**
 - Keep ratios: **1.11x** → **1,11x**
 - Keep sample sizes: **(n=37)** → **(n=37)**
+
+### Natural Turkish for Common Percentages
+
+**Use natural expressions instead of literal percentages to sound more native:**
+
+- **0% or ~0%**: Use **"hiç"** (none), **"hiçbiri"** (none of them), **"kimse"** (no one)
+  - "0% exercise daily" → "Günlük egzersiz yapan hiç yok"
+
+- **100% or ~100%**: Use **"hepsi"** (all), **"tamamı"** (entire), **"herkes"** (everyone)
+  - "100% have poor nutrition" → "Hepsi kötü beslenme gösteriyor"
+
+- **50% or ~50%**: Use **"yarısı"** (half), **"yarıya yakın"** (nearly half)
+  - "50% smoke" → "Yarısı sigara içiyor"
+
+- **25% or ~25%**: Use **"dörtte bir"** (one quarter), **"her dört çalışandan biri"** (one in four)
+  - "25% have diabetes" → "Her dört çalışandan birinde diyabet var"
+
+**Keep exact percentages** for specific values: %47,3, %18,9, %91,2
+**Combine when helpful**: "Hemen hemen hiçbiri (%0,8)" or "Yarıya yakını (%47,3)"
 
 ## Analytical Framework
 
