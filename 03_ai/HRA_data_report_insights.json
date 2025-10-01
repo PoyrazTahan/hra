@@ -1,30 +1,32 @@
 {
-  "total_insights": 16,
+  "total_insights": 15,
   "insights": [
     {
       "id": "insight_01",
       "index": 1,
       "english": {
-        "message": "Daily smoking emerges as the single most powerful health risk predictor in your workforce, with 55.7% of daily smokers classified as high-risk compared to just 21.9% overall. This isn't just about future disease - these employees are experiencing compounding health issues right now. Companies should prioritize smoking cessation programs with personalized coaching, subsidized nicotine replacement therapy, and group support sessions. The ROI potential is exceptional since this affects 22.4% of surveyed employees.",
-        "proof": "Daily smokers show 55.7% high-risk rate vs 21.9% population baseline (p < 0.001, 13.05σ). This affects 327 employees (22.4% of surveyed workforce). Risk ratio: 2.54x baseline. When combined with mental health issues, risk escalates further: daily smokers with persistent sadness show 16.1% very high-risk rate vs 0.8% population (13.93σ, n=62)."
+        "message": "Daily smoking creates catastrophic health outcomes far beyond typical wellness concerns. Over half of daily smokers (55.7%) already face high health risks, and when combined with depression, risk escalates dramatically—16.1% reach very high risk levels compared to just 0.8% of the general employee population. This represents a 13.93 standard deviation difference, indicating smoking + mental health issues create compounded vulnerabilities that urgently require integrated intervention.\n\nCompanies should implement smoking cessation programs that explicitly address mental health, as these employees face 20x higher very high risk rates. Traditional smoking cessation alone may fail without concurrent mental health support. Prioritize this 62-employee segment for intensive, personalized coaching combining addiction support with psychological counseling.",
+        "proof": "Daily smokers: 327 employees (22.4%), 55.7% high risk vs 21.9% population (13.05σ, p < 0.001). Daily smokers + persistent sadness: n=62, 16.1% very high risk vs 0.8% population (13.93σ), 81.4% high risk. Risk ratio for very high risk: 20.1x baseline."
       },
       "turkish": {
-        "message": "Günlük sigara içen çalışanlar işyerindeki en yüksek sağlık riskini taşıyor: %55,7'si yüksek risk grubunda (genel nüfusta %21,9). Bu sadece gelecekteki hastalık riski değil - bu çalışanlar şu anda birden fazla sağlık sorunu yaşıyor. Anket katılımcılarının %22,4'ünü oluşturan günlük sigara içenlere yönelik sigarayı bırakma programları (kişisel koçluk, nikotin replasman tedavisi desteği, grup destek oturumları) en yüksek yatırım getirisine sahip müdahale olacaktır (n=327).",
+        "message": "Günlük sigara içen çalışanların yarısından fazlası (%55,7) yüksek sağlık riski taşıyor ve bu oran genel popülasyonun 2,5 katı. En kritik bulgu ise sigara ve depresyon kombinasyonunda: günlük sigara içen ve sürekli üzüntü yaşayan 62 çalışanın %16,1'i çok yüksek risk kategorisinde (genel popülasyonda %0,8). Bu, normal popülasyona göre 20 kat daha yüksek risk anlamına geliyor. Şirketler, sigara bırakma programlarını mutlaka ruh sağlığı desteğiyle entegre etmeli—geleneksel yaklaşımlar bu grup için yetersiz kalacaktır. Bu 62 kişilik kritik segment, bağımlılık danışmanlığı ve psikolojik destek içeren yoğun, kişiselleştirilmiş müdahaleler için önceliklendirilmeli.",
         "score": 10
       },
       "categories": [
-        "lifestyle",
-        "physical_health"
+        "mental_health",
+        "lifestyle"
       ],
       "health_tags": [
-        "daily_smoker"
+        "daily_smoker",
+        "persistent_sadness"
       ],
       "demographic_tags": [],
       "target_group": {
-        "size": 327,
-        "percentage": 22.44,
+        "size": 62,
+        "percentage": 4.26,
         "filters_applied": [
-          "A.smoking_status=daily_smoker"
+          "A.smoking_status=daily_smoker",
+          "A.depression_mood=persistent_sadness"
         ],
         "total_population": 1457
       }
@@ -33,11 +35,11 @@
       "id": "insight_02",
       "index": 2,
       "english": {
-        "message": "Employees who never smoke and report positive mood achieve a remarkable 59% low-risk classification compared to just 12.8% overall - demonstrating that mental wellbeing and lifestyle choices create powerful protective effects. Rather than only addressing problems, companies should actively promote these protective factors through workplace culture initiatives that normalize non-smoking, mental health resources, stress management workshops, and recognition programs for healthy behaviors. Scaling what works among healthy employees may be more effective than only fixing problems.",
-        "proof": "Never-smokers with positive mood show 59.0% low-risk rate vs 12.8% population baseline (p < 0.001, 12.89σ). Protection factor: 0.17x baseline risk. Sample: 100 employees. Similarly, never-smokers with full interest/pleasure show 59.8% low-risk rate (12.22σ, n=87), and normal weight + positive mood shows 59.0% low-risk (11.75σ, n=83)."
+        "message": "Employees who never smoked and maintain positive mood represent your healthiest segment, with 59% achieving low risk status compared to just 12.8% company-wide. This 100-employee group demonstrates how behavioral and mental health factors combine for protection—they're 4.6x more likely to be low risk. Interestingly, this protective effect appears even stronger than the absence of chronic disease alone.\n\nCompanies should study this population to understand what workplace conditions, support systems, or lifestyle factors enable their success. Use them as peer mentors in wellness programs, showcase their habits in internal communications, and investigate whether they share common work environments, managers, or benefits usage patterns that could be replicated.",
+        "proof": "Never smoked + positive mood: n=100, 59.0% low risk vs 12.8% population (12.89σ, p < 0.001). Risk ratio: 0.22x for high risk (protective). Never smoked + full interest/pleasure: n=87, 59.8% low risk. Both combinations show >46pp improvement over baseline."
       },
       "turkish": {
-        "message": "Hiç sigara içmeyen ve olumlu ruh haline sahip çalışanların %59'u düşük risk grubunda (genel nüfusta yalnızca %12,8). Bu, ruh sağlığı ve yaşam tarzı seçimlerinin güçlü koruyucu etkisini gösteriyor. Şirketler yalnızca sorunları gidermeye değil, bu koruyucu faktörleri teşvik etmeye odaklanmalı: sigarasızlığı normalleştiren işyeri kültürü, ruh sağlığı kaynakları, stres yönetimi atölyeleri ve sağlıklı davranışlar için ödül programları. Sağlıklı çalışanlar arasında işe yarayanı yaymak, yalnızca sorunları düzeltmekten daha etkili olabilir (n=100, risk oranı: 0.17x, 12.89σ).",
+        "message": "Hiç sigara içmemiş ve olumlu ruh haline sahip 100 çalışan, şirketin en sağlıklı segmentini oluşturuyor: %59'u düşük risk kategorisinde (genel popülasyonda %12,8). Bu, 4,6 kat daha yüksek koruma faktörü anlamına geliyor. İlginç olan, bu koruyucu etkinin kronik hastalık yokluğundan bile daha güçlü görünmesi. Şirketler bu grubu başarı örneği olarak incelemeli: hangi çalışma koşulları, destek sistemleri veya yaşam tarzı faktörleri onların sağlıklı kalmasını sağlıyor? Bu çalışanları wellness programlarında akran mentoru olarak kullanın, alışkanlıklarını içsel iletişimde öne çıkarın ve ortak çalışma ortamları, yöneticiler veya yan hak kullanım paternleri olup olmadığını araştırarak bu başarıyı kopyalayın.",
         "score": 9
       },
       "categories": [
@@ -63,28 +65,26 @@
       "id": "insight_03",
       "index": 3,
       "english": {
-        "message": "A dangerous compound effect emerges when daily smoking combines with severe mental health symptoms: 16.1% of employees who both smoke daily and experience persistent sadness fall into the very high-risk category, compared to just 0.8% overall. This 20-fold elevation represents employees in crisis requiring immediate, integrated intervention. HR should implement alert systems that flag employees with multiple severe risk factors for priority access to combined mental health counseling plus smoking cessation support, rather than treating these issues separately.",
-        "proof": "Daily smokers with persistent sadness show 16.1% very high-risk rate vs 0.8% population baseline (p < 0.001, 13.93σ). Risk ratio: 20.1x baseline. Sample: 62 employees. Similar compound effects observed for daily smokers with severe anhedonia (13.3% very high-risk, 11.21σ, n=60) and daily smokers with frequent sadness (81.4% high-risk, 11.79σ, n=86)."
+        "message": "Nutrition represents a near-universal gap in your workforce: 92.5% of employees report poor or very poor fruit and vegetable intake, with 53.1% in the \"very poor\" category. This isn't a high-risk subgroup—it's essentially everyone. The uniformity suggests systemic barriers rather than individual choices: lack of healthy food access near offices, insufficient time for meal preparation, or limited nutrition education.\n\nRather than targeting specific employees, implement structural interventions: subsidize healthy meal delivery, create office fruit/vegetable programs, negotiate discounts with healthy food vendors, or provide meal prep workshops. The massive scale (1,348 employees) means even modest improvements in nutrition access could drive significant population health gains.",
+        "proof": "Fruit/vegetable intake: very poor 53.1% (n=774), poor 39.4% (n=574), total poor nutrition 92.5% (n=1,348). Only 5.8% adequate, 1.4% good, 0.3% excellent. Diversity score 0.588 indicates high concentration in poor categories, suggesting systemic rather than individual factors."
       },
       "turkish": {
-        "message": "Günlük sigara içimi şiddetli depresyon belirtileriyle birleştiğinde tehlikeli bir bileşik etki ortaya çıkıyor: hem günlük sigara içen hem de sürekli üzüntü yaşayan çalışanların %16,1'i çok yüksek risk kategorisinde (genel nüfusta yalnızca %0,8). Bu 20 kat artış, kriz halindeki çalışanları temsil ediyor ve acil, entegre müdahale gerektiriyor. İK departmanları, birden fazla şiddetli risk faktörü taşıyan çalışanları tespit eden uyarı sistemleri kurmalı ve bu çalışanlara ruh sağlığı danışmanlığı ve sigarayı bırakma desteğini ayrı değil birlikte sunmalıdır (n=62, 13.93σ).",
-        "score": 10
+        "message": "Beslenme, işgücünüzde neredeyse evrensel bir açık: çalışanların %92,5'i kötü veya çok kötü meyve-sebze tüketimi bildiriyor ve %53,1'i \"çok kötü\" kategorisinde (1.348 çalışan). Bu riskli bir alt grup değil—neredeyse herkes. Bu tekdüzelik, bireysel tercihlerden ziyade sistemik engelleri işaret ediyor: ofis yakınında sağlıklı gıda erişimi eksikliği, yemek hazırlama için yetersiz zaman veya beslenme eğitimi eksikliği. Belirli çalışanları hedeflemek yerine yapısal müdahaleler uygulayın: sağlıklı yemek teslimatını sübvanse edin, ofis meyve-sebze programları oluşturun, sağlıklı gıda tedarikçileriyle indirim anlaşmaları yapın veya yemek hazırlama atölyeleri sağlayın. Büyük ölçek, beslenme erişimindeki mütevazi iyileştirmelerin bile önemli popülasyon sağlığı kazançları sağlayabileceği anlamına geliyor.",
+        "score": 8
       },
       "categories": [
-        "mental_health",
-        "lifestyle"
+        "nutrition"
       ],
       "health_tags": [
-        "daily_smoker",
-        "persistent_sadness"
+        "very_poor_nutrition",
+        "poor_nutrition"
       ],
       "demographic_tags": [],
       "target_group": {
-        "size": 62,
-        "percentage": 4.26,
+        "size": 1348,
+        "percentage": 92.52,
         "filters_applied": [
-          "A.smoking_status=daily_smoker",
-          "A.depression_mood=persistent_sadness"
+          "A.fruit_veg_intake IN (very_poor_nutrition OR poor_nutrition)"
         ],
         "total_population": 1457
       }
@@ -93,30 +93,28 @@
       "id": "insight_04",
       "index": 4,
       "english": {
-        "message": "Nearly half of surveyed employees (49.6%) report doing no regular exercise, and 58.8% take fewer than 5,000 steps daily - yet this represents only those health-conscious enough to complete the survey. The true workforce inactivity rate is likely far higher. The data reveals that non-exercisers exist across all demographic groups, suggesting systemic barriers rather than individual motivation issues. Companies should redesign workplaces and schedules to make movement inevitable: walking meetings, standing desks, hourly movement breaks, on-site fitness facilities, and exercise-friendly flexible scheduling.",
-        "proof": "Activity levels: 49.6% report no regular exercise (n=723), 17.2% weekly exercise only (n=250), 23.3% regular exercise (n=340). Daily step distribution: 26.4% very low steps (n=385), 32.4% low steps (n=472), totaling 58.8% below healthy activity threshold. Among high-risk employees, 75.8% report no exercise, suggesting strong relationship between inactivity and overall health risk."
+        "message": "Excessive sleep (9+ hours) affects only 25 employees but carries extreme health risks: 64% high risk and 84% elevated risk overall—nearly triple the population baseline. This small segment shows 2.92x risk amplification, similar to extreme pain levels. Excessive sleep often signals underlying depression, sleep disorders, or chronic fatigue rather than restfulness, and frequently co-occurs with severe anhedonia (27.3% very high risk when combined).\n\nCreate an immediate outreach program for these 25 employees. Excessive sleep is a clinical red flag requiring medical evaluation for sleep apnea, depression, thyroid issues, or other conditions. Partner with occupational health to offer sleep studies and endocrinology consultations. This targeted intervention addresses <2% of your workforce but could prevent serious health deterioration.",
+        "proof": "Excessive sleep: n=25 (1.7%), 64.0% high risk vs 21.9% population (2.92x ratio). Elevated risk 84.0%. Excessive sleep + severe anhedonia: n=11, 27.3% very high risk vs 0.8% population (10.12σ). Excessive sleep + persistent sadness: n=13, 23.1% very high risk (9.26σ). Strong signal despite small sample."
       },
       "turkish": {
-        "message": "Ankete katılan çalışanların yarısı (%49,6) düzenli egzersiz yapmıyor ve %58,8'i günde 5.000 adımın altında yürüyor - bu sadece sağlık anketini dolduracak kadar bilinçli çalışanlar arasında. Gerçek işgücü hareketsizlik oranı muhtemelen çok daha yüksek. Egzersiz yapmayan çalışanların tüm demografik gruplarda bulunması, bireysel motivasyon sorunundan çok sistemik engelleri işaret ediyor. Şirketler işyeri ve programlarını hareketi kaçınılmaz kılacak şekilde yeniden tasarlamalı: yürüyüş toplantıları, ayakta çalışma masaları, saatlik hareket molaları, yerinde spor tesisleri ve egzersize uygun esnek çalışma saatleri (n=723 egzersiz yapmayan).",
+        "message": "Aşırı uyku (günde 9+ saat) sadece 25 çalışanı etkiliyor ancak aşırı sağlık riskleri taşıyor: %64'ü yüksek risk ve genel olarak %84'ü yükseksek risk—popülasyon bazının neredeyse üç katı. Bu küçük segment 2,92 kat risk amplifikasyonu gösteriyor, aşırı ağrı seviyelerine benzer. Aşırı uyku genellikle dinlenmeyi değil, altta yatan depresyon, uyku bozuklukları veya kronik yorgunluk sinyali veriyor ve sıklıkla şiddetli motivasyon kaybıyla birlikte görülüyor (birlikte %27,3 çok yüksek risk). Bu 25 çalışan için acil bir yönlendirme programı oluşturun. Aşırı uyku, uyku apnesi, depresyon, tiroid sorunları veya diğer durumlar için tıbbi değerlendirme gerektiren klinik bir uyarı işaretidir. Uyku çalışmaları ve endokrinoloji konsültasyonları sunmak için işyeri sağlığıyla ortaklık kurun. Bu hedefli müdahale, işgücünüzün %2'sinden azını ele alıyor ancak ciddi sağlık bozulmasını önleyebilir.",
         "score": 9
       },
       "categories": [
-        "activity_level",
-        "lifestyle"
+        "sleep",
+        "mental_health"
       ],
       "health_tags": [
-        "no_exercise",
-        "very_low_steps",
-        "low_steps"
+        "excessive_sleep",
+        "severe_anhedonia"
       ],
       "demographic_tags": [],
       "target_group": {
-        "size": 0,
-        "percentage": 0.0,
+        "size": 11,
+        "percentage": 0.75,
         "filters_applied": [
-          "A.activity_level=no_exercise",
-          "A.daily_steps=very_low_steps",
-          "A.daily_steps=low_steps"
+          "A.sleep_quality=excessive_sleep",
+          "A.depression_anhedonia=severe_anhedonia"
         ],
         "total_population": 1457
       }
@@ -125,33 +123,28 @@
       "id": "insight_05",
       "index": 5,
       "english": {
-        "message": "Mental health symptoms cluster powerfully together in the data: employees with severe depression symptoms show 69% co-occurrence with constant loneliness, and persistent sadness correlates with loneliness at 66%. This suggests that isolated interventions addressing only one dimension will miss the interconnected nature of mental health. Companies should implement holistic mental health programs that simultaneously address mood, social connection, and stress management - such as group therapy, team building activities that foster genuine connection, and peer support networks rather than only individual counseling.",
-        "proof": "Strong mental health clustering observed: depression_mood × loneliness (Cramer's V = 0.35, p < 0.001); depression_anhedonia × loneliness (V = 0.316, p < 0.001). Specific patterns: employees with severe anhedonia show 69% rate of always_lonely vs 24% population; persistent sadness shows 66% always_lonely rate; frequent sadness shows 37% always_lonely vs 24% population and 23% often_lonely vs 18% population."
+        "message": "Half your workforce (49.6%, n=723) reports no structured exercise, and an additional 32.4% take fewer than 5,000 daily steps—together representing 82% of employees in sedentary patterns. Yet daily exercisers show remarkable health outcomes: 0% high risk compared to 21.9% population-wide. The protective effect is absolute within this 49-employee group, suggesting exercise may be your single most powerful modifiable health factor.\n\nLaunch tiered intervention programs: for the 723 non-exercisers, start with low-barrier activities like walking meetings or subsidized gym memberships. For the 385 very-low-step employees, implement step challenges with team-based incentives. The scale demands creative solutions—experiment with standing desks, activity breaks, or flexible hours for exercise. Even moving 10% of sedentary employees to moderate activity could significantly reduce your high-risk population.",
+        "proof": "No exercise: 49.6% (n=723). Very low steps (<5,000): 26.4% (n=385). Combined sedentary: 82% of workforce. Daily exercise: n=49 (3.4%), 0% high risk vs 21.9% population (infinite protection factor). Regular/frequent/daily exercise combined: n=484 (33.2%), shows protective effects across all levels."
       },
       "turkish": {
-        "message": "Ruh sağlığı belirtileri güçlü şekilde bir araya geliyor: şiddetli depresyon belirtileri olan çalışanların %69'u sürekli yalnızlık yaşıyor ve sürekli üzüntü %66 oranında yalnızlıkla ilişkili. Bu, yalnızca bir boyutu ele alan izole müdahalelerin ruh sağlığının birbirine bağlı doğasını kaçıracağını gösteriyor. Şirketler ruh hali, sosyal bağlantı ve stres yönetimini aynı anda ele alan bütünsel ruh sağlığı programları uygulamalı: grup terapisi, gerçek bağlantıyı teşvik eden takım oluşturma aktiviteleri ve akran destek ağları - sadece bireysel danışmanlık değil (Cramer's V=0.35, p<0.001).",
-        "score": 8
+        "message": "İşgücünüzün yarısı (%49,6, n=723) yapılandırılmış egzersiz yapmıyor ve ek olarak %32,4'ü günde 5.000'den az adım atıyor—birlikte çalışanların %82'si hareketsiz paternlerde. Ancak günlük egzersiz yapanlar dikkat çekici sağlık sonuçları gösteriyor: %0 yüksek risk, popülasyon genelinde %21,9'a karşı. Koruyucu etki bu 49 kişilik grup içinde mutlak, egzersizin değiştirilebilir en güçlü tek sağlık faktörünüz olabileceğini gösteriyor. Kademeli müdahale programları başlatın: 723 egzersiz yapmayan için yürüyüş toplantıları veya sübvansiyonlu spor salonu üyelikleri gibi düşük engelli faaliyetlerle başlayın. 385 çok düşük adımlı çalışan için, takım bazlı teşviklerle adım yarışmaları uygulayın. Ölçek yaratıcı çözümler gerektiriyor—ayakta çalışma masaları, aktivite molaları veya egzersiz için esnek saatlerle denemeler yapın. Hareketsiz çalışanların sadece %10'unu orta aktiviteye taşımak bile yüksek riskli popülasyonunuzu önemli ölçüde azaltabilir.",
+        "score": 9
       },
       "categories": [
-        "mental_health"
+        "activity_level"
       ],
       "health_tags": [
-        "severe_anhedonia",
-        "always_lonely",
-        "persistent_sadness",
-        "frequent_sadness",
-        "often_lonely"
+        "no_exercise",
+        "very_low_steps",
+        "daily_exercise"
       ],
       "demographic_tags": [],
       "target_group": {
-        "size": 0,
-        "percentage": 0.0,
+        "size": 284,
+        "percentage": 19.49,
         "filters_applied": [
-          "A.depression_anhedonia=severe_anhedonia",
-          "A.loneliness=always_lonely",
-          "A.depression_mood=persistent_sadness",
-          "A.depression_mood=frequent_sadness",
-          "A.loneliness=often_lonely"
+          "A.activity_level IN (no_exercise OR daily_exercise)",
+          "A.daily_steps=very_low_steps"
         ],
         "total_population": 1457
       }
@@ -160,31 +153,29 @@
       "id": "insight_06",
       "index": 6,
       "english": {
-        "message": "A striking nutrition crisis exists even among health-engaged survey participants: 53.1% report very poor fruit/vegetable intake and 39.4% report poor intake, meaning 92.5% of respondents don't meet basic nutritional standards. Only 1.7% achieve good or excellent nutrition. This near-universal deficiency suggests that individual nutrition education has failed - employees likely know vegetables are healthy but face structural barriers (limited healthy options in cafeterias, time poverty, cost, convenience). Companies must change the food environment itself through subsidized healthy meal programs, improved cafeteria offerings, free fruit provisions, and healthy snack policies.",
-        "proof": "Fruit/vegetable intake distribution: 53.1% very poor nutrition (n=774), 39.4% poor nutrition (n=574), totaling 92.5% below adequate. Only 5.8% adequate (n=84), 1.4% good (n=20), 0.3% excellent (n=5). This represents engaged employees who completed health survey - true workforce nutrition may be worse. Diversity score: 0.588, indicating highly concentrated poor nutrition across workforce."
+        "message": "Depression and loneliness cluster together powerfully (Cramer's V = 0.35, p < 0.001), revealing how mental health challenges compound. Among employees reporting persistent sadness, 66% also feel always lonely—nearly triple the 24% population rate. Among those with severe motivasyon issues, 69% report constant loneliness. This isn't coincidence—these conditions reinforce each other in a cycle where social isolation worsens mood, and low mood drives withdrawal.\n\nMental health programs must address social connection alongside psychological support. Implement structured social opportunities: team-building activities, employee resource groups, mentorship programs, or co-working spaces that encourage organic interaction. Screen for loneliness when employees present with mood concerns, and vice versa. Breaking the isolation-depression cycle requires treating both dimensions simultaneously rather than addressing mental health in isolation.",
+        "proof": "Depression-loneliness correlation: χ² significant, Cramer's V = 0.35. Persistent sadness group: 66% always lonely vs 24% population. Severe anhedonia group: 69% always lonely vs 24% population. Frequent sadness: 37% always lonely, 23% often lonely. Overall loneliness prevalence: 24% always, 17.8% often, 21.9% sometimes (63.7% experience regular loneliness)."
       },
       "turkish": {
-        "message": "Sağlık bilinci yüksek anket katılımcıları arasında bile çarpıcı bir beslenme krizi var: %53,1'i çok yetersiz meyve-sebze tüketimi, %39,4'ü yetersiz tüketim bildiriyor - yani katılımcıların %92,5'i temel beslenme standartlarını karşılamıyor. Yalnızca %1,7'si iyi veya mükemmel beslenme gösteriyor. Bu neredeyse evrensel eksiklik, bireysel beslenme eğitiminin başarısız olduğunu gösteriyor - çalışanlar sebzelerin sağlıklı olduğunu biliyor ama yapısal engellerle karşılaşıyor. Şirketler gıda ortamının kendisini değiştirmeli: sübvansiyonlu sağlıklı yemek programları, iyileştirilmiş kafeterya seçenekleri, ücretsiz meyve temini, sağlıklı atıştırmalık politikaları (n=774 çok yetersiz, n=574 yetersiz).",
-        "score": 9
+        "message": "Depresyon ve yalnızlık güçlü bir şekilde kümeleniyor (Cramer's V = 0,35, p < 0,001), ruh sağlığı zorluklarının nasıl birleştiğini ortaya koyuyor. Sürekli üzüntü bildiren çalışanlar arasında %66'sı her zaman yalnız hissediyor—%24 popülasyon oranının neredeyse üç katı. Şiddetli motivasyon sorunu yaşayanlar arasında %69'u sürekli yalnızlık bildiriyor. Bu tesadüf değil—bu durumlar sosyal izolasyonun ruh halini kötüleştirdiği ve düşük ruh halinin geri çekilmeyi tetiklediği bir döngüde birbirini güçlendiriyor. Ruh sağlığı programları, psikolojik desteğin yanı sıra sosyal bağlantıyı da ele almalı. Yapılandırılmış sosyal fırsatlar uygulayın: takım oluşturma aktiviteleri, çalışan kaynak grupları, mentorluk programları veya organik etkileşimi teşvik eden ortak çalışma alanları. Çalışanlar ruh hali endişeleriyle başvurduğunda yalnızlık için tarama yapın ve bunun tersi de geçerli. İzolasyon-depresyon döngüsünü kırmak, ruh sağlığını izole bir şekilde ele almak yerine her iki boyutu eşzamanlı olarak tedavi etmeyi gerektirir.",
+        "score": 8
       },
       "categories": [
-        "nutrition"
+        "mental_health"
       ],
       "health_tags": [
-        "very_poor_nutrition",
-        "poor_nutrition",
-        "excellent_nutrition",
-        "good_nutrition"
+        "persistent_sadness",
+        "always_lonely",
+        "severe_anhedonia"
       ],
       "demographic_tags": [],
       "target_group": {
-        "size": 0,
-        "percentage": 0.0,
+        "size": 93,
+        "percentage": 6.38,
         "filters_applied": [
-          "A.fruit_veg_intake=very_poor_nutrition",
-          "A.fruit_veg_intake=poor_nutrition",
-          "A.fruit_veg_intake=excellent_nutrition",
-          "A.fruit_veg_intake=good_nutrition"
+          "A.depression_mood=persistent_sadness",
+          "A.loneliness=always_lonely",
+          "A.depression_anhedonia=severe_anhedonia"
         ],
         "total_population": 1457
       }
@@ -193,28 +184,26 @@
       "id": "insight_07",
       "index": 7,
       "english": {
-        "message": "A micro-segment of just 15 employees who report no exercise combined with excessive sleep shows an extraordinary 80% high-risk rate - 3.65 times the population baseline. Such tiny high-risk segments represent perfect targets for intensive, personalized intervention with exceptional ROI potential. HR systems should use multi-factor flagging algorithms to identify these micro-segments automatically and offer white-glove concierge health services: dedicated health coaches, priority medical appointments, home sleep studies, and personalized exercise programs. The small size makes comprehensive support affordable while the concentrated risk maximizes impact.",
-        "proof": "Segment: no_exercise + excessive_sleep shows 80.0% high-risk rate vs 21.9% population (risk ratio: 3.65x, difference: +58.1pp, n=15, 1.0% of population). Other high-impact micro-segments: frequently_irritated + insufficient_sleep (77.4% high-risk, 3.54x, n=31); heavy_alcohol + sometimes_irritated (75.0% high-risk, 3.43x, n=8); excessive_sleep alone (64.0% high-risk, 2.92x, n=25)."
+        "message": "Underweight employees (BMI <18.5, n=88) show surprisingly high health risks with a 1.91x risk ratio, similar to obese employees despite conventional wisdom treating low weight as healthy. This 6.1% segment faces elevated risks often overlooked in wellness programs that focus primarily on overweight/obesity. The risk likely stems from inadequate nutrition, underlying chronic illness, high stress, or eating disorders rather than genetic predisposition to thinness.\n\nExpand wellness screening to explicitly include underweight employees. Train occupational health staff to recognize that low BMI can signal serious health concerns requiring medical evaluation for malnutrition, hyperthyroidism, gastrointestinal disorders, or eating disorders. Avoid \"healthy weight\" messaging that inadvertently celebrates extreme leanness. Nutrition programs should address both ends of the weight spectrum, offering support for healthy weight gain alongside weight loss resources.",
+        "proof": "Underweight employees: n=88 (6.1% of population), risk ratio 1.91x for high-risk category. Obese employees show 1.95x risk ratio—nearly identical despite opposite weight extremes. Normal weight: 49.4% (n=717), 0.51x risk ratio (protective). BMI category × health risk: χ² = 178.64, p < 0.001, Cramer's V = 0.203 (strong effect)."
       },
       "turkish": {
-        "message": "Egzersiz yapmayan ve aşırı uyuyan yalnızca 15 çalışanlık mikro-segment olağanüstü %80 yüksek risk oranı gösteriyor - nüfus ortalamasının 3,65 katı. Bu tür küçük yüksek riskli segmentler, olağanüstü yatırım getirisi potansiyeline sahip yoğun, kişiselleştirilmiş müdahale için mükemmel hedeflerdir. İK sistemleri bu mikro-segmentleri otomatik olarak tespit etmek için çok faktörlü bayrak algoritmaları kullanmalı ve özel konsiyerj sağlık hizmetleri sunmalı: özel sağlık koçları, öncelikli tıbbi randevular, evde uyku çalışmaları ve kişiselleştirilmiş egzersiz programları. Küçük boyut kapsamlı desteği uygun fiyatlı hale getirirken yoğun risk etkiyi maksimize ediyor (n=15, risk oranı: 3.65x).",
-        "score": 10
+        "message": "Düşük kilolu çalışanlar (BMI <18,5, n=88) şaşırtıcı derecede yüksek sağlık riskleri gösteriyor, 1,91 kat risk oranıyla—düşük kilonun sağlıklı olduğunu varsayan geleneksel bilgeliğe rağmen obez çalışanlara benzer. Bu %6,1'lik segment, öncelikle fazla kilo/obeziteye odaklanan wellness programlarında genellikle gözden kaçan yüksek risklerle karşı karşıya. Risk muhtemelen genetik incelik eğiliminden ziyade yetersiz beslenme, altta yatan kronik hastalık, yüksek stres veya yeme bozukluklarından kaynaklanıyor. Wellness taramasını açıkça düşük kilolu çalışanları kapsayacak şekilde genişletin. İşyeri sağlığı personelini, düşük BMI'nin malnütrisyon, hipertiroidi, gastrointestinal bozukluklar veya yeme bozuklukları için tıbbi değerlendirme gerektiren ciddi sağlık endişelerini işaret edebileceğini fark etmek için eğitin. İstemeden aşırı zayıflığı kutlayan \"sağlıklı kilo\" mesajlarından kaçının. Beslenme programları, kilo kaybı kaynaklarının yanı sıra sağlıklı kilo alma desteği sunarak kilo spektrumunun her iki ucunu da ele almalı.",
+        "score": 8
       },
       "categories": [
-        "activity_level",
-        "sleep"
+        "physical_health",
+        "nutrition"
       ],
-      "health_tags": [
-        "no_exercise",
-        "excessive_sleep"
+      "health_tags": [],
+      "demographic_tags": [
+        "underweight"
       ],
-      "demographic_tags": [],
       "target_group": {
-        "size": 15,
-        "percentage": 1.03,
+        "size": 88,
+        "percentage": 6.04,
         "filters_applied": [
-          "A.activity_level=no_exercise",
-          "A.sleep_quality=excessive_sleep"
+          "bmi_category=underweight"
         ],
         "total_population": 1457
       }
@@ -223,28 +212,28 @@
       "id": "insight_08",
       "index": 8,
       "english": {
-        "message": "Daily exercise shows a perfect protective effect: 0% of employees exercising daily (n=49) are classified as high-risk, compared to 21.9% overall. Similarly, employees reporting never feeling irritated show 0% high-risk rates. These represent proof points that certain behaviors deliver near-complete protection when sustained. Companies should study these high-performing individuals to understand what enables their consistency, then systematically replicate those conditions: flexible scheduling that accommodates morning workouts, on-site facilities eliminating commute barriers, team-based fitness challenges creating social accountability, or workplace stress management reducing irritability triggers.",
-        "proof": "Daily exercise shows 0.0% high-risk rate vs 21.9% population (protection factor: infinite, n=49, 3.4% of workforce). Never irritated shows 0.0% high-risk rate (protection factor: infinite, n=36, 2.5% of workforce). By contrast: no exercise shows 49.6% prevalence with 75.8% of high-risk employees reporting no exercise. The contrast demonstrates powerful protective effect of sustained daily activity and stress management."
+        "message": "Only 11.1% of employees report full interest and pleasure in activities, while 53% show mild and 24.3% moderate loss of interest—a total of 88.9% experiencing some degree of anhedonia. This is a striking mental health signal often overlooked because it's subtler than obvious sadness or stress. Anhedonia predicts disengagement, reduced productivity, and burnout even when employees aren't clinically depressed, and it strongly correlates with very high health risk when severe (2.40x baseline).\n\nScreen for engagement and motivation systematically, not just during performance reviews. Anhedonia often manifests as reduced work enthusiasm, missed social events, or declining participation in previously enjoyed activities. Implement \"pulse\" surveys asking about interest and motivation levels. Offer coaching focused on rediscovering meaning and purpose, not just stress management. Consider whether workplace culture inadvertently contributes—excessive workload, lack of autonomy, or insufficient recognition can all erode intrinsic motivation over time.",
+        "proof": "Interest/pleasure levels: full interest 11.1% (n=162), mild loss 53.0% (n=772), moderate loss 24.3% (n=354), severe loss 11.6% (n=169). Total experiencing anhedonia: 88.9% (n=1,295). Severe anhedonia shows 2.40x risk amplification with 95.3% elevated risk rate. Anhedonia × loneliness: severe anhedonia = 69% always lonely vs 24% population."
       },
       "turkish": {
-        "message": "Günlük egzersiz yapan çalışanların hiçbiri (%0) yüksek risk olarak sınıflandırılmıyor (genel nüfusta %21,9). Benzer şekilde, hiç sinirli hissetmeyen çalışanlar %0 yüksek risk oranı gösteriyor. Bunlar, belirli davranışların sürdürüldüğünde neredeyse tam koruma sağladığına dair kanıtlardır. Şirketler bu yüksek performanslı bireyleri incelemeli ve tutarlılıklarını sağlayan faktörleri anlamalı, ardından bu koşulları sistematik olarak çoğaltmalı: sabah antrenmanlarına uyum sağlayan esnek programlama, ulaşım engellerini ortadan kaldıran yerinde tesisler, sosyal sorumluluk yaratan takım bazlı fitness yarışmaları veya sinirlilik tetikleyicilerini azaltan işyeri stres yönetimi (günlük egzersiz n=49, hiç sinirli değil n=36).",
-        "score": 9
+        "message": "Çalışanların sadece %11,1'i aktivitelerde tam ilgi ve zevk bildiriyor, %53'ü hafif ve %24,3'ü orta derece ilgi kaybı gösteriyor—toplam %88,9'u bir dereceye kadar motivasyon kaybı yaşıyor. Bu, genellikle gözden kaçan çarpıcı bir ruh sağlığı sinyali çünkü belirgin üzüntü veya stresten daha ince. Motivasyon kaybı, çalışanlar klinik olarak depresif olmasa bile, bağlılık azalması, üretkenlik düşüşü ve tükenmişliği öngörüyor ve şiddetli olduğunda çok yüksek sağlık riskiyle güçlü bir şekilde ilişkili (2,40 kat bazlık). Bağlılık ve motivasyonu sistematik olarak tarayın, sadece performans değerlendirmeleri sırasında değil. Motivasyon kaybı genellikle azalan iş coşkusu, kaçırılan sosyal etkinlikler veya daha önce keyif alınan aktivitelere katılımda düşüş olarak kendini gösterir. İlgi ve motivasyon seviyeleri hakkında soran \"nabız\" anketleri uygulayın. Sadece stres yönetimi değil, anlam ve amaç yeniden keşfetmeye odaklanan koçluk sunun. İşyeri kültürünün istemeden katkıda bulunup bulunmadığını düşünün—aşırı iş yükü, özerklik eksikliği veya yetersiz tanınma, zamanla içsel motivasyonu aşındırabilir.",
+        "score": 7
       },
       "categories": [
-        "activity_level",
         "mental_health"
       ],
       "health_tags": [
-        "daily_exercise",
-        "never_irritated"
+        "full_interest_pleasure",
+        "mild_anhedonia",
+        "moderate_anhedonia",
+        "severe_anhedonia"
       ],
       "demographic_tags": [],
       "target_group": {
-        "size": 4,
-        "percentage": 0.27,
+        "size": 1457,
+        "percentage": 100.0,
         "filters_applied": [
-          "A.activity_level=daily_exercise",
-          "A.stress_level_irritability=never_irritated"
+          "A.depression_anhedonia IN (full_interest_pleasure OR mild_anhedonia OR moderate_anhedonia OR severe_anhedonia)"
         ],
         "total_population": 1457
       }
@@ -253,32 +242,30 @@
       "id": "insight_09",
       "index": 9,
       "english": {
-        "message": "Chronic disease prevalence is surprisingly low even in this survey population: diabetes (2.9%), heart disease (2.3%), hypertension (2.0%), cancer (0.5%). Yet 22.6% are classified as high-risk, indicating that current risk stems primarily from modifiable lifestyle factors rather than established disease. This represents a prevention opportunity window - companies can intervene before diseases develop rather than managing complications afterward. The data shows lifestyle changes now can prevent the chronic disease burden that would otherwise emerge in 5-10 years, making wellness investments today far more cost-effective than disease management tomorrow.",
-        "proof": "Chronic disease prevalence: diabetes 2.9% (n=42), thyroid 8.5% (n=124), kidney disease 1.0% (n=14), heart disease 2.3% (n=34), obesity 3.3% (n=48), hypertension 2.0% (n=29), cancer 0.5% (n=8). Combined chronic disease prevalence: <10% of population. Yet 21.9% high-risk + 0.8% very high-risk = 22.7% at elevated risk. This indicates risk driven by lifestyle factors (smoking, inactivity, poor nutrition, stress) rather than existing disease."
+        "message": "Physical pain affects nearly two-thirds of employees (63.2% report some level of pain), yet only 26.3% are pain-free. Extreme pain, while affecting just 33 employees (2.3%), carries massive health implications: 2.77x risk amplification and 84.8% elevated risk rate—comparable to daily smoking. Moderate-to-extreme pain (17.1% of workforce, n=248) likely reduces physical activity, disrupts sleep, and contributes to stress and mood problems, creating cascading health deterioration.\n\nPain management should be a primary occupational health focus. Assess whether workplace ergonomics, physical job demands, or inadequate equipment contribute to pain prevalence. Offer ergonomic assessments, standing desk options, physical therapy access, and chronic pain management programs. For the 33 extreme pain employees, immediate case management is essential—chronic severe pain often indicates treatable conditions being inadequately managed, and these employees are likely experiencing significant productivity loss and quality of life impairment alongside health risks.",
+        "proof": "Pain distribution: no pain 26.3% (n=383), minimal 36.9% (n=538), mild 19.8% (n=288), moderate 9.0% (n=131), severe 5.8% (n=84), extreme 2.3% (n=33). Total with pain: 73.7%. Extreme pain: 2.77x risk amplification, 84.8% elevated risk (comparable to excessive sleep at 2.92x). Moderate+ pain: 17.1% of workforce (n=248)."
       },
       "turkish": {
-        "message": "Anket popülasyonunda kronik hastalık yaygınlığı şaşırtıcı derekede düşük: diyabet (%2,9), kalp hastalığı (%2,3), hipertansiyon (%2,0), kanser (%0,5). Ancak %22,6'sı yüksek risk olarak sınıflandırılıyor - bu, mevcut riskin yerleşik hastalıktan çok değiştirilebilir yaşam tarzı faktörlerinden kaynaklandığını gösteriyor. Bu bir önleme fırsat penceresidir - şirketler hastalıklar gelişmeden önce müdahale edebilir. Veriler, bugün yaşam tarzı değişikliklerinin 5-10 yıl içinde ortaya çıkacak kronik hastalık yükünü önleyebileceğini gösteriyor; bu da bugünkü sağlık yatırımlarını yarının hastalık yönetiminden çok daha maliyet-etkin hale getiriyor (yüksek risk n=330, kronik hastalık toplamı <%10).",
+        "message": "Fiziksel ağrı, çalışanların neredeyse üçte ikisini etkiliyor (%63,2 bir düzeyde ağrı bildiriyor), ancak sadece %26,3'ü ağrısız. Aşırı ağrı sadece 33 çalışanı (%2,3) etkilerken büyük sağlık etkileri taşıyor: 2,77 kat risk amplifikasyonu ve %84,8 yüksek risk oranı—günlük sigaraya eşdeğer. Orta-aşırı ağrı (işgücünün %17,1'i, n=248) muhtemelen fiziksel aktiviteyi azaltıyor, uykuyu bozuyor ve stres ve ruh hali sorunlarına katkıda bulunarak basamaklı sağlık bozulması yaratıyor. Ağrı yönetimi, birincil işyeri sağlığı odak noktası olmalı. İşyeri ergonomisinin, fiziksel iş taleplerinin veya yetersiz ekipmanın ağrı yaygınlığına katkıda bulunup bulunmadığını değerlendirin. Ergonomik değerlendirmeler, ayakta masa seçenekleri, fizik tedavi erişimi ve kronik ağrı yönetimi programları sunun. 33 aşırı ağrılı çalışan için acil vaka yönetimi şart—kronik şiddetli ağrı genellikle yetersiz yönetilen tedavi edilebilir durumları gösterir ve bu çalışanlar muhtemelen sağlık risklerinin yanı sıra önemli üretkenlik kaybı ve yaşam kalitesi bozulması yaşıyorlar.",
         "score": 8
       },
       "categories": [
-        "health_conditions",
-        "lifestyle"
+        "physical_health"
       ],
       "health_tags": [
-        "no_diabetes",
-        "no_heart_disease",
-        "no_hypertension",
-        "no_cancer"
+        "no_pain",
+        "minimal_pain",
+        "mild_pain",
+        "moderate_pain",
+        "severe_pain",
+        "extreme_pain"
       ],
       "demographic_tags": [],
       "target_group": {
-        "size": 1353,
-        "percentage": 92.86,
+        "size": 1457,
+        "percentage": 100.0,
         "filters_applied": [
-          "diabetes_status=no_diabetes",
-          "heart_disease_status=no_heart_disease",
-          "hypertension_status=no_hypertension",
-          "cancer_status=no_cancer"
+          "A.physical_pain IN (no_pain OR minimal_pain OR mild_pain OR moderate_pain OR severe_pain OR extreme_pain)"
         ],
         "total_population": 1457
       }
@@ -287,33 +274,31 @@
       "id": "insight_10",
       "index": 10,
       "english": {
-        "message": "Stress manifests differently across the workforce: 44.9% sometimes feel irritated, 34.2% often irritated, and 8.4% frequently irritated, while 41.8% sometimes feel out of control and 26.4% often feel out of control. This widespread stress experience suggests systemic workplace stressors rather than individual resilience deficits. Companies should investigate organizational sources of stress - unrealistic deadlines, unclear expectations, insufficient autonomy, poor manager communication, lack of recognition - and address root causes through workload audits, manager training, role clarity initiatives, and autonomy-enhancing policies rather than only offering individual stress management apps.",
-        "proof": "Stress level - irritability distribution: 44.9% sometimes irritated (n=654), 34.2% often irritated (n=498), 8.4% frequently irritated (n=123), only 10.0% rarely (n=146) and 2.5% never irritated (n=36). Stress level - locus of control: 41.8% sometimes out of control (n=609), 26.4% often (n=384), 9.5% frequently (n=138), only 14.6% mostly in control (n=213) and 7.8% always in control (n=113). Combined: 87.5% experience regular irritability; 77.7% experience regular loss of control."
+        "message": "High-risk employees show dramatically different behavior patterns: 75.8% never exercise (vs 49.6% population), 58.5% smoke daily (vs 22.4% population), and 34.2% have insufficient sleep (vs 15.9% population). These aren't independent choices—they cluster within the same 330 individuals, suggesting a \"multiple risk factor\" syndrome where stress, poor coping mechanisms, and health neglect reinforce each other. Single-issue wellness programs may fail because addressing only smoking or exercise leaves underlying patterns intact.\n\nDesign holistic interventions for the high-risk segment that acknowledge multiple behaviors stem from common causes like stress, time poverty, or health fatalism. Pilot a comprehensive case management program for willing high-risk employees combining behavioral health coaching, practical time management support, stress reduction, and progressive lifestyle changes. Track whether integrated approaches produce better outcomes than siloed programs offering smoking cessation, fitness challenges, and stress workshops separately.",
+        "proof": "High-risk employees: n=330 (22.6%). Behavior clustering: 75.8% no exercise vs 49.6% population, 58.5% daily smoker vs 22.4% population, 34.2% insufficient sleep vs 15.9% population, 37.9% very low steps vs 26.4% population. Risk behaviors concentrate in same individuals rather than distributing randomly across population."
       },
       "turkish": {
-        "message": "Stres işgücü genelinde farklı şekillerde ortaya çıkıyor: %44,9 bazen sinirli, %34,2 sık sık sinirli, %8,4 çok sık sinirli hissediyor; %41,8 bazen kontrol eksikliği, %26,4 sık sık kontrol eksikliği yaşıyor. Bu yaygın stres deneyimi, bireysel dayanıklılık eksikliğinden çok sistemik işyeri stres faktörlerini gösteriyor. Şirketler organizasyonel stres kaynaklarını araştırmalı - gerçekçi olmayan son tarihler, belirsiz beklentiler, yetersiz özerklik, zayıf yönetici iletişimi, tanınma eksikliği - ve yalnızca bireysel stres yönetimi uygulamaları sunmak yerine iş yükü denetimleri, yönetici eğitimi, rol netliği girişimleri ve özerklik artırıcı politikalar aracılığıyla kök nedenleri ele almalı.",
-        "score": 8
+        "message": "Yüksek riskli çalışanlar dramatik şekilde farklı davranış paternleri gösteriyor: %75,8'i asla egzersiz yapmıyor (popülasyonda %49,6), %58,5'i günlük sigara içiyor (popülasyonda %22,4) ve %34,2'si yetersiz uykuya sahip (popülasyonda %15,9). Bunlar bağımsız tercihler değil—aynı 330 birey içinde kümeleniyorlar, stresin, zayıf başa çıkma mekanizmalarının ve sağlık ihmalinin birbirini güçlendirdiği bir \"çoklu risk faktörü\" sendromunu gösteriyor. Tek konulu wellness programları başarısız olabilir çünkü sadece sigarayı veya egzersizi ele almak altta yatan paternleri sağlam bırakır. Yüksek riskli segment için, stres, zaman yoksulluğu veya sağlık fatalizmi gibi ortak nedenlerden kaynaklanan çoklu davranışları kabul eden bütünsel müdahaleler tasarlayın. İstekli yüksek riskli çalışanlar için davranışsal sağlık koçluğu, pratik zaman yönetimi desteği, stres azaltma ve ilerici yaşam tarzı değişikliklerini birleştiren kapsamlı bir vaka yönetimi programı pilot uygulayın. Entegre yaklaşımların, sigara bırakma, fitness yarışmaları ve stres atölyeleri ayrı ayrı sunan silolu programlardan daha iyi sonuçlar üretip üretmediğini izleyin.",
+        "score": 9
       },
       "categories": [
-        "mental_health"
+        "lifestyle",
+        "activity_level",
+        "sleep"
       ],
       "health_tags": [
-        "sometimes_irritated",
-        "often_irritated",
-        "frequently_irritated",
-        "sometimes_out_of_control",
-        "often_out_of_control"
+        "daily_smoker",
+        "no_exercise",
+        "insufficient_sleep"
       ],
       "demographic_tags": [],
       "target_group": {
-        "size": 0,
-        "percentage": 0.0,
+        "size": 37,
+        "percentage": 2.54,
         "filters_applied": [
-          "A.stress_level_irritability=sometimes_irritated",
-          "A.stress_level_irritability=often_irritated",
-          "A.stress_level_irritability=frequently_irritated",
-          "A.stress_level_loc=sometimes_out_of_control",
-          "A.stress_level_loc=often_out_of_control"
+          "A.smoking_status=daily_smoker",
+          "A.activity_level=no_exercise",
+          "A.sleep_quality=insufficient_sleep"
         ],
         "total_population": 1457
       }
@@ -322,109 +307,11 @@
       "id": "insight_11",
       "index": 11,
       "english": {
-        "message": "Obese employees with persistent sadness face catastrophic compound risk: 17.9% fall into very high-risk category compared to 0.8% overall - representing a 22-fold elevation. This tiny segment of 28 employees needs immediate, multidisciplinary intervention combining weight management, mental health support, and medical monitoring. The extreme risk elevation suggests these employees face cascading health crises where physical and mental health deteriorate together. Companies should implement integrated care pathways that provide simultaneous access to dietitians, therapists, physicians, and fitness coaches rather than fragmented specialty referrals.",
-        "proof": "Obese employees with persistent sadness show 17.9% very high-risk rate vs 0.8% population baseline (p < 0.001, 10.42σ, risk ratio: 22.4x, n=28). Other severe compound effects: excessive_sleep + severe_anhedonia (27.3% very high-risk, 10.12σ, n=11); excessive_sleep + persistent_sadness (23.1% very high-risk, 9.26σ, n=13); excessive_sleep + always_lonely (21.4% very high-risk, 8.90σ, n=14); obese + daily_smoker (11.3% very high-risk, 8.85σ, n=53)."
+        "message": "Employees with positive mood show a striking nutrition pattern: 48% consume minimal sugar compared to just 26% population-wide. This unexpected correlation (Cramer's V = 0.159, p < 0.001) between mental health and sugar intake suggests either that sugar consumption affects mood negatively, or that people with better mental health make more deliberate nutrition choices. The relationship challenges the common assumption that stressed employees use sugar for comfort—in fact, lower sugar intake associates with better mental health.\n\nReframe nutrition education to emphasize the mood-nutrition connection, not just physical health. Highlight to employees that reducing sugar may improve mental wellbeing alongside metabolic health. Test whether nutrition coaching that emphasizes mental health benefits produces better engagement than traditional weight-focused messaging. Consider that employees already experiencing good mental health may be most receptive to nutrition interventions, potentially creating a virtuous cycle where nutrition improvements further enhance mood.",
+        "proof": "Depression mood × sugar intake: χ² significant, Cramer's V = 0.159. Positive mood group: 48% minimal sugar vs 26% population (difference +22pp). Sugar distribution overall: minimal 25.9% (n=377), daily 23.7% (n=346), showing high variance. Relationship unexpected as conventional wisdom suggests stressed employees consume more sugar for comfort."
       },
       "turkish": {
-        "message": "Obez ve sürekli üzüntü yaşayan çalışanlar felaket düzeyinde bileşik risk taşıyor: %17,9'u çok yüksek risk kategorisinde (genel nüfusta %0,8) - 22 kat artış. Yalnızca 28 çalışanlık bu küçük segment, kilo yönetimi, ruh sağlığı desteği ve tıbbi izlemeyi birleştiren acil, multidisipliner müdahale gerektiriyor. Aşırı risk artışı, bu çalışanların fiziksel ve zihinsel sağlığın birlikte kötüleştiği kademeli sağlık krizleriyle karşılaştığını gösteriyor. Şirketler, parçalı uzmanlık yönlendirmeleri yerine diyetisyen, terapist, doktor ve fitness koçlarına eşzamanlı erişim sağlayan entegre bakım yolları uygulamalıdır (n=28, risk oranı: 22.4x, 10.42σ).",
-        "score": 10
-      },
-      "categories": [
-        "physical_health",
-        "mental_health"
-      ],
-      "health_tags": [
-        "persistent_sadness"
-      ],
-      "demographic_tags": [
-        "obese"
-      ],
-      "target_group": {
-        "size": 28,
-        "percentage": 1.92,
-        "filters_applied": [
-          "A.depression_mood=persistent_sadness",
-          "bmi_category=obese"
-        ],
-        "total_population": 1457
-      }
-    },
-    {
-      "id": "insight_12",
-      "index": 12,
-      "english": {
-        "message": "Normal weight employees with positive mood achieve 59% low-risk classification, but normal weight alone doesn't guarantee health - the data shows normal weight employees span all risk categories. This challenges the oversimplified \"weight = health\" narrative and demonstrates that BMI must be evaluated alongside mental health, lifestyle behaviors, and stress levels. Companies should avoid weight-centric wellness programs that stigmatize obesity while ignoring unhealthy normal-weight employees. Instead, offer comprehensive health assessments measuring multiple dimensions and provide personalized interventions based on individual risk profiles rather than appearance-based assumptions.",
-        "proof": "Normal weight + positive mood shows 59.0% low-risk rate vs 12.8% population (11.75σ, n=83). Normal weight + full_interest_pleasure shows 56.2% low-risk (10.84σ, n=80). However, BMI_category distribution across risk levels shows normal weight employees present in all categories: 49.4% of total population is normal weight (n=717), yet they represent both highest low-risk group and significant portion of high-risk group. This indicates weight alone insufficient predictor; mental health and lifestyle are critical factors."
-      },
-      "turkish": {
-        "message": "Normal kilolu ve olumlu ruh haline sahip çalışanların %59'u düşük risk gösteriyor, ancak tek başına normal kilo sağlığı garanti etmiyor - veriler normal kilolu çalışanların tüm risk kategorilerine yayıldığını gösteriyor. Bu, aşırı basitleştirilmiş \"kilo = sağlık\" anlatısına meydan okuyor ve BMI'nin ruh sağlığı, yaşam tarzı davranışları ve stres seviyeleriyle birlikte değerlendirilmesi gerektiğini gösteriyor. Şirketler, obeziteyi damgalayan ancak sağlıksız normal kilolu çalışanları göz ardı eden kilo merkezli sağlık programlarından kaçınmalı. Bunun yerine, birden fazla boyutu ölçen kapsamlı sağlık değerlendirmeleri sunmalı ve görünüşe dayalı varsayımlar yerine bireysel risk profillerine göre kişiselleştirilmiş müdahaleler sağlamalıdır (normal kilo + olumlu ruh hali n=83, 11.75σ).",
-        "score": 8
-      },
-      "categories": [
-        "physical_health",
-        "mental_health"
-      ],
-      "health_tags": [
-        "positive_mood",
-        "full_interest_pleasure"
-      ],
-      "demographic_tags": [
-        "normal_weight"
-      ],
-      "target_group": {
-        "size": 46,
-        "percentage": 3.16,
-        "filters_applied": [
-          "A.depression_mood=positive_mood",
-          "A.depression_anhedonia=full_interest_pleasure",
-          "bmi_category=normal_weight"
-        ],
-        "total_population": 1457
-      }
-    },
-    {
-      "id": "insight_13",
-      "index": 13,
-      "english": {
-        "message": "Sleep quality shows a J-shaped risk curve: insufficient sleep (15.9%) and excessive sleep (1.7%) both predict elevated risk, while borderline sleep (51%) represents the most common state. Excessive sleepers show 64% high-risk rates and face compound dangers when combined with mental health issues. This bidirectional relationship means companies need different interventions for different sleep problems: shift work policies and workload management for insufficient sleepers, plus sleep disorder screening and medical referrals for excessive sleepers who may have underlying conditions like sleep apnea or depression requiring clinical intervention.",
-        "proof": "Sleep quality distribution: 51.0% borderline (n=743), 27.3% optimal (n=398), 15.9% insufficient (n=231), 4.1% long (n=60), 1.7% excessive (n=25). Excessive sleep shows 64.0% high-risk rate (risk ratio: 2.92x, n=25). Compound effects: excessive_sleep + severe_anhedonia (27.3% very high-risk, 10.12σ, n=11); excessive_sleep + persistent_sadness (23.1% very high-risk, 9.26σ, n=13). Insufficient sleep shows 97.8% elevated risk in additive model, indicating strong independent risk factor."
-      },
-      "turkish": {
-        "message": "Uyku kalitesi J şeklinde bir risk eğrisi gösteriyor: yetersiz uyku (%15,9) ve aşırı uyku (%1,7) yüksek riski öngörüyor, sınırda uyku (%51) en yaygın durum. Aşırı uyuyanlar %64 yüksek risk oranı gösteriyor ve ruh sağlığı sorunlarıyla birleştiğinde bileşik tehlikelerle karşılaşıyorlar. Bu çift yönlü ilişki, şirketlerin farklı uyku sorunları için farklı müdahalelere ihtiyaç duyduğu anlamına geliyor: yetersiz uyuyanlar için vardiya çalışma politikaları ve iş yükü yönetimi, artı uyku apnesi veya klinik müdahale gerektiren depresyon gibi altta yatan durumları olabilecek aşırı uyuyanlar için uyku bozukluğu taraması ve tıbbi yönlendirmeler (aşırı uyku n=25, %64 yüksek risk, 2.92x).",
-        "score": 8
-      },
-      "categories": [
-        "sleep",
-        "physical_health"
-      ],
-      "health_tags": [
-        "insufficient_sleep",
-        "excessive_sleep",
-        "borderline_sleep",
-        "optimal_sleep"
-      ],
-      "demographic_tags": [],
-      "target_group": {
-        "size": 0,
-        "percentage": 0.0,
-        "filters_applied": [
-          "A.sleep_quality=insufficient_sleep",
-          "A.sleep_quality=excessive_sleep",
-          "A.sleep_quality=borderline_sleep",
-          "A.sleep_quality=optimal_sleep"
-        ],
-        "total_population": 1457
-      }
-    },
-    {
-      "id": "insight_14",
-      "index": 14,
-      "english": {
-        "message": "An unexpected relationship emerges between mood and sugar intake: employees with positive mood show 48% minimal sugar consumption compared to 26% population-wide, suggesting that diet and mental health influence each other bidirectionally. While causation remains unclear, this creates an opportunity for integrated interventions that address both simultaneously. Companies could pilot programs combining nutrition coaching with mood tracking, offering healthy food subsidies alongside mental health resources, or testing whether dietary improvements create mental health benefits and vice versa through structured experiments measuring both outcomes.",
-        "proof": "Unexpected cross-cluster correlation: depression_mood × sugar_intake (Cramer's V = 0.159, p < 0.001). Employees with positive_mood show 48% minimal_sugar intake vs 26% population baseline. Overall sugar intake distribution: 25.9% minimal (n=377), 18.7% low (n=272), 17.8% moderate weekly (n=259), 13.9% frequent weekly (n=203), 23.7% daily weekly (n=346), showing high diversity (diversity score: 0.986)."
-      },
-      "turkish": {
-        "message": "Ruh hali ve şeker tüketimi arasında beklenmedik bir ilişki ortaya çıkıyor: olumlu ruh haline sahip çalışanların %48'i minimum şeker tüketiyor (genel nüfusta %26), bu da beslenme ve ruh sağlığının birbirini çift yönlü etkilediğini gösteriyor. Nedensellik belirsiz olsa da, bu her ikisini de aynı anda ele alan entegre müdahaleler için bir fırsat yaratıyor. Şirketler, beslenme koçluğunu ruh hali takibiyle birleştiren, ruh sağlığı kaynaklarının yanı sıra sağlıklı gıda sübvansiyonları sunan veya diyet iyileştirmelerinin ruh sağlığı faydaları yaratıp yaratmadığını (veya tersi) her iki sonucu da ölçen yapılandırılmış deneyler aracılığıyla test eden pilot programlar deneyebilir (Cramer's V=0.159, p<0.001).",
+        "message": "Olumlu ruh haline sahip çalışanlar çarpıcı bir beslenme paterni gösteriyor: %48'i minimal şeker tüketiyor, popülasyon genelinde sadece %26'ya karşı. Ruh sağlığı ve şeker alımı arasındaki bu beklenmedik korelasyon (Cramer's V = 0,159, p < 0,001), şeker tüketiminin ruh halini olumsuz etkilediğini veya daha iyi ruh sağlığına sahip insanların daha bilinçli beslenme tercihleri yaptığını gösteriyor. İlişki, stresli çalışanların rahatlık için şeker kullandığı yaygın varsayımını sorguluyor—aslında, daha düşük şeker alımı daha iyi ruh sağlığıyla ilişkili. Beslenme eğitimini sadece fiziksel sağlık değil, ruh hali-beslenme bağlantısını vurgulayacak şekilde yeniden çerçeveleyin. Çalışanlara şeker azaltmanın metabolik sağlığın yanı sıra ruhsal esenliği de iyileştirebileceğini vurgulayın. Ruh sağlığı faydalarını vurgulayan beslenme koçluğunun geleneksel kilo odaklı mesajlardan daha iyi katılım üretip üretmediğini test edin. Zaten iyi ruh sağlığı yaşayan çalışanların beslenme müdahalelerine en duyarlı olabileceğini ve beslenme iyileştirmelerinin ruh halini daha da artırdığı erdemli bir döngü yaratabileceğini düşünün.",
         "score": 7
       },
       "categories": [
@@ -447,14 +334,106 @@
       }
     },
     {
+      "id": "insight_12",
+      "index": 12,
+      "english": {
+        "message": "Less than one-third of employees (27.3%) achieve optimal sleep, while 51% have borderline sleep and 15.9% insufficient sleep—collectively 66.9% with suboptimal sleep quality. Sleep problems cascade into multiple health issues: the insufficient sleep group shows 2.17x risk amplification and concentrates heavily in the high-risk population (34.2% of high-risk employees vs 15.9% baseline). Sleep disruption impairs immunity, metabolism, mental health, and decision-making, yet often receives less wellness program attention than diet or exercise.\n\nElevate sleep as a primary wellness pillar alongside nutrition and physical activity. Provide sleep hygiene education, chronotype assessments to optimize work schedules where possible, and screening for sleep disorders (apnea affects 10-30% of adults but remains underdiagnosed). Consider environmental interventions: limit after-hours communications, encourage vacation use, and review whether shift scheduling or on-call duties contribute to sleep deprivation. The 231 insufficient-sleep employees represent an immediate intervention opportunity with potential broad health impact.",
+        "proof": "Sleep quality distribution: optimal 27.3% (n=398), borderline 51.0% (n=743), insufficient 15.9% (n=231), long 4.1% (n=60), excessive 1.7% (n=25). Suboptimal sleep: 66.9% (borderline + insufficient). Insufficient sleep: 2.17x risk amplification, 97.8% elevated risk rate. High-risk employees: 34.2% insufficient sleep vs 15.9% population. BMI × sleep: χ² = 31.07, p = 0.002, showing sleep-metabolic connection."
+      },
+      "turkish": {
+        "message": "Çalışanların üçte birinden azı (%27,3) optimal uyku elde ediyor, %51'i sınırda uyku ve %15,9'u yetersiz uyku—toplam %67 yetersiz uyku kalitesiyle. Uyku sorunları birden fazla sağlık sorununa dönüşüyor: yetersiz uyku grubu 2,17 kat risk amplifikasyonu gösteriyor ve yüksek riskli popülasyonda yoğun olarak toplanıyor (yüksek riskli çalışanların %34,2'si, %15,9 bazlıkla karşılaştırıldığında). Uyku bozukluğu bağışıklığı, metabolizmayı, ruh sağlığını ve karar vermeyi bozuyor, ancak genellikle diyet veya egzersizden daha az wellness programı ilgisi alıyor. Uykuyu beslenme ve fiziksel aktivitenin yanında birincil bir wellness sütunu olarak yükseltin. Uyku hijyeni eğitimi, mümkün olan yerlerde çalışma programlarını optimize etmek için kronotip değerlendirmeleri ve uyku bozuklukları için tarama sağlayın (apne yetişkinlerin %10-30'unu etkiler ancak teşhis eksik kalır). Çevresel müdahaleleri düşünün: mesai dışı iletişimleri sınırlayın, tatil kullanımını teşvik edin ve vardiya planlama veya nöbetçi görevlerin uyku yoksunluğuna katkıda bulunup bulunmadığını gözden geçirin. 231 yetersiz uyku çalışanı, potansiyel geniş sağlık etkisi ile acil bir müdahale fırsatını temsil ediyor.",
+        "score": 8
+      },
+      "categories": [
+        "sleep"
+      ],
+      "health_tags": [
+        "optimal_sleep",
+        "borderline_sleep",
+        "insufficient_sleep"
+      ],
+      "demographic_tags": [],
+      "target_group": {
+        "size": 1372,
+        "percentage": 94.17,
+        "filters_applied": [
+          "A.sleep_quality IN (optimal_sleep OR borderline_sleep OR insufficient_sleep)"
+        ],
+        "total_population": 1457
+      }
+    },
+    {
+      "id": "insight_13",
+      "index": 13,
+      "english": {
+        "message": "Chronic stress dominates your workforce: 41.8% sometimes feel out of control, 26.4% often feel out of control, and 9.5% frequently feel out of control—totaling 77.7% experiencing regular loss of control. Only 7.8% always feel in control. Similarly, 44.9% sometimes feel irritated and 34.2% often feel irritated. This pervasive stress affects health outcomes, productivity, and likely contributes to the low interest/motivation levels seen elsewhere in the data (88.9% with some anhedonia).\n\nStress management cannot be an optional wellness module—it must be a strategic organizational priority. Assess workload distribution, management practices, role clarity, and resources to identify structural stressors. High stress often stems from excessive demands, insufficient autonomy, unclear expectations, or inadequate support rather than individual coping deficits. While offering stress management workshops and mindfulness programs helps, sustainable stress reduction requires examining whether organizational practices create unnecessary pressure. Consider workload audits, manager training on sustainable performance expectations, and employee input on stress sources.",
+        "proof": "Stress control: sometimes out 41.8% (n=609), often out 26.4% (n=384), frequently out 9.5% (n=138), total lack of control 77.7%. Always in control: 7.8% (n=113). Irritability: sometimes 44.9% (n=654), often 34.2% (n=498), frequently 8.4% (n=123). Frequently irritated: 2.34x risk amplification. Often out of control: daily smokers at 75.8% high risk vs 21.9% population (11.45σ)."
+      },
+      "turkish": {
+        "message": "Kronik stres işgücünüze hakim: %41,8'i bazen kontrolden çıkmış hissediyor, %26,4'ü sık sık kontrolden çıkmış hissediyor ve %9,5'i sürekli kontrolden çıkmış hissediyor—toplam %77,7'si düzenli kontrol kaybı yaşıyor. Sadece %7,8'i her zaman kontrol altında hissediyor. Benzer şekilde, %44,9'u bazen sinirli hissediyor ve %34,2'si sık sık sinirli hissediyor. Bu yaygın stres sağlık sonuçlarını, üretkenliği etkiliyor ve muhtemelen verilerde başka yerde görülen düşük ilgi/motivasyon seviyelerine katkıda bulunuyor (%88,9 bir dereceye kadar motivasyon kaybıyla). Stres yönetimi isteğe bağlı bir wellness modülü olamaz—stratejik bir kurumsal öncelik olmalı. Yapısal stres faktörlerini belirlemek için iş yükü dağılımını, yönetim uygulamalarını, rol netliğini ve kaynakları değerlendirin. Yüksek stres genellikle bireysel başa çıkma eksikliklerinden ziyade aşırı taleplerden, yetersiz özerklikten, belirsiz beklentilerden veya yetersiz destekten kaynaklanır. Stres yönetimi atölyeleri ve farkındalık programları sunmak yardımcı olurken, sürdürülebilir stres azaltma, örgütsel uygulamaların gereksiz baskı yaratıp yaratmadığını incelemeyi gerektirir. İş yükü denetimleri, sürdürülebilir performans beklentileri konusunda yönetici eğitimi ve stres kaynakları hakkında çalışan girdisi düşünün.",
+        "score": 9
+      },
+      "categories": [
+        "mental_health"
+      ],
+      "health_tags": [
+        "sometimes_out_of_control",
+        "often_out_of_control",
+        "frequently_out_of_control",
+        "sometimes_irritated",
+        "often_irritated",
+        "frequently_irritated"
+      ],
+      "demographic_tags": [],
+      "target_group": {
+        "size": 1073,
+        "percentage": 73.64,
+        "filters_applied": [
+          "A.stress_level_loc IN (sometimes_out_of_control OR often_out_of_control OR frequently_out_of_control)",
+          "A.stress_level_irritability IN (sometimes_irritated OR often_irritated OR frequently_irritated)"
+        ],
+        "total_population": 1457
+      }
+    },
+    {
+      "id": "insight_14",
+      "index": 14,
+      "english": {
+        "message": "Employees reporting no exercise and excessive sleep represent your highest-risk micro-segment: 80% face high health risk compared to 21.9% population-wide (3.65x ratio). This 15-employee group shows compounding vulnerabilities where sedentary lifestyle combines with abnormal sleep patterns—excessive sleep likely signals depression, chronic fatigue, or undiagnosed sleep disorders rather than healthy rest. The combination creates a downward spiral where fatigue reduces activity, which worsens sleep quality and mood.\n\nThese 15 employees need urgent, personalized outreach. The combination of no exercise + excessive sleep is a clinical red flag requiring medical evaluation. Partner with occupational health to conduct comprehensive assessments including depression screening, sleep studies, endocrine testing, and chronic disease evaluation. Simultaneously offer low-intensity activity options (chair exercises, short walks) and sleep disorder treatment. Breaking this pattern requires addressing both dimensions—neither exercise promotion alone nor sleep interventions alone will succeed without treating the underlying causes and building both simultaneously.",
+        "proof": "No exercise + excessive sleep: n=15 (1.0% of population), 80.0% high risk vs 21.9% population (3.65x risk ratio, +58.1pp difference). Highest risk two-variable demographic combination identified. Excessive sleep alone: 2.92x risk. No exercise: 49.6% of population but concentrated in high-risk group at 75.8%. Combination likely indicates depression, sleep disorders, or chronic illness requiring medical evaluation."
+      },
+      "turkish": {
+        "message": "Egzersiz yapmadığını bildiren ve aşırı uyuyan çalışanlar, en yüksek riskli mikro segmentinizi temsil ediyor: %80'i yüksek sağlık riskiyle karşı karşıya, popülasyon genelinde %21,9 ile karşılaştırıldığında (3,65 kat oran). Bu 15 kişilik grup, hareketsiz yaşam tarzının anormal uyku paternleriyle birleştiği birleşen zayıflıklar gösteriyor—aşırı uyku muhtemelen sağlıklı dinlenmeden ziyade depresyon, kronik yorgunluk veya teşhis edilmemiş uyku bozukluklarını işaret ediyor. Kombinasyon, yorgunluğun aktiviteyi azalttığı, bunun da uyku kalitesini ve ruh halini kötüleştirdiği aşağı doğru bir spiral yaratıyor. Bu 15 çalışanın acil, kişiselleştirilmiş yönlendirmeye ihtiyacı var. Egzersiz yok + aşırı uyku kombinasyonu, depresyon taraması, uyku çalışmaları, endokrin testi ve kronik hastalık değerlendirmesi dahil olmak üzere kapsamlı değerlendirmeler gerektiren klinik bir uyarı işaretidir. Aynı anda düşük yoğunluklu aktivite seçenekleri (sandalye egzersizleri, kısa yürüyüşler) ve uyku bozukluğu tedavisi sunun. Bu paterni kırmak her iki boyutu da ele almayı gerektirir—sadece egzersiz promosyonu veya sadece uyku müdahaleleri, altta yatan nedenleri tedavi etmeden ve her ikisini de aynı anda oluşturmadan başarılı olmayacaktır.",
+        "score": 10
+      },
+      "categories": [
+        "activity_level",
+        "sleep"
+      ],
+      "health_tags": [
+        "no_exercise",
+        "excessive_sleep"
+      ],
+      "demographic_tags": [],
+      "target_group": {
+        "size": 15,
+        "percentage": 1.03,
+        "filters_applied": [
+          "A.activity_level=no_exercise",
+          "A.sleep_quality=excessive_sleep"
+        ],
+        "total_population": 1457
+      }
+    },
+    {
       "id": "insight_15",
       "index": 15,
       "english": {
-        "message": "The combination of frequently feeling irritated plus insufficient sleep affects 31 employees who show a devastating 77.4% high-risk rate - 3.54 times the population baseline. This stress-sleep interaction represents a vicious cycle where stress disrupts sleep and poor sleep amplifies stress responses. Breaking this cycle requires simultaneous intervention on both factors. Companies should offer integrated programs: cognitive behavioral therapy for insomnia (CBT-I) combined with workplace stress reduction, flexible start times allowing natural sleep schedules plus workload adjustments reducing stress, or mindfulness training addressing both stress reactivity and sleep hygiene together rather than separately.",
-        "proof": "Segment: frequently_irritated + insufficient_sleep shows 77.4% high-risk rate vs 21.9% population (risk ratio: 3.54x, difference: +55.5pp, n=31, 2.1% of population). Base rates: frequently_irritated alone affects 8.4% (n=123) with 95.1% elevated risk; insufficient_sleep affects 15.9% (n=231) with 97.8% elevated risk. Combined effect exceeds additive prediction, indicating interaction/synergy between stress and sleep deprivation."
+        "message": "Frequently irritated employees experiencing insufficient sleep face 77.4% high-risk rates—3.54x population baseline—in a 31-employee segment. This combination reveals how sleep deprivation amplifies stress reactivity, creating a vicious cycle where poor sleep increases irritability, which disrupts sleep further through rumination and hyperarousal. The pattern concentrates high-risk behaviors: 68% never exercise and 42% smoke daily, suggesting these employees cope with stress and fatigue through unhealthy mechanisms rather than restorative behaviors.\n\nDesign integrated sleep-stress interventions recognizing these aren't separate issues. Cognitive behavioral therapy for insomnia (CBT-I) combined with stress management may be more effective than addressing each alone. Screen irritable employees for sleep problems and sleep-deprived employees for stress. Workplace factors like always-on communication expectations or unpredictable schedules may contribute—consider whether organizational practices enable adequate rest and recovery. This 31-employee segment represents a high-ROI intervention opportunity given their concentrated risk and the strong evidence base for sleep-stress treatments.",
+        "proof": "Frequently irritated + insufficient sleep: n=31 (2.1% of population), 77.4% high risk vs 21.9% population (3.54x ratio, +55.5pp). Segment characteristics: 68% no exercise vs 50% population, 42% daily smoker vs 22% population. Insufficient sleep: 2.17x risk amplification overall. Frequently irritated: 2.34x risk amplification overall. Combination shows multiplicative rather than additive effect."
       },
       "turkish": {
-        "message": "Sık sık sinirli hissetme ve yetersiz uykunun kombinasyonu 31 çalışanı etkiliyor ve yıkıcı %77,4 yüksek risk oranı gösteriyorlar - nüfus ortalamasının 3,54 katı. Bu stres-uyku etkileşimi, stresin uykuyu bozduğu ve kötü uykunun stres tepkilerini güçlendirdiği kısır bir döngüyü temsil ediyor. Bu döngüyü kırmak her iki faktöre de eşzamanlı müdahale gerektiriyor. Şirketler entegre programlar sunmalı: uykusuzluk için bilişsel davranışçı terapi (CBT-I) ve işyeri stres azaltma, doğal uyku programlarına izin veren esnek başlangıç saatleri artı stresi azaltan iş yükü ayarlamaları, veya hem stres reaktivitesini hem de uyku hijyenini ayrı değil birlikte ele alan farkındalık eğitimi (n=31, risk oranı: 3.54x, 5.55pp fark).",
+        "message": "Sık sık sinirli olan ve yetersiz uyuyan çalışanlar %77,4 yüksek risk oranlarıyla karşı karşıya—popülasyon bazlının 3,54 katı—31 kişilik bir segmentte. Bu kombinasyon, uyku yoksunluğunun stres tepkiselliğini nasıl güçlendirdiğini ortaya koyarak, kötü uykunun sinirlilik artırdığı ve bunun da ruminasyon ve hiperarousal yoluyla uykuyu daha da bozduğu kısır bir döngü yaratıyor. Patern yüksek riskli davranışları yoğunlaştırıyor: %68'i asla egzersiz yapmıyor ve %42'si günlük sigara içiyor, bu çalışanların onarıcı davranışlar yerine sağlıksız mekanizmalar yoluyla stres ve yorgunlukla başa çıktığını gösteriyor. Bunların ayrı sorunlar olmadığını kabul eden entegre uyku-stres müdahaleleri tasarlayın. Uykusuzluk için bilişsel davranışçı terapi (CBT-I) ve stres yönetimi birlikte, her birini tek başına ele almaktan daha etkili olabilir. Sinirli çalışanları uyku sorunları için ve uyku yoksunu çalışanları stres için tarayın. Her zaman iletişim beklentileri veya öngörülemeyen programlar gibi işyeri faktörleri katkıda bulunabilir—örgütsel uygulamaların yeterli dinlenme ve toparlanmayı sağlayıp sağlamadığını düşünün. Bu 31 kişilik segment, yoğun riskleri ve uyku-stres tedavileri için güçlü kanıt tabanı göz önüne alındığında yüksek ROI müdahale fırsatını temsil ediyor.",
         "score": 9
       },
       "categories": [
@@ -475,47 +454,17 @@
         ],
         "total_population": 1457
       }
-    },
-    {
-      "id": "insight_16",
-      "index": 16,
-      "english": {
-        "message": "Supplement usage divides the workforce almost evenly: 46.1% use supplements, 53.9% don't. However, supplement use doesn't appear among top risk factors or protective factors, suggesting supplements neither compensate for poor lifestyle nor enhance good habits significantly. This challenges the common employee belief that supplements provide health insurance against lifestyle risks. Companies should redirect wellness budget from supplement subsidies toward interventions with proven impact: smoking cessation support, gym memberships, healthy food provision, mental health services, and sleep programs. Evidence-based resource allocation will deliver far better health ROI than supplement programs.",
-        "proof": "Supplement usage: 46.1% using (n=672), 53.9% not using (n=785), nearly even split (diversity score: 0.996). However, supplement_usage does not appear among: (1) top statistical surprises for any risk outcome, (2) highest impact individual factors in compound risk models, (3) demographic outliers showing protection or elevation, or (4) significant cross-pattern relationships with health outcomes. This absence suggests limited independent impact on health risk classification."
-      },
-      "turkish": {
-        "message": "Takviye kullanımı işgücünü neredeyse eşit şekilde bölüyor: %46,1 takviye kullanıyor, %53,9 kullanmıyor. Ancak takviye kullanımı en önemli risk faktörleri veya koruyucu faktörler arasında görünmüyor; bu, takviyelerin ne kötü yaşam tarzını telafi ettiğini ne de iyi alışkanlıkları önemli ölçüde geliştirdiğini gösteriyor. Bu, takviyelerin yaşam tarzı risklerine karşı sağlık sigortası sağladığına dair yaygın çalışan inancına meydan okuyor. Şirketler sağlık bütçesini takviye sübvansiyonlarından kanıtlanmış etkiye sahip müdahalelere yönlendirmeli: sigarayı bırakma desteği, spor salonu üyelikleri, sağlıklı gıda temini, ruh sağlığı hizmetleri ve uyku programları. Kanıt tabanlı kaynak tahsisi, takviye programlarından çok daha iyi sağlık yatırım getirisi sağlayacaktır (kullanıyor n=672, kullanmıyor n=785).",
-        "score": 7
-      },
-      "categories": [
-        "nutrition",
-        "lifestyle"
-      ],
-      "health_tags": [
-        "using_supplements",
-        "not_using_supplements"
-      ],
-      "demographic_tags": [],
-      "target_group": {
-        "size": 0,
-        "percentage": 0.0,
-        "filters_applied": [
-          "A.supplement_usage=using_supplements",
-          "A.supplement_usage=not_using_supplements"
-        ],
-        "total_population": 1457
-      }
     }
   ],
   "source_report": "02_out/HRA_data_report.txt",
   "prompt_used": "scripts/llm/prompts/unified_insights.md",
-  "processing_date": "2025-09-30T15:32:49.569947",
+  "processing_date": "2025-10-01T12:54:34.649359",
   "claude_model": "claude-sonnet",
   "log_file": "03_ai/HRA_data_report_insights.log",
-  "thinking_content": "Let me carefully analyze this health data report and generate 5-15 compelling, actionable insights for HR professionals. I need to think deeply about the patterns, avoid obvious observations, and focus on practical business value.\n\nKey observations from the data:\n1. 1,457 employees - this is survey participants, not full workforce (selection bias)\n2. 22.6% high-risk or very high risk employees\n3. Strong smoking impact: Daily smokers have 55.7% high-risk rate vs 21.9% population\n4. Mental health clustering: Depression and loneliness correlate strongly\n5. Protective factors: Never smoking + positive mood = 59% low risk\n6. Compound effects: Daily smoking + persistent sadness = 16.1% very high risk (vs 0.8%)\n7. Lifestyle patterns: 49.6% no exercise, 53.1% very poor nutrition\n8. Small high-risk segments identifiable for targeted intervention\n\nLet me craft diverse insights covering:\n- Participation/engagement patterns\n- Behavioral clustering\n- Compound risk effects\n- Protective factors to promote\n- Hidden vulnerabilities\n- Specific demographic combinations\n- Actionable interventions\n\nI must:\n- Write ONLY XML formatted insights\n- Make each insight standalone\n- Use proper statistical notation (p < 0.001 is fine)\n- Include concrete numbers\n- Focus on HR actions\n- Use natural Turkish for summaries\n- Score based on actionability (1-10)\n- Include at least 3 demographic combination insights\n- Avoid clinical jargon in Turkish (use \"depresyon\" not \"anhedonia\")\n\nLet me generate 12-15 high-quality insights:",
+  "thinking_content": "Let me analyze this comprehensive health risk assessment report and generate actionable insights for HR professionals. I need to:\n\n1. Think deeply about what this data reveals\n2. Consider participation bias (this is survey data, not full workforce)\n3. Find diverse, compelling patterns beyond simple risk comparisons\n4. Generate 5-15 insights with proper XML formatting\n5. Use proper statistical notation (which will be auto-escaped)\n6. Make insights standalone and actionable\n7. Include Turkish summaries with natural language and proper scoring\n\nLet me identify the most compelling patterns:\n\n**Key findings from the data:**\n\n1. **Smoking is the dominant risk factor**: 55.7% of daily smokers are high risk (vs 21.9% population) - 13.05σ significance\n2. **Compound effect - smoking + depression**: 16.1% very high risk (vs 0.8% population) - 13.93σ\n3. **Poor nutrition is near-universal**: 92.5% have poor/very poor fruit/veg intake\n4. **Mental health clustering**: Depression correlates with loneliness (V=0.35)\n5. **Protective factors**: Never smoked + positive mood = 59% low risk (vs 12.8%)\n6. **Half don't exercise**: 49.6% no exercise at all\n7. **Physical pain is common**: 63.2% report some level of pain\n8. **Sleep issues widespread**: Only 27.3% have optimal sleep\n9. **Excessive sleep is very high risk**: 64% high risk, 84% elevated risk\n10. **Mental health engagement**: Depression and stress questions show high participation\n11. **Underweight employees show high risk**: Risk ratio 1.91x despite \"normal\" perception\n12. **Depression metrics very high**: Only 11.1% report full interest/pleasure\n13. **Stress control issues**: 41.8% sometimes out of control, 26.4% often\n14. **Loneliness epidemic**: 24% always lonely, 63.7% sometimes/often/always lonely\n\n\n15. **Sugar paradox**: Mental health pattern - positive mood = 48% minimal sugar\n\nI notice an intriguing connection between mental well-being and dietary habits. The sugar paradox reveals that nearly half of those with positive mood consume minimal sugar, suggesting a potential link between diet and mental health. This insight opens up fascinating avenues for workplace wellness interventions that could address both nutritional and psychological aspects of employee health.",
   "thinking_stats": {
-    "thinking_characters": 1515,
+    "thinking_characters": 2248,
     "thinking_enabled": true,
-    "estimated_thinking_tokens": 378
+    "estimated_thinking_tokens": 562
   }
 }

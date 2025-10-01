@@ -1,0 +1,269 @@
+{
+  "total_insights": 12,
+  "insights": [
+    {
+      "id": "insight_01",
+      "index": 1,
+      "english": {
+        "message": "Even health-engaged employees completing wellness surveys show alarming nutritional gaps, with 94% reporting poor or very poor fruit and vegetable intake. This suggests that nutrition education and healthy food access remain critical barriers even among employees motivated to track their health. Companies should prioritize subsidized healthy meal programs and nutrition coaching over basic awareness campaigns.",
+        "proof": "94% of employees (47 out of 50) report poor or very poor fruit and vegetable intake, with poor_nutrition at 48% and very_poor_nutrition at 46%. Only 6% report adequate or good nutrition despite participating in health tracking surveys."
+      },
+      "turkish": {
+        "message": "Sağlık anketlerini tamamlayan ve sağlık konusunda bilinçli çalışanların %94'ü yetersiz meyve-sebze tüketimi bildirmektedir. Bu durum, sağlığını takip etme motivasyonuna sahip çalışanlarda bile beslenme eğitimi ve sağlıklı gıda erişiminin kritik engeller olduğunu göstermektedir. Şirketler temel farkındalık kampanyalarından ziyade sübvansiyonlu sağlıklı yemek programları ve beslenme koçluğunu önceliklendirmelidir.",
+        "score": 9
+      },
+      "categories": [
+        "nutrition",
+        "lifestyle"
+      ],
+      "health_tags": [
+        "poor_nutrition",
+        "very_poor_nutrition"
+      ],
+      "demographic_tags": []
+    },
+    {
+      "id": "insight_02",
+      "index": 2,
+      "english": {
+        "message": "Daily smokers face dramatically elevated health risks, with 69.2% classified as high-risk compared to 30% of the general surveyed population - a 2.3x increase. This represents the strongest single risk factor identified. Companies should implement intensive smoking cessation programs with personalized support, as traditional wellness approaches appear insufficient for this critical group.",
+        "proof": "Daily smokers show 69.2% high-risk rate versus 30.0% population average (n=13). Statistical significance of 2.58σ indicates this is not random variation but a true risk amplification effect."
+      },
+      "turkish": {
+        "message": "Günlük sigara içenler dramatik olarak yüksek sağlık riskleri yaşamaktadır; %69,2'si yüksek riskli olarak sınıflandırılmıştır (genel anket popülasyonunda %30'a karşı) - 2,3x artış. Bu, tespit edilen en güçlü tek risk faktörüdür. Şirketler kişiselleştirilmiş destekle yoğun sigarayı bırakma programları uygulamalıdır, çünkü geleneksel wellness yaklaşımları bu kritik grup için yetersiz görünmektedir.",
+        "score": 10
+      },
+      "categories": [
+        "lifestyle"
+      ],
+      "health_tags": [
+        "daily_smoker"
+      ],
+      "demographic_tags": []
+    },
+    {
+      "id": "insight_03",
+      "index": 3,
+      "english": {
+        "message": "Sleep deprivation emerges as a secondary major risk amplifier, with employees reporting insufficient sleep showing 61.5% high-risk rates versus 30% average. Combined with the finding that 74% of employees have insufficient or borderline sleep quality, this suggests widespread fatigue-related health impacts. Companies should prioritize sleep hygiene education and flexible work arrangements to reduce sleep stress.",
+        "proof": "Insufficient sleep correlates with 61.5% high-risk classification (vs 30% population average, n=13). Overall sleep quality shows 26% insufficient sleep and 48% borderline sleep, totaling 74% with suboptimal sleep patterns."
+      },
+      "turkish": {
+        "message": "Uyku yoksunluğu ikincil bir büyük risk çarpanı olarak ortaya çıkmaktadır; yetersiz uyku bildiren çalışanlar %61,5 yüksek risk oranına sahipken ortalama %30'dur. Çalışanların %74'ünün yetersiz veya sınırda uyku kalitesine sahip olması bulgusuyyla birleştiğinde, yaygın yorgunlukla ilgili sağlık etkilerini göstermektedir. Şirketler uyku hijyeni eğitimi ve uyku stresini azaltmak için esnek çalışma düzenlemelerini önceliklendirmelidir.",
+        "score": 8
+      },
+      "categories": [
+        "sleep",
+        "lifestyle"
+      ],
+      "health_tags": [
+        "insufficient_sleep",
+        "borderline_sleep"
+      ],
+      "demographic_tags": []
+    },
+    {
+      "id": "insight_04",
+      "index": 4,
+      "english": {
+        "message": "A surprising protective pattern emerges among non-smokers who experience moderate stress: those who never smoked but report \"sometimes irritated\" show 36.4% low-risk classification versus only 12% population average. This suggests that moderate stress levels may actually indicate healthy engagement and emotional processing among non-smoking employees. Companies should focus on supporting employees with either no stress response (potentially disconnected) or excessive stress rather than targeting all stress equally.",
+        "proof": "Non-smokers reporting \"sometimes irritated\" show 36.4% low-risk rate versus 12.0% population baseline (n=11). This represents a 2.33σ statistical surprise, suggesting moderate stress may be protective when combined with non-smoking behavior."
+      },
+      "turkish": {
+        "message": "Sigara içmeyen ve orta düzey stres yaşayan çalışanlarda şaşırtıcı bir koruyucu patern ortaya çıkmaktadır: hiç sigara içmemiş ancak \"bazen sinirli\" olanların %36,4'ü düşük riskli sınıflandırılırken popülasyon ortalaması sadece %12'dir. Bu, orta düzey stres seviyelerinin sigara içmeyen çalışanlarda sağlıklı katılım ve duygusal işlemeyi gösterebileceğini düşündürmektedir. Şirketler tüm stresi eşit olarak hedeflemek yerine stres tepkisi olmayan (potansiyel olarak kopuk) veya aşırı stresli çalışanları desteklemeye odaklanmalıdır.",
+        "score": 7
+      },
+      "categories": [
+        "mental_health",
+        "lifestyle"
+      ],
+      "health_tags": [
+        "never_smoked",
+        "sometimes_irritated"
+      ],
+      "demographic_tags": []
+    },
+    {
+      "id": "insight_05",
+      "index": 5,
+      "english": {
+        "message": "The workforce shows extreme physical inactivity despite health survey participation, with 56% reporting no exercise and 52% having very low daily steps. This creates a compound risk scenario where even health-conscious employees remain sedentary. Companies need to address structural barriers to movement, such as redesigning workspaces for walking meetings, implementing hourly movement breaks, and creating step challenges that accommodate low baseline fitness levels.",
+        "proof": "56% report no exercise (28 out of 50 employees) and 52% have very low daily steps (26 out of 50). Combined, 74% of employees show poor activity patterns across multiple exercise metrics despite health survey engagement."
+      },
+      "turkish": {
+        "message": "İş gücü, sağlık anketlerine katılımına rağmen aşırı fiziksel hareketsizlik göstermekte; %56'sı egzersiz yapmadığını, %52'si çok düşük günlük adım sayısına sahip olduğunu bildirmektedir. Bu, sağlık bilincine sahip çalışanların bile hareketsiz kaldığı bileşik risk senaryosu oluşturmaktadır. Şirketler yürüyüşlü toplantılar için çalışma alanlarını yeniden tasarlama, saatlik hareket molaları uygulama ve düşük başlangıç fitness seviyelerini destekleyen adım yarışmaları oluşturma gibi harekete yönelik yapısal engelleri ele almalıdır.",
+        "score": 8
+      },
+      "categories": [
+        "activity_level",
+        "lifestyle"
+      ],
+      "health_tags": [
+        "no_exercise",
+        "very_low_steps"
+      ],
+      "demographic_tags": []
+    },
+    {
+      "id": "insight_06",
+      "index": 6,
+      "english": {
+        "message": "Mental health challenges are widespread even among survey participants, with 90% showing some level of anhedonia (loss of interest/pleasure) and 88% experiencing mood difficulties beyond positive mood. The high participation in health tracking alongside poor mental health metrics suggests employees recognize their struggles but lack effective coping resources. Companies should integrate mental health support directly into existing wellness programs rather than treating them as separate initiatives.",
+        "proof": "90% show anhedonia (mild 60%, moderate 20%, severe 10%) versus only 10% with full interest/pleasure. 88% experience mood difficulties (occasional sadness 58%, frequent sadness 20%, persistent sadness 10%) versus 12% positive mood."
+      },
+      "turkish": {
+        "message": "Anket katılımcıları arasında bile ruh sağlığı zorlukları yaygındır; %90'ında bir düzeyde anhedoni (ilgi/zevk kaybı) görülürken %88'i pozitif ruh halinin ötesinde mood zorlukları yaşamaktadır. Sağlık takibine yüksek katılımın kötü ruh sağlığı metrikleriyle birlikte bulunması, çalışanların mücadelelerini tanıdıklarını ancak etkili başa çıkma kaynaklarından yoksun olduklarını göstermektedir. Şirketler ruh sağlığı desteğini ayrı girişimler olarak değil, mevcut wellness programlarının doğrudan içine entegre etmelidir.",
+        "score": 9
+      },
+      "categories": [
+        "mental_health"
+      ],
+      "health_tags": [
+        "mild_anhedonia",
+        "moderate_anhedonia",
+        "severe_anhedonia",
+        "occasional_sadness",
+        "frequent_sadness",
+        "persistent_sadness"
+      ],
+      "demographic_tags": []
+    },
+    {
+      "id": "insight_07",
+      "index": 7,
+      "english": {
+        "message": "Survey participation itself reveals significant workforce engagement bias - employees completing health assessments likely represent the most health-conscious segment, yet still show concerning risk patterns. This suggests that employees not participating in surveys may face even greater health challenges. Companies should implement proactive outreach strategies and remove barriers to health program participation, such as offering assessments during work hours and providing multilingual support.",
+        "proof": "50 employees completed comprehensive health surveys, representing only a subset of the workforce. Despite health engagement, 30% are high-risk and 58% moderate-risk, with 94% showing poor nutrition and 56% no exercise, indicating non-participants likely face greater challenges."
+      },
+      "turkish": {
+        "message": "Anket katılımının kendisi önemli iş gücü katılım yanlılığını ortaya çıkarmaktadır - sağlık değerlendirmelerini tamamlayan çalışanlar muhtemelen en sağlık bilincine sahip segmenti temsil etmekte, ancak yine de endişe verici risk paternleri göstermektedir. Bu durum, anketlere katılmayan çalışanların daha büyük sağlık zorluklarıyla karşılaşabileceğini göstermektedir. Şirketler çalışma saatleri içinde değerlendirmeler sunma ve çok dilli destek sağlama gibi sağlık programı katılımına yönelik engelleri kaldırarak proaktif erişim stratejileri uygulamalıdır.",
+        "score": 8
+      },
+      "categories": [
+        "lifestyle"
+      ],
+      "health_tags": [],
+      "demographic_tags": []
+    },
+    {
+      "id": "insight_08",
+      "index": 8,
+      "english": {
+        "message": "Normal-weight employees represent exactly 50% of the health-engaged workforce, yet still face substantial health risks, indicating that BMI alone is inadequate for workplace wellness assessment. Companies over-relying on weight-based metrics may miss critical health factors like smoking, sleep quality, and mental health. Comprehensive health screening should replace BMI-focused programs to identify risks among employees who appear physically healthy.",
+        "proof": "Normal-weight employees comprise exactly 50% of participants (25 out of 50). BMI categories show normal_weight 50%, overweight 28%, obese 14%, underweight 8%. Despite normal weight status, significant health risks persist across the population."
+      },
+      "turkish": {
+        "message": "Normal kilodaki çalışanlar sağlık bilincine sahip iş gücünün tam %50'sini temsil etmekte, ancak yine de önemli sağlık riskleriyle karşılaşmakta ve bu da BMI'nin tek başına işyeri wellness değerlendirmesi için yetersiz olduğunu göstermektedir. Ağırlık temelli metriklere aşırı güvenen şirketler sigara, uyku kalitesi ve ruh sağlığı gibi kritik sağlık faktörlerini kaçırabilir. Fiziksel olarak sağlıklı görünen çalışanlar arasındaki riskleri tespit etmek için BMI odaklı programların yerini kapsamlı sağlık taraması almalıdır.",
+        "score": 7
+      },
+      "categories": [
+        "physical_health"
+      ],
+      "health_tags": [],
+      "demographic_tags": [
+        "normal_weight"
+      ]
+    },
+    {
+      "id": "insight_09",
+      "index": 9,
+      "english": {
+        "message": "Chronic disease prevalence remains remarkably low in this health-engaged population (only 4% diabetes, 2% thyroid disorders), yet 30% still classify as high-risk. This disconnect highlights that lifestyle factors - not just medical conditions - drive most workplace health risks. Companies should shift resources from managing existing chronic diseases to preventing lifestyle-driven health deterioration through behavioral interventions targeting smoking, sleep, activity, and nutrition.",
+        "proof": "Chronic disease rates are low: diabetes 4% (2/50), thyroid disorders 2% (1/50), heart disease 2% (1/50), hypertension 2% (1/50), obesity 0%, cancer 0%. Yet 30% are classified high-risk, indicating lifestyle factors drive most health risks."
+      },
+      "turkish": {
+        "message": "Bu sağlık bilincine sahip popülasyonda kronik hastalık yaygınlığı oldukça düşük kalıyor (sadece %4 diyabet, %2 tiroid bozuklukları), ancak %30'u hâlâ yüksek riskli olarak sınıflandırılıyor. Bu uyumsuzluk, çoğu işyeri sağlık riskinin sadece tıbbi durumlardan değil, yaşam tarzı faktörlerinden kaynaklandığını vurgulamaktadır. Şirketler kaynaklarını mevcut kronik hastalıkları yönetmekten sigara, uyku, aktivite ve beslenmeyi hedefleyen davranışsal müdahaleler yoluyla yaşam tarzından kaynaklanan sağlık bozulmasını önlemeye kaydırmalıdır.",
+        "score": 8
+      },
+      "categories": [
+        "health_conditions",
+        "lifestyle"
+      ],
+      "health_tags": [
+        "no_diabetes",
+        "no_thyroid",
+        "no_heart_disease",
+        "no_obesity",
+        "no_hypertension",
+        "no_cancer"
+      ],
+      "demographic_tags": []
+    },
+    {
+      "id": "insight_10",
+      "index": 10,
+      "english": {
+        "message": "High stress levels pervade this workforce, with 86% reporting they are sometimes or often irritated, and 74% feeling sometimes or often out of control. Despite health survey participation indicating some self-awareness, these stress levels suggest inadequate coping mechanisms. Companies should implement daily stress management tools like brief mindfulness sessions, stress-relief spaces, and manager training on recognizing employee stress rather than quarterly wellness seminars.",
+        "proof": "Stress levels show 86% experience irritation (sometimes_irritated 44%, often_irritated 42%). Loss of control affects 74% (sometimes_out_of_control 32%, often_out_of_control 42%). Only 14% feel mostly or always in control."
+      },
+      "turkish": {
+        "message": "Bu iş gücünde yüksek stres seviyeleri yaygındır; %86'sı bazen veya sık sık sinirli olduğunu, %74'ü bazen veya sık sık kontrolü kaybettiğini bildirmektedir. Sağlık anketi katılımının bir miktar öz-farkındalık göstermesine rağmen, bu stres seviyeleri yetersiz başa çıkma mekanizmalarını düşündürmektedir. Şirketler üç ayda bir wellness seminerleri yerine kısa mindfulness seansları, stres giderme alanları ve yöneticiler için çalışan stresini tanıma eğitimi gibi günlük stres yönetimi araçları uygulamalıdır.",
+        "score": 8
+      },
+      "categories": [
+        "mental_health"
+      ],
+      "health_tags": [
+        "sometimes_irritated",
+        "often_irritated",
+        "sometimes_out_of_control",
+        "often_out_of_control"
+      ],
+      "demographic_tags": []
+    },
+    {
+      "id": "insight_11",
+      "index": 11,
+      "english": {
+        "message": "Loneliness affects 72% of health-surveyed employees to some degree, with 28% reporting they are \"always lonely.\" This social isolation among health-engaged employees suggests that traditional team-building activities may be insufficient. Companies should create structured opportunities for meaningful workplace connections, such as mentorship programs, collaborative projects across departments, and spaces designed for informal social interaction during work hours.",
+        "proof": "Loneliness affects 72% with always_lonely 28%, sometimes_lonely 22%, often_lonely 16%, rarely_lonely 16%. Only 18% report never feeling lonely, indicating widespread social isolation among health-engaged employees."
+      },
+      "turkish": {
+        "message": "Yalnızlık, sağlık anketine katılan çalışanların %72'sini bir dereceye kadar etkilemekte, %28'i \"her zaman yalnız\" olduğunu bildirmektedir. Sağlık bilincine sahip çalışanlar arasındaki bu sosyal izolasyon, geleneksel takım oluşturma etkinliklerinin yetersiz olabileceğini göstermektedir. Şirketler mentorluk programları, departmanlar arası işbirlikçi projeler ve çalışma saatleri içinde gayri resmi sosyal etkileşim için tasarlanmış alanlar gibi anlamlı işyeri bağlantıları için yapılandırılmış fırsatlar yaratmalıdır.",
+        "score": 7
+      },
+      "categories": [
+        "mental_health"
+      ],
+      "health_tags": [
+        "always_lonely",
+        "sometimes_lonely",
+        "often_lonely"
+      ],
+      "demographic_tags": []
+    },
+    {
+      "id": "insight_12",
+      "index": 12,
+      "english": {
+        "message": "Water intake shows surprisingly positive patterns with 72% reporting adequate to high consumption levels, representing one of the few bright spots in this health assessment. This success suggests that simple, trackable health behaviors can be effectively adopted even by time-pressured employees. Companies should leverage this hydration success as a foundation for building other healthy habits, using similar visibility tools and environmental supports for nutrition and activity goals.",
+        "proof": "Water intake shows positive patterns: high_water 36%, good_water 18%, adequate_water 18%, totaling 72% with adequate or better hydration. Only 28% report low or very low water intake, making hydration the most successful health behavior measured."
+      },
+      "turkish": {
+        "message": "Su tüketimi, %72'sinin yeterli ila yüksek tüketim seviyeleri bildirmesiyle şaşırtıcı derecede pozitif paternler göstermekte ve bu sağlık değerlendirmesindeki az sayıdaki parlak noktadan birini temsil etmektedir. Bu başarı, basit, takip edilebilir sağlık davranışlarının zaman baskısı altındaki çalışanlar tarafından bile etkili bir şekilde benimsenebileceğini göstermektedir. Şirketler bu hidrasyon başarısını diğer sağlıklı alışkanlıkları oluşturmak için bir temel olarak kullanmalı, beslenme ve aktivite hedefleri için benzer görünürlük araçları ve çevresel destekleri kullanmalıdır.",
+        "score": 6
+      },
+      "categories": [
+        "nutrition",
+        "lifestyle"
+      ],
+      "health_tags": [
+        "high_water",
+        "good_water",
+        "adequate_water"
+      ],
+      "demographic_tags": []
+    }
+  ],
+  "source_report": "02_out/company/Company_2_report.txt",
+  "prompt_used": "scripts/llm/prompts/unified_insights.md",
+  "processing_date": "2025-09-25T21:32:23.717080",
+  "claude_model": "claude-sonnet",
+  "log_file": "03_ai/company/Company_2_report_insights.log",
+  "thinking_content": "Let me carefully analyze this health analysis report for Company_2 with 50 employees. I need to focus on the key patterns and insights that would be valuable for HR professionals.\n\nKey findings from the data:\n1. This is a small sample (50 employees) participating in health surveys\n2. 30% are high risk, 58% moderate risk, 12% low risk\n3. Major issues: \n   - Very poor nutrition (94% have poor/very poor fruit/veg intake)\n   - Low activity (56% no exercise, 52% very low steps)\n   - Poor sleep (74% insufficient/borderline sleep)\n   - High smoking rate (26% daily smokers)\n   - Mental health challenges (60% mild anhedonia, 58% occasional sadness)\n   - High stress/irritability (86% sometimes/often irritated)\n\nStatistical surprises:\n- Daily smokers have 69.2% high risk rate (vs 30% population average) - very strong signal\n- Insufficient sleep leads to 61.5% high risk rate\n- Never smokers + sometimes irritated actually have higher low risk rates (36.4% vs 12%)\n\nKey insights I should generate:\n1. Participation bias - this is health-engaged employees, not full workforce\n2. Nutrition crisis - 94% poor nutrition despite health engagement\n3. Smoking as major risk multiplier\n4. Sleep quality impact\n5. Activity/sedentary behavior patterns\n6. Mental health and stress patterns\n7. Compound effects\n8. Protective factors for non-smokers\n\nI need to create 5-15 insights in the exact XML format specified, with both English messages and Turkish summaries, appropriate health and demographic tags, and supporting proof.\n\nLet me structure insights around:\n- Participation bias implications\n- Nutrition paradox among health-conscious employees  \n- Smoking risk amplification\n- Sleep-health connection\n- Activity engagement patterns\n- Mental health stress clustering\n- Protective factor combinations\n\n\n- Compound risk scenarios\n\nI'll investigate how multiple risk factors interact and amplify health challenges. When employees experience multiple simultaneous health risks, the cumulative impact becomes significantly more severe. For instance, combining poor nutrition, lack of sleep, and high stress creates a compounded health vulnerability that dramatically increases overall risk profile.",
+  "thinking_stats": {
+    "thinking_characters": 2187,
+    "thinking_enabled": true,
+    "estimated_thinking_tokens": 546
+  }
+}

@@ -125,8 +125,9 @@ class GroupSizeCalculator:
                 'note': 'No filters applied - represents entire population'
             }
 
-        # Build filters
-        filters = []
+        # Build filters grouped by column
+        # Key insight: Use OR logic within same column, AND logic between columns
+        column_filters = {}
         unknown_tags = []
 
         for tag in all_tags:
@@ -135,27 +136,40 @@ class GroupSizeCalculator:
 
                 # Check if column exists in dataframe
                 if column_name in self.df.columns:
-                    filters.append((column_name, tag_value))
+                    if column_name not in column_filters:
+                        column_filters[column_name] = []
+                    column_filters[column_name].append(tag_value)
                 else:
                     unknown_tags.append(f"{tag} (column {column_name} not found)")
             else:
                 unknown_tags.append(tag)
 
-        # Apply filters with AND logic
+        # Apply filters: OR within column, AND between columns
         filtered_df = self.df.copy()
 
-        for column_name, tag_value in filters:
-            filtered_df = filtered_df[filtered_df[column_name] == tag_value]
+        for column_name, tag_values in column_filters.items():
+            # Use .isin() for OR logic within the same column
+            filtered_df = filtered_df[filtered_df[column_name].isin(tag_values)]
 
         # Calculate results
         group_size = len(filtered_df)
         total_population = len(self.df)
         percentage = (group_size / total_population * 100) if total_population > 0 else 0.0
 
+        # Build human-readable filter descriptions
+        filters_applied = []
+        for column_name, tag_values in column_filters.items():
+            if len(tag_values) == 1:
+                filters_applied.append(f"{column_name}={tag_values[0]}")
+            else:
+                # Multiple values from same column - show as OR
+                values_str = " OR ".join(tag_values)
+                filters_applied.append(f"{column_name} IN ({values_str})")
+
         result = {
             'size': int(group_size),
             'percentage': round(percentage, 2),
-            'filters_applied': [f"{col}={val}" for col, val in filters],
+            'filters_applied': filters_applied,
             'total_population': int(total_population)
         }
 

@@ -224,3 +224,43 @@ Structure each insight EXACTLY as follows:
 ## FINAL REMINDER
 
 Output ONLY the XML-formatted insights. No additional text, summaries, or formatting. Start directly with the first `<insight>` tag and end with the last `</insight>` tag.
+
+---
+
+**CRITICAL INSTRUCTION - READ THIS CAREFULLY:**
+
+Your response MUST begin with the exact characters `<insight>` with NO text, explanation, greeting, or commentary before it.
+
+Your response MUST end with `</insight>` with NO text, summary, explanation, or commentary after it.
+
+DO NOT write "I'll generate insights..." or "Here are the insights..." or "The insights have been saved..." or any other explanatory text.
+
+DO NOT write anything before the first `<insight>` tag or after the last `</insight>` tag.
+
+Your ENTIRE response should be ONLY the raw XML insight blocks, nothing else.
+
+Example of CORRECT format:
+```
+<insight>
+<message>...</message>
+<summary_tr score="8">...</summary_tr>
+...
+</insight>
+
+<insight>
+<message>...</message>
+<summary_tr score="9">...</summary_tr>
+...
+</insight>
+```
+
+Example of WRONG format (DO NOT DO THIS):
+```
+I'll now generate insights for this report.
+
+<insight>...</insight>
+
+The insights have been created successfully.
+```
+
+START YOUR RESPONSE NOW WITH: <insight>

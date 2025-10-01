@@ -105,6 +105,38 @@ class AIOrchestrator:
             dir_path.mkdir(parents=True, exist_ok=True)
             print(f"Ensured directory exists: {dir_path}")
 
+    def determine_csv_path(self, input_path: Path) -> Path:
+        """
+        Determine the correct CSV file based on input report path.
+
+        For company reports, uses company-specific CSV from 01_in/company/
+        For main report, uses main CSV from 01_in/
+
+        Args:
+            input_path: Path to the input report file
+
+        Returns:
+            Path to the appropriate CSV file
+        """
+        # Check if this is a company-specific report
+        if 'company' in input_path.parts:
+            # Extract company identifier from filename
+            # Example: Company_28_report.txt -> Company_28.csv
+            company_id = input_path.stem.replace('_report', '')
+            csv_path = Path('01_in/company') / f"{company_id}.csv"
+
+            if csv_path.exists():
+                return csv_path
+            else:
+                print(f"⚠️  Warning: Company CSV not found: {csv_path}")
+                print(f"   Falling back to main CSV for {input_path.name}")
+
+        # Default to main CSV (or user-provided CSV path)
+        if self.csv_path and self.csv_path.exists():
+            return self.csv_path
+
+        return Path('01_in/HRA_data.csv')
+
     def process_single_file(self, input_path: Path, output_path: Path) -> ProcessingResult:
         """Process a single file using ClaudeProcessor."""
         start_time = time.time()
@@ -126,12 +158,21 @@ class AIOrchestrator:
 
             print(f"\n🔄 Creating: {output_path.name} from {input_path.name}")
 
+            # Determine the correct CSV path for this specific input file
+            csv_path = self.determine_csv_path(input_path)
+
+            if csv_path and csv_path.exists():
+                print(f"   Using CSV: {csv_path}")
+            else:
+                print(f"   ⚠️  No CSV available - skipping group size calculation")
+                csv_path = None
+
             # Create processor and run it
             processor = ClaudeProcessor(
                 input_file=str(input_path),
                 output_file=str(output_path),
                 prompt_file=str(self.prompt_file),
-                csv_path=str(self.csv_path) if self.csv_path else None
+                csv_path=str(csv_path) if csv_path else None
             )
 
             # Process the file
