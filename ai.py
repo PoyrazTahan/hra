@@ -110,8 +110,21 @@ class AIOrchestrator:
         start_time = time.time()
 
         try:
+            # Check if output already exists
+            if output_path.exists():
+                print(f"\n⏭️  Skipping: {input_path.name} (output already exists: {output_path.name})")
+                return ProcessingResult(
+                    input_file=input_path,
+                    output_file=output_path,
+                    success=True,
+                    processing_time=0,
+                    error_message="Skipped - already exists"
+                )
+
             # Ensure output directory exists before processing
             output_path.parent.mkdir(parents=True, exist_ok=True)
+
+            print(f"\n🔄 Creating: {output_path.name} from {input_path.name}")
 
             # Create processor and run it
             processor = ClaudeProcessor(
@@ -120,8 +133,6 @@ class AIOrchestrator:
                 prompt_file=str(self.prompt_file),
                 csv_path=str(self.csv_path) if self.csv_path else None
             )
-
-            print(f"\n🔄 Starting: {input_path.name}")
 
             # Process the file
             processor.run()
@@ -213,19 +224,23 @@ class AIOrchestrator:
         """Print final processing summary."""
         successful = [r for r in results if r.success]
         failed = [r for r in results if not r.success]
+        skipped = [r for r in successful if r.error_message == "Skipped - already exists"]
+        created = [r for r in successful if r.error_message != "Skipped - already exists"]
 
         print(f"\n{'='*80}")
         print(f"🎯 AI PROCESSING COMPLETE")
         print(f"{'='*80}")
         print(f"📈 Total files: {len(results)}")
         print(f"✅ Successful: {len(successful)}")
+        print(f"   ⏭️  Skipped (already exist): {len(skipped)}")
+        print(f"   ✨ Newly created: {len(created)}")
         print(f"❌ Failed: {len(failed)}")
         print(f"⏱️  Total time: {total_time:.1f} seconds")
 
-        if successful:
-            avg_time = sum(r.processing_time for r in successful) / len(successful)
-            total_thinking = sum(r.thinking_chars for r in successful)
-            print(f"📊 Average processing time: {avg_time:.1f}s per file")
+        if created:
+            avg_time = sum(r.processing_time for r in created) / len(created)
+            total_thinking = sum(r.thinking_chars for r in created)
+            print(f"📊 Average processing time: {avg_time:.1f}s per file (for newly created)")
             print(f"🧠 Total thinking characters: {total_thinking:,}")
 
         if failed:
