@@ -166,10 +166,33 @@ class GroupSizeCalculator:
                 values_str = " OR ".join(tag_values)
                 filters_applied.append(f"{column_name} IN ({values_str})")
 
+        # Extract column name slugs (without "A." prefix) and subcategories
+        slugs = []
+        subcategories = []
+        for column_name in column_filters.keys():
+            # Remove "A." prefix if present, otherwise use column name as-is
+            slug = column_name.replace('A.', '') if column_name.startswith('A.') else column_name
+            slugs.append(slug)
+
+            # Look up subcategory from value_mappings
+            # Try with original column_name first, then without prefix
+            column_config = self.value_mappings.get(column_name)
+            if not column_config and not column_name.startswith('A.'):
+                # Try adding "A." prefix
+                column_config = self.value_mappings.get(f"A.{column_name}")
+
+            if column_config and 'subcategory' in column_config:
+                subcategories.append(column_config['subcategory'])
+            else:
+                # If no subcategory found, use slug as fallback
+                subcategories.append(slug)
+
         result = {
             'size': int(group_size),
             'percentage': round(percentage, 2),
             'filters_applied': filters_applied,
+            'slugs': slugs,
+            'subcategories': subcategories,
             'total_population': int(total_population)
         }
 

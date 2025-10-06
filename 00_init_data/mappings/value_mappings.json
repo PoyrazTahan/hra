@@ -2,6 +2,7 @@
   "A.perceived_health": {
     "answer_field": "SingleSelection",
     "category": "mental_health",
+    "subcategory": "perceived_health",
     "mappings": {
       "english": {
         "Hiç iyi hissetmiyorum": "very_poor_health",
@@ -22,6 +23,7 @@
   "A.depression_anhedonia": {
     "answer_field": "SingleSelection",
     "category": "mental_health",
+    "subcategory": "depression",
     "mappings": {
       "english": {
         "Hiç yaşamadım": "full_interest_pleasure",
@@ -40,6 +42,7 @@
   "A.depression_mood": {
     "answer_field": "SingleSelection",
     "category": "mental_health",
+    "subcategory": "depression",
     "mappings": {
       "english": {
         "Hiç yaşamadım": "positive_mood",
@@ -58,6 +61,7 @@
   "A.stress_level_irritability": {
     "answer_field": "SingleSelection",
     "category": "mental_health",
+    "subcategory": "stress",
     "mappings": {
       "english": {
         "Hiçbir zaman": "never_irritated",
@@ -77,6 +81,7 @@
   },
   "A.stress_level_loc": {
     "category": "mental_health",
+    "subcategory": "stress",
     "mappings": {
       "english": {
         "Hiçbir zaman": "always_in_control",
@@ -98,6 +103,7 @@
   "A.loneliness": {
     "answer_field": "SingleSelection",
     "category": "mental_health",
+    "subcategory": "loneliness",
     "mappings": {
       "english": {
         "Hiçbir zaman": "never_lonely",
@@ -118,6 +124,7 @@
   "A.sleep_quality": {
     "answer_field": "SingleSelection",
     "category": "sleep",
+    "subcategory": "sleep_quality",
     "mappings": {
       "english": {
         "6 saatten az": "insufficient_sleep",
@@ -138,6 +145,7 @@
   "A.activity_level": {
     "answer_field": "SingleSelection",
     "category": "activity_level",
+    "subcategory": "activity_level",
     "mappings": {
       "english": {
         "Hiç yapmıyorum": "no_exercise",
@@ -158,6 +166,7 @@
   "A.daily_steps": {
     "answer_field": "SingleSelection",
     "category": "activity_level",
+    "subcategory": "daily_steps",
     "mappings": {
       "english": {
         "2.500 adımdan az": "very_low_steps",
@@ -178,6 +187,7 @@
   "A.physical_pain": {
     "answer_field": "SingleSelection",
     "category": "physical_health",
+    "subcategory": "physical_pain",
     "mappings": {
       "english": {
         "Hiç ağrım olmadı": "no_pain",
@@ -200,6 +210,7 @@
   "A.fruit_veg_intake": {
     "answer_field": "SingleSelection",
     "category": "nutrition",
+    "subcategory": "fruit_veg_intake",
     "mappings": {
       "english": {
         "Günde 1 porsiyondan az veya hiç": "very_poor_nutrition",
@@ -220,6 +231,7 @@
   "A.sugar_intake": {
     "answer_field": "SingleSelection",
     "category": "nutrition",
+    "subcategory": "sugar_intake",
     "mappings": {
       "english": {
         "Haftada 1 veya hiç": "minimal_sugar",
@@ -240,6 +252,7 @@
   "A.processed_food_intake": {
     "answer_field": "SingleSelection",
     "category": "nutrition",
+    "subcategory": "processed_food_intake",
     "mappings": {
       "english": {
         "Haftada 1 veya hiç": "minimal_processed_food",
@@ -260,6 +273,7 @@
   "A.water_intake": {
     "answer_field": "SingleSelection",
     "category": "nutrition",
+    "subcategory": "water_intake",
     "mappings": {
       "english": {
         "1-2 bardak (200-400 ml)": "very_low_water",
@@ -273,6 +287,7 @@
   "A.alcohol_consumption": {
     "answer_field": "SingleSelection",
     "category": "lifestyle",
+    "subcategory": "alcohol_consumption",
     "mappings": {
       "english": {
         "Hiç içmiyorum": "no_alcohol",
@@ -297,6 +312,7 @@
   "A.smoking_status": {
     "answer_field": "SingleSelection",
     "category": "lifestyle",
+    "subcategory": "smoking_status",
     "mappings": {
       "english": {
         "Hiç kullanmadım": "never_smoked",
@@ -317,6 +333,7 @@
   "A.chronic_conditions": {
     "answer_field": "MultiSelection",
     "category": "health_conditions",
+    "subcategory": "chronic_conditions",
     "mappings": {
       "english": {
         "Hayır yok": "no_chronic_conditions",
@@ -368,6 +385,7 @@
   "A.supplement_usage": {
     "answer_field": "SingleSelection",
     "category": "health_conditions",
+    "subcategory": "supplement_usage",
     "mappings": {
       "english": {
         "Evet kullanıyorum": "using_supplements",
@@ -378,6 +396,7 @@
   "A.gender": {
     "answer_field": "SingleSelection",
     "category": "other",
+    "subcategory": "gender",
     "mappings": {
       "english": {
         "Erkek": "male",
@@ -390,6 +409,7 @@
   "A.has_children": {
     "answer_field": "SingleSelection",
     "category": "other",
+    "subcategory": "children_status",
     "mappings": {
       "english": {
         "Çocuğum yok": "no_children",

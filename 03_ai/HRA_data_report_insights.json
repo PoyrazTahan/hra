@@ -28,6 +28,14 @@
           "A.smoking_status=daily_smoker",
           "A.depression_mood=persistent_sadness"
         ],
+        "slugs": [
+          "smoking_status",
+          "depression_mood"
+        ],
+        "subcategories": [
+          "smoking_status",
+          "depression"
+        ],
         "total_population": 1457
       }
     },
@@ -58,6 +66,14 @@
           "A.smoking_status=never_smoked",
           "A.depression_mood=positive_mood"
         ],
+        "slugs": [
+          "smoking_status",
+          "depression_mood"
+        ],
+        "subcategories": [
+          "smoking_status",
+          "depression"
+        ],
         "total_population": 1457
       }
     },
@@ -85,6 +101,12 @@
         "percentage": 92.52,
         "filters_applied": [
           "A.fruit_veg_intake IN (very_poor_nutrition OR poor_nutrition)"
+        ],
+        "slugs": [
+          "fruit_veg_intake"
+        ],
+        "subcategories": [
+          "fruit_veg_intake"
         ],
         "total_population": 1457
       }
@@ -116,6 +138,14 @@
           "A.sleep_quality=excessive_sleep",
           "A.depression_anhedonia=severe_anhedonia"
         ],
+        "slugs": [
+          "sleep_quality",
+          "depression_anhedonia"
+        ],
+        "subcategories": [
+          "sleep_quality",
+          "depression"
+        ],
         "total_population": 1457
       }
     },
@@ -145,6 +175,14 @@
         "filters_applied": [
           "A.activity_level IN (no_exercise OR daily_exercise)",
           "A.daily_steps=very_low_steps"
+        ],
+        "slugs": [
+          "activity_level",
+          "daily_steps"
+        ],
+        "subcategories": [
+          "activity_level",
+          "daily_steps"
         ],
         "total_population": 1457
       }
@@ -177,6 +215,16 @@
           "A.loneliness=always_lonely",
           "A.depression_anhedonia=severe_anhedonia"
         ],
+        "slugs": [
+          "depression_mood",
+          "loneliness",
+          "depression_anhedonia"
+        ],
+        "subcategories": [
+          "depression",
+          "loneliness",
+          "depression"
+        ],
         "total_population": 1457
       }
     },
@@ -204,6 +252,12 @@
         "percentage": 6.04,
         "filters_applied": [
           "bmi_category=underweight"
+        ],
+        "slugs": [
+          "bmi_category"
+        ],
+        "subcategories": [
+          "bmi_category"
         ],
         "total_population": 1457
       }
@@ -234,6 +288,12 @@
         "percentage": 100.0,
         "filters_applied": [
           "A.depression_anhedonia IN (full_interest_pleasure OR mild_anhedonia OR moderate_anhedonia OR severe_anhedonia)"
+        ],
+        "slugs": [
+          "depression_anhedonia"
+        ],
+        "subcategories": [
+          "depression"
         ],
         "total_population": 1457
       }
@@ -266,6 +326,12 @@
         "percentage": 100.0,
         "filters_applied": [
           "A.physical_pain IN (no_pain OR minimal_pain OR mild_pain OR moderate_pain OR severe_pain OR extreme_pain)"
+        ],
+        "slugs": [
+          "physical_pain"
+        ],
+        "subcategories": [
+          "physical_pain"
         ],
         "total_population": 1457
       }
@@ -300,6 +366,16 @@
           "A.activity_level=no_exercise",
           "A.sleep_quality=insufficient_sleep"
         ],
+        "slugs": [
+          "smoking_status",
+          "activity_level",
+          "sleep_quality"
+        ],
+        "subcategories": [
+          "smoking_status",
+          "activity_level",
+          "sleep_quality"
+        ],
         "total_population": 1457
       }
     },
@@ -330,6 +406,14 @@
           "A.depression_mood=positive_mood",
           "A.sugar_intake=minimal_sugar"
         ],
+        "slugs": [
+          "depression_mood",
+          "sugar_intake"
+        ],
+        "subcategories": [
+          "depression",
+          "sugar_intake"
+        ],
         "total_population": 1457
       }
     },
@@ -358,6 +442,12 @@
         "percentage": 94.17,
         "filters_applied": [
           "A.sleep_quality IN (optimal_sleep OR borderline_sleep OR insufficient_sleep)"
+        ],
+        "slugs": [
+          "sleep_quality"
+        ],
+        "subcategories": [
+          "sleep_quality"
         ],
         "total_population": 1457
       }
@@ -392,6 +482,14 @@
           "A.stress_level_loc IN (sometimes_out_of_control OR often_out_of_control OR frequently_out_of_control)",
           "A.stress_level_irritability IN (sometimes_irritated OR often_irritated OR frequently_irritated)"
         ],
+        "slugs": [
+          "stress_level_loc",
+          "stress_level_irritability"
+        ],
+        "subcategories": [
+          "stress",
+          "stress"
+        ],
         "total_population": 1457
       }
     },
@@ -422,6 +520,14 @@
           "A.activity_level=no_exercise",
           "A.sleep_quality=excessive_sleep"
         ],
+        "slugs": [
+          "activity_level",
+          "sleep_quality"
+        ],
+        "subcategories": [
+          "activity_level",
+          "sleep_quality"
+        ],
         "total_population": 1457
       }
     },
@@ -451,6 +557,14 @@
         "filters_applied": [
           "A.stress_level_irritability=frequently_irritated",
           "A.sleep_quality=insufficient_sleep"
+        ],
+        "slugs": [
+          "stress_level_irritability",
+          "sleep_quality"
+        ],
+        "subcategories": [
+          "stress",
+          "sleep_quality"
         ],
         "total_population": 1457
       }
