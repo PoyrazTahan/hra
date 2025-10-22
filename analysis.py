@@ -199,6 +199,10 @@ Examples:
                        action='store_true',
                        help='Process only the main dataset (skip company processing)')
 
+    parser.add_argument('--company',
+                       type=str,
+                       help='Process only a specific company (e.g., --company İş_Bankası)')
+
     args = parser.parse_args()
 
     print(f"Health Risk Assessment Multi-Company Analysis Pipeline")
@@ -214,22 +218,23 @@ Examples:
     company_output_dir = output_dir / "company"
     company_output_dir.mkdir(exist_ok=True)
 
-    # Process main dataset
-    main_data_path = Path(args.data)
-    if not main_data_path.exists():
-        print(f"Error: Main data file not found: {main_data_path}")
-        sys.exit(1)
+    # Process main dataset (skip if --company is specified)
+    if not args.company:
+        main_data_path = Path(args.data)
+        if not main_data_path.exists():
+            print(f"Error: Main data file not found: {main_data_path}")
+            sys.exit(1)
 
-    # Use the filename stem for the main report (e.g., HRA_data.csv -> HRA_data_report.txt)
-    main_output_file = output_dir / f"{main_data_path.stem}_report.txt"
-    print(f"\n{'='*80}")
-    print("PROCESSING MAIN DATASET")
-    print(f"{'='*80}")
+        # Use the filename stem for the main report (e.g., HRA_data.csv -> HRA_data_report.txt)
+        main_output_file = output_dir / f"{main_data_path.stem}_report.txt"
+        print(f"\n{'='*80}")
+        print("PROCESSING MAIN DATASET")
+        print(f"{'='*80}")
 
-    success = process_dataset(main_data_path, main_output_file, "Main Dataset")
-    if not success:
-        print("Main dataset processing failed")
-        sys.exit(1)
+        success = process_dataset(main_data_path, main_output_file, "Main Dataset")
+        if not success:
+            print("Main dataset processing failed")
+            sys.exit(1)
 
     # Process company datasets (unless main-only flag is set)
     if not args.main_only:
@@ -244,16 +249,59 @@ Examples:
             processed_companies = 0
             skipped_companies = 0
 
-            # Process each company CSV file
-            for company_file in sorted(company_dir.glob("Company_*.csv")):
-                company_name = company_file.stem  # e.g., "Company_10"
+            # If specific company requested, process only that one
+            if args.company:
+                # Find company file matching the name
+                company_pattern = f"*{args.company}*.csv"
+                matching_files = list(company_dir.glob(company_pattern))
+
+                if not matching_files:
+                    print(f"Error: No company file found matching '{args.company}'")
+                    print(f"Available companies:")
+                    for f in sorted(company_dir.glob("Corporate_*.csv")):
+                        # Extract company name from filename
+                        parts = f.stem.split('_', 2)
+                        if len(parts) >= 3:
+                            print(f"  - {parts[2]}")
+                    sys.exit(1)
+
+                if len(matching_files) > 1:
+                    print(f"Warning: Multiple files match '{args.company}':")
+                    for f in matching_files:
+                        print(f"  - {f.name}")
+                    print(f"Using first match: {matching_files[0].name}")
+
+                company_file = matching_files[0]
+                company_name = company_file.stem
                 company_output_file = company_output_dir / f"{company_name}_report.txt"
 
+                print(f"Processing specific company: {company_name}")
                 success = process_dataset(company_file, company_output_file, company_name)
                 if success:
-                    processed_companies += 1
+                    processed_companies = 1
                 else:
-                    skipped_companies += 1
+                    skipped_companies = 1
+            else:
+                # Process all company CSV files (Corporate_* pattern)
+                for company_file in sorted(company_dir.glob("Corporate_*.csv")):
+                    company_name = company_file.stem  # e.g., "Corporate_68e6d330_Heltia"
+                    company_output_file = company_output_dir / f"{company_name}_report.txt"
+
+                    success = process_dataset(company_file, company_output_file, company_name)
+                    if success:
+                        processed_companies += 1
+                    else:
+                        skipped_companies += 1
+
+                # Also process Unknown_Company.csv if it exists
+                unknown_file = company_dir / "Unknown_Company.csv"
+                if unknown_file.exists():
+                    unknown_output_file = company_output_dir / "Unknown_Company_report.txt"
+                    success = process_dataset(unknown_file, unknown_output_file, "Unknown_Company")
+                    if success:
+                        processed_companies += 1
+                    else:
+                        skipped_companies += 1
 
             print(f"\n{'='*80}")
             print("COMPANY PROCESSING SUMMARY")
@@ -264,7 +312,8 @@ Examples:
     print(f"\n{'='*80}")
     print("PIPELINE COMPLETE")
     print(f"{'='*80}")
-    print(f"Main report: {main_output_file}")
+    if not args.company:
+        print(f"Main report: {main_output_file}")
     if not args.main_only:
         print(f"Company reports: {company_output_dir}")
     print(f"Finished: {datetime.now()}")

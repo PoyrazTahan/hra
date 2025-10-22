@@ -1,0 +1,681 @@
+{
+  "total_insights": 16,
+  "insights": [
+    {
+      "id": "insight_01",
+      "index": 1,
+      "english": {
+        "message": "Among employees engaged enough to complete a comprehensive health survey, a striking paradox emerges: 92.6% have poor or very poor fruit and vegetable intake (46.3% very poor, 46.3% poor), while 53.7% actively take supplements. This reveals a fundamental disconnect between health awareness and foundational nutrition habits. Employees are willing to invest in supplements but haven't established basic dietary patterns that provide superior nutrition at lower cost.\n\nCompanies should prioritize practical nutrition interventions over supplement education. Implement on-site fruit availability, subsidized healthy meal options, or meal planning workshops. The fact that health-conscious employees skip basic nutrition suggests barriers beyond awareness—likely time constraints, convenience, or cooking skills. Address the root causes rather than symptoms.",
+        "proof": "92.6% of health survey participants have poor or very poor fruit/vegetable intake (19 very poor + 19 poor out of 41). Meanwhile, 53.7% use supplements (22 out of 41). This creates a paradox where employees invest in supplements while lacking foundational nutrition. Only 7.3% have adequate or good nutrition despite being engaged enough to complete a comprehensive health assessment."
+      },
+      "turkish": {
+        "message": "Sağlık anketini dolduracak kadar bilinçli çalışanlar arasında çarpıcı bir çelişki var: %92,6'sı meyve-sebze tüketiminde yetersiz (yarısı çok kötü, yarısı kötü seviyede) ancak %53,7'si takviye kullanıyor. Bu durum, sağlık bilinci ile temel beslenme alışkanlıkları arasında ciddi bir kopukluğa işaret ediyor. Çalışanlar takviyelere para harcamaya istekli ama daha etkili ve ekonomik olan temel beslenme düzenini oluşturamamış. Şirketler, takviye eğitimi yerine pratik beslenme müdahalelerine öncelik vermeli: işyerinde meyve bulundurun, sağlıklı öğünleri sübvanse edin veya yemek planlama atölyeleri düzenleyin. Sağlık bilincine sahip çalışanların bile temel beslenmeyi atlıyor olması, farkındalık eksikliğinden çok zaman kısıtı, kolaylık arayışı ya da mutfak becerileri gibi temel engellere işaret ediyor (n=41, %53,7 takviye kullanıcısı, %92,6 yetersiz meyve-sebze).",
+        "score": 9
+      },
+      "categories": [
+        "nutrition",
+        "lifestyle"
+      ],
+      "health_tags": [
+        "very_poor_nutrition",
+        "poor_nutrition",
+        "using_supplements"
+      ],
+      "demographic_tags": [],
+      "target_group": {
+        "size": 20,
+        "percentage": 48.78,
+        "filters_applied": [
+          "A.fruit_veg_intake IN (very_poor_nutrition OR poor_nutrition)",
+          "A.supplement_usage=using_supplements"
+        ],
+        "slugs": [
+          "fruit_veg_intake",
+          "supplement_usage"
+        ],
+        "subcategories": [
+          "fruit_veg_intake",
+          "supplement_usage"
+        ],
+        "total_population": 41
+      }
+    },
+    {
+      "id": "insight_02",
+      "index": 2,
+      "english": {
+        "message": "Physical inactivity emerges as the dominant risk factor, even among health-tracking employees. Those with very low daily steps show 54.5% high-risk rates versus 22% population baseline—a 2.5x elevation. Critically, 39% of respondents report zero regular exercise, and over half (51.2%) have low or very low step counts. The compound risk analysis confirms no exercise amplifies overall risk by 1.71x, making it the strongest single lifestyle predictor.\n\nThis finding is especially concerning because these are employees who chose to track their health. The broader workforce likely has even lower activity levels. Companies should implement walking meetings, standing desks, step challenges with meaningful incentives, and most importantly, cultural shifts that make movement during work hours acceptable and encouraged rather than viewed as unproductive.",
+        "proof": "Very low steps group shows 54.5% high-risk rate versus 22% population baseline (n=11, 2.31σ magnitude). 39% report no regular exercise (n=16), with this group showing 93.8% elevated risk rate (1.71x risk amplification). Combined, 51.2% of health-tracking employees have low or very low step counts (21 out of 41). Statistical surprise analysis confirms very low steps as strongest single predictor across multiple compound patterns."
+      },
+      "turkish": {
+        "message": "Fiziksel hareketsizlik, sağlık takibi yapan çalışanlar arasında bile baskın risk faktörü olarak öne çıkıyor. Çok düşük adım atan çalışanlarda yüksek risk oranı %54,5'e çıkıyor—bu, genel %22'lik oranın 2,5 katı. Katılımcıların %39'u hiç düzenli egzersiz yapmıyor ve yarısından fazlası (%51,2) düşük adım sayısına sahip. Bileşik risk analizi, egzersiz yapmama durumunun genel riski 1,71 kat artırdığını doğruluyor; bu onu en güçlü tek yaşam tarzı göstergesi yapıyor. Bu bulgu, sağlık takibi yapmayı seçen çalışanlar için geçerli olduğundan özellikle endişe verici—geniş işgücünün muhtemelen daha da düşük aktivite seviyeleri var. Şirketler yürüyüşlü toplantılar, ayakta çalışma masaları, anlamlı teşviklerle adım yarışmaları uygulamalı ve en önemlisi, çalışma saatleri içinde hareketi kabul edilebilir ve teşvik edilen bir norm haline getiren kültürel değişimler yapmalı (n=11 çok düşük adım, %54,5 yüksek risk; n=16 hiç egzersiz yok, %93,8 artmış risk).",
+        "score": 10
+      },
+      "categories": [
+        "activity_level",
+        "physical_health"
+      ],
+      "health_tags": [
+        "very_low_steps",
+        "low_steps",
+        "no_exercise"
+      ],
+      "demographic_tags": [],
+      "target_group": {
+        "size": 11,
+        "percentage": 26.83,
+        "filters_applied": [
+          "A.daily_steps IN (very_low_steps OR low_steps)",
+          "A.activity_level=no_exercise"
+        ],
+        "slugs": [
+          "daily_steps",
+          "activity_level"
+        ],
+        "subcategories": [
+          "daily_steps",
+          "activity_level"
+        ],
+        "total_population": 41
+      }
+    },
+    {
+      "id": "insight_03",
+      "index": 3,
+      "english": {
+        "message": "Mental health challenges pervade even the health-engaged workforce, with 73.2% reporting some level of anhedonia (reduced interest/pleasure) and only 19.5% showing full interest in activities. Simultaneously, 75.6% experience at least occasional sadness, and 75.7% report irritability. Most concerning: 39% feel out of control sometimes, with another 24.4% feeling out of control often or frequently. This suggests high workplace stress that persists despite health awareness.\n\nThe banking sector's demanding nature appears to affect mental wellbeing regardless of health engagement. Companies must go beyond offering EAP programs to addressing root causes: workload management, psychological safety, manageable deadlines, and clear boundaries between work and personal time. Mental health interventions should be systemic, not just individual.",
+        "proof": "73.2% report some level of anhedonia: 51.2% mild (n=21), 22% moderate (n=9), 7.3% severe (n=3). Only 19.5% show full interest/pleasure (n=8). For mood: 51.2% occasional sadness (n=21), 17.1% frequent (n=7), 7.3% persistent (n=3), with only 24.4% positive mood (n=10). Stress indicators show 53.7% sometimes irritated (n=22), 22% often (n=9). Loss of control: 39% sometimes (n=16), 19.5% often (n=8), 4.9% frequently (n=2)."
+      },
+      "turkish": {
+        "message": "Sağlık bilincine sahip işgücünde bile ruh sağlığı sorunları yaygın: %73,2'si motivasyon ve ilgi kaybı yaşıyor, sadece %19,5'i aktivitelere tam ilgi duyuyor. Aynı zamanda %75,6'sı en azından ara sıra üzüntü hissediyor ve %75,7'si sinirlilik bildiriyor. En endişe verici bulgu: %39'u bazen kontrol kaybı hissederken, %24,4'ü sık sık veya çoğunlukla kontrol kaybı yaşıyor. Bu, sağlık farkındalığına rağmen devam eden yüksek işyeri stresine işaret ediyor. Bankacılık sektörünün zorlu doğası, sağlık katılımından bağımsız olarak ruh sağlığını etkiliyor. Şirketler, sadece ÇAD (Çalışan Destek Programı) sunmanın ötesine geçerek temel nedenleri ele almalı: iş yükü yönetimi, psikolojik güvenlik, yönetilebilir son tarihler ve iş-özel yaşam arasında net sınırlar. Ruh sağlığı müdahaleleri bireysel değil sistemik olmalı (n=41, %73,2 motivasyon kaybı, %63,4 kontrol kaybı hissi, %75,7 sinirlilik).",
+        "score": 9
+      },
+      "categories": [
+        "mental_health"
+      ],
+      "health_tags": [
+        "mild_anhedonia",
+        "moderate_anhedonia",
+        "severe_anhedonia",
+        "occasional_sadness",
+        "frequent_sadness",
+        "sometimes_irritated",
+        "often_irritated",
+        "sometimes_out_of_control",
+        "often_out_of_control"
+      ],
+      "demographic_tags": [],
+      "target_group": {
+        "size": 15,
+        "percentage": 36.59,
+        "filters_applied": [
+          "A.depression_anhedonia IN (mild_anhedonia OR moderate_anhedonia OR severe_anhedonia)",
+          "A.depression_mood IN (occasional_sadness OR frequent_sadness)",
+          "A.stress_level_irritability IN (sometimes_irritated OR often_irritated)",
+          "A.stress_level_loc IN (sometimes_out_of_control OR often_out_of_control)"
+        ],
+        "slugs": [
+          "depression_anhedonia",
+          "depression_mood",
+          "stress_level_irritability",
+          "stress_level_loc"
+        ],
+        "subcategories": [
+          "depression",
+          "depression",
+          "stress",
+          "stress"
+        ],
+        "total_population": 41
+      }
+    },
+    {
+      "id": "insight_04",
+      "index": 4,
+      "english": {
+        "message": "Only 41 employees from İş Bankası completed this comprehensive health assessment, representing a critically small engagement rate that reveals more about organizational health culture than individual health status. This low participation suggests most employees either lack health awareness, don't trust health data privacy, feel too busy for wellness activities, or perceive health programs as performative rather than genuinely supportive. The employees who did participate show 80.5% elevated health risk despite being health-conscious enough to complete detailed tracking.\n\nThis is a red flag for HR leadership. Before investing in program features, address fundamental engagement barriers. Conduct anonymous surveys about why employees don't participate, ensure ironclad data privacy guarantees, and create dedicated time during work hours for wellness activities. The current 41-person sample likely represents your most health-engaged employees—if they show 80.5% elevated risk, your broader workforce faces even greater challenges.",
+        "proof": "Total sample size of only 41 employees suggests very low participation rate for a major bank. Among these health-engaged participants, 80.5% show elevated health risk (58.5% moderate risk + 22% high risk, n=33 out of 41). Only 19.5% classified as low risk (n=8). This means even the most health-conscious employees willing to complete detailed health tracking show overwhelming majority with elevated risk."
+      },
+      "turkish": {
+        "message": "İş Bankası'ndan sadece 41 çalışan bu kapsamlı sağlık değerlendirmesini tamamlamış; bu kritik derecede düşük katılım oranı, bireysel sağlık durumundan çok kurumsal sağlık kültürünü gösteriyor. Düşük katılım, çoğu çalışanın ya sağlık bilincinden yoksun olduğunu, sağlık verisi gizliliğine güvenmediğini, wellness aktiviteleri için çok meşgul hissettiğini veya sağlık programlarını samimi destek yerine göstermelik algıladığını düşündürüyor. Katılan çalışanlar bile %80,5 artmış risk gösteriyor—oysa bunlar detaylı takip yapmaya istekli, sağlık bilincine sahip kişiler. Bu, İK liderliği için ciddi bir alarm. Program özelliklerine yatırım yapmadan önce temel katılım engellerini çözün: çalışanların neden katılmadığına dair anonim anketler yapın, çelik gibi veri gizliliği garantileri verin ve çalışma saatleri içinde wellness aktiviteleri için özel zaman yaratın. Mevcut 41 kişilik örnek muhtemelen en sağlık-bilinçli çalışanlarınızı temsil ediyor—eğer onlar %80,5 artmış risk gösteriyorsa, geniş işgücü daha da büyük zorluklarla karşı karşıya (n=41 katılımcı, %80,5 artmış risk).",
+        "score": 10
+      },
+      "categories": [
+        "lifestyle"
+      ],
+      "health_tags": [],
+      "demographic_tags": [],
+      "target_group": {
+        "size": 41,
+        "percentage": 100.0,
+        "filters_applied": [],
+        "total_population": 41,
+        "note": "No filters applied - represents entire population"
+      }
+    },
+    {
+      "id": "insight_05",
+      "index": 5,
+      "english": {
+        "message": "One in four employees (24.4%) reports thyroid disorders, a rate substantially higher than general Turkish population estimates of 5-15%. This could indicate genuine prevalence in this workforce, but more likely reflects that health-conscious individuals who track wellness are more likely to have diagnosed conditions requiring monitoring. This \"diagnosis bias\" means health tracking populations overrepresent people managing existing conditions rather than preventing future ones.\n\nHR should segment wellness programs into prevention and management tracks. The 24.4% with thyroid conditions need different support (medication adherence, endocrinologist access, fatigue management) than the 75.6% focused on prevention. Currently, one-size-fits-all programs likely serve neither group optimally. Additionally, thyroid disorders often correlate with fatigue and weight management challenges, explaining some of the physical inactivity patterns observed.",
+        "proof": "24.4% of participants report thyroid disorders (n=10 out of 41), compared to general Turkish population prevalence estimates of 5-15%. The 75.6% without thyroid conditions (n=31) represent a different wellness profile. This high rate among health-tracking employees suggests selection bias where individuals with existing diagnosed conditions are more likely to engage with health monitoring systems."
+      },
+      "turkish": {
+        "message": "Her dört çalışandan biri (%24,4) tiroid rahatsızlığı bildiriyor—bu oran, Türkiye genel nüfus tahminlerinden (%5-15) önemli ölçüde yüksek. Bu durum gerçek bir yaygınlığı gösterebilir, ancak daha olası olarak \"tanı yanlılığı\"nı yansıtıyor: sağlık takibi yapan bireyler, izleme gerektiren mevcut rahatsızlıkları olan kişiler arasından çıkma eğiliminde. Bu, sağlık takibi yapan popülasyonların, gelecekteki sorunları önlemeye çalışanlardan çok mevcut durumları yöneten kişileri aşırı temsil ettiği anlamına geliyor. İK, wellness programlarını önleme ve yönetim izlerine ayırmalı. %24,4'lük tiroid rahatsızlığı olan grup farklı desteğe ihtiyaç duyuyor (ilaç uyumu, endokrinolog erişimi, yorgunluk yönetimi), oysa %75,6'lık önleme odaklı grup başka müdahalelere. Şu anda tek-beden-herkese programlar muhtemelen her iki grubu da optimal şekilde hizmet etmiyor. Ayrıca, tiroid rahatsızlıkları sıklıkla yorgunluk ve kilo yönetimi zorluklarıyla ilişkili, bu da gözlemlenen fiziksel hareketsizlik kalıplarını açıklıyor (n=10 tiroid rahatsızlığı, %24,4 oran).",
+        "score": 7
+      },
+      "categories": [
+        "health_conditions",
+        "physical_health"
+      ],
+      "health_tags": [
+        "has_thyroid"
+      ],
+      "demographic_tags": [],
+      "target_group": {
+        "size": 10,
+        "percentage": 24.39,
+        "filters_applied": [
+          "thyroid_disorder_status=has_thyroid"
+        ],
+        "slugs": [
+          "thyroid_disorder_status"
+        ],
+        "subcategories": [
+          "thyroid_disorder_status"
+        ],
+        "total_population": 41
+      }
+    },
+    {
+      "id": "insight_06",
+      "index": 6,
+      "english": {
+        "message": "The majority of employees (58.5%) exist in a precarious \"borderline sleep\" category—neither getting insufficient sleep nor achieving optimal rest. Only 31.7% report optimal sleep, while 9.8% are clearly insufficient. This borderline majority suggests chronic sleep debt: employees getting just enough sleep to function but not enough to thrive. Over time, borderline sleep accumulates deficits that impair cognitive performance, emotional regulation, and physical recovery.\n\nOrganizations should investigate whether work demands, commute times, or evening work communications push employees into borderline sleep patterns. Simple interventions like discouraging emails after 8 PM, flexible start times for long commutes, or education on sleep hygiene could shift the borderline group toward optimal sleep. The goal should be moving that 58.5% majority into the optimal category, which would likely improve the mental health metrics showing widespread stress and mood issues.",
+        "proof": "58.5% report borderline sleep quality (n=24 out of 41), representing the largest single category. Only 31.7% achieve optimal sleep (n=13), while 9.8% have insufficient sleep (n=4). This means 68.3% of health-tracking employees are not achieving optimal sleep, with the majority stuck in a borderline state that suggests chronic sleep debt accumulation."
+      },
+      "turkish": {
+        "message": "Çalışanların çoğunluğu (%58,5) tehlikeli bir \"sınırda uyku\" kategorisinde yaşıyor—ne yetersiz uyku ne de optimal dinlenme alıyorlar. Sadece %31,7'si optimal uyku bildirirken, %9,8'i açıkça yetersiz. Bu sınırdaki çoğunluk, kronik uyku borcuna işaret ediyor: çalışanlar işlev gösterecek kadar uyuyor ama gelişmek için yeterli değil. Zamanla sınırda uyku, bilişsel performansı, duygusal düzenlemeyi ve fiziksel iyileşmeyi bozan açıklar biriktiriyor. Kuruluşlar, iş talepleri, işe gidiş-geliş süreleri veya akşam iş iletişimlerinin çalışanları sınırda uyku kalıplarına itip itmediğini araştırmalı. Akşam 8'den sonra e-posta göndermekten kaçınmak, uzun işe gidiş-gelişler için esnek başlama saatleri veya uyku hijyeni eğitimi gibi basit müdahaleler, sınırdaki grubu optimal uykuya kaydırabilir. Hedef, %58,5'lik çoğunluğu optimal kategoriye taşımak olmalı; bu muhtemelen yaygın stres ve ruh hali sorunlarını gösteren ruh sağlığı metriklerini iyileştirecektir (n=24 sınırda uyku, n=13 optimal, n=4 yetersiz).",
+        "score": 8
+      },
+      "categories": [
+        "sleep",
+        "mental_health"
+      ],
+      "health_tags": [
+        "borderline_sleep",
+        "optimal_sleep",
+        "insufficient_sleep"
+      ],
+      "demographic_tags": [],
+      "target_group": {
+        "size": 41,
+        "percentage": 100.0,
+        "filters_applied": [
+          "A.sleep_quality IN (borderline_sleep OR optimal_sleep OR insufficient_sleep)"
+        ],
+        "slugs": [
+          "sleep_quality"
+        ],
+        "subcategories": [
+          "sleep_quality"
+        ],
+        "total_population": 41
+      }
+    },
+    {
+      "id": "insight_07",
+      "index": 7,
+      "english": {
+        "message": "Despite no employees classified as obese by the health risk system (obesity_status shows 100% no_obesity), BMI data reveals 14.6% are actually obese (BMI > 30) and 39% are overweight—meaning 53.7% of health-tracking employees exceed healthy weight ranges. Additionally, overweight employees show 1.42x risk ratio and obese employees show 2.28x risk ratio for high health risk. Normal weight is the strongest protective factor identified (0.24x risk ratio).\n\nThis discrepancy between obesity classification and actual BMI suggests the risk assessment system may be miscategorized or outdated. Companies should verify their health risk algorithms and ensure weight-related interventions reach the actual 53.7% above healthy weight. Focus on the protective power of normal weight through sustainable lifestyle changes rather than restrictive dieting. The data shows normal weight employees have dramatically lower risk even when other factors are present.",
+        "proof": "BMI distribution shows 46.3% normal weight (n=19), 39% overweight (n=16), and 14.6% obese (n=6), totaling 53.7% above healthy weight. However, obesity_status field shows 100% \"no_obesity\" (n=41), indicating classification discrepancy. High-risk group analysis shows overweight represents 55.6% of high-risk employees (1.42x ratio) and obese represents 33.3% (2.28x ratio). Normal weight shows strongest protective effect with 0.24x baseline risk ratio and 73.7% elevated risk rate versus 80.5% population."
+      },
+      "turkish": {
+        "message": "Sağlık risk sistemi hiçbir çalışanı obez olarak sınıflandırmamasına rağmen (obesity_status %100 obez değil gösteriyor), BMI verileri %14,6'sının gerçekte obez (BMI > 30) ve %39'unun fazla kilolu olduğunu ortaya koyuyor—yani sağlık takibi yapan çalışanların %53,7'si sağlıklı kilo aralıklarını aşıyor. Ek olarak, fazla kilolu çalışanlar 1,42 kat risk oranı ve obez çalışanlar yüksek sağlık riski için 2,28 kat risk oranı gösteriyor. Normal kilo, tespit edilen en güçlü koruyucu faktör (0,24 kat risk oranı). Obezite sınıflandırması ile gerçek BMI arasındaki bu tutarsızlık, risk değerlendirme sisteminin yanlış kategorize edilmiş veya eski olabileceğini gösteriyor. Şirketler sağlık risk algoritmalarını doğrulamalı ve kilo ile ilgili müdahalelerin gerçek %53,7'lik sağlıklı kilo üzerindeki gruba ulaşmasını sağlamalı. Kısıtlayıcı diyet yerine sürdürülebilir yaşam tarzı değişiklikleriyle normal kilonun koruyucu gücüne odaklanın. Veriler, normal kilolu çalışanların diğer faktörler mevcut olsa bile çarpıcı biçimde daha düşük risk taşıdığını gösteriyor (n=19 normal kilo, n=16 fazla kilolu, n=6 obez; normal kilo 0,24x koruyucu etki).",
+        "score": 8
+      },
+      "categories": [
+        "physical_health"
+      ],
+      "health_tags": [
+        "normal_weight",
+        "overweight",
+        "obese"
+      ],
+      "demographic_tags": [
+        "normal_weight",
+        "overweight",
+        "obese"
+      ],
+      "target_group": {
+        "size": 41,
+        "percentage": 100.0,
+        "filters_applied": [
+          "bmi_category IN (normal_weight OR overweight OR obese OR normal_weight OR overweight OR obese)"
+        ],
+        "slugs": [
+          "bmi_category"
+        ],
+        "subcategories": [
+          "bmi_category"
+        ],
+        "total_population": 41
+      }
+    },
+    {
+      "id": "insight_08",
+      "index": 8,
+      "english": {
+        "message": "Among the 9 high-risk employees, 44.4% are daily smokers—a rate 2.6x higher than the 17.1% daily smoking rate in the overall health-tracking population. This concentration reveals smoking as a powerful risk amplifier even in small samples. Notably, 36.6% of health-aware employees never smoked, showing that health consciousness does correlate with avoiding smoking, but 17.1% smoke daily despite being engaged enough to track their health metrics.\n\nThe persistence of daily smoking among health-tracking employees suggests nicotine addiction overrides health awareness. Standard education campaigns are insufficient. Companies should offer comprehensive smoking cessation programs with multiple support modes: nicotine replacement therapy subsidies, behavioral counseling, peer support groups, and quit-attempt rewards. The analysis shows never-smoked status has a 0.61x protective effect, demonstrating clear health benefits. Target the 17.1% daily smokers with intensive support rather than broad awareness campaigns.",
+        "proof": "Overall population shows 17.1% daily smokers (n=7 out of 41) and 36.6% never smoked (n=15). Among 9 high-risk employees, 44.4% are daily smokers (n=4), representing 2.6x concentration versus population baseline. Never-smoked status shows 0.61x protective effect with 73.3% elevated risk rate (n=15) versus 80.5% population. Additional smoking categories: 24.4% occasional smokers (n=10), 14.6% former smokers (n=6), 7.3% frequent smokers (n=3)."
+      },
+      "turkish": {
+        "message": "9 yüksek riskli çalışan arasında %44,4'ü günlük sigara içiciği—bu oran, genel sağlık takibi yapan popülasyondaki %17,1'lik günlük sigara içme oranının 2,6 katı. Bu yoğunlaşma, küçük örneklerde bile sigaranın güçlü bir risk artırıcı olduğunu ortaya koyuyor. Dikkat çekici şekilde, sağlık bilincine sahip çalışanların %36,6'sı hiç sigara içmemiş; bu, sağlık bilincinin sigaradan kaçınmayla ilişkili olduğunu gösteriyor, ancak %17,1'i sağlık metriklerini takip edecek kadar bilinçli olmalarına rağmen günlük sigara içiyor. Sağlık takibi yapan çalışanlar arasında günlük sigara içmenin devam etmesi, nikotin bağımlılığının sağlık bilincini geçersiz kıldığını gösteriyor. Standart eğitim kampanyaları yetersiz. Şirketler, çoklu destek modlarıyla kapsamlı sigara bırakma programları sunmalı: nikotin yerine koyma tedavisi sübvansiyonları, davranışsal danışmanlık, akran destek grupları ve bırakma girişimi ödülleri. Analiz, hiç sigara içmemiş olma durumunun 0,61 kat koruyucu etkiye sahip olduğunu gösteriyor. Geniş farkındalık kampanyaları yerine %17,1'lik günlük sigara içenleri yoğun destekle hedefleyin (n=7 günlük sigara, n=4 yüksek riskli günlük içiciler, 2,6x yoğunlaşma).",
+        "score": 9
+      },
+      "categories": [
+        "lifestyle"
+      ],
+      "health_tags": [
+        "daily_smoker",
+        "never_smoked"
+      ],
+      "demographic_tags": [],
+      "target_group": {
+        "size": 22,
+        "percentage": 53.66,
+        "filters_applied": [
+          "A.smoking_status IN (daily_smoker OR never_smoked)"
+        ],
+        "slugs": [
+          "smoking_status"
+        ],
+        "subcategories": [
+          "smoking_status"
+        ],
+        "total_population": 41
+      }
+    },
+    {
+      "id": "insight_09",
+      "index": 9,
+      "english": {
+        "message": "Employees with very low daily steps show 60% high-risk rates when examined alongside the absence of chronic diseases like kidney disease, heart disease, and hypertension. This pattern reveals a critical insight: sedentary behavior creates substantial health risk even in employees without existing chronic conditions. You cannot be sedentary and metabolically healthy long-term, regardless of current disease status.\n\nThis finding has major implications for workplace wellness strategy. Physical activity interventions should be universal and prioritized, not reserved for employees with existing health conditions. The current data suggests sedentary employees without chronic disease may be the highest-value intervention target—they're accumulating risk that hasn't yet manifested as disease. Implement environmental changes (walking paths, standing meeting rooms, active breaks) that make movement the default rather than requiring individual motivation.",
+        "proof": "Statistical surprise analysis reveals employees with very low steps combined with no kidney disease, heart disease, or hypertension show 60% high-risk rates (n=10) versus 22% population baseline, representing 2.57σ magnitude effect. Similar patterns appear for no_obesity + very_low_steps (54.5% high risk, n=11) and no_cancer + very_low_steps (54.5%, n=11). This demonstrates sedentary behavior drives risk independent of chronic disease presence."
+      },
+      "turkish": {
+        "message": "Çok düşük günlük adım atan çalışanlar, böbrek hastalığı, kalp hastalığı ve hipertansiyon gibi kronik hastalıkların yokluğuyla birlikte incelendiğinde %60 yüksek risk oranları gösteriyor. Bu kalıp kritik bir içgörü ortaya koyuyor: hareketsiz yaşam tarzı, mevcut kronik hastalığı olmayan çalışanlarda bile önemli sağlık riski yaratıyor. Mevcut hastalık durumundan bağımsız olarak, uzun vadede hareketsiz ve metabolik olarak sağlıklı olamazsınız. Bu bulgu, işyeri wellness stratejisi için büyük etkiler taşıyor. Fiziksel aktivite müdahaleleri evrensel ve öncelikli olmalı, sadece mevcut sağlık sorunları olan çalışanlara ayrılmamalı. Mevcut veriler, kronik hastalığı olmayan hareketsiz çalışanların en yüksek değerli müdahale hedefi olabileceğini gösteriyor—henüz hastalık olarak ortaya çıkmamış riski biriktiriyorlar. Bireysel motivasyon gerektirmek yerine hareketi varsayılan yapan çevresel değişiklikler uygulayın (yürüyüş yolları, ayakta toplantı odaları, aktif molalar) (n=10 çok düşük adım + kronik hastalık yok, %60 yüksek risk).",
+        "score": 10
+      },
+      "categories": [
+        "activity_level",
+        "health_conditions"
+      ],
+      "health_tags": [
+        "very_low_steps",
+        "no_kidney_disease",
+        "no_heart_disease",
+        "no_hypertension",
+        "no_obesity",
+        "no_cancer"
+      ],
+      "demographic_tags": [],
+      "target_group": {
+        "size": 8,
+        "percentage": 19.51,
+        "filters_applied": [
+          "A.daily_steps=very_low_steps",
+          "kidney_disease_status=no_kidney_disease",
+          "heart_disease_status=no_heart_disease",
+          "hypertension_status=no_hypertension",
+          "obesity_status=no_obesity",
+          "cancer_status=no_cancer"
+        ],
+        "slugs": [
+          "daily_steps",
+          "kidney_disease_status",
+          "heart_disease_status",
+          "hypertension_status",
+          "obesity_status",
+          "cancer_status"
+        ],
+        "subcategories": [
+          "daily_steps",
+          "kidney_disease_status",
+          "heart_disease_status",
+          "hypertension_status",
+          "obesity_status",
+          "cancer_status"
+        ],
+        "total_population": 41
+      }
+    },
+    {
+      "id": "insight_10",
+      "index": 10,
+      "english": {
+        "message": "The compound risk analysis identifies three critical protective factors that companies can actively promote: normal weight (0.24x risk ratio), never smoking (0.61x ratio), and minimal processed food intake (0.40x ratio). Conversely, no exercise emerges as the strongest risk amplifier at 1.71x. These factors are more impactful than demographic characteristics and largely under behavioral control, making them ideal targets for workplace interventions.\n\nRather than generic wellness programs, create targeted campaigns around these specific evidence-based factors. Implement subsidized healthy meal programs emphasizing whole foods, create smoke-free campus policies with comprehensive cessation support, establish environmental nudges toward physical activity, and provide weight management resources. The data shows these four factors—weight, smoking, food quality, and exercise—have measurable, substantial effects on health risk that exceed the impact of most other tracked variables.",
+        "proof": "Compound risk scoring identifies highest impact factors: bmi_category=normal_weight shows 0.24x baseline with 73.7% elevated risk (n=19, strongest protective factor across all demographics). A.smoking_status=never_smoked shows 0.61x baseline with 73.3% elevated risk (n=15). A.processed_food_intake=minimal shows 0.40x baseline with 69.6% elevated risk (n=23). A.activity_level=no_exercise shows 1.71x amplification with 93.8% elevated risk (n=16, strongest risk amplifier across all lifestyle factors)."
+      },
+      "turkish": {
+        "message": "Bileşik risk analizi, şirketlerin aktif olarak destekleyebileceği üç kritik koruyucu faktör belirliyor: normal kilo (0,24x risk oranı), hiç sigara içmemiş olmak (0,61x) ve minimal işlenmiş gıda tüketimi (0,40x). Tersine, egzersiz yapmamak 1,71x ile en güçlü risk artırıcı olarak öne çıkıyor. Bu faktörler demografik özelliklerden daha etkili ve büyük ölçüde davranışsal kontrol altında, bu da onları işyeri müdahaleleri için ideal hedefler yapıyor. Genel wellness programları yerine bu spesifik kanıta dayalı faktörler etrafında hedefli kampanyalar oluşturun. Bütün gıdalara vurgu yapan sübvansiyonlu sağlıklı yemek programları uygulayın, kapsamlı bırakma desteğiyle sigara-içilmez kampüs politikaları yaratın, fiziksel aktiviteye yönelik çevresel dürtmeler kurun ve kilo yönetimi kaynakları sağlayın. Veriler bu dört faktörün—kilo, sigara, gıda kalitesi ve egzersiz—takip edilen diğer çoğu değişkenin etkisini aşan ölçülebilir, önemli sağlık riski etkileri olduğunu gösteriyor (normal kilo 0,24x, hiç sigara 0,61x, minimal işlenmiş gıda 0,40x koruyucu; egzersiz yok 1,71x artırıcı).",
+        "score": 10
+      },
+      "categories": [
+        "lifestyle",
+        "nutrition",
+        "activity_level",
+        "physical_health"
+      ],
+      "health_tags": [
+        "normal_weight",
+        "never_smoked",
+        "minimal_processed_food",
+        "no_exercise"
+      ],
+      "demographic_tags": [
+        "normal_weight"
+      ],
+      "target_group": {
+        "size": 0,
+        "percentage": 0.0,
+        "filters_applied": [
+          "bmi_category IN (normal_weight OR normal_weight)",
+          "A.smoking_status=never_smoked",
+          "A.processed_food_intake=minimal_processed_food",
+          "A.activity_level=no_exercise"
+        ],
+        "slugs": [
+          "bmi_category",
+          "smoking_status",
+          "processed_food_intake",
+          "activity_level"
+        ],
+        "subcategories": [
+          "bmi_category",
+          "smoking_status",
+          "processed_food_intake",
+          "activity_level"
+        ],
+        "total_population": 41
+      }
+    },
+    {
+      "id": "insight_11",
+      "index": 11,
+      "english": {
+        "message": "A striking pattern emerges when examining stress metrics: 63.4% of employees report feeling out of control at least sometimes (39% sometimes, 19.5% often, 4.9% frequently), yet the stress-control variable actually shows a protective effect (0.57x ratio for \"sometimes out of control\"). This paradox suggests that employees who acknowledge stress and loss of control may be more self-aware and potentially more likely to seek help, compared to those claiming complete control who may be in denial or experiencing different stressors.\n\nOrganizations should reframe stress conversations from \"eliminating stress\" to \"managing and acknowledging stress healthily.\" The employees reporting \"sometimes out of control\" may represent a realistic, adaptive middle ground—acknowledging challenges while maintaining overall function. Focus mental health resources on the 24.4% who feel out of control often or frequently, and investigate whether those claiming \"always in control\" (17.1%) are genuinely thriving or masking struggles behind professional facades.",
+        "proof": "63.4% report feeling out of control at some level: 39% sometimes (n=16), 19.5% often (n=8), 4.9% frequently (n=2). Despite this high prevalence, \"sometimes_out_of_control\" shows protective 0.57x effect with 81.2% elevated risk versus 80.5% population. Only 17.1% claim \"always in control\" (n=7) and 19.5% \"mostly in control\" (n=8). The compound risk analysis identifies this as a protective factor rather than a risk amplifier."
+      },
+      "turkish": {
+        "message": "Stres metrikleri incelendiğinde çarpıcı bir kalıp ortaya çıkıyor: çalışanların %63,4'ü en azından bazen kontrol kaybı hissediyor (%39 bazen, %19,5 sık sık, %4,9 çoğunlukla), ancak stres-kontrol değişkeni aslında koruyucu bir etki gösteriyor (\"bazen kontrolü kaybetmiş hissetme\" için 0,57x oran). Bu paradoks, stres ve kontrol kaybını kabul eden çalışanların, tam kontrol iddia edenlere kıyasla daha fazla öz-farkındalığa sahip olabileceğini ve potansiyel olarak yardım arama olasılıklarının daha yüksek olduğunu düşündürüyor—tam kontrol iddia edenler inkar içinde veya farklı stresörler yaşıyor olabilir. Kuruluşlar stres konuşmalarını \"stresi ortadan kaldırma\"dan \"stresi sağlıklı şekilde yönetme ve kabul etme\"ye çevirmeli. \"Bazen kontrolü kaybetmiş\" bildiren çalışanlar gerçekçi, uyumlu bir orta yolu temsil ediyor olabilir—zorlukları kabul ederken genel işlevi sürdürüyor. Ruh sağlığı kaynaklarını sık sık veya çoğunlukla kontrol dışı hisseden %24,4'e odaklayın ve \"her zaman kontrol altında\" iddia edenlerin (%17,1) gerçekten gelişip gelişmediğini veya profesyonel cepheler ardında mücadeleleri maskeleyip maskelemediğini araştırın (n=26 kontrol kaybı, %63,4; 0,57x koruyucu etki).",
+        "score": 7
+      },
+      "categories": [
+        "mental_health"
+      ],
+      "health_tags": [
+        "sometimes_out_of_control",
+        "often_out_of_control",
+        "frequently_out_of_control",
+        "always_in_control",
+        "mostly_in_control"
+      ],
+      "demographic_tags": [],
+      "target_group": {
+        "size": 41,
+        "percentage": 100.0,
+        "filters_applied": [
+          "A.stress_level_loc IN (sometimes_out_of_control OR often_out_of_control OR frequently_out_of_control OR always_in_control OR mostly_in_control)"
+        ],
+        "slugs": [
+          "stress_level_loc"
+        ],
+        "subcategories": [
+          "stress"
+        ],
+        "total_population": 41
+      }
+    },
+    {
+      "id": "insight_12",
+      "index": 12,
+      "english": {
+        "message": "Water intake shows surprisingly healthy patterns, with 87.7% reporting adequate or better hydration (34.1% high, 26.8% good, 26.8% adequate). This stands in stark contrast to the 92.6% with poor fruit/vegetable intake and 39% who don't exercise. The disconnect suggests employees have internalized simple, concrete health behaviors (drink more water) but struggle with complex ones requiring planning and time (meal preparation, regular exercise). Water is easy to improve through reminders and access; nutrition and activity require systemic changes.\n\nThis finding provides a strategic framework for intervention design. Start with concrete, simple behaviors where employees can experience quick wins and build health self-efficacy. Use water intake success as a foundation, then scaffold toward more complex behaviors. For example: \"You've mastered hydration—now let's add one fruit to your high water intake\" or \"Your good hydration supports exercise recovery—let's start with 10-minute walking breaks.\" Build complexity gradually rather than launching comprehensive programs that overwhelm employees already struggling with time and planning.",
+        "proof": "Water intake distribution shows 87.7% adequate or better: 34.1% high water (n=14), 26.8% good (n=11), 26.8% adequate (n=11). Only 9.8% low water (n=4) and 2.4% very low (n=1). This contrasts sharply with nutrition where 92.6% have poor or very poor fruit/vegetable intake (46.3% very poor + 46.3% poor, n=38 out of 41) and activity where 39% report no exercise (n=16)."
+      },
+      "turkish": {
+        "message": "Su tüketimi şaşırtıcı şekilde sağlıklı kalıplar gösteriyor; %87,7'si yeterli veya daha iyi hidrasyon bildiriyor (%34,1 yüksek, %26,8 iyi, %26,8 yeterli). Bu, %92,6'lık zayıf meyve/sebze tüketimi ve %39'luk egzersiz yapmama oranıyla keskin bir tezat oluşturuyor. Kopukluk, çalışanların basit, somut sağlık davranışlarını (daha fazla su içme) içselleştirdiklerini ancak planlama ve zaman gerektiren karmaşık olanlarla (yemek hazırlama, düzenli egzersiz) mücadele ettiklerini gösteriyor. Suyu hatırlatmalar ve erişim yoluyla geliştirmek kolay; beslenme ve aktivite sistemik değişiklikler gerektiriyor. Bu bulgu, müdahale tasarımı için stratejik bir çerçeve sunuyor. Çalışanların hızlı kazanımlar yaşayabileceği ve sağlık öz-yeterliliği oluşturabileceği somut, basit davranışlarla başlayın. Su tüketimi başarısını temel olarak kullanın, sonra daha karmaşık davranışlara doğru ilerleyin. Örneğin: \"Hidrasyonda ustalaştınız—şimdi yüksek su alımınıza bir meyve ekleyelim\" veya \"İyi hidrasyonunuz egzersiz iyileşmesini destekliyor—10 dakikalık yürüyüş molaları ile başlayalım.\" Zaten zaman ve planlama ile mücadele eden çalışanları bunaltan kapsamlı programlar başlatmak yerine karmaşıklığı kademeli olarak oluşturun (n=36 yeterli+ su, %87,7).",
+        "score": 7
+      },
+      "categories": [
+        "nutrition",
+        "activity_level"
+      ],
+      "health_tags": [
+        "high_water",
+        "good_water",
+        "adequate_water",
+        "very_poor_nutrition",
+        "poor_nutrition",
+        "no_exercise"
+      ],
+      "demographic_tags": [],
+      "target_group": {
+        "size": 14,
+        "percentage": 34.15,
+        "filters_applied": [
+          "A.water_intake IN (high_water OR good_water OR adequate_water)",
+          "A.fruit_veg_intake IN (very_poor_nutrition OR poor_nutrition)",
+          "A.activity_level=no_exercise"
+        ],
+        "slugs": [
+          "water_intake",
+          "fruit_veg_intake",
+          "activity_level"
+        ],
+        "subcategories": [
+          "water_intake",
+          "fruit_veg_intake",
+          "activity_level"
+        ],
+        "total_population": 41
+      }
+    },
+    {
+      "id": "insight_13",
+      "index": 13,
+      "english": {
+        "message": "Physical pain affects 88% of health-tracking employees to some degree, with only 12.2% reporting no pain. The distribution spans from 39% minimal pain to 4.9% extreme pain, with 29.3% at mild pain and 15.1% at moderate or worse. This high pain prevalence correlates with the 51.2% low/very low step counts and 39% no exercise rate, creating a potential vicious cycle: pain reduces activity, which increases pain through deconditioning and weight gain.\n\nCompanies must address pain management as a prerequisite for physical activity programs, not an afterthought. Offering gym memberships to employees in pain without addressing the pain itself sets them up for failure. Implement comprehensive musculoskeletal health programs: ergonomic workstation assessments, physical therapy access, pain management education, gentle movement classes suitable for people with pain, and standing desk options. Break the pain-inactivity cycle by making movement accessible to employees at all pain levels rather than designing programs for pain-free populations.",
+        "proof": "Physical pain distribution: 39% minimal pain (n=16), 29.3% mild pain (n=12), 7.3% moderate pain (n=3), 7.3% severe pain (n=3), 4.9% extreme pain (n=2), only 12.2% no pain (n=5). This means 87.8% experience some pain (n=36 out of 41). This correlates with low activity: 51.2% have low or very low steps (n=21) and 39% report no exercise (n=16)."
+      },
+      "turkish": {
+        "message": "Fiziksel ağrı, sağlık takibi yapan çalışanların %88'ini bir dereceye kadar etkiliyor; sadece %12,2'si ağrı bildirmiyor. Dağılım, %39 minimal ağrıdan %4,9 aşırı ağrıya uzanıyor; %29,3'ü hafif ağrı ve %15,1'i orta veya daha kötü seviyede. Bu yüksek ağrı yaygınlığı, %51,2'lik düşük/çok düşük adım sayısı ve %39'luk egzersiz yapmama oranıyla ilişkili, potansiyel bir kısır döngü yaratıyor: ağrı aktiviteyi azaltıyor, bu da kondisyon kaybı ve kilo alımı yoluyla ağrıyı artırıyor. Şirketler, fiziksel aktivite programları için ağrı yönetimini bir ön koşul olarak ele almalı, son düşünce olarak değil. Ağrıyı ele almadan ağrısı olan çalışanlara spor salonu üyelikleri sunmak onları başarısızlığa mahkum ediyor. Kapsamlı kas-iskelet sağlığı programları uygulayın: ergonomik iş istasyonu değerlendirmeleri, fizik tedavi erişimi, ağrı yönetimi eğitimi, ağrısı olan kişiler için uygun nazik hareket sınıfları ve ayakta çalışma masası seçenekleri. Ağrısız popülasyonlar için programlar tasarlamak yerine hareketi tüm ağrı seviyelerindeki çalışanlar için erişilebilir hale getirerek ağrı-hareketsizlik döngüsünü kırın (n=36 ağrısı var, %88; n=21 düşük adım).",
+        "score": 8
+      },
+      "categories": [
+        "physical_health",
+        "activity_level"
+      ],
+      "health_tags": [
+        "minimal_pain",
+        "mild_pain",
+        "moderate_pain",
+        "severe_pain",
+        "extreme_pain",
+        "very_low_steps",
+        "low_steps",
+        "no_exercise"
+      ],
+      "demographic_tags": [],
+      "target_group": {
+        "size": 10,
+        "percentage": 24.39,
+        "filters_applied": [
+          "A.physical_pain IN (minimal_pain OR mild_pain OR moderate_pain OR severe_pain OR extreme_pain)",
+          "A.daily_steps IN (very_low_steps OR low_steps)",
+          "A.activity_level=no_exercise"
+        ],
+        "slugs": [
+          "physical_pain",
+          "daily_steps",
+          "activity_level"
+        ],
+        "subcategories": [
+          "physical_pain",
+          "daily_steps",
+          "activity_level"
+        ],
+        "total_population": 41
+      }
+    },
+    {
+      "id": "insight_14",
+      "index": 14,
+      "english": {
+        "message": "Among overweight and obese employees combined (53.7% of population), lifestyle risk factors concentrate dramatically: in the high-risk group specifically, 66.7% get no exercise and an identical 66.7% have very low daily steps. This isn't coincidence—it's a behavioral cluster where weight, inactivity, and risk reinforce each other. The data shows overweight employees have 1.42x risk ratio and obese employees have 2.28x, but these numbers understate the compound effect when combined with sedentary patterns.\n\nAddress this cluster through integrated programs rather than siloed interventions. An employee who is overweight with very low steps needs simultaneous support for nutrition, accessible physical activity (not gym-based programs they won't use), and potentially mental health support for the stress or mood issues that may drive inactivity. The 66.7% overlap between no exercise and very low steps in the high-risk group suggests these aren't independent factors but different measurements of the same underlying sedentary lifestyle requiring holistic intervention.",
+        "proof": "53.7% of population is overweight or obese (39% overweight n=16 + 14.6% obese n=6 = 22 total). High-risk group shows 55.6% overweight (1.42x ratio) and 33.3% obese (2.28x ratio). Among high-risk employees (n=9), 66.7% report no exercise and 66.7% have very low daily steps, indicating strong behavioral clustering. Population-wide, 39% report no exercise (n=16) with 1.71x risk amplification showing 93.8% elevated risk."
+      },
+      "turkish": {
+        "message": "Fazla kilolu ve obez çalışanlar birleştirildiğinde (popülasyonun %53,7'si), yaşam tarzı risk faktörleri çarpıcı biçimde yoğunlaşıyor: özellikle yüksek riskli grupta %66,7'si hiç egzersiz yapmıyor ve aynı %66,7'si çok düşük günlük adıma sahip. Bu tesadüf değil—kilo, hareketsizlik ve riskin birbirini pekiştirdiği bir davranışsal küme. Veriler fazla kilolu çalışanların 1,42x risk oranına ve obez çalışanların 2,28x'e sahip olduğunu gösteriyor, ancak bu sayılar hareketsiz kalıplarla birleştiğinde bileşik etkiyi hafife alıyor. Bu kümeyi bölünmüş müdahaleler yerine entegre programlar aracılığıyla ele alın. Çok düşük adımlarla fazla kilolu bir çalışan, beslenme, erişilebilir fiziksel aktivite (kullanmayacakları spor salonu tabanlı programlar değil) ve potansiyel olarak hareketsizliği tetikleyebilecek stres veya ruh hali sorunları için ruh sağlığı desteği için eşzamanlı desteğe ihtiyaç duyuyor. Yüksek riskli grupta egzersiz yapmama ve çok düşük adımlar arasındaki %66,7 örtüşme, bunların bağımsız faktörler değil, bütünsel müdahale gerektiren aynı temel hareketsiz yaşam tarzının farklı ölçümleri olduğunu gösteriyor (n=22 fazla kilolu+obez, %53,7 popülasyon; yüksek risklilerde %66,7 hiç egzersiz).",
+        "score": 9
+      },
+      "categories": [
+        "activity_level",
+        "physical_health"
+      ],
+      "health_tags": [
+        "overweight",
+        "obese",
+        "no_exercise",
+        "very_low_steps"
+      ],
+      "demographic_tags": [
+        "overweight",
+        "obese"
+      ],
+      "target_group": {
+        "size": 5,
+        "percentage": 12.2,
+        "filters_applied": [
+          "bmi_category IN (overweight OR obese OR overweight OR obese)",
+          "A.activity_level=no_exercise",
+          "A.daily_steps=very_low_steps"
+        ],
+        "slugs": [
+          "bmi_category",
+          "activity_level",
+          "daily_steps"
+        ],
+        "subcategories": [
+          "bmi_category",
+          "activity_level",
+          "daily_steps"
+        ],
+        "total_population": 41
+      }
+    },
+    {
+      "id": "insight_15",
+      "index": 15,
+      "english": {
+        "message": "Loneliness affects the majority of employees, with only 19.5% never feeling lonely. The distribution shows 34.1% rarely lonely, 24.4% sometimes, 4.9% often, and 17.1% always lonely. The 46.4% experiencing loneliness sometimes, often, or always represents a substantial portion of the health-engaged workforce. This correlates with the mental health challenges observed: 73.2% with anhedonia, 75.6% with mood issues, and 75.7% reporting irritability.\n\nLoneliness is a critical yet often overlooked workplace health issue with impacts comparable to smoking on mortality risk. Traditional wellness programs ignore it, focusing on individual physical health. Organizations should foster genuine social connection through team-building that creates actual relationships (not superficial exercises), employee resource groups based on shared interests, mentorship programs, collaborative workspaces, and policies that prevent isolation (like limiting work-from-home to certain days). The 17.1% always lonely employees need urgent intervention—consider whether job design, remote work policies, or workplace culture inadvertently isolate people.",
+        "proof": "Loneliness distribution: 34.1% rarely lonely (n=14), 24.4% sometimes (n=10), 19.5% never (n=8), 17.1% always (n=7), 4.9% often (n=2). This means 80.5% experience loneliness at some level (n=33 out of 41) and 46.4% experience it sometimes or more frequently (n=19). This correlates with mental health issues: 73.2% anhedonia (n=30), 75.6% mood problems (n=31), 75.7% irritability (n=31)."
+      },
+      "turkish": {
+        "message": "Yalnızlık çalışanların çoğunluğunu etkiliyor; sadece %19,5'i hiç yalnız hissetmiyor. Dağılım %34,1 nadiren yalnız, %24,4 bazen, %4,9 sık sık ve %17,1 her zaman yalnız gösteriyor. Bazen, sık sık veya her zaman yalnızlık yaşayan %46,4, sağlık-bilinçli işgücünün önemli bir bölümünü temsil ediyor. Bu, gözlemlenen ruh sağlığı zorluklarıyla ilişkili: %73,2 motivasyon kaybı, %75,6 ruh hali sorunları ve %75,7 sinirlilik bildiriyor. Yalnızlık, ölüm riski üzerinde sigaraya benzer etkilere sahip, kritik ancak genellikle gözden kaçırılan bir işyeri sağlık sorunudur. Geleneksel wellness programları bunu göz ardı ediyor, bireysel fiziksel sağlığa odaklanıyor. Kuruluşlar, gerçek ilişkiler yaratan ekip kurma (yüzeysel egzersizler değil), ortak ilgi alanlarına dayalı çalışan kaynak grupları, mentorluk programları, işbirlikçi çalışma alanları ve izolasyonu önleyen politikalar (uzaktan çalışmayı belirli günlerle sınırlamak gibi) aracılığıyla gerçek sosyal bağlantıyı teşvik etmeli. Her zaman yalnız hisseden %17,1'lik kesim acil müdahaleye ihtiyaç duyuyor—iş tasarımının, uzaktan çalışma politikalarının veya işyeri kültürünün insanları istemeden izole edip etmediğini düşünün (n=31 yalnız, %75,6; n=7 her zaman yalnız, %17,1).",
+        "score": 8
+      },
+      "categories": [
+        "mental_health"
+      ],
+      "health_tags": [
+        "rarely_lonely",
+        "sometimes_lonely",
+        "often_lonely",
+        "always_lonely",
+        "never_lonely"
+      ],
+      "demographic_tags": [],
+      "target_group": {
+        "size": 41,
+        "percentage": 100.0,
+        "filters_applied": [
+          "A.loneliness IN (rarely_lonely OR sometimes_lonely OR often_lonely OR always_lonely OR never_lonely)"
+        ],
+        "slugs": [
+          "loneliness"
+        ],
+        "subcategories": [
+          "loneliness"
+        ],
+        "total_population": 41
+      }
+    },
+    {
+      "id": "insight_16",
+      "index": 16,
+      "english": {
+        "message": "Despite relatively low rates of diagnosed chronic conditions (97.6% no diabetes, heart disease, kidney disease, or hypertension), the workforce shows 80.5% elevated health risk and 22% high risk. This reveals that risk accumulates through lifestyle and behavioral factors long before diseases manifest. The employees completing health tracking are likely younger and healthier, yet already accumulating substantial risk through sedentary behavior, poor nutrition, smoking, and weight gain.\n\nThis is actually an opportunity: these employees are in the prevention window where behavior change can avoid future disease rather than manage existing conditions. However, it requires urgency. The 39% who don't exercise, 92.6% with poor nutrition, and 53.7% above healthy weight are on trajectories toward the very chronic diseases they currently lack. Frame interventions around prevention and future health rather than current symptoms. Use predictive messaging like \"Your current patterns increase diabetes risk 3x over the next decade\" rather than \"You have prediabetes.\" Prevention resonates differently than treatment.",
+        "proof": "97.6% have no diabetes (n=40), no heart disease (n=40), no kidney disease (n=40), or no hypertension (n=40). 100% have no obesity classification and no cancer (n=41). Despite these low chronic disease rates, 80.5% show elevated health risk (58.5% moderate + 22% high, n=33) and only 19.5% are low risk (n=8). Lifestyle risk factors: 39% no exercise (n=16), 92.6% poor nutrition (n=38), 53.7% above healthy weight (n=22)."
+      },
+      "turkish": {
+        "message": "Nispeten düşük teşhis edilmiş kronik hastalık oranlarına rağmen (%97,6 diyabet, kalp hastalığı, böbrek hastalığı veya hipertansiyonu yok), işgücü %80,5 artmış sağlık riski ve %22 yüksek risk gösteriyor. Bu, riskin hastalıklar ortaya çıkmadan önce yaşam tarzı ve davranışsal faktörler aracılığıyla biriktiğini ortaya koyuyor. Sağlık takibi dolduran çalışanlar muhtemelen daha genç ve sağlıklı, ancak hareketsiz davranış, kötü beslenme, sigara ve kilo alımı yoluyla zaten önemli risk biriktiriyor. Bu aslında bir fırsat: bu çalışanlar, davranış değişikliğinin mevcut koşulları yönetmek yerine gelecekteki hastalıklardan kaçınabileceği önleme penceresinde. Ancak aciliyet gerektiriyor. Egzersiz yapmayan %39, kötü beslenmesi olan %92,6 ve sağlıklı kilo üzerinde olan %53,7, şu anda olmayan kronik hastalıklara doğru yörüngelerde. Müdahaleleri mevcut semptomlar yerine önleme ve gelecekteki sağlık etrafında çerçeveleyin. \"Prediabetiniz var\" yerine \"Mevcut kalıplarınız önümüzdeki on yıl boyunca diyabet riskini 3 kat artırıyor\" gibi öngörücü mesajlaşma kullanın. Önleme, tedaviden farklı şekilde yankılanıyor (n=40 kronik hastalık yok, %97,6; n=33 artmış risk, %80,5).",
+        "score": 9
+      },
+      "categories": [
+        "health_conditions",
+        "lifestyle"
+      ],
+      "health_tags": [
+        "no_diabetes",
+        "no_heart_disease",
+        "no_kidney_disease",
+        "no_hypertension",
+        "no_obesity",
+        "no_cancer"
+      ],
+      "demographic_tags": [],
+      "target_group": {
+        "size": 37,
+        "percentage": 90.24,
+        "filters_applied": [
+          "diabetes_status=no_diabetes",
+          "heart_disease_status=no_heart_disease",
+          "kidney_disease_status=no_kidney_disease",
+          "hypertension_status=no_hypertension",
+          "obesity_status=no_obesity",
+          "cancer_status=no_cancer"
+        ],
+        "slugs": [
+          "diabetes_status",
+          "heart_disease_status",
+          "kidney_disease_status",
+          "hypertension_status",
+          "obesity_status",
+          "cancer_status"
+        ],
+        "subcategories": [
+          "diabetes_status",
+          "heart_disease_status",
+          "kidney_disease_status",
+          "hypertension_status",
+          "obesity_status",
+          "cancer_status"
+        ],
+        "total_population": 41
+      }
+    }
+  ],
+  "source_report": "02_out/company/Corporate_68e6cd3d250837fd64be2e61_İş_Bankası_report.txt",
+  "prompt_used": "scripts/llm/prompts/unified_insights.md",
+  "processing_date": "2025-10-22T20:44:32.944732",
+  "claude_model": "claude-sonnet",
+  "log_file": "03_ai/company/Corporate_68e6cd3d250837fd64be2e61_İş_Bankası_report_insights.log",
+  "thinking_content": "Let me carefully analyze this health report for İş Bankası (Turkish bank) with 41 employees who completed the health survey. I need to be intellectually curious and discover fascinating patterns, thinking critically about participation bias and what the data reveals.\n\nKey observations from the data:\n\n1. **Survey participation demographics**: Only 41 employees - this is a small sample, suggesting low engagement with the health tracking app. This itself is a critical insight about health engagement.\n\n2. **Mental health patterns**:\n   - 51.2% mild anhedonia, 22% moderate, 7.3% severe\n   - 51.2% occasional sadness, 24.4% positive mood, 17.1% frequent sadness, 7.3% persistent sadness\n   - 53.7% sometimes irritated, 22% often irritated\n   - 39% sometimes out of control, 19.5% often out of control\n   - Significant mental health challenges even in health-engaged population\n\n3. **Activity levels**:\n   - 39% NO exercise (highest category!)\n   - 26.8% very low steps, 24.4% low steps - over 50% with very low/low steps\n   - This is surprising for people engaged enough to track health\n\n4. **Nutrition**:\n   - 46.3% very poor nutrition + 46.3% poor nutrition = 92.6% with poor/very poor fruit/veg intake!\n   - This is shocking even for health-engaged employees\n   - 56.1% minimal processed food (good)\n   - 34.1% high water intake (decent)\n\n5. **Sleep**:\n   - 58.5% borderline sleep\n   - 31.7% optimal\n   - 9.8% insufficient\n\n6. **Lifestyle**:\n   - 36.6% never smoked, but 17.1% daily smokers, 24.4% occasional\n   - 51.2% light alcohol, 34.1% no alcohol\n   - 53.7% using supplements\n\nI notice a significant portion of employees are taking supplements, which might indicate awareness of potential health gaps. The weight and risk metrics reveal concerning trends. Nearly 55.4% are above normal weight, with 80.5% showing elevated health risks. Despite low chronic disease prevalence, the overall health profile suggests substantial room for improvement in lifestyle and wellness strategies.\n\nThe data highlights a striking disconnect between health tracking and actual health behaviors. Most participants are sedentary, with step counts strongly correlating with risk levels. Lack of exercise emerges as a critical risk amplifier, increasing risk by 1.71x. Interestingly, normal weight and never smoking act as protective factors, potentially mitigating some health risks.\n\nThe core insight is a paradoxical health awareness without corresponding action. Despite engaging with a detailed health survey, the population demonstrates significant lifestyle challenges: poor nutrition, minimal exercise, low physical activity, and prevalent mental health concerns. This suggests a gap between health knowledge and behavioral change that could be addressed through targeted wellness interventions. Health insights reveal critical disconnects between awareness and action:\n\n1. Paradoxical health engagement shows survey participants exhibit counterintuitive behaviors\n2. Sedentary risks emerge as primary health threat\n3. Nutrition challenges persist despite awareness\n4. Banking sector employees face significant mental health pressures\n5. Knowledge-action gaps in exercise persist\n6. Thyroid conditions appear elevated\n7. Metabolic health complexity challenges traditional weight metrics\n8. Persistent health-damaging behaviors remain prevalent\n9. Supplement usage masks underlying nutritional deficiencies\n10. Sleep patterns hover at critical borderline\n11. Health tracking potentially skews younger demographic perceptions\n12. Workplace stress patterns demonstrate systemic challenges\n13. Elevated health risks widespread even among proactive populationsGood start. Let me continue with more diverse insights. I need to cover:\n- Participation bias insights\n- Demographic patterns\n- Behavioral clustering\n- Compound effects\n- Protective factors\n- More surprising findings\n\nLet me create insights about:\n4. Low participation = engagement crisis\n5. Thyroid disorder prevalence (24.4%)\n6. Sleep on the edge (58.5% borderline)\n7. Normal weight but unhealthy behaviors\n8. Smoking persistence despite health awareness\n9. Overweight majority (55.4%)\n10. High risk despite no chronic conditions\n11. Alcohol + smoking combinations\n12. The stress-control connection",
+  "thinking_stats": {
+    "thinking_characters": 4252,
+    "thinking_enabled": true,
+    "estimated_thinking_tokens": 1063
+  }
+}

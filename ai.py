@@ -34,12 +34,13 @@ class ProcessingResult:
 class AIOrchestrator:
     """Orchestrates AI processing across multiple health analysis reports."""
 
-    def __init__(self, input_dir: Path, output_dir: Path, main_only: bool = False, parallel: bool = False, max_workers: int = 3, csv_path: Path = None):
+    def __init__(self, input_dir: Path, output_dir: Path, main_only: bool = False, parallel: bool = False, max_workers: int = 3, csv_path: Path = None, company: str = None):
         self.input_dir = input_dir
         self.output_dir = output_dir
         self.main_only = main_only
         self.parallel = parallel
         self.max_workers = max_workers
+        self.company = company
 
         # Fixed prompt file path - internal to processor
         self.prompt_file = Path('scripts/llm/prompts/unified_insights.md')
@@ -72,25 +73,58 @@ class AIOrchestrator:
         """
         files = []
 
-        # Always process main report if it exists
-        main_report = self.input_dir / 'HRA_data_report.txt'
-        if main_report.exists():
-            output_path = self.output_dir / 'HRA_data_report_insights.json'
-            files.append((main_report, output_path))
-            print(f"Found main report: {main_report}")
+        # Process main report (skip if --company is specified)
+        if not self.company:
+            main_report = self.input_dir / 'HRA_data_report.txt'
+            if main_report.exists():
+                output_path = self.output_dir / 'HRA_data_report_insights.json'
+                files.append((main_report, output_path))
+                print(f"Found main report: {main_report}")
 
         # Process company reports unless main-only flag is set
         if not self.main_only:
             company_dir = self.input_dir / 'company'
             if company_dir.exists():
-                company_files = list(company_dir.glob('*.txt'))
-                print(f"Found {len(company_files)} company reports in {company_dir}")
+                # If specific company requested, process only that one
+                if self.company:
+                    company_pattern = f"*{self.company}*_report.txt"
+                    matching_files = list(company_dir.glob(company_pattern))
 
-                for company_file in company_files:
-                    # Convert Company_28_report.txt -> Company_28_report_insights.json
+                    if not matching_files:
+                        print(f"Error: No company report found matching '{self.company}'")
+                        print(f"Available companies:")
+                        for f in sorted(company_dir.glob("Corporate_*_report.txt")):
+                            # Extract company name from filename
+                            parts = f.stem.replace('_report', '').split('_', 2)
+                            if len(parts) >= 3:
+                                print(f"  - {parts[2]}")
+                        return files
+
+                    if len(matching_files) > 1:
+                        print(f"Warning: Multiple reports match '{self.company}':")
+                        for f in matching_files:
+                            print(f"  - {f.name}")
+                        print(f"Using first match: {matching_files[0].name}")
+
+                    company_file = matching_files[0]
                     output_name = company_file.stem + '_insights.json'
                     output_path = self.output_dir / 'company' / output_name
                     files.append((company_file, output_path))
+                    print(f"Found specific company report: {company_file}")
+                else:
+                    # Look for Corporate_* pattern and Unknown_Company
+                    company_files = list(company_dir.glob('Corporate_*_report.txt'))
+                    unknown_report = company_dir / 'Unknown_Company_report.txt'
+                    if unknown_report.exists():
+                        company_files.append(unknown_report)
+
+                    print(f"Found {len(company_files)} company reports in {company_dir}")
+
+                    for company_file in company_files:
+                        # Convert Corporate_68e6d330_Heltia_report.txt -> Corporate_68e6d330_Heltia_report_insights.json
+                        output_name = company_file.stem + '_insights.json'
+                        output_path = self.output_dir / 'company' / output_name
+                        files.append((company_file, output_path))
 
         return files
 
@@ -121,7 +155,8 @@ class AIOrchestrator:
         # Check if this is a company-specific report
         if 'company' in input_path.parts:
             # Extract company identifier from filename
-            # Example: Company_28_report.txt -> Company_28.csv
+            # Example: Corporate_68e6d330_Heltia_report.txt -> Corporate_68e6d330_Heltia.csv
+            # Example: Unknown_Company_report.txt -> Unknown_Company.csv
             company_id = input_path.stem.replace('_report', '')
             csv_path = Path('01_in/company') / f"{company_id}.csv"
 
@@ -387,6 +422,12 @@ Examples:
         help='Path to CSV data file for group size calculation (default: 01_in/HRA_data.csv)'
     )
 
+    parser.add_argument(
+        '--company',
+        type=str,
+        help='Process only a specific company (e.g., --company İş_Bankası)'
+    )
+
     args = parser.parse_args()
 
     try:
@@ -396,7 +437,8 @@ Examples:
             main_only=args.main_only,
             parallel=args.parallel,
             max_workers=args.max_workers,
-            csv_path=args.csv
+            csv_path=args.csv,
+            company=args.company
         )
         orchestrator.run()
 

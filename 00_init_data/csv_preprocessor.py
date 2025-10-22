@@ -7,9 +7,10 @@ Processes raw data, creates one-hot encoding, calculates scores and derived feat
 import pandas as pd
 import json
 import os
+import re
 
 # Configuration
-INPUT_FILE = "00_init_data/HRA_Answers_tab_with_company.csv"
+INPUT_FILE = "00_init_data/HRA_data.csv"
 OUTPUT_FILE = "./01_in/HRA_data.csv"
 COMPANY_OUTPUT_DIR = "./01_in/company/"
 MAPPINGS_FILE = "mappings/value_mappings.json"
@@ -22,12 +23,14 @@ def load_mappings():
     with open(mappings_path, 'r', encoding='utf-8') as f:
         return json.load(f)
 
-def map_sponsor_to_company(sponsor_id, mappings):
-    """Map SponsorId to company name"""
-    if 'SponsorId' in mappings and 'mappings' in mappings['SponsorId']:
-        company_names = mappings['SponsorId']['mappings']['company_names']
-        return company_names.get(sponsor_id, f"Unknown_{sponsor_id[:8]}")
-    return f"Unknown_{sponsor_id[:8]}" if sponsor_id else "No_Company"
+def sanitize_company_name(name):
+    """Sanitize company name for use in file paths."""
+    if pd.isna(name) or str(name).strip() in ['#N/A', '']:
+        return 'Unknown_Company'
+    # Remove special characters, convert spaces to underscores
+    sanitized = re.sub(r'[^\w\s-]', '', str(name))
+    sanitized = re.sub(r'[\s-]+', '_', sanitized)
+    return sanitized.strip('_')
 
 
 def process_single_selection(df, column_name, mappings):
@@ -160,27 +163,41 @@ def calculate_risk_levels(df):
                                         labels=['very_high_risk', 'high_risk', 'moderate_risk', 'low_risk'],
                                         include_lowest=True)
 
-def save_company_specific_data(df, mappings):
-    """Save company-specific CSV files"""
-    if 'SponsorId' not in df.columns:
+def save_company_specific_data(df):
+    """Save company-specific CSV files using CorporateId and CorporateName"""
+    # Check for required columns
+    if 'CorporateId' not in df.columns or 'CorporateName' not in df.columns:
+        print("Warning: CorporateId/CorporateName columns not found. Skipping company-specific data generation.")
         return
 
     # Create company output directory
     os.makedirs(COMPANY_OUTPUT_DIR, exist_ok=True)
 
-    # Group by SponsorId and save separate files
-    for sponsor_id in df['SponsorId'].unique():
-        if pd.notna(sponsor_id) and sponsor_id:
-            company_name = map_sponsor_to_company(sponsor_id, mappings)
-            company_df = df[df['SponsorId'] == sponsor_id].copy()
+    # Handle #N/A or missing values - group together as Unknown_Company
+    na_mask = df['CorporateId'].isna() | (df['CorporateId'] == '#N/A') | (df['CorporateId'].astype(str).str.strip() == '#N/A')
+    if na_mask.any():
+        unknown_df = df[na_mask].copy()
+        unknown_file = os.path.join(COMPANY_OUTPUT_DIR, "Unknown_Company.csv")
+        unknown_df.to_csv(unknown_file, index=False)
+        print(f"Saved {len(unknown_df)} records for Unknown_Company to {unknown_file}")
 
-            # Keep SponsorId in company-specific data for reference
-            # company_df.drop(columns=['SponsorId'], inplace=True)
+    # Process known companies
+    valid_df = df[~na_mask].copy()
 
-            # Save company-specific file
-            company_file = os.path.join(COMPANY_OUTPUT_DIR, f"{company_name}.csv")
+    for corporate_id in valid_df['CorporateId'].unique():
+        if pd.notna(corporate_id):
+            company_df = valid_df[valid_df['CorporateId'] == corporate_id].copy()
+
+            # Get company name (should be consistent per CorporateId)
+            corporate_name = company_df['CorporateName'].iloc[0]
+            sanitized_name = sanitize_company_name(corporate_name)
+
+            # Create filename: Corporate_{full_id}_{sanitized_name}.csv
+            company_file_name = f"Corporate_{corporate_id}_{sanitized_name}.csv"
+            company_file = os.path.join(COMPANY_OUTPUT_DIR, company_file_name)
+
             company_df.to_csv(company_file, index=False)
-            print(f"Saved {len(company_df)} records for {company_name} to {company_file}")
+            print(f"Saved {len(company_df)} records for {corporate_name} (ID: {corporate_id}) to {company_file}")
 
 def main():
     print("Processing HRA data...")
@@ -229,7 +246,7 @@ def main():
     print(f"Final dataset: {len(df)} records, {len(df.columns)} columns")
 
     # Save company-specific data
-    save_company_specific_data(df, mappings)
+    save_company_specific_data(df)
     print(f"Saved company-specific data to {COMPANY_OUTPUT_DIR}")
 
 if __name__ == "__main__":
